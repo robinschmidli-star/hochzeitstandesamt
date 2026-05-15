@@ -1,0 +1,192 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Canton {
+  id              String                @id @default(cuid())
+  nameDe          String                @map("name_de")
+  nameFr          String?               @map("name_fr")
+  nameIt          String?               @map("name_it")
+  slug            String                @unique
+  abbreviation    String
+  description     String?
+  metaTitle       String?               @map("meta_title")
+  metaDescription String?               @map("meta_description")
+  createdAt       DateTime              @default(now()) @map("created_at")
+  updatedAt       DateTime              @updatedAt @map("updated_at")
+  cities          City[]
+  offices         CivilRegistryOffice[]
+  leads           Lead[]
+  vendors         Vendor[]
+
+  @@map("cantons")
+}
+
+model City {
+  id              String                @id @default(cuid())
+  name            String
+  slug            String                @unique
+  cantonId        String                @map("canton_id")
+  postalCode      String?               @map("postal_code")
+  description     String?
+  metaTitle       String?               @map("meta_title")
+  metaDescription String?               @map("meta_description")
+  createdAt       DateTime              @default(now()) @map("created_at")
+  updatedAt       DateTime              @updatedAt @map("updated_at")
+  canton          Canton                @relation(fields: [cantonId], references: [id])
+  offices         CivilRegistryOffice[]
+  leads           Lead[]
+
+  @@map("cities")
+}
+
+model CivilRegistryOffice {
+  id                         String    @id @default(cuid())
+  name                       String
+  slug                       String    @unique
+  cantonId                   String    @map("canton_id")
+  cityId                     String?   @map("city_id")
+  addressLine1               String    @map("address_line_1")
+  addressLine2               String?   @map("address_line_2")
+  postalCode                 String    @map("postal_code")
+  city                       String
+  phone                      String?
+  email                      String?
+  websiteUrl                 String    @map("website_url")
+  appointmentUrl             String?   @map("appointment_url")
+  openingHours               String?   @map("opening_hours")
+  latitude                   Float?
+  longitude                  Float?
+  languages                  String[]  @default([])
+  responsibleMunicipalities  String[]  @default([]) @map("responsible_municipalities")
+  description                String?
+  documentsInfo              String?   @map("documents_info")
+  ceremonyInfo               String?   @map("ceremony_info")
+  imageUrl                   String?   @map("image_url")
+  sourceUrl                  String    @map("source_url")
+  lastVerifiedAt             DateTime? @map("last_verified_at")
+  published                  Boolean   @default(false)
+  metaTitle                  String?   @map("meta_title")
+  metaDescription            String?   @map("meta_description")
+  createdAt                  DateTime  @default(now()) @map("created_at")
+  updatedAt                  DateTime  @updatedAt @map("updated_at")
+  canton                     Canton    @relation(fields: [cantonId], references: [id])
+  cityRelation               City?     @relation(fields: [cityId], references: [id])
+  leads                      Lead[]
+
+  @@map("civil_registry_offices")
+}
+
+model GuideArticle {
+  id              String    @id @default(cuid())
+  title           String
+  slug            String    @unique
+  category        String
+  excerpt         String?
+  content         String
+  author          String?
+  status          String    @default("draft")
+  metaTitle       String?   @map("meta_title")
+  metaDescription String?   @map("meta_description")
+  canonicalUrl    String?   @map("canonical_url")
+  publishedAt     DateTime? @map("published_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  @@map("guide_articles")
+}
+
+model Lead {
+  id                        String                @id @default(cuid())
+  leadType                  String                @map("lead_type")
+  firstName                 String                @map("first_name")
+  lastName                  String?               @map("last_name")
+  email                     String
+  phone                     String?
+  cantonId                  String?               @map("canton_id")
+  cityId                    String?               @map("city_id")
+  registryOfficeId          String?               @map("registry_office_id")
+  weddingDate               DateTime?             @map("wedding_date")
+  guestCount                Int?                  @map("guest_count")
+  budgetRange               String?               @map("budget_range")
+  requestedVendorCategories String[]              @default([]) @map("requested_vendor_categories")
+  stylePreferences          String[]              @default([]) @map("style_preferences")
+  message                   String?
+  consentPrivacy            Boolean               @map("consent_privacy")
+  consentMarketing          Boolean               @default(false) @map("consent_marketing")
+  consentTimestamp          DateTime              @default(now()) @map("consent_timestamp")
+  sourcePage                String                @map("source_page")
+  utmSource                 String?               @map("utm_source")
+  utmMedium                 String?               @map("utm_medium")
+  utmCampaign               String?               @map("utm_campaign")
+  createdAt                 DateTime              @default(now()) @map("created_at")
+  canton                    Canton?               @relation(fields: [cantonId], references: [id])
+  city                      City?                 @relation(fields: [cityId], references: [id])
+  registryOffice            CivilRegistryOffice?   @relation(fields: [registryOfficeId], references: [id])
+  vendorLeads               VendorLead[]
+
+  @@map("leads")
+}
+
+model Vendor {
+  id               String       @id @default(cuid())
+  companyName      String       @map("company_name")
+  slug             String       @unique
+  category         String
+  contactName      String?      @map("contact_name")
+  email            String
+  phone            String?
+  websiteUrl       String?      @map("website_url")
+  address          String?
+  postalCode       String?      @map("postal_code")
+  city             String?
+  cantonId         String?      @map("canton_id")
+  serviceRegions   String[]     @default([]) @map("service_regions")
+  shortDescription String?      @map("short_description")
+  longDescription  String?      @map("long_description")
+  priceRange       String?      @map("price_range")
+  languages        String[]     @default([])
+  styleTags        String[]     @default([]) @map("style_tags")
+  logoUrl          String?      @map("logo_url")
+  galleryImages    String[]     @default([]) @map("gallery_images")
+  premium          Boolean      @default(false)
+  featured         Boolean      @default(false)
+  published        Boolean      @default(false)
+  leadEmail        String?      @map("lead_email")
+  createdAt        DateTime     @default(now()) @map("created_at")
+  updatedAt        DateTime     @updatedAt @map("updated_at")
+  canton           Canton?      @relation(fields: [cantonId], references: [id])
+  vendorLeads      VendorLead[]
+
+  @@map("vendors")
+}
+
+model VendorLead {
+  id            String    @id @default(cuid())
+  leadId        String    @map("lead_id")
+  vendorId      String    @map("vendor_id")
+  status        String    @default("new")
+  sentAt        DateTime? @map("sent_at")
+  acceptedAt    DateTime? @map("accepted_at")
+  priceCharged  Decimal?  @map("price_charged")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  lead          Lead      @relation(fields: [leadId], references: [id])
+  vendor        Vendor    @relation(fields: [vendorId], references: [id])
+
+  @@map("vendor_leads")
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  role      String   @default("admin")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("admin_users")
+}

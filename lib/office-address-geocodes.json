@@ -1,0 +1,1154 @@
+[
+  {
+    "slug": "regionales-zivilstandsamt-aarau-aarau-ag",
+    "canton": "AG",
+    "searchText": "Laurenzenvorstadt 1 5000 Aarau",
+    "label": "Laurenzenvorstadt 1 5000 Aarau",
+    "latitude": 47.39360046386719,
+    "longitude": 8.04561996459961,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-bremgarten-bremgarten-ag-ag",
+    "canton": "AG",
+    "searchText": "Rathausplatz 1 5620 Bremgarten (AG)",
+    "label": "Rathausplatz 1 5620 Bremgarten AG",
+    "latitude": 47.351810455322266,
+    "longitude": 8.342217445373535,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-brugg-brugg-ag",
+    "canton": "AG",
+    "searchText": "Untere Hofstatt 4 5201 Brugg",
+    "label": "Untere Hofstatt 4 5200 Brugg AG",
+    "latitude": 47.485050201416016,
+    "longitude": 8.207472801208496,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-laufenburg-laufenburg-ag",
+    "canton": "AG",
+    "searchText": "Gerichtsgasse 80 5080 Laufenburg",
+    "label": "Gerichtsgasse 80 5080 Laufenburg",
+    "latitude": 47.56121444702149,
+    "longitude": 8.060224533081055,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-lenzburg-lenzburg-ag",
+    "canton": "AG",
+    "searchText": "Rathaus 5600 Lenzburg",
+    "label": "Rathausgasse 1 5600 Lenzburg",
+    "latitude": 47.387569427490234,
+    "longitude": 8.179656028747559,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-leuggern-leuggern-ag",
+    "canton": "AG",
+    "searchText": "Schulweg 1 5316 Leuggern",
+    "label": "Schulweg 1 5316 Leuggern",
+    "latitude": 47.580936431884766,
+    "longitude": 8.21640682220459,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-mellingen-mellingen-ag",
+    "canton": "AG",
+    "searchText": "Iberghof, Kleine Kirchgasse 11 5507 Mellingen",
+    "label": "Kleine Kirchgasse 11 5507 Mellingen",
+    "latitude": 47.4177131652832,
+    "longitude": 8.27512264251709,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-menziken-burg-ag",
+    "canton": "AG",
+    "searchText": "Hauptstrasse 80 5736 Burg",
+    "label": "Hauptstrasse 80 5736 Burg AG",
+    "latitude": 47.23644256591797,
+    "longitude": 8.178150177001953,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-muri-muri-ag",
+    "canton": "AG",
+    "searchText": "Seetalstrasse 6 5630 Muri",
+    "label": "Seetalstrasse 6 5630 Muri AG",
+    "latitude": 47.27433776855469,
+    "longitude": 8.338760375976562,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-rheinfelden-rheinfelden-ag",
+    "canton": "AG",
+    "searchText": "Marktgasse 16 4310 Rheinfelden",
+    "label": "Marktgasse 16 4310 Rheinfelden",
+    "latitude": 47.55532455444336,
+    "longitude": 7.793187618255615,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-schoftland-schoftland-ag",
+    "canton": "AG",
+    "searchText": "Bahnhofstrasse 5 5040 SchÃ¶ftland",
+    "label": "Bahnhofstrasse 5 5040 Schöftland",
+    "latitude": 47.304344177246094,
+    "longitude": 8.050200462341309,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-sins-sins-ag",
+    "canton": "AG",
+    "searchText": "Kirchstrasse 14 5643 Sins",
+    "label": "Kirchstrasse 14 5643 Sins",
+    "latitude": 47.19396209716797,
+    "longitude": 8.394943237304688,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-wohlen-wohlen-ag",
+    "canton": "AG",
+    "searchText": "Zentralstrasse 20 5610 Wohlen",
+    "label": "Zentralstrasse 20 5610 Wohlen AG",
+    "latitude": 47.350120544433594,
+    "longitude": 8.27752685546875,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-zofingen-zofingen-ag",
+    "canton": "AG",
+    "searchText": "Kirchplatz 26 4800 Zofingen",
+    "label": "Kirchplatz 26 4800 Zofingen",
+    "latitude": 47.2885856628418,
+    "longitude": 7.944751739501953,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-zurzach-bad-zurzach-ag",
+    "canton": "AG",
+    "searchText": "Hauptstrasse 50 5330 Bad Zurzach",
+    "label": "Hauptstrasse 50 5330 Bad Zurzach",
+    "latitude": 47.58754348754883,
+    "longitude": 8.293335914611816,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-wettingen-wettingen-ag",
+    "canton": "AG",
+    "searchText": "Alb. Zwyssigstrasse 76 5430 Wettingen",
+    "label": "Alb. Zwyssigstrasse 76 5430 Wettingen",
+    "latitude": 47.46394729614258,
+    "longitude": 8.325220108032227,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-baden-baden-ag",
+    "canton": "AG",
+    "searchText": "Oberstadtstrasse 4 5400 Baden",
+    "label": "Oberstadtstrasse 4 5400 Baden",
+    "latitude": 47.47050094604492,
+    "longitude": 8.304328918457031,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-dietikon-dietikon-ag",
+    "canton": "AG",
+    "searchText": "Bremgartnerstrasse 22 8953 Dietikon",
+    "label": "Bremgartnerstrasse 22 8953 Dietikon",
+    "latitude": 47.40289688110352,
+    "longitude": 8.400951385498047,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-appenzell-appenzell-ai",
+    "canton": "AI",
+    "searchText": "Marktgasse 2 9050 Appenzell",
+    "label": "Marktgasse 2 9050 Appenzell",
+    "latitude": 47.33116912841797,
+    "longitude": 9.409561157226562,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-hinterland-appenzell-a-rh-herisau-ar",
+    "canton": "AR",
+    "searchText": "Poststrasse 6 9102 Herisau",
+    "label": "Poststrasse 6 9100 Herisau",
+    "latitude": 47.38504409790039,
+    "longitude": 9.277950286865234,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-mittelland-buhler-ar",
+    "canton": "AR",
+    "searchText": " 9055 BÃ¼hler",
+    "label": "Unterer Steigbach 1 9055 Bühler",
+    "latitude": 47.37730026245117,
+    "longitude": 9.40167999267578,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-vorderland-rehetobel-ar",
+    "canton": "AR",
+    "searchText": "St. Gallerstrasse 11 9038 Rehetobel",
+    "label": "St. Gallerstrasse 11 9038 Rehetobel",
+    "latitude": 47.42753601074219,
+    "longitude": 9.482319831848145,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-jura-bernois-courtelary-be",
+    "canton": "BE",
+    "searchText": "Rue de la PrÃ©fecture 2c 2608 Courtelary",
+    "label": "Rue de la Préfecture 2 2608 Courtelary",
+    "latitude": 47.17943572998047,
+    "longitude": 7.074187278747559,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-bern-mittelland-bern-be",
+    "canton": "BE",
+    "searchText": "Laupenstrasse 18A 3008 Bern",
+    "label": "Laupenstrasse 18a 3008 Bern",
+    "latitude": 46.94740295410156,
+    "longitude": 7.435834884643555,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-emmental-langnau-im-emmental-be",
+    "canton": "BE",
+    "searchText": "Marktstrasse 7 3550 Langnau im Emmental",
+    "label": "Marktstrasse 7 3550 Langnau im Emmental",
+    "latitude": 46.94110107421875,
+    "longitude": 7.784700870513916,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-oberaargau-langenthal-be",
+    "canton": "BE",
+    "searchText": "Melchnaustrasse 28 4900 Langenthal",
+    "label": "Melchnaustrasse 28 4900 Langenthal",
+    "latitude": 47.21026992797851,
+    "longitude": 7.79236364364624,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-oberland-ost-interlaken-be",
+    "canton": "BE",
+    "searchText": "Schloss 8 3800 Interlaken",
+    "label": "Schloss 8 3800 Interlaken",
+    "latitude": 46.687286376953125,
+    "longitude": 7.864578247070312,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-oberland-west-thun-be",
+    "canton": "BE",
+    "searchText": "Scheibenstrasse 3 3600 Thun",
+    "label": "Scheibenstrasse 3 3600 Thun",
+    "latitude": 46.76016998291016,
+    "longitude": 7.624990940093994,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-seeland-biel-bienne-be",
+    "canton": "BE",
+    "searchText": "Seevorstadt 105 2502 Biel/Bienne",
+    "label": "Faubourg du Lac / Seevorstadt 105 2502 Biel/Bienne",
+    "latitude": 47.14035415649414,
+    "longitude": 7.242924690246582,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-basel-landschaft-arlesheim-bl",
+    "canton": "BL",
+    "searchText": "Kirchgasse 5 4144 Arlesheim",
+    "label": "Kirchgasse 5 4144 Arlesheim",
+    "latitude": 47.49251937866211,
+    "longitude": 7.621560096740723,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-basel-stadt-basel-bs",
+    "canton": "BS",
+    "searchText": "Rittergasse 11 4001 Basel",
+    "label": "Rittergasse 11 4051 Basel",
+    "latitude": 47.55561447143555,
+    "longitude": 7.593562126159668,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-canton-de-fribourg-zivilstandsamt-des-kantons-freiburg-fribourg-fr",
+    "canton": "FR",
+    "searchText": "Rue de l'AbbÃ©-Bovet 14 1701 Fribourg",
+    "label": "Rue de l'Abbé-Bovet 14 1700 Fribourg",
+    "latitude": 46.80384826660156,
+    "longitude": 7.154455661773682,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-campagne-et-rive-gauche-du-lac-vesenaz-ge",
+    "canton": "GE",
+    "searchText": "Chemin des Rayes 3 1222 VÃ©senaz",
+    "label": "Chemin des Rayes 26f 1222 Vésenaz",
+    "latitude": 46.23548889160156,
+    "longitude": 6.202938556671143,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-chene-bourg-thonex-veyrier-chene-bourg-ge",
+    "canton": "GE",
+    "searchText": "Avenue du Petit-Senn 46 1225 ChÃªne-Bourg",
+    "label": "Avenue PETIT-SENN 46 1225 Chêne-Bourg",
+    "latitude": 46.19198989868164,
+    "longitude": 6.195744037628174,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-bernex-bernex-ge",
+    "canton": "GE",
+    "searchText": "rue de Bernex 313 1233 Bernex",
+    "label": "Rue de Bernex 313 1233 Bernex",
+    "latitude": 46.17436218261719,
+    "longitude": 6.072144031524658,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-carouge-carouge-ge",
+    "canton": "GE",
+    "searchText": "Place du MarchÃ© 14 1227 Carouge",
+    "label": "Place du Marché 14 1227 Carouge GE",
+    "latitude": 46.184226989746094,
+    "longitude": 6.140051364898682,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-chene-bougeries-voirons-chene-bougeries-ge",
+    "canton": "GE",
+    "searchText": "route du Vallon 4 1224 ChÃªne-Bougeries",
+    "label": "Route du Vallon 4 1224 Chêne-Bougeries",
+    "latitude": 46.19708633422851,
+    "longitude": 6.1873064041137695,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-geneve-geneve-6-ge",
+    "canton": "GE",
+    "searchText": "rue de la Mairie 37 1211 GenÃ¨ve 6",
+    "label": "Rue de la Mairie 37 1207 Genève",
+    "latitude": 46.2016716003418,
+    "longitude": 6.159640312194824,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-lancy-grand-lancy-1-ge",
+    "canton": "GE",
+    "searchText": "Route du Grand-Lancy 39A 1212 Grand-Lancy 1",
+    "label": "Route du Grand-Lancy 39a 1212 Grand-Lancy",
+    "latitude": 46.18468475341797,
+    "longitude": 6.123132228851318,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-meyrin-mandement-vernier-meyrin-ge",
+    "canton": "GE",
+    "searchText": "rue des Boudines 2, CP 367 1217 Meyrin",
+    "label": "Rue des Boudines 2 1217 Meyrin",
+    "latitude": 46.23271942138672,
+    "longitude": 6.081543445587158,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-rive-droite-du-lac-chambesy-ge",
+    "canton": "GE",
+    "searchText": "Route de Pregny 47 1292 ChambÃ©sy",
+    "label": "Route de Pregny 47 1292 Chambésy",
+    "latitude": 46.237552642822266,
+    "longitude": 6.141238689422607,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-glarus-glarus-gl",
+    "canton": "GL",
+    "searchText": "Postgasse 29 8750 Glarus",
+    "label": "Postgasse 29 8750 Glarus",
+    "latitude": 47.04160690307617,
+    "longitude": 9.067429542541504,
+    "precision": "office-address"
+  },
+  {
+    "slug": "ufficio-di-stato-civile-bernina-poschiavo-gr",
+    "canton": "GR",
+    "searchText": "Via da Clalt 2 7742 Poschiavo",
+    "label": "Via da Clalt 2 7742 Poschiavo",
+    "latitude": 46.3233757019043,
+    "longitude": 10.055912971496582,
+    "precision": "office-address"
+  },
+  {
+    "slug": "ufficio-di-stato-civile-moesa-santa-maria-in-calanca-gr",
+    "canton": "GR",
+    "searchText": "A la Gescia 22 6541 Santa Maria in Calanca",
+    "label": "A la Gescia 22 6541 Sta. Maria in Calanca",
+    "latitude": 46.26185607910156,
+    "longitude": 9.145956039428713,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-albula-tiefencastel-gr",
+    "canton": "GR",
+    "searchText": "Stradung 26 7450 Tiefencastel",
+    "label": "Stradung 26 7450 Tiefencastel",
+    "latitude": 46.66242599487305,
+    "longitude": 9.577473640441896,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-en-scuol-gr",
+    "canton": "GR",
+    "searchText": "Bagnera 171 7550 Scuol",
+    "label": "Bagnera 171 7550 Scuol",
+    "latitude": 46.79710006713867,
+    "longitude": 10.302263259887695,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-imboden-domat-ems-gr",
+    "canton": "GR",
+    "searchText": "Plaz 7 7013 Domat/Ems",
+    "label": "Plaz 7 7013 Domat/Ems",
+    "latitude": 46.83635711669922,
+    "longitude": 9.451714515686035,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-landquart-landquart-gr",
+    "canton": "GR",
+    "searchText": "Bahnhofplatz 2a 7302 Landquart",
+    "label": "Bahnhofplatz 2a 7302 Landquart",
+    "latitude": 46.9673957824707,
+    "longitude": 9.555767059326172,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-maloja-st-moritz-gr",
+    "canton": "GR",
+    "searchText": "Via Maistra 12 7500 St. Moritz",
+    "label": "Via Maistra 12 7500 St. Moritz",
+    "latitude": 46.49789047241211,
+    "longitude": 9.839520454406738,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-plessur-chur-gr",
+    "canton": "GR",
+    "searchText": "Klostergasse 11 7001 Chur",
+    "label": "Klostergasse 11 7000 Chur",
+    "latitude": 46.849334716796875,
+    "longitude": 9.531723976135254,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-prattigau-davos-davos-platz-gr",
+    "canton": "GR",
+    "searchText": "Berglistutz 8 7270 Davos Platz",
+    "label": "Berglistutz 8 7270 Davos Platz",
+    "latitude": 46.79305648803711,
+    "longitude": 9.822137832641602,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-surselva-ilanz-gr",
+    "canton": "GR",
+    "searchText": "Glennerstrasse 22 a 7130 Ilanz",
+    "label": "Glennerstrasse 22 7130 Ilanz",
+    "latitude": 46.774192810058594,
+    "longitude": 9.20787525177002,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-viamala-thusis-gr",
+    "canton": "GR",
+    "searchText": "Rathaus 7430 Thusis",
+    "label": "Marktwiesenweg # 7430 Thusis",
+    "latitude": 46.69454574584961,
+    "longitude": 9.439947128295898,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-jura-delemont-ju",
+    "canton": "JU",
+    "searchText": "3, rue du 24-Septembre 2800 DelÃ©mont",
+    "label": "Rue du 24-Septembre 1 2800 Delémont",
+    "latitude": 47.3691291809082,
+    "longitude": 7.357061386108398,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-amt-willisau-willisau-lu",
+    "canton": "LU",
+    "searchText": "Schlossstrasse 5 6130 Willisau",
+    "label": "Schlossstrasse 5 6130 Willisau",
+    "latitude": 47.11961364746094,
+    "longitude": 7.991821765899658,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-ebikon-ebikon-lu",
+    "canton": "LU",
+    "searchText": "Riedmattstrasse 14 6031 Ebikon",
+    "label": "Riedmattstrasse 14 6030 Ebikon",
+    "latitude": 47.08330535888672,
+    "longitude": 8.342528343200684,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-emmen-emmenbrucke-lu",
+    "canton": "LU",
+    "searchText": "RÃ¼eggisingerstrasse 22 6020 EmmenbrÃ¼cke",
+    "label": "Rüeggisingerstrasse 22 6020 Emmenbrücke",
+    "latitude": 47.07811737060547,
+    "longitude": 8.27810287475586,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-hochdorf-hochdorf-lu",
+    "canton": "LU",
+    "searchText": "Hauptstrasse 3 6280 Hochdorf",
+    "label": "Hauptstrasse 3 6280 Hochdorf",
+    "latitude": 47.1663932800293,
+    "longitude": 8.291667938232422,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-horw-horw-lu",
+    "canton": "LU",
+    "searchText": "Gemeindehausplatz 1 6048 Horw",
+    "label": "Gemeindehausplatz 1 6048 Horw",
+    "latitude": 47.019100189208984,
+    "longitude": 8.309809684753418,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-kriens-kriens-lu",
+    "canton": "LU",
+    "searchText": "Stadtplatz 1 6011 Kriens",
+    "label": "Stadtplatz 1 6010 Kriens",
+    "latitude": 47.03411483764648,
+    "longitude": 8.280464172363281,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-luzern-luzern-lu",
+    "canton": "LU",
+    "searchText": "Stadt Luzern, Obergrundstrasse 1 6002 Luzern",
+    "label": "Obergrundstrasse 28 6003 Luzern",
+    "latitude": 47.04677200317383,
+    "longitude": 8.303895950317383,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-oberer-sempachersee-sempach-lu",
+    "canton": "LU",
+    "searchText": "Stadtstrasse 8 6204 Sempach",
+    "label": "Stadtstrasse 8 6204 Sempach",
+    "latitude": 47.13665390014648,
+    "longitude": 8.191082954406738,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-sursee-sursee-lu",
+    "canton": "LU",
+    "searchText": "Centralstrasse 9 6210 Sursee",
+    "label": "Centralstrasse 9 6210 Sursee",
+    "latitude": 47.171630859375,
+    "longitude": 8.106722831726074,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-wolhusen-wolhusen-lu",
+    "canton": "LU",
+    "searchText": "Menznauerstrasse 13 6110 Wolhusen",
+    "label": "Menznauerstrasse 13 6110 Wolhusen",
+    "latitude": 47.05982971191406,
+    "longitude": 8.073127746582031,
+    "precision": "office-address"
+  },
+  {
+    "slug": "etat-civil-des-montagnes-neuchateloises-le-locle-ne",
+    "canton": "NE",
+    "searchText": "HÃ´tel de Ville 2400 Le Locle",
+    "label": "Avenue de l'Hôtel-de-Ville 1 2400 Le Locle",
+    "latitude": 47.055755615234375,
+    "longitude": 6.745852470397949,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-boudry-ne",
+    "canton": "NE",
+    "searchText": "Rue Louis-Favre 37 2017 Boudry",
+    "label": "Rue Louis-Favre 37 2017 Boudry",
+    "latitude": 46.94872283935547,
+    "longitude": 6.835693836212158,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-l-arrondissement-de-neuchatel-neuchatel-ne",
+    "canton": "NE",
+    "searchText": "Rue de l'HÃ´tel-de-Ville 1 2000 NeuchÃ¢tel",
+    "label": "Rue de l'Hôtel-de-Ville 2 2000 Neuchâtel",
+    "latitude": 46.99176788330078,
+    "longitude": 6.930855751037598,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-val-de-ruz-cernier-ne",
+    "canton": "NE",
+    "searchText": "Rue de l'Epervier 6 2053 Cernier",
+    "label": "Rue de l'Epervier 6 2053 Cernier",
+    "latitude": 47.059669494628906,
+    "longitude": 6.902095317840576,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-val-de-travers-les-verrieres-ne",
+    "canton": "NE",
+    "searchText": "Grand-Bourgeau 61 2126 Les VerriÃ¨res",
+    "label": "Grand-Bourgeau 61 2126 Les Verrières",
+    "latitude": 46.90394592285156,
+    "longitude": 6.479938983917236,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-nidwalden-stans-nw",
+    "canton": "NW",
+    "searchText": "Marktgasse 3 6371 Stans",
+    "label": "Marktgasse 3 6370 Stans",
+    "latitude": 46.956634521484375,
+    "longitude": 8.366719245910645,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-obwalden-sarnen-ow",
+    "canton": "OW",
+    "searchText": "BrÃ¼nigstrasse 180a 6060 Sarnen",
+    "label": "Brünigstrasse 180a 6060 Sarnen",
+    "latitude": 46.89104461669922,
+    "longitude": 8.24435043334961,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-rheintal-altstatten-sg-sg",
+    "canton": "SG",
+    "searchText": "Rathausplatz 9450 AltstÃ¤tten SG",
+    "label": "Rathausplatz 1 9450 Altstätten SG",
+    "latitude": 47.37799835205078,
+    "longitude": 9.541059494018556,
+    "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-st-gallen-st-gallen-sg",
+    "canton": "SG",
+    "searchText": " 9001 St. Gallen",
+    "label": "St.Jakob-Strasse 2 9000 St. Gallen",
+    "latitude": 47.428321838378906,
+    "longitude": 9.37763500213623,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-gossau-gossau-sg",
+    "canton": "SG",
+    "searchText": " 9201 Gossau",
+    "label": "Gossauerrietweg 18.1 8625 Gossau ZH",
+    "latitude": 47.30384826660156,
+    "longitude": 8.743910789489746,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-rapperswil-jona-jona-sg",
+    "canton": "SG",
+    "searchText": "St. Gallerstrasse 40 8645 Jona",
+    "label": "St. Gallerstrasse 40 8645 Jona",
+    "latitude": 47.230037689208984,
+    "longitude": 8.837416648864746,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-rorschach-rorschach-sg",
+    "canton": "SG",
+    "searchText": "Rathaus, Hauptstrasse 29 9400 Rorschach",
+    "label": "Hauptstrasse 29 9400 Rorschach",
+    "latitude": 47.47788619995117,
+    "longitude": 9.495000839233398,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-sarganserland-wangs-sg",
+    "canton": "SG",
+    "searchText": "Rathaus 7323 Wangs",
+    "label": "Neuwangserstrasse 1 7323 Wangs",
+    "latitude": 47.033782958984375,
+    "longitude": 9.432035446166992,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-toggenburg-wattwil-sg",
+    "canton": "SG",
+    "searchText": "GrÃ¼enaustrasse 7 9630 Wattwil",
+    "label": "Grüenaustrasse 7 9630 Wattwil",
+    "latitude": 47.302833557128906,
+    "longitude": 9.084575653076172,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-uznach-uznach-sg",
+    "canton": "SG",
+    "searchText": "Obergasse 24 8730 Uznach",
+    "label": "Obergasse 24 8730 Uznach",
+    "latitude": 47.22482681274414,
+    "longitude": 8.986425399780273,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-uzwil-uzwil-sg",
+    "canton": "SG",
+    "searchText": "Stickereiplatz 1 9240 Uzwil",
+    "label": "Stickereiplatz 1 9240 Uzwil",
+    "latitude": 47.43601989746094,
+    "longitude": 9.13486385345459,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-werdenberg-buchs-sg-1-sg",
+    "canton": "SG",
+    "searchText": "St.Gallerstrasse 2 9471 Buchs SG 1",
+    "label": "St. Gallerstrasse 68 9470 Buchs SG",
+    "latitude": 47.17532730102539,
+    "longitude": 9.466408729553224,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-wil-wil-sg",
+    "canton": "SG",
+    "searchText": "Rathaus, Marktgasse 58 9500 Wil",
+    "label": "Marktgasse 58 9500 Wil SG",
+    "latitude": 47.467037200927734,
+    "longitude": 9.04892635345459,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-schaffhausen-schaffhausen-sh",
+    "canton": "SH",
+    "searchText": "Safrangasse 8 8200 Schaffhausen",
+    "label": "Safrangasse 8 8200 Schaffhausen",
+    "latitude": 47.69739532470703,
+    "longitude": 8.635194778442383,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-dorneck-thierstein-dornach-so",
+    "canton": "SO",
+    "searchText": "Amthausstrasse 7 4143 Dornach",
+    "label": "Amthausstrasse 7 4143 Dornach",
+    "latitude": 47.488136291503906,
+    "longitude": 7.610576152801514,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-olten-gosgen-olten-so",
+    "canton": "SO",
+    "searchText": "Hauptgasse 25 4603 Olten",
+    "label": "Hauptgasse 25 4600 Olten",
+    "latitude": 47.34977340698242,
+    "longitude": 7.903409004211426,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-thal-gau-klus-balsthal-so",
+    "canton": "SO",
+    "searchText": "Schmelzihof, Wengimattstrasse 2 4710 Klus-Balsthal",
+    "label": "Wengimattstrasse 2 4710 Balsthal",
+    "latitude": 47.30450820922851,
+    "longitude": 7.69424295425415,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-solothurn-solothurn-so",
+    "canton": "SO",
+    "searchText": "Patriotenweg 9 4502 Solothurn",
+    "label": "Patriotenweg 9 4500 Solothurn",
+    "latitude": 47.205509185791016,
+    "longitude": 7.537278175354004,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-ausserschwyz-pfaffikon-sz",
+    "canton": "SZ",
+    "searchText": "Unterdorfstrasse 9 8808 PfÃ¤ffikon",
+    "label": "Unterdorfstrasse 9 8808 Pfäffikon SZ",
+    "latitude": 47.20418167114258,
+    "longitude": 8.774945259094238,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-innerschwyz-schwyz-sz",
+    "canton": "SZ",
+    "searchText": "Herrengasse 17 6431 Schwyz",
+    "label": "Herrengasse 17 6430 Schwyz",
+    "latitude": 47.02183151245117,
+    "longitude": 8.651766777038574,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-thurgau-ost-amriswil-tg",
+    "canton": "TG",
+    "searchText": "Zielweg 1 8580 Amriswil",
+    "label": "Zielweg 1 8580 Amriswil",
+    "latitude": 47.54691696166992,
+    "longitude": 9.300780296325684,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-thurgau-west-frauenfeld-tg",
+    "canton": "TG",
+    "searchText": "Bankplatz 1 8510 Frauenfeld",
+    "label": "Bankplatz 1 8500 Frauenfeld",
+    "latitude": 47.55699157714844,
+    "longitude": 8.898421287536621,
+    "precision": "office-address"
+  },
+  {
+    "slug": "servizio-circondariale-dello-stato-civile-di-bellinzona-bellinzona-ti",
+    "canton": "TI",
+    "searchText": "Via Lugano 4 6500 Bellinzona",
+    "label": "Via Lugano 4 6500 Bellinzona",
+    "latitude": 46.1893196105957,
+    "longitude": 9.022430419921877,
+    "precision": "office-address"
+  },
+  {
+    "slug": "servizio-circondariale-dello-stato-civile-di-locarno-locarno-ti",
+    "canton": "TI",
+    "searchText": "Via della Posta 9 6600 Locarno",
+    "label": "Via della Posta 9 6600 Locarno",
+    "latitude": 46.1680908203125,
+    "longitude": 8.797588348388672,
+    "precision": "office-address"
+  },
+  {
+    "slug": "servizio-circondariale-dello-stato-civile-di-lugano-breganzona-ti",
+    "canton": "TI",
+    "searchText": "Via Dottor Giovanni Polar 46 6932 Breganzona",
+    "label": "Via Dott. G. Polar 46 6932 Breganzona",
+    "latitude": 46.00909423828125,
+    "longitude": 8.929388046264648,
+    "precision": "office-address"
+  },
+  {
+    "slug": "servizio-circondariale-dello-stato-civile-di-mendrisio-mendrisio-ti",
+    "canton": "TI",
+    "searchText": "Via Municipio 13 6850 Mendrisio",
+    "label": "Via Municipio 13 6850 Mendrisio",
+    "latitude": 45.871620178222656,
+    "longitude": 8.986285209655762,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-uri-altdorf-ur",
+    "canton": "UR",
+    "searchText": "Marktgasse 6 6460 Altdorf",
+    "label": "Marktgasse 6 6460 Altdorf UR",
+    "latitude": 46.88206100463867,
+    "longitude": 8.645040512084961,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
+    "canton": "VD",
+    "searchText": "Avenue de SÃ©velin 46 1014 Lausanne",
+    "label": "Avenue de Sévelin 46 1004 Lausanne",
+    "latitude": 46.52289962768555,
+    "longitude": 6.618902206420898,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-martigny-martigny-vs",
+    "canton": "VS",
+    "searchText": "Avenue du LÃ©man 29 1920 Martigny",
+    "label": "Avenue de la Gare 29 1920 Martigny",
+    "latitude": 46.10480499267578,
+    "longitude": 7.077183246612549,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-sierre-sierre-vs",
+    "canton": "VS",
+    "searchText": "av. de France 21 3960 Sierre",
+    "label": "Avenue de France 21 3960 Sierre",
+    "latitude": 46.2905387878418,
+    "longitude": 7.524289608001709,
+    "precision": "office-address"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-sion-sion-vs",
+    "canton": "VS",
+    "searchText": "rue de Conthey 21 1950 Sion",
+    "label": "Rue de Conthey 1 1950 Sion",
+    "latitude": 46.23345947265625,
+    "longitude": 7.360318660736084,
+    "precision": "office-address"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-monthey-monthey-vs",
+    "canton": "VS",
+    "searchText": "Avenue du Simplon 32 A 1870 Monthey",
+    "label": "Avenue du Simplon 32 1870 Monthey",
+    "latitude": 46.24815368652344,
+    "longitude": 6.9548444747924805,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-brig-glis-brig-glis-vs",
+    "canton": "VS",
+    "searchText": "Alte Simplonstrasse 26 3900 Brig-Glis",
+    "label": "Alte Simplonstrasse 26 3900 Brig",
+    "latitude": 46.31558609008789,
+    "longitude": 7.99039888381958,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-des-kreises-visp-visp-vs",
+    "canton": "VS",
+    "searchText": "St. Martiniplatz 1 3930 Visp",
+    "label": "St. Martiniplatz 1 3930 Visp",
+    "latitude": 46.289344787597656,
+    "longitude": 7.881553649902344,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-baar-baar-zg",
+    "canton": "ZG",
+    "searchText": "Rathausstrasse 2 6341 Baar",
+    "label": "Rathausstrasse 2 6340 Baar",
+    "latitude": 47.19463348388672,
+    "longitude": 8.526504516601562,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-cham-cham-zg",
+    "canton": "ZG",
+    "searchText": "Mandelhof 6330 Cham",
+    "label": "Mandelhof # 6330 Cham",
+    "latitude": 47.180625915527344,
+    "longitude": 8.458378791809082,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-kreis-zug-zug-zg",
+    "canton": "ZG",
+    "searchText": "Gubelstrasse 22 6300 Zug",
+    "label": "Gubelstrasse 22 6300 Zug",
+    "latitude": 47.17560577392578,
+    "longitude": 8.514057159423828,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-dielsdorf-dielsdorf-zh",
+    "canton": "ZH",
+    "searchText": "MÃ¼hlestrasse 4 8157 Dielsdorf",
+    "label": "Mühlestrasse 4 8157 Dielsdorf",
+    "latitude": 47.4832763671875,
+    "longitude": 8.45230484008789,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-volketswil-volketswil-zh",
+    "canton": "ZH",
+    "searchText": "Zentralstrasse 21 8604 Volketswil",
+    "label": "Zentralstrasse 21 8604 Volketswil",
+    "latitude": 47.388877868652344,
+    "longitude": 8.68364143371582,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-zollikon-zollikon-zh",
+    "canton": "ZH",
+    "searchText": "Bergstrasse 20 8702 Zollikon",
+    "label": "Bergstrasse 20 8702 Zollikon",
+    "latitude": 47.34089660644531,
+    "longitude": 8.577095985412598,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-zurich-zurich-zh",
+    "canton": "ZH",
+    "searchText": "Stadthausquai 17 8001 Zürich",
+    "label": "Stadthausquai 17 8001 Zürich",
+    "latitude": 47.36931610107422,
+    "longitude": 8.541576385498047,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
+    "canton": "ZH",
+    "searchText": "Kanzleistrasse 2 8451 Kleinandelfingen",
+    "label": "Kanzleistrasse 2 8451 Kleinandelfingen",
+    "latitude": 47.59943389892578,
+    "longitude": 8.682268142700195,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-bulach-bulach-zh",
+    "canton": "ZH",
+    "searchText": "Allmendstrasse 6 8180 BÃ¼lach",
+    "label": "Allmendstrasse 6 8180 Bülach",
+    "latitude": 47.51570129394531,
+    "longitude": 8.53707504272461,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-dietikon-dietikon-zh",
+    "canton": "ZH",
+    "searchText": "Bremgartnerstrasse 22 8953 Dietikon",
+    "label": "Bremgartnerstrasse 22 8953 Dietikon",
+    "latitude": 47.40289688110352,
+    "longitude": 8.400951385498047,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-dubendorf-dubendorf-zh",
+    "canton": "ZH",
+    "searchText": "Usterstrasse 2 8600 DÃ¼bendorf",
+    "label": "Usterstrasse 2 8600 Dübendorf",
+    "latitude": 47.39693069458008,
+    "longitude": 8.618249893188477,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-furttal-regensdorf-zh",
+    "canton": "ZH",
+    "searchText": "Watterstrasse 116 8105 Regensdorf",
+    "label": "Watterstrasse 116 8105 Regensdorf",
+    "latitude": 47.4339485168457,
+    "longitude": 8.469676971435547,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-horgen-horgen-zh",
+    "canton": "ZH",
+    "searchText": "Bahnhofstrasse 10 8810 Horgen",
+    "label": "Bahnhofstrasse 10 8810 Horgen",
+    "latitude": 47.260955810546875,
+    "longitude": 8.597613334655762,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-illnau-effretikon-effretikon-zh",
+    "canton": "ZH",
+    "searchText": "MÃ¤rtplatz 29 8307 Effretikon",
+    "label": "Märtplatz 29 8307 Effretikon",
+    "latitude": 47.42748260498047,
+    "longitude": 8.68616008758545,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-kloten-kloten-zh",
+    "canton": "ZH",
+    "searchText": "Kirchgasse 7 8302 Kloten",
+    "label": "Kirchgasse 7 8302 Kloten",
+    "latitude": 47.45112991333008,
+    "longitude": 8.58259105682373,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-kusnacht-kusnacht-zh-zh",
+    "canton": "ZH",
+    "searchText": "Obere Dorfstrasse 32 8700 KÃ¼snacht ZH",
+    "label": "Obere Dorfstrasse 32 8700 Küsnacht ZH",
+    "latitude": 47.31747055053711,
+    "longitude": 8.584160804748535,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-mannedorf-mannedorf-zh",
+    "canton": "ZH",
+    "searchText": "Bahnhofstrasse 10 8708 MÃ¤nnedorf",
+    "label": "Bahnhofstrasse 10 8708 Männedorf",
+    "latitude": 47.25363540649414,
+    "longitude": 8.69146728515625,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-pfaffikon-pfaffikon-zh-zh",
+    "canton": "ZH",
+    "searchText": " 8330 PfÃ¤ffikon ZH",
+    "label": "Pfaffberg 1r 8330 Pfäffikon ZH",
+    "latitude": 47.36936569213867,
+    "longitude": 8.793291091918945,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-ruti-zh-ruti-zh-zh",
+    "canton": "ZH",
+    "searchText": "Breitenhofstrasse 30 8630 RÃ¼ti ZH",
+    "label": "Breitenhofstrasse 30 8630 Rüti ZH",
+    "latitude": 47.25642013549805,
+    "longitude": 8.85014820098877,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-sihltal-albis-adliswil-zh",
+    "canton": "ZH",
+    "searchText": "ZÃ¼richstrasse 10 8134 Adliswil",
+    "label": "Zürichstrasse 10 8134 Adliswil",
+    "latitude": 47.31291198730469,
+    "longitude": 8.527719497680664,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-thalwil-ruschlikon-kilchberg-thalwil-zh",
+    "canton": "ZH",
+    "searchText": "alte Landstrasse 112 8800 Thalwil",
+    "label": "Alte Landstrasse 112 8800 Thalwil",
+    "latitude": 47.292354583740234,
+    "longitude": 8.565345764160156,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-uster-uster-zh",
+    "canton": "ZH",
+    "searchText": "Bahnhofstrasse 17 8610 Uster",
+    "label": "Bahnhofstrasse 17 8610 Uster",
+    "latitude": 47.34858703613281,
+    "longitude": 8.718975067138672,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-wadenswil-wadenswil-zh",
+    "canton": "ZH",
+    "searchText": "Florhofstrasse 6 8820 WÃ¤denswil",
+    "label": "Florhofstrasse 6 8820 Wädenswil",
+    "latitude": 47.23069763183594,
+    "longitude": 8.67138671875,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-wetzikon-wetzikon-zh",
+    "canton": "ZH",
+    "searchText": "Bahnhofstrasse 167 8622 Wetzikon",
+    "label": "Bahnhofstrasse 167 8620 Wetzikon ZH",
+    "latitude": 47.32749557495117,
+    "longitude": 8.801407814025879,
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-winterthur-winterthur-zh",
+    "canton": "ZH",
+    "searchText": "Pionierstrasse 7 8403 Winterthur",
+    "label": "Pionierstrasse 7 8400 Winterthur",
+    "latitude": 47.498069763183594,
+    "longitude": 8.719574928283691,
+    "precision": "office-address"
+  }
+]
