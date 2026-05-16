@@ -461,7 +461,6 @@ export function HomePageClient() {
             <p className="mt-5 max-w-2xl text-lg leading-8 text-soft-ink">{t.subheadline}</p>
             <div className="mt-7 max-w-none rounded-xl border border-linen bg-white p-4 shadow-soft sm:p-5">
               <LocalizedSearchForm t={t} />
-              <p className="mt-3 text-xs leading-5 text-soft-ink/80">{t.mapBridge}</p>
               <div className="mt-2">
                 <h2 className="text-xl font-semibold text-ink">{t.mapTitle}</h2>
                 <LocalizedSwissMap t={t} />
@@ -834,40 +833,89 @@ function UnifiedMobileLanguageChooser({
 function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
   const privacyNotice = "privacyNotice" in t ? t.privacyNotice : translations.de.privacyNotice;
   const marketingOptIn = "marketingOptIn" in t ? t.marketingOptIn : translations.de.marketingOptIn;
+  const weekdays = ["Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const searchSuggestions = useMemo(() => {
+    const suggestions = new Set<string>();
+
+    swissRegistryOffices.forEach((office) => {
+      suggestions.add(office.city);
+      suggestions.add(office.postalCode);
+      suggestions.add(`${office.postalCode} ${office.city}`);
+      office.responsibleMunicipalities.forEach((municipality) => suggestions.add(municipality));
+    });
+
+    return Array.from(suggestions).sort((a, b) => a.localeCompare(b, "de-CH"));
+  }, []);
 
   return (
     <form action="/standesamt-finden" className="grid gap-3">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
-          {t.canton}
-          <select name="canton" className="focus-ring h-11 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">{t.allCantons}</option>
-            {registryCantons.map((canton) => (
-              <option key={canton.code} value={canton.code}>
-                {canton.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
-          {t.city}
-          <input name="query" inputMode="search" placeholder={t.cityPlaceholder} className="focus-ring h-11 rounded-lg border border-linen px-3 text-soft-ink" />
-        </label>
-        <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
-          {t.date}
-          <input name="weddingDate" type="date" className="focus-ring h-11 rounded-lg border border-linen px-3 text-soft-ink" />
-        </label>
-        <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
-          {t.email}
-          <input name="email" type="email" placeholder="name@example.ch" className="focus-ring h-11 rounded-lg border border-linen px-3 text-soft-ink" />
-        </label>
-        <label className="flex gap-3 text-sm leading-6 text-soft-ink sm:col-span-2 lg:col-span-4">
-          <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
-          <span>{marketingOptIn}</span>
-        </label>
-        <button className="focus-ring h-11 rounded-lg bg-sage px-5 font-semibold text-white transition hover:bg-sage/90 sm:col-span-2 lg:col-span-4">
-          {t.searchButton}
-        </button>
+      <div className="grid gap-3">
+        <div className="grid items-end gap-3 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1.55fr)_minmax(180px,240px)]">
+          <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
+            Stadt oder PLZ
+            <input name="query" inputMode="search" list="municipality-search-suggestions" placeholder={t.cityPlaceholder} className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+            <datalist id="municipality-search-suggestions">
+              {searchSuggestions.map((suggestion) => (
+                <option key={suggestion} value={suggestion} />
+              ))}
+            </datalist>
+          </label>
+          <fieldset className="min-w-0 text-sm font-medium text-ink">
+            <legend className="mb-1.5">Gewünschter Zeitraum</legend>
+            <div className="grid grid-cols-2 gap-2">
+              <input name="dateStart" type="date" aria-label="Von" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+              <input name="dateEnd" type="date" aria-label="Bis" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+            </div>
+          </fieldset>
+          <button className="focus-ring h-11 rounded-lg bg-sage px-5 font-semibold text-white transition hover:bg-sage/90">
+            {t.searchButton}
+          </button>
+        </div>
+        <details className="group rounded-lg border border-linen bg-paper/45 px-3 py-2">
+          <summary className="cursor-pointer list-none text-sm font-semibold text-sage marker:hidden">
+            Zusatzfilter anzeigen
+            <span className="ml-1 text-soft-ink transition group-open:hidden">+</span>
+            <span className="ml-1 hidden text-soft-ink transition group-open:inline">-</span>
+          </summary>
+          <div className="mt-3 grid gap-3 border-t border-linen pt-3">
+            <div className="grid gap-3 md:grid-cols-2">
+              <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
+                {t.canton}
+                <select name="canton" className="focus-ring h-11 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink">
+                  <option value="">{t.allCantons}</option>
+                  {registryCantons.map((canton) => (
+                    <option key={canton.code} value={canton.code}>
+                      {canton.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <div className="grid min-w-0 gap-2">
+                <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
+                  {t.email}
+                  <input name="email" type="email" placeholder="name@example.ch" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+                </label>
+                <label className="flex gap-3 text-sm leading-6 text-soft-ink">
+                  <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+                  <span>{marketingOptIn}</span>
+                </label>
+              </div>
+            </div>
+            <fieldset className="grid gap-2 text-sm font-medium text-ink">
+              <legend>Bevorzugte Trautage</legend>
+              <div className="flex flex-wrap gap-2">
+                {weekdays.map((day) => (
+                  <label key={day} className="cursor-pointer">
+                    <input type="checkbox" name="preferredWeekdays" value={day} className="peer sr-only" />
+                    <span className="inline-flex min-w-11 justify-center rounded-full border border-linen bg-white px-3 py-2 text-sm font-semibold text-soft-ink transition peer-checked:border-sage peer-checked:bg-sage peer-checked:text-white">
+                      {day}
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+        </details>
       </div>
       <p className="text-[11px] leading-5 text-soft-ink/75">{privacyNotice}</p>
     </form>
@@ -897,7 +945,7 @@ function LocalizedSwissMap({ t }: { t: (typeof translations)[Language] }) {
         width: selectedShape.bounds[2] - selectedShape.bounds[0] + 28,
         height: selectedShape.bounds[3] - selectedShape.bounds[1] + 28
       }
-    : { x: 0, y: 0, width: 1000, height: 700 };
+    : { x: -35, y: 120, width: 1070, height: 470 };
   const appliedZoom = selectedShape ? zoomLevel : 1;
   const viewBoxWidth = baseViewBox.width / appliedZoom;
   const viewBoxHeight = baseViewBox.height / appliedZoom;
@@ -954,7 +1002,7 @@ function LocalizedSwissMap({ t }: { t: (typeof translations)[Language] }) {
             -
           </button>
         </div>
-        <svg viewBox={viewBox} role="img" aria-label="Schweizerkarte mit auswählbaren Kantonen" className="h-[220px] w-full transition-all duration-500 sm:h-[310px] lg:h-[380px]">
+        <svg viewBox={viewBox} role="img" aria-label="Schweizerkarte mit auswählbaren Kantonen" className="h-[150px] w-full transition-all duration-500 sm:h-[200px] lg:h-[240px]">
           <defs>
             <filter id="mapShadow" x="-20%" y="-20%" width="140%" height="140%">
               <feDropShadow dx="0" dy="10" stdDeviation="10" floodColor="#24211f" floodOpacity="0.12" />

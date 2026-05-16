@@ -1,4 +1,6 @@
 import { registryCantons, swissRegistryOffices } from "@/lib/registry-data";
+import { repairText } from "@/lib/search-experience";
+import type { SwissRegistryOffice } from "@/lib/types";
 import postalCodes from "switzerland-postal-codes/dist/postal-codes-full.json";
 
 type PostalCodeEntry = {
@@ -11,7 +13,7 @@ type PostalCodeEntry = {
 const swissPostalCodes = postalCodes as Record<string, PostalCodeEntry[]>;
 
 const normalize = (value: string) =>
-  value
+  repairText(value)
     .toLowerCase()
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
@@ -32,6 +34,24 @@ const getPostalPlaces = (value: string) => {
     canton: normalize(entry.canton)
   }));
 };
+
+function repairOffice(office: SwissRegistryOffice): SwissRegistryOffice {
+  return {
+    ...office,
+    name: repairText(office.name),
+    cantonName: repairText(office.cantonName),
+    city: repairText(office.city),
+    addressLine1: repairText(office.addressLine1),
+    postBox: repairText(office.postBox),
+    openingHours: repairText(office.openingHours),
+    ceremonyTimes: repairText(office.ceremonyTimes),
+    wheelchairAccessible: repairText(office.wheelchairAccessible),
+    parking: repairText(office.parking),
+    mediaAlt: repairText(office.mediaAlt),
+    mediaLicenseNote: repairText(office.mediaLicenseNote),
+    responsibleMunicipalities: office.responsibleMunicipalities.map(repairText)
+  };
+}
 
 export function searchRegistryOffices(params: {
   canton?: string;
@@ -86,5 +106,5 @@ export function searchRegistryOffices(params: {
     const matchesPhone = params.phoneAvailable !== "on" || Boolean(office.phone);
 
     return matchesCanton && matchesText && matchesPostal && matchesEmail && matchesPhone;
-  });
+  }).map(repairOffice);
 }

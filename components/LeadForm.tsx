@@ -1,4 +1,5 @@
 import { registryCantons } from "@/lib/registry-data";
+import { repairText } from "@/lib/search-experience";
 
 export function ChecklistForm({ sourcePage, officeSlug }: { sourcePage: string; officeSlug?: string }) {
   return (
@@ -26,7 +27,7 @@ export function ChecklistForm({ sourcePage, officeSlug }: { sourcePage: string; 
           <select name="cantonSlug" className="focus-ring rounded-lg border border-linen px-3 py-3">
             <option value="">Offen</option>
             {registryCantons.map((canton) => (
-              <option key={canton.code} value={canton.code}>{canton.name}</option>
+              <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>
             ))}
           </select>
         </label>
@@ -137,7 +138,7 @@ export function FamilyLawLeadForm({ sourcePage }: { sourcePage: string }) {
           <select name="canton" required className="focus-ring rounded-lg border border-linen px-3 py-3">
             <option value="">Bitte auswählen</option>
             {registryCantons.map((canton) => (
-              <option key={canton.code} value={canton.code}>{canton.name}</option>
+              <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>
             ))}
           </select>
         </label>

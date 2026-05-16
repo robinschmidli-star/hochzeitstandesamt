@@ -33,7 +33,7 @@ async function saveSearchLead(params: Record<string, string | string[] | undefin
     source_page: "/standesamt-finden",
     first_name: "",
     last_name: "",
-    email: "",
+    email: getParam(params, "email"),
     phone: "",
     address: "",
     canton: getParam(params, "canton"),
@@ -47,6 +47,7 @@ async function saveSearchLead(params: Record<string, string | string[] | undefin
     message: "",
     consent_privacy: false,
     consent_forwarding: false,
+    marketing_opt_in: getParam(params, "marketingOptIn") === "yes",
     created_at: new Date().toISOString(),
     status: "new"
   };
@@ -79,7 +80,7 @@ export default async function RegistrySearchPage({
       <section className="rounded-xl border border-linen bg-white p-4 shadow-soft sm:p-5">
         <SearchForm compact embedded />
         <div className="mt-4">
-          <SwissMap embedded />
+          <SwissMap embedded selectedCanton={canton} />
         </div>
       </section>
       <section className="grid gap-4">
