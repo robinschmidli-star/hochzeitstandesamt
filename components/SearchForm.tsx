@@ -57,7 +57,7 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
           <span className="ml-1 hidden text-soft-ink transition group-open:inline">-</span>
         </summary>
         <div className="mt-3 grid gap-3 border-t border-linen pt-3">
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid items-start gap-3 md:grid-cols-2">
             <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
               Kanton
               <select name="canton" className="focus-ring h-12 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink">
@@ -69,21 +69,19 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
                 ))}
               </select>
             </label>
-            <div className="grid min-w-0 gap-2">
-              <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
-                E-Mail für Checkliste (optional)
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="name@example.ch"
-                  className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink"
-                />
-              </label>
-              <label className="flex gap-3 text-sm leading-6 text-soft-ink">
-                <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
-                <span>Ich möchte passende Tipps und Angebote rund um meine Hochzeit per E-Mail erhalten. Ich kann mich jederzeit abmelden.</span>
-              </label>
-            </div>
+            <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+              E-Mail für Checkliste (optional)
+              <input
+                name="email"
+                type="email"
+                placeholder="name@example.ch"
+                className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink"
+              />
+            </label>
+            <label className="flex gap-3 text-sm leading-6 text-soft-ink md:col-span-2">
+              <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+              <span>Ich möchte passende Tipps und Angebote rund um meine Hochzeit per E-Mail erhalten. Ich kann mich jederzeit abmelden.</span>
+            </label>
           </div>
           <fieldset className="grid gap-2 text-sm font-medium text-ink">
             <legend>Bevorzugte Trautage</legend>

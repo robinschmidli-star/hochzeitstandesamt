@@ -50,11 +50,11 @@ export function SearchFilters({ params }: { params: SearchParams }) {
             <option value="thursday">Donnerstag</option>
           </select>
         </label>
-        <label className="flex gap-3 text-sm text-soft-ink">
-          <input name="saturdayOnly" value="true" defaultChecked={params.saturdayOnly === "true"} type="checkbox" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
-          Nur Samstagstrauungen
-        </label>
         <div className="grid gap-2">
+          <label className="flex gap-3 text-sm text-soft-ink">
+            <input name="saturdayOnly" value="true" defaultChecked={params.saturdayOnly === "true"} type="checkbox" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+            Nur Samstagstrauungen
+          </label>
           {[
             ["evening", "Abendtrauung möglich"],
             ["outdoor", "Trauung im Freien"],

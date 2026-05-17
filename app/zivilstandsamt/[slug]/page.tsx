@@ -1,5 +1,6 @@
 ﻿import { notFound } from "next/navigation";
 import { ChecklistForm } from "@/components/LeadForm";
+import { ResponsibleMunicipalities } from "@/components/ResponsibleMunicipalities";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Faq } from "@/components/Faq";
 import { ceremonyVenues } from "@/lib/ceremony-venues";
@@ -104,7 +105,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
   const faq = [
     {
       question: `Für welche Gemeinden ist ${cleanOffice.name} zuständig?`,
-      answer: `${cleanOffice.name} ist in dieser Liste unter anderem für ${cleanOffice.responsibleMunicipalities.slice(0, 12).join(", ")} zuständig.`
+      answer: `${cleanOffice.name} ist für die Ehevorbereitung und zivile Trauung der aufgeführten Gemeinden zuständig, unter anderem für ${cleanOffice.responsibleMunicipalities.slice(0, 12).join(", ")}.`
     },
     {
       question: "Welche Dokumente brauche ich?",
@@ -244,22 +245,13 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
         </figure>
       ) : null}
 
-      <section className="grid gap-5 rounded-xl border border-linen bg-white p-6 shadow-soft">
-        <h2 className="text-2xl font-semibold text-ink">Zuständige Gemeinden</h2>
-        <div className="flex flex-wrap gap-2">
-          {cleanOffice.responsibleMunicipalities.map((municipality) => (
-            <span key={municipality} className="rounded-full bg-linen px-3 py-1 text-sm text-soft-ink">
-              {municipality}
-            </span>
-          ))}
-        </div>
-      </section>
+      <ResponsibleMunicipalities municipalities={cleanOffice.responsibleMunicipalities} />
 
       <section className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-xl border border-linen bg-linen/70 p-6">
           <h2 className="text-2xl font-semibold text-ink">Nächste Schritte</h2>
           <ol className="mt-4 grid gap-3 text-sm leading-6 text-soft-ink">
-            <li>1. Prüfe, ob eure Gemeinde diesem Zivilstandskreis zugeordnet ist.</li>
+            <li>1. Schau nach, ob eure Wohn- oder Wunschgemeinde in der Liste oben aufgeführt ist.</li>
             <li>2. Kontaktiere das Amt und frage die persönliche Dokumentenliste an.</li>
             <li>3. Plane genug Zeit für ausländische Dokumente, Übersetzungen oder Beglaubigungen ein.</li>
             <li>4. Vereinbare den Trautermin erst, wenn die Ehevorbereitung bestätigt ist.</li>

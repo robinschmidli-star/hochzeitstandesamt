@@ -152,6 +152,12 @@ function getOfficeTags(office: SwissRegistryOffice) {
   if (/(park|wald|garten|natur|see|berge)/.test(text)) tags.add("nature");
   if (/(zivilstandsamt|regionales|office)/.test(text)) tags.add("romantic");
   if (/(modern|zentrum|stadthaus)/.test(text)) tags.add("modern");
+  if (
+    venues.some((venue) => (venue.highlightLevel ?? 0) >= 3) ||
+    venues.some((venue) => normalize(repairText(venue.beautyStatus ?? "")).includes("schon")) ||
+    venues.some((venue) => (venue.tags ?? []).some((tag) => ["featured", "premium", "castle", "lake", "park", "nature", "historic", "schloss", "see", "natur", "historisch"].includes(normalize(repairText(tag))))) ||
+    /(schloss|see|park|garten|panorama|altstadt|histor|palazzo|castello|zunfthaus|rathaus)/.test(text)
+  ) tags.add("featured");
 
   return Array.from(tags);
 }

@@ -21,23 +21,23 @@ export function ChecklistForm({ sourcePage, officeSlug }: { sourcePage: string; 
           <input name="email" type="email" required className="focus-ring rounded-lg border border-linen px-3 py-3" />
         </label>
       </div>
-      <div className="grid gap-3 sm:grid-cols-3">
-        <label className="grid gap-2 text-sm font-medium">
+      <div className="grid gap-3 sm:grid-cols-2">
+        <label className="grid min-w-0 gap-2 text-sm font-medium sm:col-span-2">
           Kanton
-          <select name="cantonSlug" className="focus-ring rounded-lg border border-linen px-3 py-3">
+          <select name="cantonSlug" className="focus-ring w-full min-w-0 rounded-lg border border-linen px-3 py-3">
             <option value="">Offen</option>
             {registryCantons.map((canton) => (
               <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>
             ))}
           </select>
         </label>
-        <label className="grid gap-2 text-sm font-medium">
+        <label className="grid min-w-0 gap-2 text-sm font-medium">
           Datum optional
-          <input name="weddingDate" type="date" className="focus-ring rounded-lg border border-linen px-3 py-3" />
+          <input name="weddingDate" type="date" className="focus-ring w-full min-w-0 rounded-lg border border-linen px-3 py-3" />
         </label>
-        <label className="grid gap-2 text-sm font-medium">
+        <label className="grid min-w-0 gap-2 text-sm font-medium">
           Sprache
-          <select name="language" className="focus-ring rounded-lg border border-linen px-3 py-3">
+          <select name="language" className="focus-ring w-full min-w-0 rounded-lg border border-linen px-3 py-3">
             <option>DE</option>
             <option>FR</option>
             <option>IT</option>

@@ -30,15 +30,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </Link>
             <nav className="hidden items-center gap-5 text-sm text-soft-ink md:flex">
               {nav.map((item) => (
-                item.href === "/anbieter-finden" ? (
-                  <span key={item.href} className="cursor-not-allowed text-soft-ink/55" title="Dieser Bereich folgt später">
-                    {item.label}
-                  </span>
-                ) : (
-                  <Link key={item.href} href={item.href} className="transition hover:text-sage">
-                    {item.label}
-                  </Link>
-                )
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={item.href === "/anbieter-finden" ? "text-soft-ink/55 transition hover:text-soft-ink" : "transition hover:text-sage"}
+                  title={item.href === "/anbieter-finden" ? "Dieser Bereich folgt bald" : undefined}
+                >
+                  {item.label}
+                </Link>
               ))}
             </nav>
             <div className="hidden h-10 w-[310px] md:block" aria-hidden="true" />
@@ -57,15 +56,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <p className="font-semibold">Plattform</p>
               <div className="mt-3 grid gap-2 text-sm text-white/70">
                 {nav.map((item) => (
-                  item.href === "/anbieter-finden" ? (
-                    <span key={item.href} className="text-white/45">
-                      {item.label}
-                    </span>
-                  ) : (
-                    <Link key={item.href} href={item.href} className="hover:text-white">
-                      {item.label}
-                    </Link>
-                  )
+                  <Link key={item.href} href={item.href} className={item.href === "/anbieter-finden" ? "text-white/45 hover:text-white/70" : "hover:text-white"}>
+                    {item.label}
+                  </Link>
                 ))}
               </div>
             </div>

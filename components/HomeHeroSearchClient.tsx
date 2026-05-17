@@ -1,10 +1,28 @@
 "use client";
 
+import type { ChangeEvent } from "react";
 import { useRef, useState } from "react";
 import { registryCantons } from "@/lib/registry-data";
 import { repairText } from "@/lib/search-experience";
+import postalCodes from "switzerland-postal-codes/dist/postal-codes-full.json";
 
 type SearchType = "date" | "location" | "style";
+
+type PostalCodeEntry = {
+  name: string;
+  canton: string;
+  latitude: string;
+  longitude: string;
+};
+
+const postalCodeEntries = postalCodes as Record<string, PostalCodeEntry[]>;
+
+function getPlaceFromPostalCode(value: string) {
+  const code = value.trim().match(/^\d{4}$/)?.[0];
+  const entry = code ? postalCodeEntries[code]?.[0] : undefined;
+
+  return code && entry ? `${code} ${repairText(entry.name)}` : "";
+}
 
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: 4 }, (_, index) => String(currentYear + index));
@@ -167,11 +185,29 @@ export function DateSearchForm() {
 }
 
 export function LocationSearchForm() {
+  const [locationValue, setLocationValue] = useState("");
+  const [locationHint, setLocationHint] = useState("");
+
+  function handleLocationChange(event: ChangeEvent<HTMLInputElement>) {
+    const nextValue = event.target.value;
+    const place = getPlaceFromPostalCode(nextValue);
+
+    setLocationValue(place || nextValue);
+    setLocationHint(place ? `Ort erkannt: ${place}` : "");
+  }
+
   return (
     <form action="/search" className="grid gap-5">
       <label className="grid gap-2 text-sm font-medium text-ink">
         Ort / PLZ
-        <input name="location" placeholder="z.B. Bern oder 3000" className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
+        <input
+          name="location"
+          value={locationValue}
+          onChange={handleLocationChange}
+          placeholder="z.B. Bern oder 3000"
+          className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink"
+        />
+        {locationHint ? <span className="text-xs font-medium text-sage">{locationHint}</span> : null}
       </label>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-medium text-ink">

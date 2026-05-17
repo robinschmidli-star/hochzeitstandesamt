@@ -217,10 +217,10 @@ export function FeaturedRegistryOffices() {
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Inspiration</p>
-          <h2 className="mt-2 text-3xl font-semibold text-ink">Inspirierende Standesämter</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Datenbasis</p>
+          <h2 className="mt-2 text-3xl font-semibold text-ink">Alle Standesämter</h2>
         </div>
-        <Link href="/search?tag=romantic" className="text-sm font-semibold text-sage">Alle entdecken</Link>
+        <Link href="/standesamt-finden" className="text-sm font-semibold text-sage">Alle anzeigen</Link>
       </div>
       <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {featured.map((office) => (

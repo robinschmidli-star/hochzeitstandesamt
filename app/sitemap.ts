@@ -6,7 +6,7 @@ import { municipalityPages } from "@/lib/municipalities";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
   return [
-    "", "/standesamt-finden", "/ratgeber", "/kontakt", "/datenschutz", "/impressum",
+    "", "/standesamt-finden", "/anbieter-finden", "/anbieter/floristik", "/anbieter/floristik/unico-florales-design", "/ratgeber", "/kontakt", "/datenschutz", "/impressum",
     ...registryCantons.map((canton) => `/kanton/${canton.slug}`),
     ...municipalityPages.map((page) => `/standesamt/${page.slug}`),
     ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`),
