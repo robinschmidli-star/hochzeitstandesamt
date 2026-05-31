@@ -5,15 +5,18 @@ import {
   PopularSearchLinks,
   SwitzerlandMapSection
 } from "@/components/HomeSearchExperience";
+import { defaultLocale, getDictionary } from "@/lib/i18n";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const dictionary = await getDictionary(defaultLocale);
+
   return (
     <>
-      <HomeHeroSearch />
-      <PopularSearchLinks />
+      <HomeHeroSearch dictionary={dictionary} />
+      <PopularSearchLinks dictionary={dictionary} />
       <SwitzerlandMapSection />
-      <FeaturedRegistryOffices />
-      <HomeGuideTeasers />
+      <FeaturedRegistryOffices dictionary={dictionary} />
+      <HomeGuideTeasers dictionary={dictionary} />
     </>
   );
 }

@@ -1,77 +1,32 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { SiteChrome } from "@/components/SiteChrome";
+import { defaultLocale, locales } from "@/lib/i18n";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "hochzeitstandesamt.ch - Standesamt finden in der Schweiz",
     template: "%s | hochzeitstandesamt.ch"
   },
   description:
-    "Finde das passende Zivilstandsamt in der Schweiz, verstehe den Ablauf der standesamtlichen Trauung und plane die naechsten Schritte."
+    "Finde das passende Zivilstandsamt in der Schweiz, verstehe den Ablauf der standesamtlichen Trauung und plane die naechsten Schritte.",
+  alternates: {
+    canonical: `${siteUrl}/${defaultLocale}`,
+    languages: {
+      ...Object.fromEntries(locales.map((locale) => [locale, `${siteUrl}/${locale}`])),
+      "x-default": `${siteUrl}/${defaultLocale}`
+    }
+  }
 };
-
-const nav = [
-  { href: "/standesamt-finden", label: "Standesamt finden" },
-  { href: "/ratgeber", label: "Ratgeber rund ums Heiraten" },
-  { href: "/anbieter-finden", label: "Anbieter finden (folgt)" },
-  { href: "/kontakt", label: "Kontakt" }
-];
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de-CH">
       <body className="min-h-screen font-sans antialiased">
-        <header className="sticky top-0 z-40 border-b border-linen bg-paper/90 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-            <Link href="/" className="text-lg font-semibold tracking-[0] text-sage">
-              hochzeitstandesamt.ch
-            </Link>
-            <nav className="hidden items-center gap-5 text-sm text-soft-ink md:flex">
-              {nav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={item.href === "/anbieter-finden" ? "text-soft-ink/55 transition hover:text-soft-ink" : "transition hover:text-sage"}
-                  title={item.href === "/anbieter-finden" ? "Dieser Bereich folgt bald" : undefined}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="hidden h-10 w-[310px] md:block" aria-hidden="true" />
-          </div>
-        </header>
-        {children}
-        <footer className="border-t border-sage/10 bg-sage text-white">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
-            <div className="md:col-span-2">
-              <p className="text-lg font-semibold">hochzeitstandesamt.ch</p>
-              <p className="mt-3 max-w-xl text-sm leading-6 text-white/70">
-                Der erste Schritt zur Hochzeit in der Schweiz: Zivilstandsamt finden, Ablauf verstehen und sauber weiterplanen.
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold">Plattform</p>
-              <div className="mt-3 grid gap-2 text-sm text-white/70">
-                {nav.map((item) => (
-                  <Link key={item.href} href={item.href} className={item.href === "/anbieter-finden" ? "text-white/45 hover:text-white/70" : "hover:text-white"}>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="font-semibold">Rechtliches</p>
-              <div className="mt-3 grid gap-2 text-sm text-white/70">
-                <Link href="/kontakt" className="hover:text-white">Kontakt</Link>
-                <Link href="/datenschutz" className="hover:text-white">Datenschutz</Link>
-                <Link href="/impressum" className="hover:text-white">Impressum</Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

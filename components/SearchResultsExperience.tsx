@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { registryCantons } from "@/lib/registry-data";
+import { registryOfficeMedia } from "@/lib/safe-media";
 import { repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
 
 const weekdayLabels: Record<string, string> = {
@@ -96,15 +98,12 @@ export function SearchFilters({ params }: { params: SearchParams }) {
 
 export function RegistryOfficeCard({ office }: { office: EnrichedRegistryOffice }) {
   const officialUrl = office.website_url || office.officialUrl;
+  const media = registryOfficeMedia(office);
 
   return (
     <article className="grid gap-4 rounded-xl border border-linen bg-white p-4 shadow-soft sm:grid-cols-[140px_1fr]">
       <div className="flex h-36 items-center justify-center overflow-hidden rounded-lg bg-linen/70">
-        {office.imageUrl || office.coatOfArmsUrl ? (
-          <img src={office.imageUrl || office.coatOfArmsUrl} alt={office.mediaAlt || office.name} className="h-full w-full object-contain p-5" loading="lazy" />
-        ) : (
-          <span className="text-sm font-semibold text-soft-ink">{office.city}</span>
-        )}
+        <SafeMediaFrame media={media} className="h-full w-full" />
       </div>
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">{office.city} · {office.canton}</p>

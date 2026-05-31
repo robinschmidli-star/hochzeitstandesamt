@@ -66,6 +66,20 @@ export type Vendor = {
   featured: boolean;
 };
 
+export type ImageStatus = "approved" | "needs_review" | "fallback_crest" | "placeholder";
+
+export type LicensedImageFields = {
+  imageUrl?: string;
+  imageAlt?: string;
+  imageSource?: string;
+  imageLicense?: string;
+  imageAttribution?: string;
+  imageStatus?: ImageStatus;
+  imageCandidateUrl?: string;
+  imageCandidateNote?: string;
+  imageCandidateStatus?: "manual_permission_required";
+};
+
 export type RegistryCanton = {
   code: string;
   name: string;
@@ -75,7 +89,7 @@ export type RegistryCanton = {
   map: number[];
 };
 
-export type SwissRegistryOffice = {
+export type SwissRegistryOffice = LicensedImageFields & {
   id: string;
   name: string;
   slug: string;
@@ -123,14 +137,13 @@ export type SwissRegistryOffice = {
   parkingAvailableBoolean?: boolean | null;
   ceremonyRemarks?: string;
   coatOfArmsUrl?: string;
-  imageUrl?: string;
   mediaAlt?: string;
   mediaLicenseNote?: string;
   responsibleMunicipalities: string[];
   map: number[];
 };
 
-export type CeremonyVenue = {
+export type CeremonyVenue = LicensedImageFields & {
   standesamt_id: string;
   standesamt_name: string;
   traulokal_name: string;
@@ -152,7 +165,6 @@ export type CeremonyVenue = {
   outdoorCeremonyAvailable: boolean | null;
   seasonalAvailability: string;
   venueUrl: string;
-  imageUrl: string;
   officialConfirmed?: boolean | null;
   sourceUrl?: string;
   sourceType?: string;

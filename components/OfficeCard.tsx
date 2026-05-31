@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { registryOfficeMedia } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import type { SwissRegistryOffice } from "@/lib/types";
 
 export function OfficeCard({ office }: { office: SwissRegistryOffice }) {
   const city = repairText(office.city);
   const municipalities = office.responsibleMunicipalities.map(repairText);
+  const media = registryOfficeMedia(office);
 
   return (
     <article className="rounded-xl border border-linen bg-white p-5 shadow-soft">
@@ -13,8 +15,8 @@ export function OfficeCard({ office }: { office: SwissRegistryOffice }) {
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{repairText(office.cantonName)} · {office.canton}</p>
           <h2 className="mt-1 text-xl font-semibold text-ink">{repairText(office.name)}</h2>
         </div>
-        {office.coatOfArmsUrl ? (
-          <img src={office.coatOfArmsUrl} alt={repairText(office.mediaAlt) || `Wappen ${city}`} className="h-12 w-12 object-contain" loading="lazy" />
+        {media.url ? (
+          <img src={media.url} alt={media.alt} className="h-12 w-12 object-contain" loading="lazy" />
         ) : (
           <span className="rounded-full bg-linen px-3 py-1 text-xs font-semibold text-sage">{city}</span>
         )}

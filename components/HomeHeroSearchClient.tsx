@@ -4,74 +4,44 @@ import type { ChangeEvent } from "react";
 import { useRef, useState } from "react";
 import { registryCantons } from "@/lib/registry-data";
 import { repairText } from "@/lib/search-experience";
+import type { Dictionary } from "@/lib/i18n";
+import de from "@/locales/de.json";
 import postalCodes from "switzerland-postal-codes/dist/postal-codes-full.json";
 
 type SearchType = "date" | "location" | "style";
-
-type PostalCodeEntry = {
-  name: string;
-  canton: string;
-  latitude: string;
-  longitude: string;
-};
+type PostalCodeEntry = { name: string; canton: string; latitude: string; longitude: string };
 
 const postalCodeEntries = postalCodes as Record<string, PostalCodeEntry[]>;
+const currentYear = new Date().getFullYear();
+const years = Array.from({ length: 4 }, (_, index) => String(currentYear + index));
+const months = [["01", "Januar"], ["02", "Februar"], ["03", "März"], ["04", "April"], ["05", "Mai"], ["06", "Juni"], ["07", "Juli"], ["08", "August"], ["09", "September"], ["10", "Oktober"], ["11", "November"], ["12", "Dezember"]];
+const tags = [
+  ["featured", "tag.featured"],
+  ["castle", "tag.castle"],
+  ["lake", "tag.lake"],
+  ["mountains", "tag.mountains"],
+  ["historic", "tag.historic"],
+  ["modern", "tag.modern"],
+  ["romantic", "tag.romantic"],
+  ["city", "tag.city"],
+  ["nature", "tag.nature"]
+];
+const searchTypes = [
+  { type: "date" as const, icon: "date" as const, titleKey: "search.date.title", textKey: "search.date.text" },
+  { type: "location" as const, icon: "location" as const, titleKey: "search.location.title", textKey: "search.location.text" },
+  { type: "style" as const, icon: "heart" as const, titleKey: "search.style.title", textKey: "search.style.text" }
+];
 
 function getPlaceFromPostalCode(value: string) {
   const code = value.trim().match(/^\d{4}$/)?.[0];
   const entry = code ? postalCodeEntries[code]?.[0] : undefined;
-
   return code && entry ? `${code} ${repairText(entry.name)}` : "";
 }
 
-const currentYear = new Date().getFullYear();
-const years = Array.from({ length: 4 }, (_, index) => String(currentYear + index));
-const months = [
-  ["01", "Januar"],
-  ["02", "Februar"],
-  ["03", "März"],
-  ["04", "April"],
-  ["05", "Mai"],
-  ["06", "Juni"],
-  ["07", "Juli"],
-  ["08", "August"],
-  ["09", "September"],
-  ["10", "Oktober"],
-  ["11", "November"],
-  ["12", "Dezember"]
-];
-const tags = [
-  ["featured", "schönste"],
-  ["castle", "Schloss"],
-  ["lake", "See"],
-  ["mountains", "Berge"],
-  ["historic", "historisch"],
-  ["modern", "modern"],
-  ["romantic", "romantisch"],
-  ["city", "Stadt"],
-  ["nature", "Natur"]
-];
-
-const searchTypes = [
-  {
-    type: "date" as const,
-    icon: "date" as const,
-    title: "Datum im Kopf",
-    text: "Suche nach Monat, Jahr, Wochentag oder konkretem Datum."
-  },
-  {
-    type: "location" as const,
-    icon: "location" as const,
-    title: "In meiner Nähe",
-    text: "Finde Standesämter rund um euren Wohnort oder Wunschort."
-  },
-  {
-    type: "style" as const,
-    icon: "heart" as const,
-    title: "Schöne Orte",
-    text: "Entdecke besondere Trauorte nach Stil, Landschaft oder Stimmung."
-  }
-];
+function createTranslator(dictionary: Dictionary) {
+  const fallback = de as Dictionary;
+  return (key: string) => dictionary[key] ?? fallback[key] ?? key;
+}
 
 function Icon({ type }: { type: "date" | "location" | "heart" }) {
   const path =
@@ -90,128 +60,105 @@ function Icon({ type }: { type: "date" | "location" | "heart" }) {
   );
 }
 
-export function SearchTypeCard({
-  type,
-  icon,
-  title,
-  text,
-  selected,
-  onSelect
-}: {
+export function SearchTypeCard({ type, icon, titleKey, textKey, selected, onSelect, t }: {
   type: SearchType;
   icon: "date" | "location" | "heart";
-  title: string;
-  text: string;
+  titleKey: string;
+  textKey: string;
   selected: boolean;
   onSelect: (type: SearchType) => void;
+  t: (key: string) => string;
 }) {
   return (
     <button
       type="button"
       onClick={() => onSelect(type)}
-      className={`focus-ring grid h-full gap-4 rounded-xl border bg-white p-5 text-left shadow-soft transition hover:-translate-y-0.5 hover:border-champagne ${
-        selected ? "border-sage" : "border-linen"
-      }`}
+      className={`focus-ring grid h-full gap-4 rounded-xl border bg-white p-5 text-left shadow-soft transition hover:-translate-y-0.5 hover:border-champagne ${selected ? "border-sage" : "border-linen"}`}
     >
       <Icon type={icon} />
       <div>
-        <h2 className="text-2xl font-semibold text-ink">{title}</h2>
-        <p className="mt-2 text-sm leading-6 text-soft-ink">{text}</p>
+        <h2 className="text-2xl font-semibold text-ink">{t(titleKey)}</h2>
+        <p className="mt-2 text-sm leading-6 text-soft-ink">{t(textKey)}</p>
       </div>
-      <span className="mt-auto inline-flex justify-center rounded-lg bg-sage px-4 py-3 text-sm font-semibold text-white">
-        Diese Suche starten
-      </span>
+      <span className="mt-auto inline-flex justify-center rounded-lg bg-sage px-4 py-3 text-sm font-semibold text-white">{t("search.start")}</span>
     </button>
   );
 }
 
-export function SearchEntryCards({
-  selectedSearchType,
-  onSelect
-}: {
+export function SearchEntryCards({ selectedSearchType, onSelect, t }: {
   selectedSearchType: SearchType | null;
   onSelect: (type: SearchType) => void;
+  t: (key: string) => string;
 }) {
   return (
     <div className={`grid gap-4 ${selectedSearchType ? "md:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-3"}`}>
       {searchTypes.map((item) => (
-        <SearchTypeCard key={item.type} {...item} selected={selectedSearchType === item.type} onSelect={onSelect} />
+        <SearchTypeCard key={item.type} {...item} selected={selectedSearchType === item.type} onSelect={onSelect} t={t} />
       ))}
     </div>
   );
 }
 
-export function DateSearchForm() {
+export function DateSearchForm({ t }: { t: (key: string) => string }) {
   return (
     <form action="/search" className="grid gap-5">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Monat
+          {t("search.month")}
           <select name="month" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">Monat auswählen</option>
-            {months.map(([value, label]) => (
-              <option key={value} value={value}>{label}</option>
-            ))}
+            <option value="">{t("search.monthPlaceholder")}</option>
+            {months.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
           </select>
         </label>
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Jahr
+          {t("search.year")}
           <select name="year" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">Jahr auswählen</option>
-            {years.map((year) => (
-              <option key={year} value={year}>{year}</option>
-            ))}
+            <option value="">{t("search.yearPlaceholder")}</option>
+            {years.map((year) => <option key={year} value={year}>{year}</option>)}
           </select>
         </label>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Wochentag
+          {t("search.weekday")}
           <select name="weekday" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="saturday">Samstag</option>
-            <option value="friday">Freitag</option>
-            <option value="thursday">Donnerstag</option>
-            <option value="any">egal</option>
+            <option value="saturday">{t("search.saturday")}</option>
+            <option value="friday">{t("search.friday")}</option>
+            <option value="thursday">{t("search.thursday")}</option>
+            <option value="any">{t("search.any")}</option>
           </select>
         </label>
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Konkretes Datum optional
+          {t("search.dateOptional")}
           <input name="date" type="date" className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
         </label>
       </div>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">Passende Trautage finden</button>
+      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitDate")}</button>
     </form>
   );
 }
 
-export function LocationSearchForm() {
+export function LocationSearchForm({ t }: { t: (key: string) => string }) {
   const [locationValue, setLocationValue] = useState("");
   const [locationHint, setLocationHint] = useState("");
 
   function handleLocationChange(event: ChangeEvent<HTMLInputElement>) {
     const nextValue = event.target.value;
     const place = getPlaceFromPostalCode(nextValue);
-
     setLocationValue(place || nextValue);
-    setLocationHint(place ? `Ort erkannt: ${place}` : "");
+    setLocationHint(place ? `${t("search.locationHint")}: ${place}` : "");
   }
 
   return (
     <form action="/search" className="grid gap-5">
       <label className="grid gap-2 text-sm font-medium text-ink">
-        Ort / PLZ
-        <input
-          name="location"
-          value={locationValue}
-          onChange={handleLocationChange}
-          placeholder="z.B. Bern oder 3000"
-          className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink"
-        />
+        {t("search.locationLabel")}
+        <input name="location" value={locationValue} onChange={handleLocationChange} placeholder={t("search.locationPlaceholder")} className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
         {locationHint ? <span className="text-xs font-medium text-sage">{locationHint}</span> : null}
       </label>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Radius
+          {t("search.radius")}
           <select name="radius" defaultValue="50" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
             <option value="10">10 km</option>
             <option value="25">25 km</option>
@@ -220,67 +167,46 @@ export function LocationSearchForm() {
           </select>
         </label>
         <label className="grid gap-2 text-sm font-medium text-ink">
-          Kanton optional
+          {t("search.cantonOptional")}
           <select name="canton" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">Alle Kantone</option>
-            {registryCantons.map((canton) => (
-              <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>
-            ))}
+            <option value="">{t("search.allCantons")}</option>
+            {registryCantons.map((canton) => <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>)}
           </select>
         </label>
       </div>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">Standesämter in der Nähe anzeigen</button>
+      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitLocation")}</button>
     </form>
   );
 }
 
-export function StyleSearchForm() {
+export function StyleSearchForm({ t }: { t: (key: string) => string }) {
   return (
     <form action="/search" className="grid gap-5">
       <div className="flex flex-wrap gap-2">
-        {tags.map(([value, label]) => (
+        {tags.map(([value, labelKey]) => (
           <label key={value} className="cursor-pointer">
             <input type="radio" name="tag" value={value} className="peer sr-only" />
-            <span className="inline-flex rounded-full border border-linen bg-paper px-3 py-2 text-sm font-semibold text-soft-ink transition peer-checked:border-champagne peer-checked:bg-champagne peer-checked:text-white">
-              {label}
-            </span>
+            <span className="inline-flex rounded-full border border-linen bg-paper px-3 py-2 text-sm font-semibold text-soft-ink transition peer-checked:border-champagne peer-checked:bg-champagne peer-checked:text-white">{t(labelKey)}</span>
           </label>
         ))}
       </div>
       <label className="grid gap-2 text-sm font-medium text-ink">
-        Kanton / Region optional
+        {t("search.regionOptional")}
         <select name="canton" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-          <option value="">Alle Regionen</option>
-          {registryCantons.map((canton) => (
-            <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>
-          ))}
+          <option value="">{t("search.allRegions")}</option>
+          {registryCantons.map((canton) => <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>)}
         </select>
       </label>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">Schönste Standesämter entdecken</button>
+      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitStyle")}</button>
     </form>
   );
 }
 
-export function ExpandedSearchPanel({ selectedSearchType }: { selectedSearchType: SearchType }) {
+export function ExpandedSearchPanel({ selectedSearchType, t }: { selectedSearchType: SearchType; t: (key: string) => string }) {
   const content = {
-    date: {
-      icon: "date" as const,
-      title: "Standesämter nach Datum finden",
-      text: "Wählt Monat, Jahr oder einen bevorzugten Wochentag. Die Ergebnisse dienen als Orientierung und müssen beim Amt bestätigt werden.",
-      form: <DateSearchForm />
-    },
-    location: {
-      icon: "location" as const,
-      title: "Standesämter in meiner Nähe finden",
-      text: "Sucht rund um euren Wohnort, euren Wunschort oder einen Kanton.",
-      form: <LocationSearchForm />
-    },
-    style: {
-      icon: "heart" as const,
-      title: "Schöne Trauorte entdecken",
-      text: "Entdeckt Standesämter nach Stil, Landschaft oder Stimmung.",
-      form: <StyleSearchForm />
-    }
+    date: { icon: "date" as const, title: t("search.datePanel.title"), text: t("search.datePanel.text"), form: <DateSearchForm t={t} /> },
+    location: { icon: "location" as const, title: t("search.locationPanel.title"), text: t("search.locationPanel.text"), form: <LocationSearchForm t={t} /> },
+    style: { icon: "heart" as const, title: t("search.stylePanel.title"), text: t("search.stylePanel.text"), form: <StyleSearchForm t={t} /> }
   }[selectedSearchType];
 
   return (
@@ -297,9 +223,10 @@ export function ExpandedSearchPanel({ selectedSearchType }: { selectedSearchType
   );
 }
 
-export function HomeHeroSearchClient() {
+export function HomeHeroSearchClient({ dictionary }: { dictionary: Dictionary }) {
   const [selectedSearchType, setSelectedSearchType] = useState<SearchType | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const t = createTranslator(dictionary);
 
   const selectSearchType = (type: SearchType) => {
     setSelectedSearchType(type);
@@ -313,8 +240,8 @@ export function HomeHeroSearchClient() {
 
   return (
     <div className="mt-8 grid gap-5">
-      <SearchEntryCards selectedSearchType={selectedSearchType} onSelect={selectSearchType} />
-      <div ref={panelRef}>{selectedSearchType ? <ExpandedSearchPanel selectedSearchType={selectedSearchType} /> : null}</div>
+      <SearchEntryCards selectedSearchType={selectedSearchType} onSelect={selectSearchType} t={t} />
+      <div ref={panelRef}>{selectedSearchType ? <ExpandedSearchPanel selectedSearchType={selectedSearchType} t={t} /> : null}</div>
     </div>
   );
 }

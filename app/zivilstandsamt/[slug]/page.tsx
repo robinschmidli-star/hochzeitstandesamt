@@ -1,10 +1,12 @@
 ﻿import { notFound } from "next/navigation";
 import { ChecklistForm } from "@/components/LeadForm";
 import { ResponsibleMunicipalities } from "@/components/ResponsibleMunicipalities";
+import { SafeMediaAttribution, SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Faq } from "@/components/Faq";
 import { ceremonyVenues } from "@/lib/ceremony-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
+import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import { createMetadata, faqSchema } from "@/lib/seo";
 
@@ -101,6 +103,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
   const marriageInfoUrl = httpsUrl(office.marriage_info_url) || websiteUrl;
   const appointmentUrl = httpsUrl(office.appointment_url) || httpsUrl(office.appointmentBookingUrl) || httpsUrl(office.onlineCalendarUrl);
   const officeVenues = cleanVenues;
+  const officeMedia = registryOfficeMedia(office);
 
   const faq = [
     {
@@ -131,10 +134,12 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
               Zuständiger Zivilstandskreis für Gemeinden in {cleanOffice.cantonName}. Prüfe die Angaben und kontaktiere das Amt für verbindliche Auskünfte.
             </p>
           </div>
-          {office.coatOfArmsUrl ? (
+          {officeMedia ? (
             <figure className="rounded-xl border border-linen bg-white p-4 text-center shadow-soft">
-              <img src={office.coatOfArmsUrl} alt={cleanOffice.mediaAlt || `Wappen ${cleanOffice.city}`} className="mx-auto h-24 w-24 object-contain" />
-              <figcaption className="mt-2 text-xs text-soft-ink">Wappen</figcaption>
+              <div className="mx-auto h-24 w-24 overflow-hidden rounded-lg">
+                <SafeMediaFrame media={officeMedia} className="h-full w-full" imageClassName="h-full w-full" />
+              </div>
+              <figcaption className="mt-2 text-xs text-soft-ink">{officeMedia.status === "approved" ? "Bild" : officeMedia.status === "fallback_crest" ? "Wappen" : "Bild folgt"}</figcaption>
             </figure>
           ) : null}
         </section>
@@ -209,9 +214,13 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
               <div className="mt-4 grid gap-4 md:grid-cols-2">
                 {officeVenues.map((venue) => {
                   const venueDays = ceremonyDays(venue) || "Keine Information verfügbar";
+                  const venueMedia = ceremonyVenueMedia(venue);
                   return (
                     <article key={`${venue.standesamt_id}-${venue.traulokal_name}`} className="rounded-lg border border-linen bg-linen/40 p-4">
-                      {venue.imageUrl ? <img src={venue.imageUrl} alt={venue.traulokal_name} className="mb-4 h-40 w-full rounded-lg object-cover" loading="lazy" /> : null}
+                      <div className="mb-4 h-40 overflow-hidden rounded-lg">
+                        <SafeMediaFrame media={venueMedia} className="h-full w-full" />
+                      </div>
+                      <SafeMediaAttribution media={venueMedia} />
                       <h4 className="font-semibold text-ink">{venue.traulokal_name}</h4>
                       <dl className="mt-3 grid gap-3 text-sm text-soft-ink">
                         <InfoItem label="Adresse" value={info([venue.adresse, venue.ort].filter(Boolean).join(", "))} />
@@ -239,9 +248,14 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
         )}
       </section>
 
-      {office.imageUrl ? (
+      {officeMedia.status === "approved" ? (
         <figure className="overflow-hidden rounded-xl border border-linen bg-white shadow-soft">
-          <img src={office.imageUrl} alt={`${cleanOffice.name}`} className="h-72 w-full object-cover" loading="lazy" />
+          <div className="h-72">
+            <SafeMediaFrame media={officeMedia} className="h-full w-full" />
+          </div>
+          <figcaption className="px-5 pb-4">
+            <SafeMediaAttribution media={officeMedia} />
+          </figcaption>
         </figure>
       ) : null}
 
