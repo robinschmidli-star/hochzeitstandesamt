@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import de from "@/locales/de.json";
 import en from "@/locales/en.json";
@@ -29,6 +29,7 @@ function getLocaleFromPath(pathname: string): Locale {
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const locale = getLocaleFromPath(pathname);
   const fallback = de as Dictionary;
   const dictionary = { ...fallback, ...dictionaries[locale] };
@@ -42,6 +43,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   ];
 
   useEffect(() => {
+    setMobileMenuOpen(false);
     const firstSegment = pathname.split("/").filter(Boolean)[0];
     const savedLocale = window.localStorage.getItem("preferred-language");
 
@@ -75,8 +77,43 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </nav>
-          <LanguageSwitcher currentLocale={locale} />
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-white text-sage shadow-soft md:hidden"
+              aria-label={mobileMenuOpen ? "Menü schliessen" : "Menü öffnen"}
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((open) => !open)}
+            >
+              <span className="sr-only">{mobileMenuOpen ? "Menü schliessen" : "Menü öffnen"}</span>
+              <span className="grid gap-1">
+                <span className={`block h-0.5 w-4 rounded-full bg-current transition ${mobileMenuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
+                <span className={`block h-0.5 w-4 rounded-full bg-current transition ${mobileMenuOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 w-4 rounded-full bg-current transition ${mobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""}`} />
+              </span>
+            </button>
+            <LanguageSwitcher currentLocale={locale} />
+          </div>
         </div>
+        {mobileMenuOpen ? (
+          <nav className="border-t border-linen bg-paper px-4 py-3 shadow-soft md:hidden">
+            <div className="mx-auto grid max-w-7xl gap-2 text-sm text-soft-ink">
+              {nav.slice(1).map((item) => (
+                <Link
+                  key={item.href}
+                  href={withLocalePath(item.href, locale)}
+                  className={
+                    item.disabled
+                      ? "rounded-xl px-3 py-3 text-soft-ink/55"
+                      : "rounded-xl px-3 py-3 transition hover:bg-white hover:text-sage"
+                  }
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        ) : null}
       </header>
       {children}
       <footer className="border-t border-sage/10 bg-sage text-white">
