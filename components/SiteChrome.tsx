@@ -61,8 +61,8 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-linen bg-paper/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-          <Link href={withLocalePath("/", locale)} className="text-lg font-semibold tracking-[0] text-sage">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:gap-6 sm:px-6 lg:px-8">
+          <Link href={withLocalePath("/", locale)} className="min-w-0 truncate text-base font-semibold tracking-[0] text-sage sm:text-lg">
             hochzeitstandesamt.ch
           </Link>
           <nav className="hidden items-center gap-5 text-sm text-soft-ink md:flex">
@@ -77,7 +77,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <button
               type="button"
               className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-white text-sage shadow-soft md:hidden"

@@ -14,9 +14,9 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
 
   return (
     <details className="group relative">
-      <summary className="focus-ring flex cursor-pointer list-none items-center gap-2 rounded-full border border-linen bg-white px-3 py-2 text-sm font-semibold text-ink shadow-soft marker:hidden">
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-linen text-xs">文/A</span>
-        <span>{languageNames[currentLocale]}</span>
+      <summary className="focus-ring flex h-10 cursor-pointer list-none items-center gap-2 rounded-full border border-linen bg-white px-2 text-sm font-semibold text-ink shadow-soft marker:hidden sm:px-3">
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-linen text-xs">A</span>
+        <span className="hidden sm:inline">{languageNames[currentLocale]}</span>
       </summary>
       <div className="absolute right-0 z-50 mt-2 max-h-[70vh] w-64 overflow-auto rounded-xl border border-linen bg-white p-2 shadow-soft">
         <div className="grid gap-1">
