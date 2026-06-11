@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
+import { SearchLeadCapture } from "@/components/SearchLeadCapture";
 import { registryCantons } from "@/lib/registry-data";
 import { registryOfficeMedia } from "@/lib/safe-media";
 import { repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
@@ -156,6 +157,7 @@ export function SearchResultsPage({ params, results }: { params: SearchParams; r
               <RegistryOfficeCard key={office.slug} office={office} />
             ))}
           </div>
+          {results.length > 0 ? <SearchLeadCapture params={params} /> : null}
         </section>
       </div>
     </main>
