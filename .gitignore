@@ -7,5 +7,6 @@ dist
 coverage
 leads-export.csv
 storage
+reports
 *.log
 tsconfig.tsbuildinfo

@@ -90,6 +90,7 @@ export type RegistryCanton = {
 };
 
 export type SwissRegistryOffice = LicensedImageFields & {
+  canonicalId?: string;
   id: string;
   name: string;
   slug: string;
@@ -158,6 +159,7 @@ export type SwissRegistryOffice = LicensedImageFields & {
 };
 
 export type CeremonyVenue = LicensedImageFields & {
+  canonicalId?: string;
   standesamt_id: string;
   standesamt_name: string;
   traulokal_name: string;
