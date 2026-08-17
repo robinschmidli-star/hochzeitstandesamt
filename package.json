@@ -13,7 +13,8 @@
     "prisma:seed": "tsx prisma/seed.ts",
     "import:offices": "tsx scripts/import-registry-offices.ts",
     "export:leads": "tsx scripts/export-leads.ts",
-    "sync:canonical": "node scripts/sync-canonical-database.mjs"
+    "sync:canonical": "node scripts/sync-canonical-database.mjs",
+    "check:canonical": "node scripts/sync-canonical-database.mjs --check"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",

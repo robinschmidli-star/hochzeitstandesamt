@@ -1,9 +1,11 @@
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import pg from "pg";
 
 const { Client } = pg;
+const checkOnly = process.argv.includes("--check");
 const connectionString = process.env.CANONICAL_DATABASE_URL;
 if (!connectionString) {
   throw new Error("CANONICAL_DATABASE_URL is required");
@@ -11,7 +13,11 @@ if (!connectionString) {
 
 const registryPath = path.resolve("lib/registry-data.ts");
 const venuesPath = path.resolve("lib/ceremony-venues.ts");
-const reportPath = path.resolve("reports/canonical-database-sync.json");
+const reportPath = path.resolve(
+  checkOnly ? "reports/canonical-database-check.json" : "reports/canonical-database-sync.json"
+);
+
+const sha256 = (value) => crypto.createHash("sha256").update(value).digest("hex");
 
 function extractArray(source, pattern, label) {
   const match = source.match(pattern);
@@ -84,6 +90,7 @@ let officeRows;
 let venueRows;
 let assignmentRows;
 try {
+  await client.query("BEGIN READ ONLY");
   officeRows = (await client.query("SELECT * FROM web_public_offices ORDER BY canton_code, name, id")).rows;
   venueRows = (await client.query("SELECT * FROM web_public_venues ORDER BY canton_code, name, id")).rows;
   assignmentRows = (
@@ -92,6 +99,7 @@ try {
     )
   ).rows;
 } finally {
+  await client.query("ROLLBACK").catch(() => undefined);
   await client.end();
 }
 
@@ -229,11 +237,25 @@ for (const row of venueRows) {
 
 const registryOutput = `import type { RegistryCanton, SwissRegistryOffice } from "@/lib/types";\n\nexport const registryCantons = ${JSON.stringify(cantons, null, 2)} satisfies RegistryCanton[];\n\nexport const swissRegistryOffices = ${JSON.stringify(offices, null, 2)} satisfies SwissRegistryOffice[];\n`;
 const venuesOutput = `import type { CeremonyVenue } from "@/lib/types";\n\nexport const ceremonyVenues: CeremonyVenue[] = ${JSON.stringify(venues, null, 2)};\n`;
-fs.writeFileSync(registryPath, registryOutput, "utf8");
-fs.writeFileSync(venuesPath, venuesOutput, "utf8");
+
+const files = {
+  registryData: {
+    matches: registrySource === registryOutput,
+    currentSha256: sha256(registrySource),
+    generatedSha256: sha256(registryOutput)
+  },
+  ceremonyVenues: {
+    matches: venuesSource === venuesOutput,
+    currentSha256: sha256(venuesSource),
+    generatedSha256: sha256(venuesOutput)
+  }
+};
+const inSync = Object.values(files).every((file) => file.matches);
 
 const report = {
   generatedAt: new Date().toISOString(),
+  mode: checkOnly ? "check" : "sync",
+  status: checkOnly ? (inSync ? "in_sync" : "drift") : "synced",
   publicOffices: offices.length,
   publicVenues: venues.length,
   matchedExistingOffices: matchedOldOfficeIds.size,
@@ -241,8 +263,14 @@ const report = {
   matchedExistingVenues: matchedOldVenueNames.size,
   unmatchedExistingVenues: existingVenues.length - matchedOldVenueNames.size,
   withheldVenuesWithoutExactlyOnePublicOffice: ambiguousVenueAssignments.length,
-  withheldVenueDetails: ambiguousVenueAssignments
+  withheldVenueDetails: ambiguousVenueAssignments,
+  files
 };
+if (!checkOnly) {
+  fs.writeFileSync(registryPath, registryOutput, "utf8");
+  fs.writeFileSync(venuesPath, venuesOutput, "utf8");
+}
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 console.log(JSON.stringify(report, null, 2));
+if (checkOnly && !inSync) process.exitCode = 2;
