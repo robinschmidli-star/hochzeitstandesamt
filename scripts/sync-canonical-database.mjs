@@ -6,9 +6,9 @@ import pg from "pg";
 
 const { Client } = pg;
 const checkOnly = process.argv.includes("--check");
-const connectionString = process.env.PUBLIC_REPLICA_DATABASE_URL;
+const connectionString = process.env.PUBLIC_REPLICA_DATABASE_URL ?? process.env.CANONICAL_DATABASE_URL;
 if (!connectionString) {
-  throw new Error("PUBLIC_REPLICA_DATABASE_URL is required and must expose only the curated web_public_* contract");
+  throw new Error("PUBLIC_REPLICA_DATABASE_URL (or legacy CANONICAL_DATABASE_URL) is required and must expose only the curated web_public_* contract");
 }
 
 const registryPath = path.resolve("lib/registry-data.ts");
@@ -77,11 +77,13 @@ function uniqueSlug(base, used, suffix) {
   return candidate;
 }
 
+const sslMode = process.env.PUBLIC_REPLICA_DATABASE_SSL ?? process.env.CANONICAL_DATABASE_SSL;
+const sslVerify = process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY ?? process.env.CANONICAL_DATABASE_SSL_VERIFY;
 const client = new Client({
   connectionString,
   ssl:
-    process.env.PUBLIC_REPLICA_DATABASE_SSL === "require"
-      ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" }
+    sslMode === "require"
+      ? { rejectUnauthorized: sslVerify !== "false" }
       : undefined
 });
 
