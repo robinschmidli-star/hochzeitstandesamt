@@ -1,5 +1,7 @@
 import { registryCantons, swissRegistryOffices } from "@/lib/registry-data";
 import { repairText } from "@/lib/search-experience";
+import { defaultRegistrySearchLabels, type RegistrySearchLabels } from "@/lib/registry-search-labels";
+import { withLocalePath } from "@/lib/i18n";
 
 const searchSuggestions = Array.from(
   new Set(
@@ -12,24 +14,24 @@ const searchSuggestions = Array.from(
   )
 ).sort((a, b) => a.localeCompare(b, "de-CH"));
 
-export function SearchForm({ compact = false, embedded = false }: { compact?: boolean; embedded?: boolean }) {
-  const weekdays = ["Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+export function SearchForm({ compact = false, embedded = false, labels = defaultRegistrySearchLabels }: { compact?: boolean; embedded?: boolean; labels?: RegistrySearchLabels }) {
+  const weekdays = labels.weekdayNames;
 
   return (
     <form
-      action="/standesamt-finden"
+      action={withLocalePath("/standesamt-finden", labels.locale)}
       className={`grid gap-4 ${
         embedded ? "" : "rounded-xl border border-linen bg-white p-4 shadow-soft"
       }`}
     >
       <div className="grid items-end gap-3 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1.55fr)_minmax(180px,240px)]">
         <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
-          Stadt oder PLZ
+          {labels.city}
           <input
             name="query"
             inputMode="search"
             list="registry-search-suggestions"
-            placeholder="z.B. Winterthur oder 8400"
+            placeholder={labels.cityPlaceholder}
             className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink"
           />
           <datalist id="registry-search-suggestions">
@@ -39,29 +41,29 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
           </datalist>
         </label>
         <fieldset className="min-w-0 text-sm font-medium text-ink">
-          <legend className="mb-2">Gewünschter Zeitraum</legend>
+          <legend className="mb-2">{labels.period}</legend>
           <div className="grid gap-2 min-[390px]:grid-cols-2">
-            <input name="dateStart" type="date" aria-label="Von" className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
-            <input name="dateEnd" type="date" aria-label="Bis" className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+            <input name="dateStart" type="date" aria-label={labels.from} className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
+            <input name="dateEnd" type="date" aria-label={labels.until} className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
           </div>
         </fieldset>
         <button name="submitted" value="1" className="focus-ring h-12 rounded-lg bg-sage px-5 font-semibold text-white transition hover:bg-sage/90">
-          Standesamt finden
+          {labels.submit}
         </button>
       </div>
 
       <details className="group rounded-lg border border-linen bg-paper/45 px-3 py-2">
         <summary className="cursor-pointer list-none text-sm font-semibold text-sage marker:hidden">
-          Zusatzfilter anzeigen
+          {labels.filters}
           <span className="ml-1 text-soft-ink transition group-open:hidden">+</span>
           <span className="ml-1 hidden text-soft-ink transition group-open:inline">-</span>
         </summary>
         <div className="mt-3 grid gap-3 border-t border-linen pt-3">
           <div className="grid items-start gap-3 md:grid-cols-2">
             <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
-              Kanton
+              {labels.canton}
               <select name="canton" className="focus-ring h-12 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink">
-                <option value="">Alle Kantone</option>
+                <option value="">{labels.allCantons}</option>
                 {registryCantons.map((canton) => (
                   <option key={canton.code} value={canton.code}>
                     {repairText(canton.name)}
@@ -84,7 +86,7 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
             </label>
           </div>
           <fieldset className="grid gap-2 text-sm font-medium text-ink">
-            <legend>Bevorzugte Trautage</legend>
+            <legend>{labels.weekdays}</legend>
             <div className="flex flex-wrap gap-2">
               {weekdays.map((day) => (
                 <label key={day} className="cursor-pointer">

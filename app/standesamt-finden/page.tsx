@@ -3,6 +3,9 @@ import { SearchForm } from "@/components/SearchForm";
 import { SwissMap } from "@/components/SwissMap";
 import { createMetadata } from "@/lib/seo";
 import { searchRegistryOffices } from "@/lib/search";
+import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
+import { registrySearchLabels } from "@/lib/registry-search-labels";
+import { headers } from "next/headers";
 import { prisma } from "@/lib/prisma";
 
 export const metadata = createMetadata({
@@ -74,29 +77,32 @@ export default async function RegistrySearchPage({
   const postalCode = typeof params.postalCode === "string" ? params.postalCode : "";
   await saveSearchLead(params);
   const results = searchRegistryOffices({ query, canton, postalCode });
+  const requestedLocale = (await headers()).get("x-site-locale") ?? defaultLocale;
+  const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
+  const labels = registrySearchLabels(await getDictionary(locale), locale);
 
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
       <div>
-        <h1 className="text-4xl font-semibold text-ink">Zivilstandsamt finden</h1>
+        <h1 className="text-4xl font-semibold text-ink">{labels.title}</h1>
         <p className="mt-3 max-w-3xl text-soft-ink">
-          Suche nach Kanton, Gemeinde, Ort, Postleitzahl oder Name des Zivilstandskreises. Die Ergebnisse basieren auf deiner importierten Schweizer Liste.
+          {labels.intro}
         </p>
       </div>
       <section className="rounded-xl border border-linen bg-white p-4 shadow-soft sm:p-5">
-        <SearchForm compact embedded />
+        <SearchForm compact embedded labels={labels} />
         <div className="mt-4">
-          <SwissMap embedded selectedCanton={canton} />
+          <SwissMap embedded selectedCanton={canton} labels={labels} />
         </div>
       </section>
       <section className="grid gap-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-2xl font-semibold text-ink">{results.length} Treffer</h2>
-          <p className="text-sm text-soft-ink">Sortiert nach Kanton und Amt</p>
+          <h2 className="text-2xl font-semibold text-ink">{results.length} {labels.results}</h2>
+          <p className="text-sm text-soft-ink">{labels.sorted}</p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {results.map((office) => (
-            <OfficeCard key={office.slug} office={office} />
+            <OfficeCard key={office.slug} office={office} labels={labels} />
           ))}
         </div>
       </section>

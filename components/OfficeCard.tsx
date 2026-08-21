@@ -2,8 +2,10 @@ import Link from "next/link";
 import { registryOfficeMedia } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import type { SwissRegistryOffice } from "@/lib/types";
+import { defaultRegistrySearchLabels, type RegistrySearchLabels } from "@/lib/registry-search-labels";
+import { withLocalePath } from "@/lib/i18n";
 
-export function OfficeCard({ office }: { office: SwissRegistryOffice }) {
+export function OfficeCard({ office, labels = defaultRegistrySearchLabels }: { office: SwissRegistryOffice; labels?: RegistrySearchLabels }) {
   const city = repairText(office.city);
   const municipalities = office.responsibleMunicipalities.map(repairText);
   const media = registryOfficeMedia(office);
@@ -23,28 +25,28 @@ export function OfficeCard({ office }: { office: SwissRegistryOffice }) {
       </div>
       <dl className="mt-4 grid gap-2 text-sm text-soft-ink">
         <div>
-          <dt className="font-semibold text-ink">Adresse</dt>
+          <dt className="font-semibold text-ink">{labels.address}</dt>
           <dd>{repairText(office.addressLine1)}, {office.postalCode} {city}</dd>
         </div>
         <div>
-          <dt className="font-semibold text-ink">Kontakt</dt>
-          <dd>{[office.phone, office.email].filter(Boolean).join(" · ") || "Telefon nicht in der Liste"}</dd>
+          <dt className="font-semibold text-ink">{labels.contact}</dt>
+          <dd>{[office.phone, office.email].filter(Boolean).join(" · ") || labels.noPhone}</dd>
         </div>
         <div>
-          <dt className="font-semibold text-ink">Zuständige Gemeinden</dt>
+          <dt className="font-semibold text-ink">{labels.municipalities}</dt>
           <dd>{municipalities.slice(0, 5).join(", ")}</dd>
         </div>
       </dl>
       <div className="mt-5 flex flex-wrap gap-3">
-        <Link href={`/zivilstandsamt/${office.slug}`} className="focus-ring rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white transition hover:bg-sage/90">
-          Details ansehen
+        <Link href={withLocalePath(`/zivilstandsamt/${office.slug}`, labels.locale)} className="focus-ring rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white transition hover:bg-sage/90">
+          {labels.details}
         </Link>
         {office.email ? (
           <a
             href={`mailto:${office.email}`}
             className="focus-ring rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-ink transition hover:border-sage/30 hover:text-sage"
           >
-            E-Mail an Amt
+            {labels.email}
           </a>
         ) : null}
       </div>

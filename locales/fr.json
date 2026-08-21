@@ -30,5 +30,10 @@
   "footer.platform": "Plateforme",
   "footer.legal": "Mentions légales",
   "footer.privacy": "Protection des données",
-  "footer.imprint": "Impressum"
+  "footer.imprint": "Impressum",
+  "registry.title": "Trouver un office de l'état civil",
+  "registry.intro": "Recherchez par canton, commune, localité, code postal ou nom de l'arrondissement de l'état civil.",
+  "registry.city": "Localité ou NPA", "registry.cityPlaceholder": "p. ex. Winterthour ou 8400", "registry.period": "Période souhaitée", "registry.from": "Du", "registry.until": "Au", "registry.submit": "Trouver un office", "registry.filters": "Afficher les filtres", "registry.canton": "Canton", "registry.allCantons": "Tous les cantons", "registry.weekdays": "Jours préférés", "registry.weekdayNames": "Lu|Ma|Me|Je|Ve|Sa",
+  "registry.mapEyebrow": "Carte interactive de la Suisse", "registry.mapSelect": "Choisir un canton", "registry.mapSelected": "Canton", "registry.mapIntro": "Chaque canton mène directement aux offices et aux communes correspondants.", "registry.mapSelectedIntro": "Cliquez sur un point pour ouvrir l'office correspondant.", "registry.back": "Retour à la Suisse", "registry.offices": "offices", "registry.mapAria": "Carte cliquable des cantons suisses", "registry.mapSource": "Données cartographiques : swiss-maps, basées sur les limites administratives généralisées de swisstopo/OFS.",
+  "registry.results": "résultats", "registry.sorted": "Triés par canton et office", "registry.noResults": "Aucun office correspondant", "registry.noResultsHint": "Vérifiez l'orthographe ou retirez certains filtres.", "registry.address": "Adresse", "registry.contact": "Contact", "registry.noPhone": "Téléphone non indiqué", "registry.municipalities": "Communes compétentes", "registry.details": "Voir les détails", "registry.email": "E-mail à l'office"
 }
