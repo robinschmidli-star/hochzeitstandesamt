@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { updateAnonymousProfile } from "@/lib/anonymous-profile";
 import { languageNames, locales, type Locale, withLocalePath } from "@/lib/i18n";
 
 export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
@@ -8,6 +9,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
 
   const chooseLanguage = (locale: Locale) => {
     window.localStorage.setItem("preferred-language", locale);
+    updateAnonymousProfile({ language: locale });
     document.documentElement.lang = locale;
     window.location.href = withLocalePath(pathname, locale);
   };
