@@ -20,6 +20,7 @@ export type SearchParams = {
   weekday?: string;
   tag?: string;
   saturdayOnly?: string;
+  elopement?: string;
   wheelchair?: string;
   parking?: string;
   evening?: string;
@@ -34,6 +35,7 @@ export type EnrichedRegistryOffice = SwissRegistryOffice & {
   saturday_weddings_available: true | false | "unknown";
   tags: string[];
   premiumVenueNames: string[];
+  elopementSuitable: boolean;
   distanceKm?: number;
   shortDescription: string;
 };
@@ -129,6 +131,16 @@ function getVenues(office: SwissRegistryOffice) {
   return ceremonyVenues.filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug);
 }
 
+export function isElopementSuitableVenue(venue: (typeof ceremonyVenues)[number]) {
+  const capacity = venue.maxCeremonyGuests;
+  if (typeof capacity !== "number" || capacity < 2 || capacity > 30) return false;
+  if (capacity <= 20) return true;
+  const natureSignal = normalize(
+    [venue.traulokal_name, venue.beschreibung, ...(venue.tags ?? [])].map(repairText).join(" ")
+  );
+  return /(see|lake|lac|lago|ufer|fluss|riviere|berg|mountain|wald|foret|park|garten|garden|natur|panorama)/.test(natureSignal);
+}
+
 function getOfficeTags(office: SwissRegistryOffice) {
   const venues = getVenues(office);
   const text = normalize(
@@ -219,6 +231,7 @@ export function enrichOffice(office: SwissRegistryOffice, origin?: { lat: number
   const coords = officeCoordinates(office);
   const tags = getOfficeTags(office);
   const venues = getVenues(office);
+  const elopementSuitable = venues.some(isElopementSuitableVenue);
   const distance = origin && coords ? distanceKm(origin, coords) : undefined;
   const cleanMunicipalities = repairedMunicipalities(office);
   const cleanOffice = {
@@ -241,6 +254,7 @@ export function enrichOffice(office: SwissRegistryOffice, origin?: { lat: number
     saturday_weddings_available: getSaturdayAvailability(office),
     tags,
     premiumVenueNames: venues.map((venue) => repairText(venue.traulokal_name)),
+    elopementSuitable,
     distanceKm: distance,
     shortDescription: `${cleanOffice.cantonName}: Zivilstandsamt in ${cleanOffice.city} mit Zuständigkeit für ${cleanMunicipalities.slice(0, 3).join(", ")}.`
   };
@@ -264,6 +278,7 @@ export function searchExperienceOffices(params: SearchParams) {
       if (origin && radius && typeof office.distanceKm === "number" && office.distanceKm > radius) return false;
       if (weekday && weekday !== "any" && !office.available_weekdays.includes(weekday)) return false;
       if (tag && !office.tags.includes(tag)) return false;
+      if (params.elopement === "true" && !office.elopementSuitable) return false;
       if (params.wheelchair === "yes" && office.wheelchairAccessibleBoolean !== true && !venues.some((venue) => venue.wheelchairAccessible === true)) return false;
       if (params.parking === "yes" && office.parkingAvailableBoolean !== true && !venues.some((venue) => venue.parkingAvailable === true)) return false;
       if (params.evening === "yes" && office.eveningCeremonyAvailable !== true && !venues.some((venue) => venue.eveningCeremonyAvailable === true)) return false;

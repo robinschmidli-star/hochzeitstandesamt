@@ -6,9 +6,9 @@ import pg from "pg";
 
 const { Client } = pg;
 const checkOnly = process.argv.includes("--check");
-const connectionString = process.env.CANONICAL_DATABASE_URL;
+const connectionString = process.env.PUBLIC_REPLICA_DATABASE_URL;
 if (!connectionString) {
-  throw new Error("CANONICAL_DATABASE_URL is required");
+  throw new Error("PUBLIC_REPLICA_DATABASE_URL is required and must expose only the curated web_public_* contract");
 }
 
 const registryPath = path.resolve("lib/registry-data.ts");
@@ -80,8 +80,8 @@ function uniqueSlug(base, used, suffix) {
 const client = new Client({
   connectionString,
   ssl:
-    process.env.CANONICAL_DATABASE_SSL === "require"
-      ? { rejectUnauthorized: process.env.CANONICAL_DATABASE_SSL_VERIFY !== "false" }
+    process.env.PUBLIC_REPLICA_DATABASE_SSL === "require"
+      ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" }
       : undefined
 });
 
@@ -89,6 +89,7 @@ await client.connect();
 let officeRows;
 let venueRows;
 let assignmentRows;
+let mediaRows;
 try {
   await client.query("BEGIN READ ONLY");
   officeRows = (await client.query("SELECT * FROM web_public_offices ORDER BY canton_code, name, id")).rows;
@@ -98,9 +99,40 @@ try {
       "SELECT venue_id, office_id FROM web_public_venue_office_assignments ORDER BY venue_id, office_id"
     )
   ).rows;
+  try {
+    mediaRows = (
+      await client.query("SELECT * FROM web_public_media ORDER BY entity_type, entity_id")
+    ).rows;
+  } catch (error) {
+    if (error?.code !== "42P01") throw error;
+    mediaRows = [];
+  }
 } finally {
   await client.query("ROLLBACK").catch(() => undefined);
   await client.end();
+}
+
+const mediaByEntityId = new Map(mediaRows.map((row) => [String(row.entity_id), row]));
+function publicMediaFields(entityId) {
+  const media = mediaByEntityId.get(String(entityId));
+  if (!media) {
+    return {
+      imageUrl: undefined,
+      imageAlt: undefined,
+      imageSource: undefined,
+      imageLicense: undefined,
+      imageAttribution: undefined,
+      imageStatus: undefined
+    };
+  }
+  return {
+    imageUrl: text(media.image_url),
+    imageAlt: text(media.image_alt),
+    imageSource: text(media.image_source),
+    imageLicense: undefined,
+    imageAttribution: text(media.image_attribution),
+    imageStatus: "approved"
+  };
 }
 
 const cantonByCode = new Map(existingCantons.map((item) => [item.code, item]));
@@ -152,7 +184,8 @@ const offices = officeRows.map((row) => {
       municipalities.length > 0 ? municipalities : old?.responsibleMunicipalities ?? [],
     map: old?.map ?? cantonInfo?.map ?? [],
     ceremonySaturday: boolean(profile.saturday_available ?? old?.ceremonySaturday),
-    phase1CheckedAt: text(profile.last_verified_at || old?.phase1CheckedAt)
+    phase1CheckedAt: text(profile.last_verified_at || old?.phase1CheckedAt),
+    ...publicMediaFields(row.id)
   };
   canonicalOfficeById.set(String(row.id), result);
   return result;
@@ -231,7 +264,8 @@ for (const row of venueRows) {
     seasonalAvailability: text(profile.ceremony_times_raw || old?.seasonalAvailability),
     venueUrl: text(row.website || profile.website || profile.source_url_detail || old?.venueUrl),
     sourceUrl: text(profile.source_url_detail || profile.source_url || old?.sourceUrl),
-    remarks: text(profile.notes || profile.review_note || old?.remarks)
+    remarks: text(profile.notes || profile.review_note || old?.remarks),
+    ...publicMediaFields(row.id)
   });
 }
 

@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
-import { mkdir, appendFile, readFile } from "node:fs/promises";
-import path from "node:path";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
+import { prisma } from "@/lib/prisma";
 
 const schema = z.object({
   leadType: z.string().min(1),
@@ -26,6 +25,7 @@ const searchLeadSchema = z.object({
   dateRangeStart: z.string().optional().default(""),
   dateRangeEnd: z.string().optional().default(""),
   weekday: z.string().optional().default(""),
+  elopement: z.boolean().optional().default(false),
   location: z.string().optional().default(""),
   canton: z.string().optional().default(""),
   city: z.string().optional().default(""),
@@ -33,25 +33,18 @@ const searchLeadSchema = z.object({
   favoriteVenueIds: z.array(z.string()).optional().default([])
 });
 
-const storageDir = path.join(process.cwd(), "storage");
-const storageFile = path.join(storageDir, "leads.jsonl");
 
 async function existingSearchLeadId(email: string, weddingDate: string, location: string) {
-  try {
-    const file = await readFile(storageFile, "utf8");
-    return file
-      .split(/\r?\n/)
-      .filter(Boolean)
-      .map((line) => JSON.parse(line) as { id?: string; lead_type?: string; email?: string; wedding_date?: string; location?: string })
-      .find((lead) =>
-        lead.lead_type === "search_save" &&
-        lead.email?.toLowerCase() === email.toLowerCase() &&
-        (lead.wedding_date ?? "") === weddingDate &&
-        (lead.location ?? "") === location
-      )?.id ?? "";
-  } catch {
-    return "";
-  }
+  const lead = await prisma.websiteLead.findFirst({
+    where: {
+      leadType: "search_save",
+      email: { equals: email, mode: "insensitive" },
+      dedupeWeddingDate: weddingDate,
+      dedupeLocation: location
+    },
+    select: { id: true }
+  });
+  return lead?.id ?? "";
 }
 
 export async function POST(request: Request) {
@@ -80,6 +73,7 @@ export async function POST(request: Request) {
       date_range_start: data.dateRangeStart,
       date_range_end: data.dateRangeEnd,
       weekday: data.weekday,
+      elopement: data.elopement,
       location: data.location,
       canton: data.canton,
       city: data.city,
@@ -91,8 +85,18 @@ export async function POST(request: Request) {
       status: "new"
     };
 
-    await mkdir(storageDir, { recursive: true });
-    await appendFile(storageFile, `${JSON.stringify(lead)}\n`, "utf8");
+    await prisma.websiteLead.create({
+      data: {
+        id: lead.id,
+        leadType: lead.lead_type,
+        email: lead.email,
+        firstName: lead.first_name,
+        payload: lead,
+        dedupeWeddingDate: weddingDate || null,
+        dedupeLocation: data.location || null,
+        duplicateOfId: duplicateOf || null
+      }
+    });
 
     return NextResponse.json({ ok: true });
   }
@@ -123,8 +127,14 @@ export async function POST(request: Request) {
     created_at: new Date().toISOString(),
     status: "new"
   };
-  await mkdir(storageDir, { recursive: true });
-  await appendFile(storageFile, `${JSON.stringify(lead)}\n`, "utf8");
+  await prisma.websiteLead.create({
+    data: {
+      leadType: lead.lead_type,
+      email: lead.email,
+      firstName: lead.first_name,
+      payload: lead
+    }
+  });
 
   return NextResponse.redirect(new URL(`/danke?type=${encodeURIComponent(parsed.data.leadType)}`, request.url), 303);
 }

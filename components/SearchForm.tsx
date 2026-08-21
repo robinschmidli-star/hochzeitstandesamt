@@ -40,7 +40,7 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
         </label>
         <fieldset className="min-w-0 text-sm font-medium text-ink">
           <legend className="mb-2">Gewünschter Zeitraum</legend>
-          <div className="grid gap-2 sm:grid-cols-2">
+          <div className="grid gap-2 min-[390px]:grid-cols-2">
             <input name="dateStart" type="date" aria-label="Von" className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
             <input name="dateEnd" type="date" aria-label="Bis" className="focus-ring h-12 w-full rounded-lg border border-linen px-3 text-soft-ink" />
           </div>
@@ -79,7 +79,7 @@ export function SearchForm({ compact = false, embedded = false }: { compact?: bo
               />
             </label>
             <label className="flex gap-3 text-sm leading-6 text-soft-ink md:col-span-2">
-              <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+              <input name="marketingOptIn" type="checkbox" value="yes" className="mt-0.5 h-5 w-5 shrink-0 rounded border-linen accent-sage" />
               <span>Ich möchte passende Tipps und Angebote rund um meine Hochzeit per E-Mail erhalten. Ich kann mich jederzeit abmelden.</span>
             </label>
           </div>

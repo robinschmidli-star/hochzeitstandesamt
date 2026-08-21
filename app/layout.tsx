@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { Analytics } from "@/components/Analytics";
 import { SiteChrome } from "@/components/SiteChrome";
-import { defaultLocale, locales } from "@/lib/i18n";
+import { defaultLocale, indexableLocales } from "@/lib/i18n";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/${defaultLocale}`,
     languages: {
-      ...Object.fromEntries(locales.map((locale) => [locale, `${siteUrl}/${locale}`])),
+      ...Object.fromEntries(indexableLocales.map((locale) => [locale, `${siteUrl}/${locale}`])),
       "x-default": `${siteUrl}/${defaultLocale}`
     }
   }
@@ -26,6 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de-CH">
       <body className="min-h-screen font-sans antialiased">
+        <Suspense><Analytics /></Suspense>
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

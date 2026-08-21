@@ -37,6 +37,25 @@ export default function GuideIndexPage() {
           Schritt für Schritt geordnet: vom offiziellen Überblick über Dokumente bis zu rechtlichen und finanziellen Fragen.
         </p>
       </div>
+      <section className="rounded-2xl border border-champagne/40 bg-paper p-6 shadow-soft sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Euer Weg zum Ja-Wort</p>
+        <h2 className="mt-3 text-2xl font-semibold text-ink sm:text-3xl">
+          Wie funktioniert eine standesamtliche Hochzeit in der Schweiz?
+        </h2>
+        <p className="mt-3 max-w-2xl leading-7 text-soft-ink">
+          Wenn ihr noch nicht wisst, wo ihr anfangen sollt: Die Hochzeits-Journey führt euch von der Ehevorbereitung bis zur Trauung.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-3 text-sm font-semibold text-ink" aria-label="Die fünf Schritte der Hochzeits-Journey">
+          <span>💍 Start</span><span className="text-champagne" aria-hidden="true">→</span>
+          <span>📄 Vorbereitung</span><span className="text-champagne" aria-hidden="true">→</span>
+          <span>🏛️ Trauort</span><span className="text-champagne" aria-hidden="true">→</span>
+          <span>📅 Termin</span><span className="text-champagne" aria-hidden="true">→</span>
+          <span>❤️ Heiraten</span>
+        </div>
+        <Link href="/heiraten-schweiz" className="focus-ring mt-6 inline-flex rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
+          Hochzeits-Journey entdecken →
+        </Link>
+      </section>
       {guideSections.map((section) => {
         const sectionGuides = section.slugs
           .map((slug) => guides.find((guide) => guide.slug === slug))

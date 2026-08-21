@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:canonical": "npm run sync:canonical && npm run check:canonical && next build",
+    "build:canonical": "prisma generate && npm run sync:canonical && npm run check:canonical && next build",
     "start": "next start",
     "lint": "next lint",
     "prisma:generate": "prisma generate",

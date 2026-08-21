@@ -1,3 +1,7 @@
 {
-  "buildCommand": "npm run build:canonical"
+  "buildCommand": "npm run build:canonical",
+  "crons": [
+    { "path": "/api/cron/weekly-analytics", "schedule": "0 5 * * 1" },
+    { "path": "/api/cron/weekly-analytics", "schedule": "0 6 * * 1" }
+  ]
 }

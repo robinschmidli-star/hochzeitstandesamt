@@ -1,0 +1,20 @@
+{
+  "default": "de",
+  "languages": {
+    "de": { "name": "Deutsch", "enabledForUsers": true, "indexable": true, "core": true },
+    "fr": { "name": "Français", "enabledForUsers": true, "indexable": true, "core": true },
+    "it": { "name": "Italiano", "enabledForUsers": true, "indexable": true, "core": true },
+    "en": { "name": "English", "enabledForUsers": true, "indexable": true, "core": true },
+    "es": { "name": "Español", "enabledForUsers": false, "indexable": false, "core": false },
+    "pt": { "name": "Português", "enabledForUsers": false, "indexable": false, "core": false },
+    "nl": { "name": "Nederlands", "enabledForUsers": false, "indexable": false, "core": false },
+    "sr": { "name": "Srpski", "enabledForUsers": false, "indexable": false, "core": false },
+    "sq": { "name": "Shqip", "enabledForUsers": false, "indexable": false, "core": false },
+    "tr": { "name": "Türkçe", "enabledForUsers": false, "indexable": false, "core": false },
+    "hr": { "name": "Hrvatski", "enabledForUsers": false, "indexable": false, "core": false },
+    "bs": { "name": "Bosanski", "enabledForUsers": false, "indexable": false, "core": false },
+    "uk": { "name": "Українська", "enabledForUsers": false, "indexable": false, "core": false },
+    "pl": { "name": "Polski", "enabledForUsers": false, "indexable": false, "core": false },
+    "ro": { "name": "Română", "enabledForUsers": false, "indexable": false, "core": false }
+  }
+}

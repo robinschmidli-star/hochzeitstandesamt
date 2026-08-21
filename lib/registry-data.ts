@@ -398,7 +398,10 @@ export const swissRegistryOffices = [
       38
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/baden.png",
+    "mediaAlt": "Wappen der Gemeinde Baden",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Baden_AG; abgerufen am 2026-08-21"
   },
   {
     "id": "regionales-zivilstandsamt-bremgarten-bremgarten-ag-ag",
@@ -613,7 +616,10 @@ export const swissRegistryOffices = [
       38
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/dietikon.png",
+    "mediaAlt": "Wappen der Gemeinde Dietikon",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Dietikon; abgerufen am 2026-08-21"
   },
   {
     "id": "regionales-zivilstandsamt-laufenburg-laufenburg-ag",
@@ -1347,7 +1353,10 @@ export const swissRegistryOffices = [
       38
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/sins.png",
+    "mediaAlt": "Wappen der Gemeinde Sins",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Sins; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "509f4b03-72a2-536e-89c9-e56e1d66a467",
@@ -1373,7 +1382,10 @@ export const swissRegistryOffices = [
       38
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/wettingen.png",
+    "mediaAlt": "Wappen der Gemeinde Wettingen",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Wettingen; abgerufen am 2026-08-21"
   },
   {
     "id": "regionales-zivilstandsamt-wohlen-wohlen-ag",
@@ -1741,7 +1753,10 @@ export const swissRegistryOffices = [
       43
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/herisau.png",
+    "mediaAlt": "Wappen der Gemeinde Herisau",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Herisau; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "1a77e2e3-b0e3-524a-83de-d3c8e622f7d1",
@@ -1773,7 +1788,10 @@ export const swissRegistryOffices = [
       43
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/buhler.png",
+    "mediaAlt": "Wappen der Gemeinde Bühler",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/B%C3%BChler_AR; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "42ff35a5-fd98-503a-9633-b05c3b044784",
@@ -1808,7 +1826,10 @@ export const swissRegistryOffices = [
       43
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/rehetobel.png",
+    "mediaAlt": "Wappen der Gemeinde Rehetobel",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Rehetobel; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "b32686cb-2a87-5854-93a4-d646586834ac",
@@ -1834,7 +1855,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/bern.png",
+    "mediaAlt": "Wappen der Gemeinde Bern",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Bern; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "7770b051-5d7d-5619-b724-8d304d77eb66",
@@ -1860,7 +1884,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/courtelary.png",
+    "mediaAlt": "Wappen der Gemeinde Courtelary",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Courtelary; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "70cf612b-24d9-538e-a779-2a17e9b8172d",
@@ -1886,7 +1913,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/langnau-i-e.png",
+    "mediaAlt": "Wappen der Gemeinde Langnau i. E.",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Langnau_im_Emmental; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "0db6682f-80b8-5955-b13c-b2d254c71f49",
@@ -1912,7 +1942,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/langenthal.png",
+    "mediaAlt": "Wappen der Gemeinde Langenthal",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Langenthal; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "57f1dd71-7b8c-530d-a99d-a52f5bfc9b57",
@@ -1938,7 +1971,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/interlaken.png",
+    "mediaAlt": "Wappen der Gemeinde Interlaken",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Interlaken; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "c10f5c47-e3ee-5e25-a345-936c9832a605",
@@ -1964,7 +2000,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/thun.png",
+    "mediaAlt": "Wappen der Gemeinde Thun",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Thun; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "cd0e8213-5ac5-5126-9808-69c528bc3b42",
@@ -1990,7 +2029,10 @@ export const swissRegistryOffices = [
       55
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": ""
+    "phase1CheckedAt": "",
+    "coatOfArmsUrl": "/coats-of-arms/biel-bienne.png",
+    "mediaAlt": "Wappen der Gemeinde Biel/Bienne",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Biel/Bienne; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-basel-landschaft-arlesheim-bl",
@@ -2254,7 +2296,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/estavayer.png",
+    "mediaAlt": "Wappen der Gemeinde Estavayer",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Estavayer; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "5e7608c9-746a-5923-9910-a1ff2832d3c9",
@@ -2280,7 +2325,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/romont.png",
+    "mediaAlt": "Wappen der Gemeinde Romont",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Romont_FR; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "134ec693-efc0-5be6-a472-15d8850de130",
@@ -2306,7 +2354,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/bulle.png",
+    "mediaAlt": "Wappen der Gemeinde Bulle",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Bulle_FR; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "7ad47922-2bc5-5f99-a29c-a815960039e1",
@@ -2332,7 +2383,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/fribourg.png",
+    "mediaAlt": "Wappen der Gemeinde Fribourg",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Fribourg%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "318c4e3a-17ee-51ed-a547-46be6e57aec5",
@@ -2358,7 +2412,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/tafers.png",
+    "mediaAlt": "Wappen der Gemeinde Tafers",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Tafers; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "c5d5c9c2-c67b-5e14-bc40-eaede111fa88",
@@ -2384,7 +2441,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/chatel-saint-denis.png",
+    "mediaAlt": "Wappen der Gemeinde Châtel-Saint-Denis",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Ch%C3%A2tel-Saint-Denis; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "14fa4965-62e0-5b3f-9dfc-d9e560add544",
@@ -2410,7 +2470,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/murten.png",
+    "mediaAlt": "Wappen der Gemeinde Murten",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Murten; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "2bdcec7e-41c3-5970-ac16-9f3aa10fae79",
@@ -2441,7 +2504,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/chene-bougeries.png",
+    "mediaAlt": "Wappen der Gemeinde Chêne-Bougeries",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Ch%C3%AAne-Bougeries%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "60e7f1d5-6471-5ff2-a7e9-e31dee2c704a",
@@ -2477,7 +2543,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/cologny.png",
+    "mediaAlt": "Wappen der Gemeinde Cologny",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Cologny%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "ac207857-5a05-52c4-b10a-918deb24fe1e",
@@ -2511,7 +2580,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/pregny-chambesy.png",
+    "mediaAlt": "Wappen der Gemeinde Pregny-Chambésy",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Pregny-Chamb%C3%A9sy%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "41d9ba1b-0913-5ed3-b591-0089366ab220",
@@ -2548,7 +2620,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/bernex.png",
+    "mediaAlt": "Wappen der Gemeinde Bernex",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Bernex_GE; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "739194e7-8982-5815-85b2-2d7cc22fc667",
@@ -2578,7 +2653,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/chene-bourg.png",
+    "mediaAlt": "Wappen der Gemeinde Chêne-Bourg",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Ch%C3%AAne-Bourg%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "5f2ae8a9-5cfa-5e38-a391-9b5fa9420132",
@@ -2609,7 +2687,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/lancy.png",
+    "mediaAlt": "Wappen der Gemeinde Lancy",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Lancy; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "1f3cc4bf-0519-5107-a1ce-16a35fe1498d",
@@ -2641,7 +2722,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/meyrin.png",
+    "mediaAlt": "Wappen der Gemeinde Meyrin",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Meyrin; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "b4244918-e347-5e3b-9621-307dd8420906",
@@ -2672,7 +2756,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/chene-bougeries.png",
+    "mediaAlt": "Wappen der Gemeinde Chêne-Bougeries",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Ch%C3%AAne-Bougeries%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "4160c25f-1f94-5425-aab1-d217fa7ce4bd",
@@ -2708,7 +2795,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/cologny.png",
+    "mediaAlt": "Wappen der Gemeinde Cologny",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Cologny%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "bb46004d-1a2e-5e5a-b84b-9c5a7edea1ac",
@@ -2742,7 +2832,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/pregny-chambesy.png",
+    "mediaAlt": "Wappen der Gemeinde Pregny-Chambésy",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Pregny-Chamb%C3%A9sy%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "009d6565-5b76-5e3c-9686-d12ce19484a7",
@@ -2779,7 +2872,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/bernex.png",
+    "mediaAlt": "Wappen der Gemeinde Bernex",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Bernex_GE; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "66f1e848-47b6-5476-b2a4-6250756b3a89",
@@ -2809,7 +2905,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/chene-bourg.png",
+    "mediaAlt": "Wappen der Gemeinde Chêne-Bourg",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Ch%C3%AAne-Bourg%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "46f3b13a-8dba-5016-af70-0b2f5f740a00",
@@ -2840,7 +2939,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/lancy.png",
+    "mediaAlt": "Wappen der Gemeinde Lancy",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Lancy; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "21679e0e-b334-5b1d-baed-d854274a6e4e",
@@ -2872,7 +2974,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/meyrin.png",
+    "mediaAlt": "Wappen der Gemeinde Meyrin",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Meyrin; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "f3e894d9-7209-59b8-baf6-86854fade269",
@@ -2901,7 +3006,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/carouge.png",
+    "mediaAlt": "Wappen der Gemeinde Carouge",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Carouge_GE; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "6f56b27b-c8ce-560d-a51b-2ca7cf06d59b",
@@ -2930,7 +3038,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/carouge.png",
+    "mediaAlt": "Wappen der Gemeinde Carouge",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Carouge_GE; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "60fb2f9e-f10a-50c1-bf96-e00206d3683e",
@@ -2958,7 +3069,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/geneve.png",
+    "mediaAlt": "Wappen der Gemeinde Genève",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Gen%C3%A8ve; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "d35f7e7c-ee73-5534-b15a-47ed1590844a",
@@ -2986,7 +3100,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/geneve.png",
+    "mediaAlt": "Wappen der Gemeinde Genève",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Gen%C3%A8ve; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "470eb91f-4529-546d-a117-b0c5b34f5925",
@@ -3016,7 +3133,10 @@ export const swissRegistryOffices = [
       57
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/glarus.png",
+    "mediaAlt": "Wappen der Gemeinde Glarus",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:Wappen%20der%20Gemeinde%20Glarus.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "7b2cb797-56fb-5268-acfc-13aecd4f4f4c",
@@ -3044,7 +3164,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/poschiavo.png",
+    "mediaAlt": "Wappen der Gemeinde Poschiavo",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Poschiavo; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "d888e407-e2a4-525f-8435-3bd764cd98c5",
@@ -3072,7 +3195,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-21"
+    "phase1CheckedAt": "2026-06-21",
+    "coatOfArmsUrl": "/coats-of-arms/santa-maria-in-calanca.png",
+    "mediaAlt": "Wappen der Gemeinde Santa Maria in Calanca",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Santa_Maria_in_Calanca; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-albula-tiefencastel-gr",
@@ -3248,7 +3374,10 @@ export const swissRegistryOffices = [
       72
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/scuol.png",
+    "mediaAlt": "Wappen der Gemeinde Scuol",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Scuol; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-landquart-landquart-gr",
@@ -3908,7 +4037,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/willisau.png",
+    "mediaAlt": "Wappen der Gemeinde Willisau",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Willisau%20COA.png; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "798e435c-fcf8-5f04-8456-90ca3f4be005",
@@ -3944,7 +4076,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/ebikon.png",
+    "mediaAlt": "Wappen der Gemeinde Ebikon",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Ebikon; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "877fabc2-4a59-5a6a-a5f7-de779e9457a4",
@@ -3974,7 +4109,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/emmen.png",
+    "mediaAlt": "Wappen der Gemeinde Emmen",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Emmen%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "19525ad7-1c40-523c-ba6d-78f6e9bf7915",
@@ -4011,7 +4149,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/hochdorf.png",
+    "mediaAlt": "Wappen der Gemeinde Hochdorf",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Hochdorf%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "7c6fbb66-0169-53a4-8f1b-1c0a20a54b4d",
@@ -4045,7 +4186,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/luzern.gif",
+    "mediaAlt": "Wappen der Gemeinde Luzern",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Luzern; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "aab8a75c-367d-5de2-b04a-7ca577b6bd56",
@@ -4076,7 +4220,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/sempach.png",
+    "mediaAlt": "Wappen der Gemeinde Sempach",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Sempach%20COA.png; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "c50e1702-bb5a-585e-80d1-a9ce52780657",
@@ -4117,7 +4264,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/sursee.png",
+    "mediaAlt": "Wappen der Gemeinde Sursee",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Sursee; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "5415bfb3-8577-594c-841b-4f44e364d982",
@@ -4154,7 +4304,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/wolhusen.png",
+    "mediaAlt": "Wappen der Gemeinde Wolhusen",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Wolhusen; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "59369777-9e60-5691-82c0-334e4cabcb86",
@@ -4182,7 +4335,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/horw.png",
+    "mediaAlt": "Wappen der Gemeinde Horw",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Horw; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "7fb58cd6-fc5c-5b5f-852c-0a2514d3c859",
@@ -4210,7 +4366,10 @@ export const swissRegistryOffices = [
       52
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-08-17"
+    "phase1CheckedAt": "2026-08-17",
+    "coatOfArmsUrl": "/coats-of-arms/kriens.png",
+    "mediaAlt": "Wappen der Gemeinde Kriens",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Kriens; abgerufen am 2026-08-21"
   },
   {
     "id": "etat-civil-des-montagnes-neuchateloises-le-locle-ne",
@@ -4324,7 +4483,10 @@ export const swissRegistryOffices = [
       51
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/boudry.png",
+    "mediaAlt": "Wappen der Gemeinde Boudry",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Boudry; abgerufen am 2026-08-21"
   },
   {
     "id": "office-de-l-etat-civil-de-l-arrondissement-de-neuchatel-neuchatel-ne",
@@ -4582,7 +4744,10 @@ export const swissRegistryOffices = [
       59
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/stans.png",
+    "mediaAlt": "Wappen der Gemeinde Stans",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Stans; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-obwalden-sarnen-ow",
@@ -4925,7 +5090,10 @@ export const swissRegistryOffices = [
       45
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/wil.png",
+    "mediaAlt": "Wappen der Gemeinde Wil",
+    "mediaLicenseNote": "Quelle: https://commons.wikimedia.org/wiki/File:CHE%20Wil%20SG%20COA.svg; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "5ca266a7-81e1-5b4e-b92b-1cfb5794d44b",
@@ -4963,7 +5131,10 @@ export const swissRegistryOffices = [
       45
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-17"
+    "phase1CheckedAt": "2026-06-17",
+    "coatOfArmsUrl": "/coats-of-arms/altstatten.png",
+    "mediaAlt": "Wappen der Gemeinde Altstätten",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Altst%C3%A4tten; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-rorschach-rorschach-sg",
@@ -5474,7 +5645,10 @@ export const swissRegistryOffices = [
       25
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-20"
+    "phase1CheckedAt": "2026-06-20",
+    "coatOfArmsUrl": "/coats-of-arms/schaffhausen.png",
+    "mediaAlt": "Wappen der Gemeinde Schaffhausen",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Schaffhausen; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "81c5b63b-887c-5530-9be9-c6b1fb93848a",
@@ -5500,7 +5674,10 @@ export const swissRegistryOffices = [
       39
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/dornach.png",
+    "mediaAlt": "Wappen der Gemeinde Dornach",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Dornach_SO; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "c02e2da9-3dea-5082-89ff-95c2fdeec9d9",
@@ -5526,7 +5703,10 @@ export const swissRegistryOffices = [
       39
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/olten.png",
+    "mediaAlt": "Wappen der Gemeinde Olten",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Olten; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-solothurn-solothurn-so",
@@ -5686,7 +5866,10 @@ export const swissRegistryOffices = [
       39
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/balsthal.png",
+    "mediaAlt": "Wappen der Gemeinde Balsthal",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Balsthal; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-ausserschwyz-pfaffikon-sz",
@@ -6963,7 +7146,10 @@ export const swissRegistryOffices = [
       80
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/martigny.png",
+    "mediaAlt": "Wappen der Gemeinde Martigny",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Martigny; abgerufen am 2026-08-21"
   },
   {
     "id": "office-de-l-etat-civil-de-monthey-monthey-vs",
@@ -7074,7 +7260,10 @@ export const swissRegistryOffices = [
       80
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/sierre.png",
+    "mediaAlt": "Wappen der Gemeinde Sierre",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Siders; abgerufen am 2026-08-21"
   },
   {
     "canonicalId": "bad1d40c-5aee-52f3-a040-d01be8616ec0",
@@ -7100,7 +7289,10 @@ export const swissRegistryOffices = [
       80
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/sion.png",
+    "mediaAlt": "Wappen der Gemeinde Sion",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Sitten; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-brig-glis-brig-glis-vs",
@@ -7219,7 +7411,10 @@ export const swissRegistryOffices = [
       80
     ],
     "ceremonySaturday": null,
-    "phase1CheckedAt": "2026-06-19"
+    "phase1CheckedAt": "2026-06-19",
+    "coatOfArmsUrl": "/coats-of-arms/visp.png",
+    "mediaAlt": "Wappen der Gemeinde Visp",
+    "mediaLicenseNote": "Quelle: https://de.wikipedia.org/wiki/Visp; abgerufen am 2026-08-21"
   },
   {
     "id": "zivilstandsamt-kreis-baar-baar-zg",

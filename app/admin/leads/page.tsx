@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { prisma } from "@/lib/prisma";
 
 type Lead = {
   lead_type: string;
@@ -21,16 +20,28 @@ type Lead = {
 };
 
 async function getLeads() {
-  try {
-    const file = await readFile(path.join(process.cwd(), "storage", "leads.jsonl"), "utf8");
-    return file
-      .split("\n")
-      .filter(Boolean)
-      .map((line) => JSON.parse(line) as Lead)
-      .sort((a, b) => b.created_at.localeCompare(a.created_at));
-  } catch {
-    return [];
-  }
+  const rows = await prisma.websiteLead.findMany({ orderBy: { createdAt: "desc" } });
+  return rows.map((row) => {
+    const payload = row.payload as unknown as Partial<Lead>;
+    return {
+      lead_type: row.leadType,
+      source_page: payload.source_page ?? "",
+      first_name: row.firstName,
+      last_name: payload.last_name ?? "",
+      email: row.email,
+      phone: payload.phone ?? "",
+      address: payload.address ?? "",
+      canton: payload.canton ?? "",
+      wedding_location: payload.wedding_location ?? "",
+      wedding_date: payload.wedding_date ?? "",
+      legal_topic: payload.legal_topic ?? "",
+      message: payload.message ?? "",
+      consent_privacy: payload.consent_privacy ?? false,
+      consent_forwarding: payload.consent_forwarding ?? false,
+      created_at: row.createdAt.toISOString(),
+      status: row.status as Lead["status"]
+    } satisfies Lead;
+  });
 }
 
 export default async function AdminLeadsPage({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {

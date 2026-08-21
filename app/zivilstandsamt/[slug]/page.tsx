@@ -1,5 +1,7 @@
 ﻿import { notFound } from "next/navigation";
 import { ChecklistForm } from "@/components/LeadForm";
+import { TrackOnMount } from "@/components/Analytics";
+import { headers } from "next/headers";
 import { ResponsibleMunicipalities } from "@/components/ResponsibleMunicipalities";
 import { SafeMediaAttribution, SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { Disclaimer } from "@/components/Disclaimer";
@@ -8,7 +10,10 @@ import { ceremonyVenues } from "@/lib/ceremony-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
 import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
-import { createMetadata, faqSchema } from "@/lib/seo";
+import { breadcrumbSchema, createMetadata, faqSchema, registryOfficeSchema } from "@/lib/seo";
+import { contentTranslations } from "@/lib/content-translations";
+import { defaultLocale, isLocale } from "@/lib/i18n";
+import type { CeremonyVenue, SwissRegistryOffice } from "@/lib/types";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -74,8 +79,21 @@ function ceremonyDays(source: {
     .join(", ");
 }
 
+function isOfficeVenue(venue: CeremonyVenue, office: SwissRegistryOffice) {
+  const venueAddress = repairText(venue.adresse).toLowerCase();
+  const officeAddress = repairText(office.addressLine1).toLowerCase();
+  const venueName = repairText(venue.traulokal_name).toLowerCase();
+  return Boolean(
+    (venueAddress && officeAddress && venueAddress === officeAddress) ||
+    venueName.includes("zivilstandsamt") ||
+    venueName.includes("standesamt")
+  );
+}
+
 export default async function RegistryOfficeDetailPage({ params }: Props) {
   const { slug } = await params;
+  const rawLocale = (await headers()).get("x-site-locale") ?? defaultLocale;
+  const locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const office = swissRegistryOffices.find((item) => item.slug === slug);
   if (!office) notFound();
   const cleanOffice = {
@@ -89,20 +107,30 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
     responsibleMunicipalities: office.responsibleMunicipalities.map(repairText),
     ceremonyLocations: office.ceremonyLocations?.map(repairText)
   };
-  const cleanVenues = ceremonyVenues
+  const matchingVenues = ceremonyVenues
     .filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug)
+  const venueTranslations = await contentTranslations(
+    "wedding_venue",
+    matchingVenues.flatMap((venue) => venue.canonicalId ? [venue.canonicalId] : []),
+    locale,
+    "description"
+  );
+  const cleanVenues = matchingVenues
     .map((venue) => ({
       ...venue,
       traulokal_name: repairText(venue.traulokal_name),
       adresse: repairText(venue.adresse),
       ort: repairText(venue.ort),
-      beschreibung: repairText(venue.beschreibung),
+      beschreibung: repairText(
+        (venue.canonicalId && venueTranslations.get(venue.canonicalId)) || venue.beschreibung
+      ),
       seasonalAvailability: repairText(venue.seasonalAvailability)
     }));
   const websiteUrl = httpsUrl(office.website_url) || httpsUrl(office.officialUrl);
   const marriageInfoUrl = httpsUrl(office.marriage_info_url) || websiteUrl;
   const appointmentUrl = httpsUrl(office.appointment_url) || httpsUrl(office.appointmentBookingUrl) || httpsUrl(office.onlineCalendarUrl);
   const officeVenues = cleanVenues;
+  const hasOfficeVenue = officeVenues.some((venue) => isOfficeVenue(venue, office));
   const officeMedia = registryOfficeMedia(office);
 
   const faq = [
@@ -124,12 +152,19 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
 
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+      <TrackOnMount eventName="location_view" properties={{ entityType: "civil_registry_office", entityId: office.canonicalId ?? office.id, canton: office.canton }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faq)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(registryOfficeSchema(cleanOffice, cleanVenues)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Startseite", url: "https://hochzeitstandesamt.ch/" },
+        { name: "Standesämter", url: "https://hochzeitstandesamt.ch/standesamt-finden" },
+        { name: cleanOffice.name, url: `https://hochzeitstandesamt.ch/zivilstandsamt/${office.slug}` }
+      ])) }} />
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{cleanOffice.cantonName} · {office.canton}</p>
-            <h1 className="mt-2 text-4xl font-semibold text-ink">{cleanOffice.name}</h1>
+            <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{cleanOffice.name}</h1>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-soft-ink">
               Zuständiger Zivilstandskreis für Gemeinden in {cleanOffice.cantonName}. Prüfe die Angaben und kontaktiere das Amt für verbindliche Auskünfte.
             </p>
@@ -179,28 +214,35 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
       </div>
 
       <section className="grid gap-5 rounded-xl border border-linen bg-white p-6 shadow-soft">
-        <h2 className="text-2xl font-semibold text-ink">Trauung & Zugänglichkeit</h2>
+        <h2 className="text-2xl font-semibold text-ink">Trauung</h2>
+        {hasOfficeVenue ? <p className="font-semibold text-sage">✓ Trauungen direkt im Zivilstandsamt möglich</p> : null}
         <dl className="grid gap-4 text-sm text-soft-ink md:grid-cols-2 lg:grid-cols-3">
           <InfoItem label="Mögliche Trautage" value={ceremonyDays(office) || "Keine Information verfügbar"} />
           <InfoItem label="Samstagstrauung" value={boolInfo(office.ceremonySaturday)} />
           <InfoItem label="Abendtrauung" value={boolInfo(office.eveningCeremonyAvailable)} />
-          <InfoItem label="Trauung im Freien" value={boolInfo(office.outdoorCeremonyAvailable)} />
           <InfoItem label="Online-Terminbuchung" value={boolInfo(office.onlineAppointmentBookingAvailable)} />
           <InfoItem label="Direktlink Terminbuchung" value={appointmentUrl || "Keine Information verfügbar"} />
-          <InfoItem label="Trauzeiten / Öffnungstage Traulokal" value={info(office.ceremonyTimes)} />
-          <InfoItem label="Rollstuhlgängig" value={boolInfo(office.wheelchairAccessibleBoolean)} />
-          <InfoItem label="Parkplätze" value={boolInfo(office.parkingAvailableBoolean)} />
-          <InfoItem label="Max. Gästezahl Traulokal" value={info(office.maxCeremonyGuests)} />
-          <InfoItem label="Mehrere Traulokale vorhanden" value={boolInfo(office.multipleCeremonyVenuesAvailable)} />
-          <InfoItem label="Anzahl Traulokale" value={info(office.ceremonyVenueCount)} />
-          <InfoItem label="Besonderheiten Traulokal" value={info(office.ceremonyVenueNotes)} />
-          <InfoItem label="Saisonal verfügbar" value={info(office.ceremonyVenueSeasonalAvailability)} />
+          <InfoItem label="Allgemeine Trauzeiten" value={info(office.ceremonyTimes)} />
           <InfoItem label="Trauungen ausserhalb Bürozeiten" value={boolInfo(office.ceremoniesOutsideOfficeHours)} />
           <InfoItem label="Bemerkungen Trauungen" value={info(office.ceremonyRemarks)} />
         </dl>
+        {!officeVenues.length ? (
+          <div className="rounded-lg border border-linen bg-linen/40 p-4">
+            <h3 className="font-semibold text-ink">Angaben zum Trauangebot</h3>
+            <p className="mt-1 text-sm text-soft-ink">Diese bestehenden Angaben sind noch keinem separaten Trauort zugeordnet.</p>
+            <dl className="mt-3 grid gap-3 text-sm text-soft-ink md:grid-cols-2 lg:grid-cols-3">
+              <InfoItem label="Trauung im Freien" value={boolInfo(office.outdoorCeremonyAvailable)} />
+              <InfoItem label="Rollstuhlgängig" value={boolInfo(office.wheelchairAccessibleBoolean)} />
+              <InfoItem label="Parkplätze" value={boolInfo(office.parkingAvailableBoolean)} />
+              <InfoItem label="Max. Gästezahl" value={info(office.maxCeremonyGuests)} />
+              <InfoItem label="Besonderheiten" value={info(office.ceremonyVenueNotes)} />
+              <InfoItem label="Saisonal verfügbar" value={info(office.ceremonyVenueSeasonalAvailability)} />
+            </dl>
+          </div>
+        ) : null}
         {cleanOffice.ceremonyLocations?.length || officeVenues.length ? (
           <div>
-            <h3 className="font-semibold text-ink">Traulokale</h3>
+            <h3 className="text-xl font-semibold text-ink">Trauorte dieses Zivilstandsamts</h3>
             {cleanOffice.ceremonyLocations?.length ? (
               <div className="mt-3 flex flex-wrap gap-2">
                 {cleanOffice.ceremonyLocations.map((location) => (
@@ -234,7 +276,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
                       </dl>
                       {httpsUrl(venue.venueUrl) ? (
                         <a href={venue.venueUrl} target="_blank" rel="noopener noreferrer" className="focus-ring mt-4 inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
-                          Traulokal ansehen
+                          Trauort ansehen
                         </a>
                       ) : null}
                     </article>
@@ -244,7 +286,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
             ) : null}
           </div>
         ) : (
-          <p className="text-sm text-soft-ink">Zu Traulokalen sind aktuell keine Informationen hinterlegt.</p>
+          <p className="text-sm text-soft-ink">Zu Trauorten sind aktuell keine Informationen hinterlegt.</p>
         )}
       </section>
 

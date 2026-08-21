@@ -20,7 +20,7 @@ import uk from "@/locales/uk.json";
 import pl from "@/locales/pl.json";
 import { defaultLocale, isLocale, type Dictionary, type Locale, withLocalePath } from "@/lib/i18n";
 
-const dictionaries: Record<Locale, Dictionary> = { de, en, fr, it, es, pt, nl, sr, sq, tr, hr, bs, uk, pl };
+const dictionaries: Partial<Record<Locale, Dictionary>> = { de, en, fr, it, es, pt, nl, sr, sq, tr, hr, bs, uk, pl };
 
 function getLocaleFromPath(pathname: string): Locale {
   const firstSegment = pathname.split("/").filter(Boolean)[0];
@@ -32,7 +32,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const locale = getLocaleFromPath(pathname);
   const fallback = de as Dictionary;
-  const dictionary = { ...fallback, ...dictionaries[locale] };
+  const dictionary = { ...fallback, ...(dictionaries[locale] ?? {}) };
   const t = (key: string) => dictionary[key] ?? fallback[key] ?? key;
   const nav = [
     { href: "/", label: t("nav.home") },
@@ -60,9 +60,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-linen bg-paper/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:gap-6 sm:px-6 lg:px-8">
-          <Link href={withLocalePath("/", locale)} className="min-w-0 truncate text-base font-semibold tracking-[0] text-sage sm:text-lg">
+      <header className="sticky top-0 z-40 border-b border-linen bg-paper/90 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-6 sm:px-6 sm:py-4 lg:px-8">
+          <Link href={withLocalePath("/", locale)} className="min-w-0 truncate text-sm font-semibold tracking-[0] text-sage min-[360px]:text-base sm:text-lg">
             hochzeitstandesamt.ch
           </Link>
           <nav className="hidden items-center gap-5 text-sm text-soft-ink md:flex">
@@ -96,7 +96,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         {mobileMenuOpen ? (
-          <nav className="border-t border-linen bg-paper px-4 py-3 shadow-soft md:hidden">
+          <nav className="max-h-[calc(100dvh-4rem-env(safe-area-inset-top))] overflow-y-auto border-t border-linen bg-paper px-4 py-3 shadow-soft md:hidden">
             <div className="mx-auto grid max-w-7xl gap-2 text-sm text-soft-ink">
               {nav.slice(1).map((item) => (
                 <Link

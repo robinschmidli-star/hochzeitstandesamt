@@ -6,7 +6,7 @@ import {
   PopularSearchLinks,
   SwitzerlandMapSection
 } from "@/components/HomeSearchExperience";
-import { defaultLocale, getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, indexableLocales, isLocale, locales, type Locale } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,10 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
-        ...Object.fromEntries(locales.map((item) => [item, `${baseUrl}/${item}`])),
+        ...Object.fromEntries(indexableLocales.map((item) => [item, `${baseUrl}/${item}`])),
         "x-default": `${baseUrl}/${defaultLocale}`
       }
-    }
+    },
+    robots: indexableLocales.includes(locale) ? undefined : { index: false, follow: true }
   };
 }
 

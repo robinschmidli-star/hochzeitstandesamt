@@ -3,8 +3,7 @@ import { SearchForm } from "@/components/SearchForm";
 import { SwissMap } from "@/components/SwissMap";
 import { createMetadata } from "@/lib/seo";
 import { searchRegistryOffices } from "@/lib/search";
-import { appendFile, mkdir } from "node:fs/promises";
-import path from "node:path";
+import { prisma } from "@/lib/prisma";
 
 export const metadata = createMetadata({
   title: "Standesamt finden in der Schweiz",
@@ -52,9 +51,16 @@ async function saveSearchLead(params: Record<string, string | string[] | undefin
     status: "new"
   };
 
-  const storageDir = path.join(process.cwd(), "storage");
-  await mkdir(storageDir, { recursive: true });
-  await appendFile(path.join(storageDir, "leads.jsonl"), `${JSON.stringify(lead)}\n`, "utf8");
+  await prisma.websiteLead.create({
+    data: {
+      leadType: lead.lead_type,
+      email: lead.email,
+      firstName: lead.first_name,
+      payload: lead,
+      dedupeWeddingDate: lead.wedding_date || null,
+      dedupeLocation: lead.wedding_location || null
+    }
+  });
 }
 
 export default async function RegistrySearchPage({

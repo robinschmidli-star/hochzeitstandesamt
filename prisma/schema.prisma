@@ -131,6 +131,38 @@ model Lead {
 
   @@map("leads")
 }
+model WebsiteLead {
+  id                String   @id @default(uuid()) @db.Uuid
+  leadType          String   @map("lead_type")
+  email             String
+  firstName         String   @default("") @map("first_name")
+  payload           Json
+  dedupeWeddingDate String?  @map("dedupe_wedding_date")
+  dedupeLocation    String?  @map("dedupe_location")
+  duplicateOfId     String?  @db.Uuid @map("duplicate_of_id")
+  status            String   @default("new")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@index([leadType, email, dedupeWeddingDate, dedupeLocation], map: "website_leads_dedupe_idx")
+  @@index([createdAt(sort: Desc)], map: "website_leads_created_at_idx")
+  @@map("website_leads")
+}
+
+model AnalyticsEvent {
+  id          String   @id @default(uuid()) @db.Uuid
+  eventName   String   @map("event_name")
+  sessionId   String   @db.Uuid @map("session_id")
+  visitorHash String   @map("visitor_hash")
+  path        String
+  country     String   @default("CH")
+  properties  Json
+  occurredAt  DateTime @default(now()) @map("occurred_at")
+
+  @@index([occurredAt(sort: Desc)], map: "analytics_events_occurred_at_idx")
+  @@index([eventName, occurredAt(sort: Desc)], map: "analytics_events_name_time_idx")
+  @@map("analytics_events")
+}
 
 model Vendor {
   id               String       @id @default(cuid())

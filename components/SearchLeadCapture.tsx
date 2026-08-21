@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
 import { useMemo, useState } from "react";
 import type { SearchParams } from "@/lib/search-experience";
+import { track } from "@/components/Analytics";
 
 function firstValue(value?: string) {
   return value?.trim() || "";
@@ -44,6 +45,7 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
       dateRangeStart: "",
       dateRangeEnd: "",
       weekday: firstValue(params.weekday || (params.saturdayOnly === "true" ? "saturday" : "")),
+      elopement: params.elopement === "true",
       location,
       canton: firstValue(params.canton),
       city: location,
@@ -55,6 +57,7 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("saving");
+    track("shortlist_save_started", { searchType: payload.searchType, canton: payload.canton, elopement: payload.elopement });
     setMessage("");
 
     const response = await fetch("/api/leads", {
@@ -76,6 +79,7 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
     }
 
     setStatus("success");
+    track("lead_created", { searchType: payload.searchType, canton: payload.canton, elopement: payload.elopement });
     setMessage(
       marketingConsent
         ? "Danke! Wir haben deine Suche gespeichert. Du erhältst passende Informationen zu Standesämtern und Hochzeitsplanung per E-Mail."

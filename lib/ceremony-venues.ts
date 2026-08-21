@@ -783,6 +783,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "cbaf0a1f-875a-5a8e-9c8a-80e9e7023d7e",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:13",
     "standesamt_id": "regionales-zivilstandsamt-brugg-brugg-ag",
     "standesamt_name": "Regionales Zivilstandsamt Brugg",
     "traulokal_name": "Restaurant Schloss Habsburg",
@@ -2967,6 +2971,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "819333a4-efe8-5d1c-b45f-b18add5fb5a3",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:01",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Oberhofen",
@@ -2993,6 +3001,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "8673029d-2ba7-54be-950c-c16a1954a52f",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:15",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Schadau",
@@ -3045,6 +3057,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "f8ae6f21-ebe4-5a76-bf1e-ce643c3ff755",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:02",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Spiez",
@@ -3201,6 +3217,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "da067a71-7a88-57e9-8d51-e98d7904c299",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:16",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schlossberg Thun",
@@ -10221,6 +10241,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "ea88647b-eb07-5fde-b310-8db8b2a2892b",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:18",
     "standesamt_id": "zivilstandsamt-sarganserland-wangs-sg",
     "standesamt_name": "Zivilstandsamt Sarganserland",
     "traulokal_name": "Sargans, Schloss",
@@ -10367,7 +10391,7 @@ export const ceremonyVenues: CeremonyVenue[] = [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Hero",
+    "websitePriority": "Top20:17",
     "remarks": "zusätzlich an einigen Freitagen/Samstagen",
     "canonicalId": "ad7b549a-e537-56ca-a606-dfbaaf270e62"
   },
@@ -11751,6 +11775,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "c6d3d621-e916-5ba1-8b9d-d3014c0a66e8",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:10",
     "standesamt_id": "servizio-circondariale-dello-stato-civile-di-bellinzona-bellinzona-ti",
     "standesamt_name": "Servizio circondariale dello stato civile di Bellinzona",
     "traulokal_name": "Castello Sasso Corbaro",
@@ -18199,6 +18227,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "e0f5890c-019d-5deb-aa8a-57019603d159",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:11",
     "standesamt_id": "servizio-circondariale-dello-stato-civile-di-locarno-locarno-ti",
     "standesamt_name": "Servizio circondariale dello stato civile di Locarno",
     "traulokal_name": "Villa Emden",
@@ -18355,6 +18387,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "ed5f604c-4808-5229-ac5e-c5c38f385405",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:19",
     "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
     "standesamt_name": "Office de l'état civil du canton de Vaud",
     "traulokal_name": "Aigle – Château d'Aigle",
@@ -18485,6 +18521,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "b186e8cc-d961-5471-9a19-2da842ee83b6",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:20",
     "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
     "standesamt_name": "Office de l'état civil du canton de Vaud",
     "traulokal_name": "Château d'Oron",
@@ -20461,6 +20501,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "8ebae545-eed4-5093-93a5-9a0a8d1aafc0",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:03",
     "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
     "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
     "traulokal_name": "Bleulersaal Schloss Laufen",
@@ -22246,6 +22290,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "3c2e5efb-9e26-5347-ad93-2ed83c63dd07",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:09",
     "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
     "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
     "traulokal_name": "Schloss Andelfingen",
@@ -22267,7 +22315,7 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "outdoorCeremonyAvailable": null,
     "seasonalAvailability": "",
     "venueUrl": "",
-    "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
+    "sourceUrl": "https://www.zivba.ch/heirat/schloss-andelfingen.html/36",
     "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
   },
   {
@@ -22324,6 +22372,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "e3b29802-63c5-5fe4-8ad6-41fd634689cd",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:06",
     "standesamt_id": "zivilstandsamt-volketswil-volketswil-zh",
     "standesamt_name": "Zivilstandsamt Volketswil",
     "traulokal_name": "Schloss Greifensee - Landvogtstube",
@@ -23858,6 +23910,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "975c00a8-84c0-5b5c-91f9-b53e1664ecb3",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:08",
     "standesamt_id": "zivilstandskreis-winterthur-winterthur-zh",
     "standesamt_name": "Zivilstandskreis Winterthur",
     "traulokal_name": "Villa Lindengut",
@@ -24144,6 +24200,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "00344d1e-1343-559c-8bab-1587c38c2f86",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": ["featured", "romantic"],
+    "websitePriority": "Top20:04",
     "standesamt_id": "zivilstandsamt-zurich-zurich-zh",
     "standesamt_name": "Zivilstandsamt Zürich",
     "traulokal_name": "Zoo Zürich",

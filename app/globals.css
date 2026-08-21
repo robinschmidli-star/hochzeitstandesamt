@@ -10,10 +10,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
+  overflow-wrap: anywhere;
   background: #f7f5f2;
   color: #222222;
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -34,8 +37,26 @@ a {
 input,
 select,
 textarea {
+  min-width: 0;
+  max-width: 100%;
   font: inherit;
   background: #ffffff;
+}
+
+button,
+a,
+summary,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+  }
 }
 
 .focus-ring {

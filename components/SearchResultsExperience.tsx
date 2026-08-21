@@ -17,7 +17,7 @@ const weekdayLabels: Record<string, string> = {
 
 export function SearchFilters({ params }: { params: SearchParams }) {
   return (
-    <aside className="rounded-xl border border-linen bg-white p-5 shadow-soft">
+    <aside className="min-w-0 rounded-xl border border-linen bg-white p-4 shadow-soft sm:p-5">
       <h2 className="text-xl font-semibold text-ink">Filter</h2>
       <form action="/search" className="mt-4 grid gap-4">
         <label className="grid gap-2 text-sm font-medium text-ink">
@@ -55,8 +55,12 @@ export function SearchFilters({ params }: { params: SearchParams }) {
         </label>
         <div className="grid gap-2">
           <label className="flex gap-3 text-sm text-soft-ink">
-            <input name="saturdayOnly" value="true" defaultChecked={params.saturdayOnly === "true"} type="checkbox" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+            <input name="saturdayOnly" value="true" defaultChecked={params.saturdayOnly === "true"} type="checkbox" className="mt-0.5 h-5 w-5 shrink-0 rounded border-linen accent-sage" />
             Nur Samstagstrauungen
+          </label>
+          <label className="flex gap-3 text-sm text-soft-ink">
+            <input name="elopement" value="true" defaultChecked={params.elopement === "true"} type="checkbox" className="mt-0.5 h-5 w-5 shrink-0 rounded border-linen accent-sage" />
+            Heiraten zu zweit / Elopement
           </label>
           {[
             ["evening", "Abendtrauung möglich"],
@@ -64,10 +68,10 @@ export function SearchFilters({ params }: { params: SearchParams }) {
             ["wheelchair", "Rollstuhlgängig"],
             ["parking", "Parkplätze vorhanden"],
             ["onlineBooking", "Online Terminbuchung"],
-            ["multipleVenues", "Mehrere Traulokale"]
+            ["multipleVenues", "Mehrere Trauorte"]
           ].map(([name, label]) => (
             <label key={name} className="flex gap-3 text-sm text-soft-ink">
-              <input name={name} value="yes" defaultChecked={params[name as keyof SearchParams] === "yes"} type="checkbox" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
+              <input name={name} value="yes" defaultChecked={params[name as keyof SearchParams] === "yes"} type="checkbox" className="mt-0.5 h-5 w-5 shrink-0 rounded border-linen accent-sage" />
               {label}
             </label>
           ))}
@@ -80,7 +84,7 @@ export function SearchFilters({ params }: { params: SearchParams }) {
           Stil
           <select name="tag" defaultValue={params.tag || ""} className="focus-ring h-11 rounded-lg border border-linen bg-white px-3 text-soft-ink">
             <option value="">Alle</option>
-            <option value="featured">schönste Standesämter</option>
+            <option value="featured">besondere Trauorte</option>
             <option value="castle">Schloss</option>
             <option value="lake">See</option>
             <option value="mountains">Berge</option>
@@ -109,7 +113,13 @@ export function RegistryOfficeCard({ office }: { office: EnrichedRegistryOffice 
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">{office.city} · {office.canton}</p>
         <h2 className="mt-1 text-2xl font-semibold text-ink">{office.name}</h2>
+        <p className="mt-2 text-xs font-semibold uppercase tracking-[0.08em] text-sage">Zuständiges Zivilstandsamt</p>
         <p className="mt-2 text-sm leading-6 text-soft-ink">{office.shortDescription}</p>
+        {office.premiumVenueNames.length ? (
+          <p className="mt-3 text-sm font-semibold text-ink">
+            {office.premiumVenueNames.length === 1 ? "1 zugeordneter Trauort" : `${office.premiumVenueNames.length} zugeordnete Trauorte`}
+          </p>
+        ) : null}
         <div className="mt-3 flex flex-wrap gap-2">
           {office.premiumVenueNames.slice(0, 2).map((venue) => (
             <span key={venue} className="rounded-full bg-champagne/15 px-3 py-1 text-xs font-semibold text-sage">{venue}</span>
@@ -119,6 +129,9 @@ export function RegistryOfficeCard({ office }: { office: EnrichedRegistryOffice 
           ))}
           {office.saturday_weddings_available === true ? (
             <span className="rounded-full bg-champagne/15 px-3 py-1 text-xs font-semibold text-sage">Samstagstrauungen möglich</span>
+          ) : null}
+          {office.elopementSuitable ? (
+            <span className="rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">Gut geeignet für Heiraten zu zweit</span>
           ) : null}
           {typeof office.distanceKm === "number" ? (
             <span className="rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">{Math.round(office.distanceKm)} km entfernt</span>
@@ -141,9 +154,9 @@ export function SearchResultsPage({ params, results }: { params: SearchParams; r
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
       <section>
-        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Standesamt-Suche</p>
-        <h1 className="mt-2 text-4xl font-semibold text-ink">Passende Standesämter finden</h1>
-        <p className="mt-3 max-w-3xl text-soft-ink">Filtere nach Datum, Region oder Stil. Die Verfügbarkeiten dienen als Orientierung und müssen direkt beim Amt bestätigt werden.</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Zivile Hochzeit finden</p>
+        <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">Standesamt & Trauort finden</h1>
+        <p className="mt-3 max-w-3xl text-soft-ink">Sucht nach dem zuständigen Zivilstandsamt oder filtert dessen Trauorte nach Region, Termin und Eigenschaften. Verfügbarkeiten müssen direkt beim Amt bestätigt werden.</p>
       </section>
       <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
         <SearchFilters params={params} />

@@ -10,3 +10,5 @@ storage
 reports
 *.log
 tsconfig.tsbuildinfo
+.vercel
+.env*

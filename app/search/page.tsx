@@ -29,6 +29,7 @@ export default async function SearchPage({
     weekday: getParam(rawParams, "weekday"),
     tag: getParam(rawParams, "tag"),
     saturdayOnly: getParam(rawParams, "saturdayOnly"),
+    elopement: getParam(rawParams, "elopement"),
     wheelchair: getParam(rawParams, "wheelchair"),
     parking: getParam(rawParams, "parking"),
     evening: getParam(rawParams, "evening"),

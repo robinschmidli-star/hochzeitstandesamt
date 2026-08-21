@@ -458,7 +458,7 @@ export function HomePageClient() {
               onExtraLanguageChange={handleExtraLanguageChange}
             />
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.1em] text-champagne md:mt-0">{t.eyebrow}</p>
-            <h1 className="mt-4 max-w-4xl text-5xl font-semibold leading-[0.98] text-ink sm:text-6xl">{t.headline}</h1>
+            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-[1.02] text-ink sm:text-6xl sm:leading-[0.98]">{t.headline}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-soft-ink">{t.subheadline}</p>
             <div className="mt-7 max-w-none rounded-xl border border-linen bg-white p-4 shadow-soft sm:p-5">
               <LocalizedSearchForm t={t} />
@@ -863,7 +863,7 @@ function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
           </label>
           <fieldset className="min-w-0 text-sm font-medium text-ink">
             <legend className="mb-1.5">Gewünschter Zeitraum</legend>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid gap-2 min-[390px]:grid-cols-2">
               <input name="dateStart" type="date" aria-label="Von" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
               <input name="dateEnd" type="date" aria-label="Bis" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
             </div>
