@@ -17,6 +17,14 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
+    "slug": "regionales-zivilstandsamt-baden-baden-ag",
+    "canton": "AG",
+    "x": 514.9,
+    "y": 205.2,
+    "sourceName": "Baden",
+    "precision": "postal-code"
+  },
+  {
     "slug": "regionales-zivilstandsamt-bremgarten-bremgarten-ag-ag",
     "canton": "AG",
     "x": 525.8,
@@ -31,6 +39,14 @@ export const officeMapPoints = [
     "y": 202.2,
     "sourceName": "Untere Hofstatt 4 5200 Brugg AG",
     "precision": "office-address"
+  },
+  {
+    "slug": "regionales-zivilstandsamt-dietikon-zh-dietikon-ag",
+    "canton": "AG",
+    "x": 538,
+    "y": 220.8,
+    "sourceName": "Dietikon",
+    "precision": "postal-code"
   },
   {
     "slug": "regionales-zivilstandsamt-laufenburg-laufenburg-ag",
@@ -105,6 +121,14 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
+    "slug": "regionales-zivilstandsamt-wettingen-wettingen-ag",
+    "canton": "AG",
+    "x": 523.6,
+    "y": 207.1,
+    "sourceName": "Wettingen",
+    "precision": "postal-code"
+  },
+  {
     "slug": "regionales-zivilstandsamt-wohlen-wohlen-ag",
     "canton": "AG",
     "x": 511.6,
@@ -129,30 +153,6 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-wettingen-wettingen-ag",
-    "canton": "AG",
-    "x": 522.1,
-    "y": 206.8,
-    "sourceName": "Alb. Zwyssigstrasse 76 5430 Wettingen",
-    "precision": "office-address"
-  },
-  {
-    "slug": "zivilstandskreis-baden-baden-ag",
-    "canton": "AG",
-    "x": 517.5,
-    "y": 205.4,
-    "sourceName": "Oberstadtstrasse 4 5400 Baden",
-    "precision": "office-address"
-  },
-  {
-    "slug": "zivilstandskreis-dietikon-dietikon-ag",
-    "canton": "AG",
-    "x": 538.8,
-    "y": 220.3,
-    "sourceName": "Bremgartnerstrasse 22 8953 Dietikon",
-    "precision": "office-address"
-  },
-  {
     "slug": "zivilstandsamt-appenzell-appenzell-ai",
     "canton": "AI",
     "x": 761.1,
@@ -161,36 +161,28 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-hinterland-appenzell-a-rh-herisau-ar",
+    "slug": "zivilstandsamt-hinterland-appenzell-ausserrhoden-herisau-ar",
     "canton": "AR",
-    "x": 732.1,
-    "y": 224.2,
-    "sourceName": "Poststrasse 6 9100 Herisau",
-    "precision": "office-address"
+    "x": 734.2,
+    "y": 225.6,
+    "sourceName": "Herisau",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandsamt-mittelland-buhler-ar",
+    "slug": "zivilstandsamt-mittelland-appenzell-ausserrhoden-buhler-ar",
     "canton": "AR",
-    "x": 759.3,
-    "y": 225.9,
-    "sourceName": "Unterer Steigbach 1 9055 Bühler",
-    "precision": "office-address"
+    "x": 765.1,
+    "y": 225.6,
+    "sourceName": "Bühler",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandsamt-vorderland-rehetobel-ar",
+    "slug": "zivilstandsamt-vorderland-appenzell-ausserrhoden-rehetobel-ar",
     "canton": "AR",
-    "x": 777.1,
+    "x": 777.8,
     "y": 214.9,
-    "sourceName": "St. Gallerstrasse 11 9038 Rehetobel",
-    "precision": "office-address"
-  },
-  {
-    "slug": "office-de-l-etat-civil-du-jura-bernois-courtelary-be",
-    "canton": "BE",
-    "x": 246.3,
-    "y": 269.6,
-    "sourceName": "Rue de la Préfecture 2 2608 Courtelary",
-    "precision": "office-address"
+    "sourceName": "Rehetobel",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-bern-mittelland-bern-be",
@@ -201,12 +193,20 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-emmental-langnau-im-emmental-be",
+    "slug": "zivilstandsamt-berner-jura-courtelary-be",
     "canton": "BE",
-    "x": 402.9,
-    "y": 322.1,
-    "sourceName": "Marktstrasse 7 3550 Langnau im Emmental",
-    "precision": "office-address"
+    "x": 246.3,
+    "y": 267.5,
+    "sourceName": "Courtelary",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "zivilstandsamt-emmental-langnau-i-e-be",
+    "canton": "BE",
+    "x": 403.2,
+    "y": 323.5,
+    "sourceName": "Langnau im Emmental",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-oberaargau-langenthal-be",
@@ -257,28 +257,84 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "office-de-l-etat-civil-du-canton-de-fribourg-zivilstandsamt-des-kantons-freiburg-fribourg-fr",
+    "slug": "office-de-l-etat-civil-de-la-broye-estavayer-le-lac-fr",
     "canton": "FR",
-    "x": 264,
-    "y": 352.3,
-    "sourceName": "Rue de l'Abbé-Bovet 14 1700 Fribourg",
-    "precision": "office-address"
+    "x": 198.8,
+    "y": 342.2,
+    "sourceName": "Estavayer-le-Lac",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-campagne-et-rive-gauche-du-lac-vesenaz-ge",
-    "canton": "GE",
-    "x": 54.3,
-    "y": 477.6,
-    "sourceName": "Chemin des Rayes 26f 1222 Vésenaz",
-    "precision": "office-address"
+    "slug": "office-de-l-etat-civil-de-la-glane-romont-fr",
+    "canton": "FR",
+    "x": 213.6,
+    "y": 373.4,
+    "sourceName": "Romont",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-chene-bourg-thonex-veyrier-chene-bourg-ge",
+    "slug": "office-de-l-etat-civil-de-la-gruyere-bulle-fr",
+    "canton": "FR",
+    "x": 229.5,
+    "y": 400.1,
+    "sourceName": "Bulle",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-la-sarine-fribourg-fr",
+    "canton": "FR",
+    "x": 266.7,
+    "y": 352.2,
+    "sourceName": "Fribourg",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-la-singine-tafers-fr",
+    "canton": "FR",
+    "x": 277.4,
+    "y": 350.8,
+    "sourceName": "Tafers",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-la-veveyse-chatel-st-denis-fr",
+    "canton": "FR",
+    "x": 217.5,
+    "y": 411.9,
+    "sourceName": "Châtel-St-Denis",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "office-de-l-etat-civil-du-lac-morat-fr",
+    "canton": "FR",
+    "x": 250.2,
+    "y": 327.9,
+    "sourceName": "Greng",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-chene-bougeries-voirons-chene-bougeries-ge",
     "canton": "GE",
-    "x": 52.7,
-    "y": 487.2,
-    "sourceName": "Avenue PETIT-SENN 46 1225 Chêne-Bourg",
-    "precision": "office-address"
+    "x": 52.5,
+    "y": 484.7,
+    "sourceName": "Chêne-Bougeries",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-cologny-campagne-et-rive-gauche-du-lac-vesenaz-ge",
+    "canton": "GE",
+    "x": 55.5,
+    "y": 477,
+    "sourceName": "Vésenaz",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-pregny-chambesy-rive-droite-du-lac-chambesy-ge",
+    "canton": "GE",
+    "x": 40.4,
+    "y": 476.6,
+    "sourceName": "Chambésy",
+    "precision": "postal-code"
   },
   {
     "slug": "arrondissement-de-l-etat-civil-de-bernex-bernex-ge",
@@ -289,76 +345,140 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-de-carouge-carouge-ge",
+    "slug": "arrondissement-de-l-etat-civil-de-chene-bourg-chene-bourg-ge",
+    "canton": "GE",
+    "x": 53.1,
+    "y": 486.2,
+    "sourceName": "Chêne-Bourg",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-lancy-grand-lancy-ge",
+    "canton": "GE",
+    "x": 35.7,
+    "y": 490,
+    "sourceName": "Grand-Lancy",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-de-meyrin-meyrin-ge",
+    "canton": "GE",
+    "x": 25.2,
+    "y": 478.4,
+    "sourceName": "Meyrin",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-chene-bougeries-voirons-chene-bougeries-ge-b4244918",
+    "canton": "GE",
+    "x": 52.5,
+    "y": 484.7,
+    "sourceName": "Chêne-Bougeries",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-cologny-campagne-et-rive-gauche-du-lac-vesenaz-ge-4160c25f",
+    "canton": "GE",
+    "x": 55.5,
+    "y": 477,
+    "sourceName": "Vésenaz",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "arrondissement-de-l-etat-civil-pregny-chambesy-rive-droite-du-lac-chambesy-ge-bb46004d",
     "canton": "GE",
     "x": 40.4,
-    "y": 488.9,
-    "sourceName": "Place du Marché 14 1227 Carouge GE",
-    "precision": "office-address"
+    "y": 476.6,
+    "sourceName": "Chambésy",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-de-chene-bougeries-voirons-chene-bougeries-ge",
+    "slug": "arrondissement-de-l-etat-civil-de-bernex-bernex-ge-009d6565",
     "canton": "GE",
-    "x": 50.8,
-    "y": 486.1,
-    "sourceName": "Route du Vallon 4 1224 Chêne-Bougeries",
-    "precision": "office-address"
+    "x": 24.2,
+    "y": 490.9,
+    "sourceName": "Bernex",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-de-geneve-geneve-6-ge",
+    "slug": "arrondissement-de-l-etat-civil-de-chene-bourg-chene-bourg-ge-66f1e848",
     "canton": "GE",
-    "x": 44.7,
-    "y": 485.1,
-    "sourceName": "Rue de la Mairie 37 1207 Genève",
-    "precision": "office-address"
+    "x": 53.1,
+    "y": 486.2,
+    "sourceName": "Chêne-Bourg",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-de-lancy-grand-lancy-1-ge",
+    "slug": "arrondissement-de-l-etat-civil-de-lancy-grand-lancy-ge-46f3b13a",
     "canton": "GE",
-    "x": 36.7,
-    "y": 488.8,
-    "sourceName": "Route du Grand-Lancy 39a 1212 Grand-Lancy",
-    "precision": "office-address"
+    "x": 35.7,
+    "y": 490,
+    "sourceName": "Grand-Lancy",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-meyrin-mandement-vernier-meyrin-ge",
+    "slug": "arrondissement-de-l-etat-civil-de-meyrin-meyrin-ge-21679e0e",
     "canton": "GE",
-    "x": 27.5,
-    "y": 478.2,
-    "sourceName": "Rue des Boudines 2 1217 Meyrin",
-    "precision": "office-address"
+    "x": 25.2,
+    "y": 478.4,
+    "sourceName": "Meyrin",
+    "precision": "postal-code"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-rive-droite-du-lac-chambesy-ge",
+    "slug": "office-de-l-etat-civil-de-carouge-carouge-ge",
     "canton": "GE",
-    "x": 40.7,
-    "y": 477.2,
-    "sourceName": "Route de Pregny 47 1292 Chambésy",
-    "precision": "office-address"
+    "x": 40.2,
+    "y": 490,
+    "sourceName": "Carouge",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-glarus-glarus-gl",
+    "slug": "office-de-l-etat-civil-de-carouge-carouge-ge-6f56b27b",
+    "canton": "GE",
+    "x": 40.2,
+    "y": 490,
+    "sourceName": "Carouge",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "service-de-l-etat-civil-de-la-ville-de-geneve-geneve-ge",
+    "canton": "GE",
+    "x": 45.2,
+    "y": 484.2,
+    "sourceName": "Genève",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "service-de-l-etat-civil-de-la-ville-de-geneve-geneve-ge-d35f7e7c",
+    "canton": "GE",
+    "x": 45.2,
+    "y": 484.2,
+    "sourceName": "Genève",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "zivilstandsamt-glarus-glarus-gl",
     "canton": "GL",
-    "x": 685.7,
-    "y": 299.9,
-    "sourceName": "Postgasse 29 8750 Glarus",
-    "precision": "office-address"
+    "x": 682.6,
+    "y": 300.6,
+    "sourceName": "Glarus",
+    "precision": "postal-code"
   },
   {
-    "slug": "ufficio-di-stato-civile-bernina-poschiavo-gr",
+    "slug": "ufficio-stato-civile-bernina-poschiavo-gr",
     "canton": "GR",
-    "x": 903.6,
-    "y": 458.3,
-    "sourceName": "Via da Clalt 2 7742 Poschiavo",
-    "precision": "office-address"
+    "x": 896.8,
+    "y": 454,
+    "sourceName": "Poschiavo",
+    "precision": "postal-code"
   },
   {
-    "slug": "ufficio-di-stato-civile-moesa-santa-maria-in-calanca-gr",
+    "slug": "ufficio-stato-civile-regione-moesa-santa-maria-in-calanca-gr",
     "canton": "GR",
-    "x": 703,
-    "y": 471.8,
-    "sourceName": "A la Gescia 22 6541 Sta. Maria in Calanca",
-    "precision": "office-address"
+    "x": 702.5,
+    "y": 468.6,
+    "sourceName": "Sta. Maria in Calanca",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-albula-tiefencastel-gr",
@@ -369,20 +489,20 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-en-scuol-gr",
-    "canton": "GR",
-    "x": 957.9,
-    "y": 353.8,
-    "sourceName": "Bagnera 171 7550 Scuol",
-    "precision": "office-address"
-  },
-  {
     "slug": "zivilstandsamt-imboden-domat-ems-gr",
     "canton": "GR",
     "x": 770.4,
     "y": 345.2,
     "sourceName": "Plaz 7 7013 Domat/Ems",
     "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-inn-en-scuol-gr",
+    "canton": "GR",
+    "x": 963.5,
+    "y": 368.1,
+    "sourceName": "Scuol",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-landquart-landquart-gr",
@@ -441,84 +561,84 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandskreis-amt-willisau-willisau-lu",
+    "slug": "regionales-zivilstandsamt-amt-willisau-willisau-lu",
     "canton": "LU",
-    "x": 448.6,
-    "y": 282.7,
-    "sourceName": "Schlossstrasse 5 6130 Willisau",
-    "precision": "office-address"
+    "x": 445.9,
+    "y": 284.2,
+    "sourceName": "Willisau",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-ebikon-ebikon-lu",
+    "slug": "regionales-zivilstandsamt-ebikon-ebikon-lu",
     "canton": "LU",
     "x": 525.9,
-    "y": 290.7,
-    "sourceName": "Riedmattstrasse 14 6030 Ebikon",
-    "precision": "office-address"
+    "y": 291.3,
+    "sourceName": "Ebikon",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-emmen-emmenbrucke-lu",
+    "slug": "regionales-zivilstandsamt-emmen-emmenbrucke-lu",
     "canton": "LU",
-    "x": 511.7,
-    "y": 291.9,
-    "sourceName": "Rüeggisingerstrasse 22 6020 Emmenbrücke",
-    "precision": "office-address"
+    "x": 491.7,
+    "y": 280.6,
+    "sourceName": "Emmenbrücke",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-hochdorf-hochdorf-lu",
+    "slug": "regionales-zivilstandsamt-hochdorf-hochdorf-lu",
     "canton": "LU",
-    "x": 514.7,
-    "y": 272.4,
-    "sourceName": "Hauptstrasse 3 6280 Hochdorf",
-    "precision": "office-address"
+    "x": 513.2,
+    "y": 271.7,
+    "sourceName": "Hochdorf",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-horw-horw-lu",
+    "slug": "regionales-zivilstandsamt-luzern-luzern-lu",
     "canton": "LU",
-    "x": 518.7,
-    "y": 304.9,
-    "sourceName": "Gemeindehausplatz 1 6048 Horw",
-    "precision": "office-address"
+    "x": 517.8,
+    "y": 296,
+    "sourceName": "Luzern",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-kriens-kriens-lu",
+    "slug": "regionales-zivilstandsamt-oberer-sempachersee-sempach-lu",
     "canton": "LU",
-    "x": 512.2,
-    "y": 301.6,
-    "sourceName": "Stadtplatz 1 6010 Kriens",
-    "precision": "office-address"
+    "x": 495.8,
+    "y": 279.1,
+    "sourceName": "Sempach",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-luzern-luzern-lu",
+    "slug": "regionales-zivilstandsamt-sursee-sursee-lu",
     "canton": "LU",
-    "x": 517.4,
-    "y": 298.8,
-    "sourceName": "Obergrundstrasse 28 6003 Luzern",
-    "precision": "office-address"
+    "x": 473.5,
+    "y": 270.3,
+    "sourceName": "Sursee",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-oberer-sempachersee-sempach-lu",
+    "slug": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
     "canton": "LU",
-    "x": 492.5,
-    "y": 279,
-    "sourceName": "Stadtstrasse 8 6204 Sempach",
-    "precision": "office-address"
+    "x": 467,
+    "y": 296.8,
+    "sourceName": "Wolhusen",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-sursee-sursee-lu",
+    "slug": "zivilstandsamt-horw-horw-lu",
     "canton": "LU",
-    "x": 473.9,
-    "y": 271.3,
-    "sourceName": "Centralstrasse 9 6210 Sursee",
-    "precision": "office-address"
+    "x": 519.4,
+    "y": 306.1,
+    "sourceName": "Horw",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandskreis-wolhusen-wolhusen-lu",
+    "slug": "zivilstandsamt-kriens-kriens-lu",
     "canton": "LU",
-    "x": 466.5,
-    "y": 295.9,
-    "sourceName": "Menznauerstrasse 13 6110 Wolhusen",
-    "precision": "office-address"
+    "x": 506.7,
+    "y": 313.7,
+    "sourceName": "Kriens",
+    "precision": "postal-code"
   },
   {
     "slug": "etat-civil-des-montagnes-neuchateloises-le-locle-ne",
@@ -529,12 +649,12 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "office-de-l-etat-civil-boudry-ne",
+    "slug": "office-de-l-etat-civil-de-boudry-boudry-ne",
     "canton": "NE",
-    "x": 193.7,
-    "y": 320.4,
-    "sourceName": "Rue Louis-Favre 37 2017 Boudry",
-    "precision": "office-address"
+    "x": 189.8,
+    "y": 319.2,
+    "sourceName": "Boudry",
+    "precision": "postal-code"
   },
   {
     "slug": "office-de-l-etat-civil-de-l-arrondissement-de-neuchatel-neuchatel-ne",
@@ -561,12 +681,12 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-nidwalden-stans-nw",
+    "slug": "zivilstandsamt-und-burgerrecht-nidwalden-stans-nw",
     "canton": "NW",
-    "x": 531.2,
-    "y": 318.7,
-    "sourceName": "Marktgasse 3 6370 Stans",
-    "precision": "office-address"
+    "x": 527.5,
+    "y": 316.5,
+    "sourceName": "Stans",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-obwalden-sarnen-ow",
@@ -574,14 +694,6 @@ export const officeMapPoints = [
     "x": 504.2,
     "y": 333.1,
     "sourceName": "Brünigstrasse 180a 6060 Sarnen",
-    "precision": "office-address"
-  },
-  {
-    "slug": "regionales-zivilstandsamt-rheintal-altstatten-sg-sg",
-    "canton": "SG",
-    "x": 790.1,
-    "y": 225.8,
-    "sourceName": "Rathausplatz 1 9450 Altstätten SG",
     "precision": "office-address"
   },
   {
@@ -607,6 +719,22 @@ export const officeMapPoints = [
     "y": 258.4,
     "sourceName": "St. Gallerstrasse 40 8645 Jona",
     "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-region-wil-wil-sg",
+    "canton": "SG",
+    "x": 682.4,
+    "y": 209.5,
+    "sourceName": "Wil",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "zivilstandsamt-rheintal-altstatten-sg",
+    "canton": "SG",
+    "x": 791.3,
+    "y": 227.7,
+    "sourceName": "Altstätten",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-rorschach-rorschach-sg",
@@ -657,44 +785,28 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-wil-wil-sg",
-    "canton": "SG",
-    "x": 681.6,
-    "y": 206.2,
-    "sourceName": "Marktgasse 58 9500 Wil SG",
-    "precision": "office-address"
-  },
-  {
-    "slug": "zivilstandsamt-schaffhausen-schaffhausen-sh",
+    "slug": "zivilstandsamt-stadt-schaffhausen-schaffhausen-sh",
     "canton": "SH",
-    "x": 590.4,
-    "y": 155.4,
-    "sourceName": "Safrangasse 8 8200 Schaffhausen",
-    "precision": "office-address"
+    "x": 590,
+    "y": 154.8,
+    "sourceName": "Schaffhausen",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandsamt-kreis-dorneck-thierstein-dornach-so",
+    "slug": "zivilstandsamt-dorneck-thierstein-dornach-1-so",
     "canton": "SO",
-    "x": 364.5,
-    "y": 201.5,
-    "sourceName": "Amthausstrasse 7 4143 Dornach",
-    "precision": "office-address"
+    "x": 367.8,
+    "y": 204.2,
+    "sourceName": "Dornach",
+    "precision": "postal-code"
   },
   {
-    "slug": "zivilstandsamt-kreis-olten-gosgen-olten-so",
+    "slug": "zivilstandsamt-olten-gosgen-olten-1-facher-so",
     "canton": "SO",
-    "x": 429.1,
-    "y": 232,
-    "sourceName": "Hauptgasse 25 4600 Olten",
-    "precision": "office-address"
-  },
-  {
-    "slug": "zivilstandsamt-kreis-thal-gau-klus-balsthal-so",
-    "canton": "SO",
-    "x": 383,
-    "y": 242,
-    "sourceName": "Wengimattstrasse 2 4710 Balsthal",
-    "precision": "office-address"
+    "x": 428.4,
+    "y": 233.1,
+    "sourceName": "Olten 1 Fächer",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-solothurn-solothurn-so",
@@ -703,6 +815,14 @@ export const officeMapPoints = [
     "y": 263.8,
     "sourceName": "Patriotenweg 9 4500 Solothurn",
     "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandsamt-thal-gau-balsthal-so",
+    "canton": "SO",
+    "x": 386,
+    "y": 240.1,
+    "sourceName": "Balsthal",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-ausserschwyz-pfaffikon-sz",
@@ -785,28 +905,12 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "arrondissement-de-l-etat-civil-de-martigny-martigny-vs",
+    "slug": "office-de-l-etat-civil-de-martigny-martigny-vs",
     "canton": "VS",
-    "x": 247,
-    "y": 506.4,
-    "sourceName": "Avenue de la Gare 29 1920 Martigny",
-    "precision": "office-address"
-  },
-  {
-    "slug": "arrondissement-de-l-etat-civil-de-sierre-sierre-vs",
-    "canton": "VS",
-    "x": 345.5,
-    "y": 465.5,
-    "sourceName": "Avenue de France 21 3960 Sierre",
-    "precision": "office-address"
-  },
-  {
-    "slug": "arrondissement-de-l-etat-civil-de-sion-sion-vs",
-    "canton": "VS",
-    "x": 309.4,
-    "y": 478.1,
-    "sourceName": "Rue de Conthey 1 1950 Sion",
-    "precision": "office-address"
+    "x": 251.8,
+    "y": 506.1,
+    "sourceName": "Martigny",
+    "precision": "postal-code"
   },
   {
     "slug": "office-de-l-etat-civil-de-monthey-monthey-vs",
@@ -817,6 +921,22 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
+    "slug": "office-de-l-etat-civil-de-sierre-sierre-vs",
+    "canton": "VS",
+    "x": 352.3,
+    "y": 469,
+    "sourceName": "Sierre",
+    "precision": "postal-code"
+  },
+  {
+    "slug": "office-de-l-etat-civil-de-sion-sion-vs",
+    "canton": "VS",
+    "x": 308.6,
+    "y": 479,
+    "sourceName": "Sion",
+    "precision": "postal-code"
+  },
+  {
     "slug": "zivilstandsamt-brig-glis-brig-glis-vs",
     "canton": "VS",
     "x": 448.3,
@@ -825,12 +945,12 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandsamt-des-kreises-visp-visp-vs",
+    "slug": "zivilstandsamt-visp-visp-vs",
     "canton": "VS",
-    "x": 424.3,
-    "y": 465.8,
-    "sourceName": "St. Martiniplatz 1 3930 Visp",
-    "precision": "office-address"
+    "x": 421,
+    "y": 466.3,
+    "sourceName": "Visp",
+    "precision": "postal-code"
   },
   {
     "slug": "zivilstandsamt-kreis-baar-baar-zg",
@@ -1009,14 +1129,6 @@ export const officeMapPoints = [
     "precision": "office-address"
   },
   {
-    "slug": "zivilstandskreis-wadenswil-wadenswil-zh",
-    "canton": "ZH",
-    "x": 598.4,
-    "y": 258.3,
-    "sourceName": "Florhofstrasse 6 8820 Wädenswil",
-    "precision": "office-address"
-  },
-  {
     "slug": "zivilstandskreis-wetzikon-wetzikon-zh",
     "canton": "ZH",
     "x": 627,
@@ -1030,6 +1142,14 @@ export const officeMapPoints = [
     "x": 609,
     "y": 199.3,
     "sourceName": "Pionierstrasse 7 8400 Winterthur",
+    "precision": "office-address"
+  },
+  {
+    "slug": "zivilstandskreis-wadenswil-wadenswil-zh",
+    "canton": "ZH",
+    "x": 598.4,
+    "y": 258.3,
+    "sourceName": "Florhofstrasse 6 8820 Wädenswil",
     "precision": "office-address"
   }
 ] satisfies OfficeMapPoint[];
