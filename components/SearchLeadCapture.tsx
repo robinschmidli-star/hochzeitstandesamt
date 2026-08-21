@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { readAnonymousProfile, updateAnonymousProfile } from "@/lib/anonymous-profile";
 import type { SearchParams } from "@/lib/search-experience";
 
 function firstValue(value?: string) {
@@ -23,14 +24,30 @@ function getLocale(pathname: string) {
   return firstSegment && firstSegment.length <= 2 ? firstSegment : "de";
 }
 
+function searchPreferences(params: SearchParams) {
+  return Object.fromEntries(
+    Object.entries(params)
+      .filter((entry): entry is [string, string] => typeof entry[1] === "string" && Boolean(entry[1].trim()))
+  );
+}
+
 export function SearchLeadCapture({ params }: { params: SearchParams }) {
   const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [marketingConsent, setMarketingConsent] = useState(false);
+  const [favoriteVenueIds, setFavoriteVenueIds] = useState<string[]>([]);
   const [status, setStatus] = useState<"idle" | "saving" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
   const locale = getLocale(pathname);
+
+  useEffect(() => {
+    const profile = updateAnonymousProfile({
+      language: locale,
+      searchPreferences: searchPreferences(params)
+    });
+    setFavoriteVenueIds(profile.favoriteVenueIds);
+  }, [locale, params]);
 
   const payload = useMemo(() => {
     const location = firstValue(params.location);
@@ -48,20 +65,22 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
       canton: firstValue(params.canton),
       city: location,
       selectedVenueIds: [],
-      favoriteVenueIds: []
+      favoriteVenueIds
     };
-  }, [locale, params, pathname]);
+  }, [favoriteVenueIds, locale, params, pathname]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("saving");
     setMessage("");
 
+    const currentProfile = readAnonymousProfile();
     const response = await fetch("/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...payload,
+        favoriteVenueIds: currentProfile.favoriteVenueIds,
         email,
         firstName,
         marketingConsent
@@ -90,7 +109,7 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Suche speichern</p>
           <h2 className="mt-2 text-2xl font-semibold text-ink">Suche speichern & passende Tipps erhalten</h2>
           <p className="mt-3 text-sm leading-6 text-soft-ink">
-            Speichere deine Suche ohne Konto. So können wir dir passende Hinweise zu Standesämtern und der Hochzeitsplanung zusenden.
+            Speichere deine Suche ohne Konto. Deine aktuellen Suchpräferenzen bleiben erhalten, damit du sie nicht erneut eingeben musst.
           </p>
         </div>
         <form onSubmit={submit} className="grid gap-3">
