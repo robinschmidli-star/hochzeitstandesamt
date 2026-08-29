@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { nearbyRegistryOfficesForUnico, unicoProvider } from "@/lib/vendor-preview";
 
@@ -17,7 +18,7 @@ export default function UnicoVendorProfilePage() {
         <div className="grid gap-3 md:col-span-2 md:grid-cols-subgrid">
           {unicoProvider.images.map((image, index) => (
             <figure key={image.src} className={index === 0 ? "overflow-hidden rounded-xl bg-paper md:row-span-2" : "overflow-hidden rounded-xl bg-paper md:col-start-2"}>
-              <img src={image.src} alt={image.alt} className={index === 0 ? "h-56 w-full object-cover md:h-full md:min-h-[420px]" : "h-52 w-full object-cover"} />
+              <Image src={image.src} alt={image.alt} width={1200} height={800} sizes={index === 0 ? "(max-width: 768px) 100vw, 58vw" : "(max-width: 768px) 100vw, 42vw"} className={index === 0 ? "h-56 w-full object-cover md:h-full md:min-h-[420px]" : "h-52 w-full object-cover"} />
             </figure>
           ))}
         </div>

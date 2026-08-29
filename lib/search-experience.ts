@@ -1,7 +1,9 @@
-import { ceremonyVenues } from "@/lib/ceremony-venues";
+import { publicCeremonyVenues } from "@/lib/public-venues";
+import type { CeremonyVenue } from "@/lib/types";
 import { swissRegistryOffices } from "@/lib/registry-data";
 import type { SwissRegistryOffice } from "@/lib/types";
 import postalCodes from "switzerland-postal-codes/dist/postal-codes-full.json";
+import { nameMatchRank } from "@/lib/name-search";
 
 type PostalCodeEntry = {
   name: string;
@@ -11,6 +13,7 @@ type PostalCodeEntry = {
 };
 
 export type SearchParams = {
+  name?: string;
   location?: string;
   radius?: string;
   canton?: string;
@@ -128,10 +131,10 @@ function repairedMunicipalities(office: SwissRegistryOffice) {
 }
 
 function getVenues(office: SwissRegistryOffice) {
-  return ceremonyVenues.filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug);
+  return publicCeremonyVenues.filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug);
 }
 
-export function isElopementSuitableVenue(venue: (typeof ceremonyVenues)[number]) {
+export function isElopementSuitableVenue(venue: CeremonyVenue) {
   const capacity = venue.maxCeremonyGuests;
   if (typeof capacity !== "number" || capacity < 2 || capacity > 30) return false;
   if (capacity <= 20) return true;
@@ -164,14 +167,45 @@ function getOfficeTags(office: SwissRegistryOffice) {
   if (/(park|wald|garten|natur|see|berge)/.test(text)) tags.add("nature");
   if (/(zivilstandsamt|regionales|office)/.test(text)) tags.add("romantic");
   if (/(modern|zentrum|stadthaus)/.test(text)) tags.add("modern");
-  if (
-    venues.some((venue) => (venue.highlightLevel ?? 0) >= 3) ||
-    venues.some((venue) => normalize(repairText(venue.beautyStatus ?? "")).includes("schon")) ||
-    venues.some((venue) => (venue.tags ?? []).some((tag) => ["featured", "premium", "castle", "lake", "park", "nature", "historic", "schloss", "see", "natur", "historisch"].includes(normalize(repairText(tag))))) ||
-    /(schloss|see|park|garten|panorama|altstadt|histor|palazzo|castello|zunfthaus|rathaus)/.test(text)
-  ) tags.add("featured");
+  if (venues.some((venue) => venue.websitePriority?.startsWith("Top20:"))) {
+    tags.add("featured");
+  }
 
   return Array.from(tags);
+}
+
+export function featuredCeremonyVenues(params: SearchParams = {}) {
+  const nameQuery = params.name?.trim() ?? "";
+  const locationQuery = normalize(params.location);
+  const cantonQuery = normalize(params.canton);
+  const weekday = params.saturdayOnly === "true" ? "saturday" : params.weekday;
+  const weekdayField = weekday && weekday !== "any"
+    ? `ceremony${weekday[0].toUpperCase()}${weekday.slice(1)}` as keyof CeremonyVenue
+    : null;
+  const minimumGuests = Number(params.maxGuests);
+
+  return publicCeremonyVenues
+    .filter((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? ""))
+    .filter((venue) => {
+      const office = swissRegistryOffices.find((item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
+      if (!office) return false;
+      if (nameQuery && nameMatchRank(venue.traulokal_name, nameQuery, [office.name], [venue.ort, office.city]) === null) return false;
+      if (cantonQuery && normalize(venue.kanton || office.canton) !== cantonQuery && normalize(office.cantonName) !== cantonQuery) return false;
+      if (locationQuery && !normalize([venue.ort, venue.adresse, office.city, ...office.responsibleMunicipalities].join(" ")).includes(locationQuery)) return false;
+      if (weekdayField && venue[weekdayField] !== true) return false;
+      if (params.elopement === "true" && !isElopementSuitableVenue(venue)) return false;
+      if (params.wheelchair === "yes" && venue.wheelchairAccessible !== true) return false;
+      if (params.parking === "yes" && venue.parkingAvailable !== true) return false;
+      if (params.evening === "yes" && venue.eveningCeremonyAvailable !== true) return false;
+      if (params.outdoor === "yes" && venue.outdoorCeremonyAvailable !== true) return false;
+      if (params.onlineBooking === "yes" && office.onlineAppointmentBookingAvailable !== true) return false;
+      if (params.multipleVenues === "yes" && office.multipleCeremonyVenuesAvailable !== true) return false;
+      if (Number.isFinite(minimumGuests) && minimumGuests > 0 && (!venue.maxCeremonyGuests || venue.maxCeremonyGuests < minimumGuests)) return false;
+      return true;
+    })
+    .sort((left, right) =>
+      (left.websitePriority ?? "").localeCompare(right.websitePriority ?? "")
+    );
 }
 
 function getSaturdayAvailability(office: SwissRegistryOffice) {
@@ -267,6 +301,7 @@ export function searchExperienceOffices(params: SearchParams) {
   const tag = params.tag;
   const locationQuery = normalize(params.location);
   const cantonQuery = normalize(params.canton);
+  const nameQuery = params.name?.trim() ?? "";
 
   return swissRegistryOffices
     .map((office) => enrichOffice(office, origin))
@@ -274,6 +309,7 @@ export function searchExperienceOffices(params: SearchParams) {
       const venues = getVenues(office);
       const haystack = normalize([office.name, office.city, office.postalCode, office.canton, office.cantonName, ...office.responsibleMunicipalities].join(" "));
       if (cantonQuery && normalize(office.canton) !== cantonQuery && normalize(office.cantonName) !== cantonQuery) return false;
+      if (nameQuery && nameMatchRank(office.name, nameQuery, [...(office.ceremonyLocations ?? []), ...venues.map((venue) => venue.traulokal_name)], [office.city, ...venues.map((venue) => venue.ort)]) === null) return false;
       if (locationQuery && !origin && !haystack.includes(locationQuery)) return false;
       if (origin && radius && typeof office.distanceKm === "number" && office.distanceKm > radius) return false;
       if (weekday && weekday !== "any" && !office.available_weekdays.includes(weekday)) return false;
@@ -293,6 +329,14 @@ export function searchExperienceOffices(params: SearchParams) {
       return true;
     })
     .sort((a, b) => {
+      if (nameQuery) {
+        const rank = (office: EnrichedRegistryOffice) => {
+          const venues = getVenues(office);
+          return nameMatchRank(office.name, nameQuery, [...(office.ceremonyLocations ?? []), ...venues.map((venue) => venue.traulokal_name)], [office.city, ...venues.map((venue) => venue.ort)]) ?? 99;
+        };
+        const rankDifference = rank(a) - rank(b);
+        if (rankDifference) return rankDifference;
+      }
       if (typeof a.distanceKm === "number" && typeof b.distanceKm === "number") return a.distanceKm - b.distanceKm;
       return a.canton.localeCompare(b.canton, "de-CH") || a.name.localeCompare(b.name, "de-CH");
     });

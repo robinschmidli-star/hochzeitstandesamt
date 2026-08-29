@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { unicoProvider } from "@/lib/vendor-preview";
 
@@ -23,7 +24,7 @@ export default function FloristryVendorPage() {
 
       <article className="rounded-xl border border-linen bg-white p-5 shadow-soft">
         <div className="mb-5 overflow-hidden rounded-xl bg-paper">
-          <img src={unicoProvider.images[0].src} alt={unicoProvider.images[0].alt} className="h-56 w-full object-cover" />
+          <Image src={unicoProvider.images[0].src} alt={unicoProvider.images[0].alt} width={1200} height={672} className="h-56 w-full object-cover" />
         </div>
         <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Floristik / Hochzeitsfloristik</p>
         <h2 className="mt-2 text-2xl font-semibold text-ink">{unicoProvider.name}</h2>

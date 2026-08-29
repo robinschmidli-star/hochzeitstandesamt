@@ -1,5 +1,6 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 
 const adminSessionCookie = "admin_session";
 
@@ -10,6 +11,8 @@ function matches(value: string, expected: string) {
 }
 
 export async function POST(request: Request) {
+  const limited = await rateLimit(request, "admin-login", 5, 15 * 60_000);
+  if (limited) return limited;
   const form = await request.formData();
   const username = String(form.get("username") ?? "");
   const password = String(form.get("password") ?? "");

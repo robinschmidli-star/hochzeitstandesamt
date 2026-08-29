@@ -25,7 +25,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "43edb1e0-2ebf-5a0f-a567-13f26a2dc27f",
@@ -51,7 +52,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "88c04aa5-3e44-56ec-9715-2098895ecd91",
@@ -77,7 +79,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "be67a118-ed35-562f-b095-cc47fe3f7ca2",
@@ -103,7 +106,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "acc3fda2-4871-52e2-8a1b-c006790bc65f",
@@ -129,7 +133,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "dfb1c627-6cee-5fcf-b8b2-fdf4f37a21e2",
@@ -155,7 +160,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "429671de-9a38-5a77-9c16-11b32b3cf76e",
@@ -181,7 +187,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "53231785-3a79-52cf-af71-5f1f15cabe54",
@@ -207,7 +214,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "91918c0d-9092-58cd-be03-d06697194963",
@@ -233,7 +241,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "83f6864a-646b-56bc-b116-398a75b90869",
@@ -259,7 +268,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "81744cd6-b77a-5c83-8a80-d2c361d12d06",
@@ -285,7 +295,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c1be2ffe-afa5-5ccd-bfe9-e0d958221094",
@@ -311,7 +322,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c2126ca4-2845-5436-a9a7-2ca0a9d0a14c",
@@ -337,7 +349,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9fa93bb8-39c4-5343-8712-4f84ff78af1e",
@@ -363,7 +376,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "98f2171d-8415-5352-991e-50c12c88616b",
@@ -389,7 +403,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "16d3731b-c088-5173-9ff4-d7d8035eb822",
@@ -415,7 +430,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a1fadb65-02c6-5ef1-8b20-2ef2a9995f86",
@@ -441,7 +457,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ec3775ac-ef29-530b-a4c1-5c82be954dcd",
@@ -467,7 +484,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8e7891a9-d727-5ec5-8f6d-ccdea4388fb9",
@@ -493,7 +511,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "530eb583-6e26-55ca-a592-2229009aaae6",
@@ -519,7 +538,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2ed62031-da21-5f90-9f4e-14f909ac1544",
@@ -545,7 +565,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4c2ccb8d-c73d-5536-b7a2-3ee059f52928",
@@ -571,7 +592,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ce477a27-ae94-5863-9af3-e7458d0eb3dd",
@@ -597,7 +619,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c168e4d7-6d4d-55fa-a87a-20cd285f3a74",
@@ -623,7 +646,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "123e3d9f-c61b-5c89-93af-854f12170985",
@@ -649,7 +673,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a3dd00d2-04da-5720-82fc-185fec31bb50",
@@ -675,7 +700,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8db68d56-bad9-5b65-8fa2-8eeee123444e",
@@ -701,7 +727,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cbf52d8b-37b7-553d-910e-cd3956f72c4a",
@@ -727,7 +754,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "54d01af9-499d-5976-96f8-868b385d752e",
@@ -753,7 +781,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c8c7cb86-61d8-517e-a044-1d41defe58b1",
@@ -779,13 +808,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cbaf0a1f-875a-5a8e-9c8a-80e9e7023d7e",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:13",
     "standesamt_id": "regionales-zivilstandsamt-brugg-brugg-ag",
     "standesamt_name": "Regionales Zivilstandsamt Brugg",
@@ -835,7 +868,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cf9c0b41-5558-5b89-812c-16407b1b48ec",
@@ -861,7 +895,74 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "79abc59b-a11b-5225-990e-32fae24e9611",
+    "standesamt_id": "regionales-zivilstandsamt-lenzburg-lenzburg-ag",
+    "standesamt_name": "Regionales Zivilstandsamt Lenzburg",
+    "traulokal_name": "Schloss Hallwyl – Wilhelmina",
+    "adresse": "Schloss Hallwyl",
+    "ort": "Seengen",
+    "kanton": "AG",
+    "beschreibung": "Offizielles Ziviltrauungslokal im Schloss Hallwyl, buchbar über das Regionale Zivilstandsamt Lenzburg.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 25,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "1. April bis 31. Oktober",
+    "venueUrl": "https://www.museumaargau.ch/schloss-hallwyl/raeume-mieten-und-feiern",
+    "sourceUrl": "https://www.museumaargau.ch/schloss-hallwyl/raeume-mieten-und-feiern",
+    "remarks": "Top-20-Rang 12; drei Hallwyl-Trauorte separat erfasst; vor Merge Dublettenprüfung durchführen.",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:12"
+  },
+  {
+    "canonicalId": "ef74b07e-ce8f-58d2-a132-e014431a3081",
+    "standesamt_id": "regionales-zivilstandsamt-lenzburg-lenzburg-ag",
+    "standesamt_name": "Regionales Zivilstandsamt Lenzburg",
+    "traulokal_name": "Schloss Wildegg – Salon",
+    "adresse": "Effingerweg 5",
+    "ort": "Wildegg",
+    "kanton": "AG",
+    "beschreibung": "Offizielles Ziviltrauungslokal im Schloss Wildegg, buchbar über das Regionale Zivilstandsamt Lenzburg.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 21,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "April bis Oktober",
+    "venueUrl": "https://www.museumaargau.ch/raeume-mieten-und-feiern/detail/ziviltraulokal-salon",
+    "sourceUrl": "https://www.museumaargau.ch/raeume-mieten-und-feiern/detail/ziviltraulokal-salon",
+    "remarks": "Top-20-Rang 14; alle offiziellen Wildegg-Ziviltrauungsräume separat erfasst; vor Merge Dublettenprüfung durchführen.",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:14"
   },
   {
     "canonicalId": "9f580a74-0251-5f46-8902-18aa56f7f97c",
@@ -887,7 +988,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f3ace311-31d5-56b6-9988-268d73ce8de8",
@@ -913,7 +1015,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7c98ac85-c445-5ad5-8eee-ef7bf54874ce",
@@ -939,7 +1042,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fbe56643-375a-57c5-b7b7-5db0bb17337b",
@@ -965,7 +1069,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2468e905-840b-56a7-a9ae-be04cad25b95",
@@ -991,7 +1096,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fe9efa17-78db-5819-a99b-822e76aab4ac",
@@ -1017,7 +1123,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d4012dbd-0f6d-5414-9bca-a8f8b5ce91ef",
@@ -1043,7 +1150,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0b6654e5-096c-5eb8-9715-6427c6a3bce4",
@@ -1069,7 +1177,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e254fe29-75cd-568c-a41a-913a143c082c",
@@ -1095,7 +1204,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b09ed3f0-95cc-5591-ad23-9e81374c5cba",
@@ -1121,7 +1231,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "01945d55-46d2-5227-9a8a-86651ec298f2",
@@ -1147,7 +1258,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2091c5bb-8470-54ef-abc2-7d42c1b8f914",
@@ -1173,7 +1285,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9ba94dc3-023d-5423-90ec-a93490d483f4",
@@ -1199,7 +1312,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f4a63b22-7e91-5c0c-b716-9a1e4401c2a5",
@@ -1225,7 +1339,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7d91e1d4-40d8-5772-a842-dd86348c2e40",
@@ -1251,7 +1366,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c4173607-c687-5180-98a5-51f9f15cebac",
@@ -1277,7 +1393,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e3efe563-e99d-5cfe-9f6b-0128f8d4fad5",
@@ -1303,7 +1420,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4bdbde10-5ea0-5967-8327-cd67bb9ab044",
@@ -1329,7 +1447,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9b173a98-db1a-582b-ba24-5b92e1c5bb09",
@@ -1355,7 +1474,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a2495840-5c39-544e-a364-6a4268df33b3",
@@ -1381,7 +1501,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b18d35f9-b20d-5ee0-86ee-a09a9001ef97",
@@ -1407,7 +1528,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "76534e76-d9f9-53aa-b9ff-06c5386aef3e",
@@ -1433,7 +1555,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b16eaa25-b111-550e-aa70-d48d02b29a12",
@@ -1459,7 +1582,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f64d6f1d-95e7-5b3c-9701-394d188e4860",
@@ -1485,7 +1609,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "71bfc209-ab9e-5b25-a3ce-5aaa64e864f8",
@@ -1511,7 +1636,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c860e57-3d5b-5899-8e6d-f81156f1d318",
@@ -1537,7 +1663,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f9f55ec1-37b5-5d38-b069-150c35004cea",
@@ -1563,7 +1690,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c8ef4255-a947-54b8-930e-1b03fd4ba3ae",
@@ -1589,7 +1717,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a57487ee-d74a-58ce-95ae-9a068551484c",
@@ -1615,7 +1744,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "54b2263f-d4e6-5fe3-939b-dabb16583bba",
@@ -1641,7 +1771,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9ff55566-f135-51e8-894e-14d84ec91743",
@@ -1667,7 +1798,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "85bf232f-fa56-5c67-9206-d67b97cf2b35",
@@ -1693,7 +1825,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b59bfeb3-3c24-505b-a98b-a254761b34fc",
@@ -1719,7 +1852,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a14d8b85-4ab0-52c1-b609-88d61894f6c2",
@@ -1745,7 +1879,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e95cc16e-3c01-542b-891f-b7c2e6f496ed",
@@ -1771,7 +1906,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ba2094a5-61f8-5093-b4aa-50defc2ecd9c",
@@ -1797,7 +1933,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cd4a3dd7-3b44-5b7e-a452-2eb78a9273c2",
@@ -1823,7 +1960,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ad7ee362-ff65-52e8-b7c8-2f6c1ca99916",
@@ -1849,7 +1987,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "576320a1-79e5-5aa7-848f-5c6521dcedb5",
@@ -1875,7 +2014,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "27ca3de7-7521-5239-a64b-43dfcb34fba5",
@@ -1901,7 +2041,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2c5290e-f08f-54b2-90b2-352a7910256f",
@@ -1927,7 +2068,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e15e4e7d-8600-5e3e-a70c-8db4124df966",
@@ -1953,7 +2095,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a1a82135-ba52-5332-8523-438ed2ac2d05",
@@ -1979,7 +2122,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e999127f-d9bd-50d9-be3b-05301ae11a7f",
@@ -2005,7 +2149,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b1f4660d-38d0-5e27-ad52-a1a6e9579f16",
@@ -2031,7 +2176,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9b77a962-1be4-52f8-8cc7-ab0f37d33cf4",
@@ -2057,7 +2203,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9ac38659-9fe6-575c-ac31-68aedac77e12",
@@ -2083,7 +2230,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "72c2226a-f591-5598-9502-550000233450",
@@ -2109,7 +2257,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4c362df9-263b-5909-8514-5af95c881a22",
@@ -2135,7 +2284,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3d9be9dc-f013-5133-ab36-83b5022918f4",
@@ -2161,7 +2311,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "33d0ebc8-4573-5384-9948-a87f386a37a9",
@@ -2187,7 +2338,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "81e73ff9-be50-5bfe-87b4-236593dbc569",
@@ -2213,7 +2365,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f5ca0553-3fb9-5315-b1f4-206d383112c2",
@@ -2239,7 +2392,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1d198a27-936e-5128-b5dd-a5597daace13",
@@ -2265,7 +2419,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b642d7a7-fbae-56c7-b093-94348ce54f25",
@@ -2291,7 +2446,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9a93a3d9-39ab-5b54-a7a0-2c403a284f45",
@@ -2317,7 +2473,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d4501b70-7454-5efc-b266-0d12b1638122",
@@ -2343,7 +2500,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e7074f17-0ed2-527a-bc0b-7dd4e4889a7c",
@@ -2369,7 +2527,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "074bc2af-1cdf-5aa1-9610-31bc8f6d17d6",
@@ -2395,7 +2554,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2be2f0bf-d5b7-5401-8e45-d9b9d9ed9816",
@@ -2421,7 +2581,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6ca7f5ef-c38a-521d-aca7-95f4d9036432",
@@ -2447,7 +2608,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e9fb0b2f-6c25-5e11-b578-15f6bb16e957",
@@ -2473,7 +2635,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "387afb41-c624-5302-ae09-420bd9d6c60d",
@@ -2499,7 +2662,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9d3922e8-9225-5590-877b-3f9315207666",
@@ -2525,7 +2689,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "68c5c414-5235-565c-adde-e27227926898",
@@ -2551,7 +2716,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0ca980d9-0236-5e60-8900-6000e67278d5",
@@ -2577,7 +2743,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/amthaus-saanen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/amthaus-saanen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8f97176e-490f-52dd-9b76-6893268596c4",
@@ -2603,7 +2770,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/grandhotel-giessbach.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/grandhotel-giessbach.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "96fb589f-efcc-55c1-acd1-c2bccdde6d1d",
@@ -2629,7 +2797,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/harder-kulm.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/harder-kulm.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "beb3ec34-d1b3-5399-96e4-84e6b6975fa3",
@@ -2655,7 +2824,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/haslimuseum-meiringen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/haslimuseum-meiringen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8d12e60e-efe9-582e-9dd9-70310cabac95",
@@ -2681,7 +2851,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/hotel-blausee.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/hotel-blausee.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "imageUrl": "/venues/blausee/hotel-blausee.jpg",
+    "imageAlt": "Hotel Blausee im Naturpark",
+    "imageSource": "Hotel Blausee",
+    "imageAttribution": "Hotel Blausee",
+    "imageStatus": "approved",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2b4df327-af62-51d0-9f4b-5f15174b7584",
@@ -2707,7 +2883,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/rathaus-aarberg.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/rathaus-aarberg.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bfc73133-9d18-51f8-a53f-b7ce026891f1",
@@ -2733,7 +2910,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/rathaus-la-neuveville.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/la-neuveville.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "394923fd-46a1-54e3-9836-014ea5cb184b",
@@ -2759,7 +2937,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-belp.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-belp.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "624c6b2d-5dab-59cf-aa34-56d194805f64",
@@ -2785,7 +2964,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-blankenburg.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-blankenburg.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "379c2af8-99f9-5baa-ae7a-cc02e2d7da84",
@@ -2811,7 +2991,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-burgdorf.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-burgdorf.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c0959386-e653-5a80-886e-a7bde6dbdf1f",
@@ -2837,7 +3018,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-buempliz.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-buempliz.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e57c125a-9fcd-5035-b80c-94ea491dff1d",
@@ -2863,7 +3045,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/trauungslokal-schloss-holligen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/trauungslokal-schloss-holligen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "274c9242-3277-5cff-a894-77dd4f97ce25",
@@ -2889,7 +3072,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-jegenstorf.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-jegenstorf.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "73721193-1efb-55f2-acb6-ed2294d338a1",
@@ -2915,7 +3099,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-koeniz.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-koeniz.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1c9e848b-d2b1-5790-8d7f-13f5254a3b4d",
@@ -2941,7 +3126,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-laupen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-laupen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "926e767d-cd90-5e82-81f0-a37a4fbe05b9",
@@ -2967,13 +3153,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-muensingen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-muensingen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "819333a4-efe8-5d1c-b45f-b18add5fb5a3",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:01",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
@@ -2997,13 +3187,21 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-oberhofen.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-oberhofen.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "imageUrl": "/venues/oberhofen/sommersaal.webp",
+    "imageAlt": "Sommersaal im Schloss Oberhofen",
+    "imageSource": "Stiftung Schloss Oberhofen",
+    "imageAttribution": "Stiftung Schloss Oberhofen",
+    "imageStatus": "approved"
   },
   {
     "canonicalId": "8673029d-2ba7-54be-950c-c16a1954a52f",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:15",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
@@ -3053,13 +3251,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-schwarzenburg.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-schwarzenburg.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f8ae6f21-ebe4-5a76-bf1e-ce643c3ff755",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:02",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
@@ -3109,7 +3311,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-thunstetten.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-thunstetten.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "21971156-e82e-58a3-9af9-8f766ef7ada7",
@@ -3135,7 +3338,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-thunstetten.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-thunstetten.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a2cea7e-be90-5c7c-893b-cb15c69a143e",
@@ -3161,7 +3365,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-trachselwald.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-trachselwald.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e4cecac7-1655-5988-82a1-37a979aa3283",
@@ -3187,7 +3392,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-wyl.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-wyl.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "501d8170-75bd-53f2-a423-0eeebebe934d",
@@ -3213,13 +3419,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-wyl.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schloss-wyl.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "da067a71-7a88-57e9-8d51-e98d7904c299",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:16",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
@@ -3243,7 +3453,12 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schlossberg-thun.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/schlossberg-thun.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "imageUrl": "/venues/schlossberg-thun/ziviltrauung.webp",
+    "imageAlt": "Raum für Ziviltrauungen im Schlossberg Thun",
+    "imageSource": "Schlossberg Thun AG",
+    "imageAttribution": "Schlossberg Thun AG",
+    "imageStatus": "approved"
   },
   {
     "canonicalId": "c7ebdb33-bc18-5dce-9cef-3d12d1941694",
@@ -3269,7 +3484,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/st-petersinsel.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/st-petersinsel.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0445b9f6-8de2-59b9-a91d-dc970ce770ec",
@@ -3295,7 +3511,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/st-petersinsel.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/externe-trauungslokale/st-petersinsel.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f5cbeef9-8d27-514f-b642-7a625de06541",
@@ -3321,7 +3538,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zabm.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "66db714d-c2b9-5edf-be79-d36fdeb47e66",
@@ -3347,7 +3565,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zabj.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5b14879a-3f68-50e3-a495-31aea7830e0b",
@@ -3373,7 +3592,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zaet.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5e943bb6-94d0-5cab-b829-a67a5db4f63b",
@@ -3399,7 +3619,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zaoa.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f585b65a-462e-59d9-ad81-614d952104a6",
@@ -3425,7 +3646,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zaoo.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "01cccaed-4809-5196-b2bf-d3d657a5ad39",
@@ -3451,7 +3673,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zaow.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ecfc4116-cb13-588b-8013-058e2d9a10e1",
@@ -3477,7 +3700,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-za/trauungslokal-zasl.html",
     "sourceUrl": "https://www.zivilstand.sid.be.ch/de/start/heirat/trauungslokale-gaeste.html",
-    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt."
+    "remarks": "Adresse/Detaildaten gemäss offizieller BE-Quelle ergänzt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4ba77a16-e004-52d0-91cf-e734f5151d0d",
@@ -3503,7 +3727,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a5fd598f-0d02-543f-a47f-12c7017aea4b",
@@ -3529,7 +3754,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7f5d6937-b5c3-53cc-beb3-31c2c8485d3c",
@@ -3555,7 +3781,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0682270a-4def-5fe1-9304-57ff73b74a71",
@@ -3581,7 +3808,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ea296247-ce95-54da-9a65-7cb30b2a53ff",
@@ -3607,7 +3835,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "41453e16-b3c2-5d1a-9f7a-0153ed7ba4b7",
@@ -3633,7 +3862,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "775f1019-3b77-58f5-9eff-b1300da6c16f",
@@ -3659,7 +3889,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "409661ed-f7b8-5453-b4b9-71ff9ac7680c",
@@ -3685,7 +3916,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "11bdd8a0-86f3-58a3-8694-85a28666fb46",
@@ -3711,7 +3943,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "520fc116-3413-520c-8702-abfd3b90fc19",
@@ -3737,7 +3970,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ca1935e3-5e87-593f-8b2f-0beb115a8e05",
@@ -3763,7 +3997,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c6fcbfb-d605-52cb-bf3b-729e4ed1c4f7",
@@ -3789,7 +4024,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.fr.ch/vie-quotidienne/etat-civil/bureau-de-letat-civil-a-fribourg?district=Sarine",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9b962241-ebda-5f58-a9bd-79cb432d8a02",
@@ -3815,7 +4051,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.fr.ch/vie-quotidienne/etat-civil/bureau-de-letat-civil-a-tafers?district=Singine",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9bfc8751-46d6-5966-912b-9fafd91de1e9",
@@ -3841,7 +4078,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "88e769b5-ce46-5c92-b2af-945fe4882eed",
@@ -3867,7 +4105,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3d55ddbb-1b4e-50d0-896d-2f21b58d0cd1",
@@ -3893,7 +4132,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9c83520e-0842-586f-a77f-ba0476eefc0b",
@@ -3919,7 +4159,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.fr.ch/vie-quotidienne/etat-civil/bureau-de-letat-civil-a-chatel-st-denis?district=Veveyse",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a355048d-7a34-5fbb-b18f-ee2f5ea56ac7",
@@ -3945,7 +4186,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.fr.ch/vie-quotidienne/etat-civil/bureau-de-letat-civil-a-morat?district=Lac",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "82aae81f-43fb-5477-a6b5-47546d4b0cb3",
@@ -3971,7 +4213,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5f9df61d-463d-5b9d-9f21-82ff308ff2d9",
@@ -3997,7 +4240,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1c131b93-3abe-5236-a52c-49182ab8ad86",
@@ -4023,7 +4267,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4504c9d7-771f-5000-b1ab-d312c75fe351",
@@ -4049,7 +4294,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.chene-bougeries.ch/etat-civil-mariage",
     "sourceUrl": "https://www.chene-bougeries.ch/etat-civil-mariage",
-    "remarks": "Name der Salle nicht separat publiziert; als Kapazitätsraum geführt."
+    "remarks": "Name der Salle nicht separat publiziert; als Kapazitätsraum geführt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cda2b2ea-9b72-5979-8ec6-6b8150d41e25",
@@ -4075,7 +4321,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.chene-bougeries.ch/etat-civil-mariage",
     "sourceUrl": "https://www.chene-bougeries.ch/etat-civil-mariage",
-    "remarks": "Name der Salle nicht separat publiziert; als Kapazitätsraum geführt."
+    "remarks": "Name der Salle nicht separat publiziert; als Kapazitätsraum geführt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3e3d2225-2cbd-5b7c-a2b0-6a81507b7f5a",
@@ -4101,7 +4348,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "222bf335-de58-5fbb-a835-316d79465c2a",
@@ -4127,7 +4375,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fce01d1c-6673-591e-b52f-70011070785d",
@@ -4153,7 +4402,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "06cfdef3-3ffd-5c0b-9e21-eb4d0ab4e86e",
@@ -4179,7 +4429,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.geneve.ch/hotel-restaurant-parc-eaux-vives",
     "sourceUrl": "https://www.geneve.ch/hotel-restaurant-parc-eaux-vives",
-    "remarks": "Source lignes 283-290 et 295-299"
+    "remarks": "Source lignes 283-290 et 295-299",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5ff1e3f6-1833-50b5-80d2-30cfedba3636",
@@ -4205,7 +4456,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.geneve.ch/themes/civil-parcours-vie/marier-convertir-partenariat/lieux-celebration",
     "sourceUrl": "https://www.geneve.ch/themes/civil-parcours-vie/marier-convertir-partenariat/lieux-celebration",
-    "remarks": "Adresse/Kapazität auf Detailseite nachzuführen."
+    "remarks": "Adresse/Kapazität auf Detailseite nachzuführen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cb5e2bef-62d0-5c32-9822-637534173a86",
@@ -4231,7 +4483,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.lancy.ch/prestations/mariage-ou-conversion-dun-partenariat-en-mariage",
     "sourceUrl": "https://www.lancy.ch/prestations/mariage-ou-conversion-dun-partenariat-en-mariage",
-    "remarks": "Exakter Raum und Kapazität auf öffentlicher Seite nicht genannt."
+    "remarks": "Exakter Raum und Kapazität auf öffentlicher Seite nicht genannt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4ecfaff5-7843-5407-969c-4749b591a5dd",
@@ -4257,7 +4510,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "feb9abcc-fa12-5db6-a525-574062149968",
@@ -4283,7 +4537,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.bernex.ch/ma-mairie/etat-civil/",
     "sourceUrl": "https://www.bernex.ch/ma-mairie/etat-civil/ | https://www.bernex.ch/media/document/0/rapportannuel-bernex2024-web.pdf",
-    "remarks": "Kapazität/Barrierefreiheit öffentlich nicht gefunden."
+    "remarks": "Kapazität/Barrierefreiheit öffentlich nicht gefunden.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "26a10e4c-d436-5c8e-ac07-d3416897c4c6",
@@ -4309,7 +4564,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3de816d9-574a-55f9-aa0c-090a8d22f3fe",
@@ -4335,7 +4591,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.geneve.ch/palais-anna-jean-gabriel-eynard-hotel-municipal",
     "sourceUrl": "https://www.geneve.ch/palais-anna-jean-gabriel-eynard-hotel-municipal",
-    "remarks": "Source lignes 296-306, 310-323"
+    "remarks": "Source lignes 296-306, 310-323",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5af1d23d-4dc7-596d-a6f1-48ca1e96e1d8",
@@ -4361,7 +4618,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.geneve.ch/themes/civil-parcours-vie/marier-convertir-partenariat/lieux-celebration",
     "sourceUrl": "https://www.geneve.ch/themes/civil-parcours-vie/marier-convertir-partenariat/lieux-celebration",
-    "remarks": "Adresse/Kapazität auf Detailseite nachzuführen."
+    "remarks": "Adresse/Kapazität auf Detailseite nachzuführen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e29aaa8d-709e-5cfe-a3c3-5b4e76583451",
@@ -4387,7 +4645,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "037530e6-4c5e-56c6-82cd-9de0bf4422af",
@@ -4413,7 +4672,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "84e1955f-39f5-5ebe-bb01-357be9ca19d5",
@@ -4439,7 +4699,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "30c632fb-0f54-5392-8340-66d2acc83fa7",
@@ -4465,7 +4726,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c5c648b5-1fff-5d85-8635-87211384b7a7",
@@ -4491,7 +4753,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a9a0f55a-7a8d-52bb-b411-0da2827090f0",
@@ -4517,7 +4780,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.bardonnex.ch/mariage/",
     "sourceUrl": "https://www.bardonnex.ch/mariage/",
-    "remarks": "2. Etage ohne Lift; Quelle nennt 2026 Samstagstermine."
+    "remarks": "2. Etage ohne Lift; Quelle nennt 2026 Samstagstermine.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "16c1cdab-0872-50fc-8a24-56ebf003dcd4",
@@ -4543,7 +4807,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-carouge",
     "sourceUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-carouge",
-    "remarks": "Source lignes 41-64 et 71-85"
+    "remarks": "Source lignes 41-64 et 71-85",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4555b849-5f50-575e-bb42-2ab81bc8e45a",
@@ -4569,7 +4834,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-carouge",
     "sourceUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-carouge",
-    "remarks": "Kapazität inkl. Paar, Trauzeugen und Offizier."
+    "remarks": "Kapazität inkl. Paar, Trauzeugen und Offizier.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "597e72f2-2055-5688-aafb-02b623da802b",
@@ -4595,7 +4861,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-troinex",
     "sourceUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-troinex",
-    "remarks": "Kapazität inkl. Paar, Trauzeugen und Offizier."
+    "remarks": "Kapazität inkl. Paar, Trauzeugen und Offizier.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b784419a-db40-5d00-af0a-39152e12e0ad",
@@ -4621,7 +4888,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-troinex",
     "sourceUrl": "https://www.carouge.ch/lieux/salle-des-mariages-de-troinex",
-    "remarks": "Source lignes 41-70 et 79-82"
+    "remarks": "Source lignes 41-70 et 79-82",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d3348e3-5860-581c-8506-d2b31ff0440c",
@@ -4647,7 +4915,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "12a2b2da-bae1-53b4-a9c0-308997cabd52",
@@ -4673,7 +4942,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4eafce18-535d-56d6-bcff-10f1d3da7063",
@@ -4699,7 +4969,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "84be49c7-3de8-5d9b-b02c-10c8de6f6f08",
@@ -4725,7 +4996,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f34c68b5-a597-5891-b7c2-4319d59f2c85",
@@ -4751,7 +5023,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8e770da5-a851-5c2c-9653-3123e6269978",
@@ -4777,7 +5050,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4116cca6-0d59-58dd-9180-b1fe150b6702",
@@ -4803,7 +5077,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "97a631fe-7ad4-559e-adf4-b7d62efd3ed8",
@@ -4829,7 +5104,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "afd18ef2-6010-5431-829d-79dafcfe09e7",
@@ -4855,7 +5131,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "988b17f0-3fbc-5f6a-bf70-511a70e99154",
@@ -4881,7 +5158,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "71ca0d36-a924-56ba-a0f1-ad6aedc5a4b7",
@@ -4907,7 +5185,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "64585b40-964a-5928-a156-11b882519942",
@@ -4933,7 +5212,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f5e166e2-5133-59da-b285-dd46fb2c6e4e",
@@ -4959,7 +5239,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "80cdff48-7d6f-5bcc-94ca-9072baf2991a",
@@ -4985,7 +5266,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "31ddc7bd-0ce2-5a8e-9459-b57e019fc821",
@@ -5011,7 +5293,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b6fc5b75-ba52-5748-b6f8-6f3d6fef4881",
@@ -5037,7 +5320,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "00b66bb7-0f84-5fd6-9b43-3560a029be96",
@@ -5063,7 +5347,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fdb99569-c0b2-5da5-8ce0-02a65903f7ed",
@@ -5089,7 +5374,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "28191774-40eb-5df1-ad18-1013ff041067",
@@ -5115,7 +5401,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5b768b45-bf85-5d10-9f3e-69880087e0aa",
@@ -5141,7 +5428,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7afd6d09-bbf3-5155-8892-143af3b7b00c",
@@ -5167,7 +5455,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b102b7bb-8ec4-55c4-9ee8-1d889eb9420f",
@@ -5193,7 +5482,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3d56c1ce-b1c7-54d4-b897-1a5ae70524bb",
@@ -5219,7 +5509,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a5349c06-d7ec-560c-b5bd-111109635396",
@@ -5245,7 +5536,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "399d5251-b6b8-5275-93dd-66626dfa118a",
@@ -5271,7 +5563,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.regionemoesa.ch/compiti/ufficio-stato-civile",
-    "remarks": "Kosten Nutzung: sì gemäss Quelle."
+    "remarks": "Kosten Nutzung: sì gemäss Quelle.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "72d8fb68-733a-54f3-a72a-951bf66e4784",
@@ -5297,7 +5590,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.regionemoesa.ch/compiti/ufficio-stato-civile",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b431a7ad-c08a-54de-aea9-d65219f32743",
@@ -5323,7 +5617,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6b81d81b-ae99-52eb-be67-d00ca7114c08",
@@ -5349,7 +5644,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "814a36cd-afef-585c-82c6-0f6beccc883e",
@@ -5375,7 +5671,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a20e5101-25b1-5155-b731-e6f8848cef5c",
@@ -5401,7 +5698,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0485c53c-6a4c-58d5-9a12-9427fa08b03f",
@@ -5427,7 +5725,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1728817b-6d06-5d3d-821f-459a2e6e04be",
@@ -5453,7 +5752,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d90c07e7-10e3-58b4-a5c2-be838f399961",
@@ -5479,7 +5779,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "306fe20d-6b53-5df6-9618-f70f687481b1",
@@ -5505,7 +5806,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "63f3cbb2-97ef-542e-b4dd-e17bd2d28ae8",
@@ -5531,7 +5833,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7d99d5c4-5d37-5369-9085-18635802671b",
@@ -5557,7 +5860,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ca1df450-5b2d-51b4-802d-67436c8c25c7",
@@ -5583,7 +5887,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "644ee083-fabb-5254-b774-1951548ec2bc",
@@ -5609,7 +5914,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6efff1a2-3f65-5724-a80f-6afa67146bbd",
@@ -5635,7 +5941,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0255bd55-177d-5afe-8e76-6c542174b4ec",
@@ -5661,7 +5968,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cdd48002-9f02-5bda-846e-913d6aefcfb4",
@@ -5687,7 +5995,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "46d0b999-548e-59cc-b84a-74d5464e0526",
@@ -5713,7 +6022,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8f6521c6-2326-59eb-9576-242c273c0ab1",
@@ -5739,7 +6049,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a9b0d5c-9adf-5187-a377-bfc4651f73f6",
@@ -5765,7 +6076,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f7b7f89f-ef88-5718-a45d-c75eb6fff955",
@@ -5791,7 +6103,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f94d8471-5d06-545e-8cdb-cf86262dc0b0",
@@ -5817,7 +6130,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7e90d8eb-a46f-57cf-b4ab-23811b395b52",
@@ -5843,7 +6157,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c88af978-32b9-5dd7-81a3-e2ca967720c1",
@@ -5869,7 +6184,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "efb82ee7-0f28-5dd5-8b36-bfe27e08ccab",
@@ -5895,7 +6211,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "311cfe76-ed13-531b-afa0-a04b6645b236",
@@ -5921,7 +6238,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e04780e6-19d5-5443-b87a-056d9ee523d5",
@@ -5947,7 +6265,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d637c84b-4188-59fd-9d3c-f188817627e2",
@@ -5973,7 +6292,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f7406108-c07f-5433-afc4-b62e4d47d075",
@@ -5999,7 +6319,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1a901bc0-5ab6-5e39-9231-44f7a6b470d9",
@@ -6025,7 +6346,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "51fb9c7b-4b38-5f8c-8b95-3b283a3774dd",
@@ -6051,7 +6373,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b58bc0bd-6352-528c-aeac-93fe8cbd8ed7",
@@ -6077,7 +6400,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "68295871-fa60-5293-8d57-96d80a829ca6",
@@ -6103,7 +6427,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b12c2f78-ce18-5efc-960a-32a94d60580b",
@@ -6129,7 +6454,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c420c03e-acd8-5247-92a0-3838e879e8a9",
@@ -6155,7 +6481,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "91e3bc84-6d91-5b7d-b938-da9dbb852533",
@@ -6181,7 +6508,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1e9866f3-fba2-5048-90f9-d8de0397294d",
@@ -6207,7 +6535,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "016d0f47-a336-5efa-9cc9-e5dd043195d4",
@@ -6233,7 +6562,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8ec24dc9-9673-5f02-97c3-955db75806e1",
@@ -6259,7 +6589,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c550771f-83b5-5a32-80d0-469661466eeb",
@@ -6285,7 +6616,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e6447f84-8a64-502d-b201-d427bc557ae9",
@@ -6311,7 +6643,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "55a9bc16-03f5-5739-8b5f-7d8103cc62d2",
@@ -6337,7 +6670,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a0b56aae-ba09-5078-9b6d-c1fbcbed00a3",
@@ -6363,7 +6697,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cc6d8f7d-9705-53b6-a58a-a19b6fbfdfe3",
@@ -6389,7 +6724,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d66a1ff4-1ebd-578f-a5ab-eb3fad79c8f0",
@@ -6415,7 +6751,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "af26998c-3507-5124-926f-e952e0679c9c",
@@ -6441,7 +6778,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "21804794-e2eb-5368-94e9-3f5af7d0acc9",
@@ -6467,7 +6805,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "083ce0a5-8a1f-590a-85f6-3060978ca03a",
@@ -6493,7 +6832,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2be50ff-4ed9-5355-a2f3-cbd4e40c9ba5",
@@ -6519,7 +6859,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8aacda74-ab78-574e-bd29-3ad894bd85bb",
@@ -6545,7 +6886,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7a376077-8ab6-5d57-a53b-af489c4ca333",
@@ -6571,7 +6913,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8655ec82-9105-50e1-9f77-6c815ba9d169",
@@ -6597,7 +6940,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0cd0dab3-3daa-597c-85a3-85f2c2597d5c",
@@ -6623,7 +6967,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "03aa673f-3ad9-54f1-a684-16eb47130ad3",
@@ -6649,7 +6994,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fc9aa2cd-dd26-5e8e-af55-fd93a6799e85",
@@ -6675,7 +7021,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "95ba27e5-d6f3-553a-bcf6-838d8de9cb7c",
@@ -6701,7 +7048,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4297146a-b0f7-58ba-8ecc-2c20d0011a41",
@@ -6727,7 +7075,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f41052e5-1117-52c5-81d2-66456b83291e",
@@ -6753,7 +7102,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "050b4829-153e-5abd-b6d4-804ad52f992f",
@@ -6779,7 +7129,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e5e65ca3-d5ae-5a02-bb4e-6a1eb050d199",
@@ -6805,7 +7156,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6290c244-b789-5261-a7f3-52193910a9aa",
@@ -6831,7 +7183,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8aa86dbb-b04c-56b7-a5d0-65382210bce2",
@@ -6857,7 +7210,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f29f579d-a8bd-55b5-ba78-f86f07430b0d",
@@ -6883,7 +7237,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "aeb5cbb1-f836-5f82-91a0-396b35e70d82",
@@ -6909,7 +7264,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "19e17726-6893-51e8-ae90-43cff38ec782",
@@ -6935,7 +7291,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "133c3f68-cfd8-5b63-a001-76b3e61a176b",
@@ -6961,7 +7318,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e6b16992-0d60-587a-8df3-9cc7b301d869",
@@ -6987,7 +7345,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "692c0bc6-1d50-5558-9fad-bc8717b75038",
@@ -7013,7 +7372,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "27ea1316-c0be-575f-bedc-5d0072c2e246",
@@ -7039,7 +7399,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "14d7aa51-aee1-5d83-bc43-83d9721eb9f1",
@@ -7065,7 +7426,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "86d2ec22-3108-5494-aa80-94c65b702d22",
@@ -7091,7 +7453,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "34dc9d82-5c6f-5aef-b85d-72d40edcdd00",
@@ -7117,7 +7480,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1f989d21-d37b-5938-ac6c-a15580d360c3",
@@ -7143,7 +7507,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cf9fb87f-2ca6-5a45-9332-12b5698773fa",
@@ -7169,7 +7534,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "042fba58-379a-5951-bdfe-fa144b5976d4",
@@ -7195,7 +7561,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5135410d-0a52-5fc7-95f8-87e900978029",
@@ -7221,7 +7588,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f8ad3007-de8a-5927-8994-029cb702f83d",
@@ -7247,7 +7615,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f5132b0a-b45c-523d-9e1a-abc3dfe15b0e",
@@ -7273,7 +7642,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d4859d24-ac18-57e2-a549-14c63c83f9db",
@@ -7299,7 +7669,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a4f61ff8-bc51-5d1f-8e54-c94d7331705f",
@@ -7325,7 +7696,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4ed7e1c7-6b45-5c05-9add-a0499a5b353b",
@@ -7351,7 +7723,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "79a19903-1771-5e62-b040-3009d7bec522",
@@ -7377,7 +7750,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3c55a31c-5d4f-5f76-87d4-22c91aff9c8d",
@@ -7403,7 +7777,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "75ffbe9b-d17e-593c-bdeb-6d32cd0e212b",
@@ -7429,7 +7804,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "167ca6dc-50c2-5802-9ce5-f4290351c5bb",
@@ -7455,7 +7831,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a8635641-5916-59cf-8b60-cbfa598a8172",
@@ -7481,7 +7858,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c1c6eebf-6710-5516-9104-8f58d97ceb01",
@@ -7507,7 +7885,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "89790fa2-be91-55bc-95fe-172661ce2214",
@@ -7533,7 +7912,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3f82d4d3-8e57-54b6-9aa7-070dfe5c631e",
@@ -7559,7 +7939,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3fe8b2b7-977a-5f1c-a670-0e88d4e34459",
@@ -7585,7 +7966,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6a5881e6-de56-5947-897d-73b86be0c338",
@@ -7611,7 +7993,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "86e13af8-6990-5425-a7c4-f002a8d0fd3b",
@@ -7637,7 +8020,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e539123c-8000-54fa-a83b-25f5d3a1fac1",
@@ -7663,7 +8047,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "39bc0abe-135a-5845-b23b-0da9526be29e",
@@ -7689,7 +8074,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "900f71af-a50d-5d09-afa7-21c19cf5a35a",
@@ -7715,7 +8101,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "84bc6552-ed03-59ac-afb1-1c6c2ff83793",
@@ -7741,7 +8128,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "18290bcc-05ab-548b-b2bc-844e6726bb9b",
@@ -7767,7 +8155,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6168f276-4b08-5a31-88e0-221f6c69c239",
@@ -7793,7 +8182,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5460eb62-c618-59fa-b7f8-c9ae68ad48d6",
@@ -7819,7 +8209,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "89a6b153-06fb-5e34-9a45-1df745d648bc",
@@ -7845,7 +8236,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "86efbf48-d023-5d75-9509-178a72b31238",
@@ -7871,7 +8263,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3e18ae96-3b40-5ef5-932c-5943a2d12839",
@@ -7897,7 +8290,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "705ffd4f-9e9f-5130-8263-8be94651aef2",
@@ -7923,7 +8317,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1e8583f8-5bd1-5298-a30c-24cf7a32b4d6",
@@ -7949,7 +8344,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c246778-6d59-5b9c-80ee-115ad105c41d",
@@ -7975,7 +8371,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3674deae-820f-55fd-a32d-b26f54df85bd",
@@ -8001,7 +8398,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f013ac4a-4179-58bc-af08-359e3f2adccc",
@@ -8027,7 +8425,170 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "ea796029-a080-57f3-93f0-4f9e53185456",
+    "standesamt_id": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Wolhusen",
+    "traulokal_name": "Barocksaal Kloster Werthenstein",
+    "adresse": "",
+    "ort": "Werthenstein",
+    "kanton": "LU",
+    "beschreibung": "Von Regionalem Zivilstandsamt Wolhusen als Trauort genannt; Bewilligung der Abteilung Gemeinden erwähnt.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "gemäss ZSA Wolhusen",
+    "venueUrl": "https://www.wolhusen.ch/leben-wohnen/leben/ehe/",
+    "sourceUrl": "https://www.wolhusen.ch/aktuelles-gemeinde/aktuelles/news/extension_news/detail/News/neue-trauungslokale-ab-1-januar-2023/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "ce1c3c29-ccf1-5acf-bd0b-cba1fc463712",
+    "standesamt_id": "regionales-zivilstandsamt-amt-willisau-willisau-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Amt Willisau",
+    "traulokal_name": "Ehemaliges Kloster St. Urban",
+    "adresse": "Schafmattstrasse 1",
+    "ort": "St. Urban",
+    "kanton": "LU",
+    "beschreibung": "Zivilstandsamt Willisau zuständig; zivile Trauungen u.a. in barocken Räumen; Abtsaal/Gästerefektorium/Festsaal erwähnt.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "gemäss ZSA Willisau",
+    "venueUrl": "https://www.st-urban.ch/ihr-event/trauung/",
+    "sourceUrl": "https://www.st-urban.ch/ihr-event/trauung/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "99bc4c4e-96bd-594f-9981-851c90d5f8bc",
+    "standesamt_id": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Wolhusen",
+    "traulokal_name": "Entlebucherhaus Schüpfheim",
+    "adresse": "",
+    "ort": "Schüpfheim",
+    "kanton": "LU",
+    "beschreibung": "Von Regionalem Zivilstandsamt Wolhusen als Trauort genannt.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "gemäss ZSA Wolhusen",
+    "venueUrl": "https://www.wolhusen.ch/leben-wohnen/leben/ehe/",
+    "sourceUrl": "https://www.wolhusen.ch/aktuelles-gemeinde/aktuelles/news/extension_news/detail/News/neue-trauungslokale-ab-1-januar-2023/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "7c612a7f-1358-596e-9535-0a6f7bd79614",
+    "standesamt_id": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Wolhusen",
+    "traulokal_name": "Kapitelsaal Ruswil",
+    "adresse": "",
+    "ort": "Ruswil",
+    "kanton": "LU",
+    "beschreibung": "Von Regionalem Zivilstandsamt Wolhusen als Trauort genannt; PDF-Hinweis max. 20 Gäste.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 20,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "gemäss ZSA Wolhusen",
+    "venueUrl": "https://www.wolhusen.ch/leben-wohnen/leben/ehe/",
+    "sourceUrl": "https://www.wolhusen.ch/aktuelles-gemeinde/aktuelles/news/extension_news/detail/News/neue-trauungslokale-ab-1-januar-2023/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "f70ee534-6ef4-59bc-a590-b338fa07d2ad",
+    "standesamt_id": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Wolhusen",
+    "traulokal_name": "Trauzimmer Gemeindehaus Wolhusen",
+    "adresse": "Menznauerstrasse 13",
+    "ort": "Wolhusen",
+    "kanton": "LU",
+    "beschreibung": "Ordentliches Traulokal im Gemeindehaus; separater PDF-Hinweis max. 25 Gäste.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 25,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "Mo–Do Kurztrauung; ordentliche Termine gemäss ZSA",
+    "venueUrl": "https://www.wolhusen.ch/leben-wohnen/leben/ehe/",
+    "sourceUrl": "https://www.wolhusen.ch/aktuelles-gemeinde/aktuelles/news/extension_news/detail/News/neue-trauungslokale-ab-1-januar-2023/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "b9e8b4c9-d8a1-505d-aae7-8b4fec822116",
+    "standesamt_id": "regionales-zivilstandsamt-wolhusen-wolhusen-lu",
+    "standesamt_name": "Regionales Zivilstandsamt Wolhusen",
+    "traulokal_name": "Tropenhaus Wolhusen – Eventfläche E-Haus Ost",
+    "adresse": "Hiltenberg 4",
+    "ort": "Wolhusen",
+    "kanton": "LU",
+    "beschreibung": "Trauungen im Tropenhaus sind gemäss offiziellem Merkblatt auf der Eventfläche E-Haus Ost möglich; max. 80 Gäste; Miete CHF 150 plus Zivilstandsamt-Zuschläge.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 80,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "Mittwoch bis Freitag",
+    "venueUrl": "https://www.wolhusen.ch/files/Files/Dokumente/31_Leben/31_4_Ehe_und_Partnerschaft/Merkblatt_Trauungen_im_Tropenhaus_in_Wolhusen.pdf",
+    "sourceUrl": "https://www.wolhusen.ch/aktuelles-gemeinde/aktuelles/news/extension_news/detail/News/neue-trauungslokale-ab-1-januar-2023/",
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6a476e0c-8555-5882-8506-b8d2d5b66b9a",
@@ -8053,7 +8614,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "05613b56-59bf-5449-af77-b46f60e6dcde",
@@ -8079,7 +8641,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "19951f51-9d78-5d12-a63c-07d1eb6ab788",
@@ -8105,7 +8668,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ec56e0cb-7f7a-5700-9fb5-41bf79ca1bdc",
@@ -8131,7 +8695,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e61ece4f-1a90-5181-828e-b4fbd829a48f",
@@ -8157,7 +8722,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1eef7bb7-fe13-5792-8cdf-f31ef226e00f",
@@ -8183,7 +8749,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cc247fe2-b6b7-5220-b0be-dc6051984bb2",
@@ -8209,7 +8776,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "64e8a042-b938-51f8-b308-9e4af47e333e",
@@ -8235,7 +8803,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "475c91ce-fddd-5d91-8bcc-7a00317d417b",
@@ -8261,7 +8830,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "76a1f046-0ae6-5431-a893-f8ddd4ca41bc",
@@ -8287,7 +8857,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9d94dd19-e2f4-57db-b90c-9c4eaeadf1ad",
@@ -8313,7 +8884,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "eb6c1c08-1b90-557a-a542-a533e6a94bd0",
@@ -8339,7 +8911,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cc685207-9b40-57ad-9582-a02bdc8d391f",
@@ -8365,7 +8938,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6c34eda4-274d-58f3-ac23-82cba29b91a2",
@@ -8391,7 +8965,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "16a1d969-d481-5da4-bfab-64248d849201",
@@ -8417,7 +8992,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a877d1c0-ef78-50be-be28-8ff8cbab4f23",
@@ -8443,7 +9019,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2dd16f5e-0a1a-5984-8221-64f8f7b6cd8e",
@@ -8469,7 +9046,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6cad38fa-b1cc-533b-8722-7f5cfbf6ef9d",
@@ -8495,7 +9073,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4a251861-df99-5a61-ae04-2c40a6949f54",
@@ -8521,7 +9100,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a18d2f8-71df-560c-9664-1833bae5380e",
@@ -8547,7 +9127,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "664cc47a-6600-5c7a-abf1-73e4fc397321",
@@ -8573,7 +9154,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ff13fcc5-30d8-56d2-b566-1835b0fbbefd",
@@ -8599,7 +9181,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "779d9acf-bf2d-5185-ba21-3f3f7bdac644",
@@ -8625,7 +9208,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "142bee1c-988b-5328-a21f-df6cfa0fa521",
@@ -8651,7 +9235,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d9c49fa7-80ff-5d44-839a-1c88d1690d7d",
@@ -8677,7 +9262,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3afb3bc3-fa37-5d34-985d-6ee2cbfaad05",
@@ -8703,7 +9289,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "12d6651f-442f-52d8-807d-ca67f00c69f1",
@@ -8729,7 +9316,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4a0281df-5a71-5e6b-805d-4ffd633505b0",
@@ -8755,7 +9343,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e2ea8ef0-0f4d-5d83-82ab-c3090decac08",
@@ -8781,7 +9370,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f72d73e7-c4db-5cd1-adae-dff5c584633f",
@@ -8807,7 +9397,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "42941603-3322-5bfc-be3c-333e29b3d882",
@@ -8833,7 +9424,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f790e6d1-e63e-5627-8981-59d4a4c74e38",
@@ -8859,7 +9451,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b58cff91-c246-5e39-96b0-95aa1d564f22",
@@ -8885,7 +9478,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "00494886-2a2c-59c6-81d2-9ab00a256067",
@@ -8911,7 +9505,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "688565e0-58d0-59bd-a6d2-cd94a15569f8",
@@ -8937,7 +9532,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e59d5be4-efce-585a-8764-d7e8954523ee",
@@ -8963,7 +9559,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "36ebb100-3573-561a-9720-57c945e0204c",
@@ -8989,7 +9586,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0ca1f4f2-c7ad-5700-bfc4-4b573f52d196",
@@ -9015,7 +9613,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://zivile-trauung.ch/traulokal/baeren/",
     "sourceUrl": "https://zivile-trauung.ch/traulokal/baeren/",
-    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen."
+    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ad00d374-cd67-5a99-893f-7f87b9517ad3",
@@ -9041,7 +9640,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3403db09-7268-5d4c-ae92-e23ca27c267f",
@@ -9067,7 +9667,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9c246d0e-c1ad-5315-86a7-5cc61428f51f",
@@ -9093,7 +9694,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1805b1f1-af7e-57b2-9829-5dd8c658f8e0",
@@ -9119,7 +9721,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0f820a03-8cfa-5c31-8a32-27f95b9a3690",
@@ -9145,7 +9748,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5cddead9-7b36-56ef-9f81-8136d58d2f6a",
@@ -9171,7 +9775,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a06488ac-63bd-5014-991e-1a76e54c2041",
@@ -9197,7 +9802,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3657e98e-f57b-5fb9-9b84-486a67be6251",
@@ -9223,7 +9829,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1f37bbaf-c548-5dd8-9774-7f14d98d5956",
@@ -9249,7 +9856,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "14b2e49f-248f-5a17-b6e9-87e85908c980",
@@ -9275,7 +9883,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a930fd1b-af12-592c-9a16-098493c1273a",
@@ -9301,7 +9910,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6671cd07-405d-568d-8c25-09576dc153ce",
@@ -9327,7 +9937,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4ca29c0a-ec15-56d4-bf87-0efc4b68feb1",
@@ -9353,7 +9964,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4ccd45bd-2023-5b2e-a343-e751db7027cb",
@@ -9379,7 +9991,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3045ed22-4d86-55e2-bfa6-69d047d131a3",
@@ -9405,7 +10018,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c69d78b9-9f8c-5605-bef9-6305a38438cb",
@@ -9431,7 +10045,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f8be2d94-27b7-56bc-8000-74af26f84ee6",
@@ -9457,7 +10072,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3049f003-1275-51a2-ac38-b2cfc995d6a3",
@@ -9483,7 +10099,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1b7b937a-1bdc-5923-894b-b5b38aa5215d",
@@ -9509,7 +10126,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://zivile-trauung.ch/traulokal/gewoelbekeller-raiffeisenbank/",
     "sourceUrl": "https://zivile-trauung.ch/traulokal/gewoelbekeller-raiffeisenbank/",
-    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen."
+    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f3689949-081e-5153-b941-c011bb49d84c",
@@ -9535,7 +10153,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7666de4b-8cf4-5c4f-8338-1dc7f53eccb9",
@@ -9561,7 +10180,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "df798adf-1b4c-5946-b12b-c861fab51f4a",
@@ -9587,7 +10207,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f5486a64-3075-527a-ab5a-ddb3b8e2d85c",
@@ -9613,7 +10234,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://zivile-trauung.ch/traulokal/haus-siebenthal/",
     "sourceUrl": "https://zivile-trauung.ch/traulokal/haus-siebenthal/",
-    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen."
+    "remarks": "Zusatzfund aus Traulokal-Datenbank; offizielle Zulassung final prüfen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "51508f2c-2ee3-5acd-a9cc-18e9348221ff",
@@ -9639,7 +10261,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "be07a232-179a-5cfc-aa68-ff191fc7dbf9",
@@ -9665,7 +10288,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "05eb35ee-a239-52d6-bd74-aac2247a56b8",
@@ -9691,7 +10315,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "54232eee-a47c-58c5-a59d-cecc2159ee15",
@@ -9717,7 +10342,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6aba7feb-5a35-5eec-906d-460bdfbe08a5",
@@ -9743,7 +10369,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a79d500d-5c16-534e-ba04-b55ecf659e55",
@@ -9769,7 +10396,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "943d48e2-5a87-511f-bc93-5610e4dc57cd",
@@ -9795,7 +10423,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d2bfc45b-9d3d-5670-9b1f-ba45e16d568c",
@@ -9821,7 +10450,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8a831745-5a29-5bab-ba7c-b9a66796afea",
@@ -9847,7 +10477,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "11fa7f09-6129-52cf-b997-3651eaed01f5",
@@ -9873,7 +10504,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://zivile-trauung.ch/traulokal/museum-schwaerzerles-theres-huus/",
     "sourceUrl": "https://zivile-trauung.ch/traulokal/museum-schwaerzerles-theres-huus/",
-    "remarks": "Zusatzfund aus Traulokal-Datenbank; auf regionalem Merkblatt separat prüfen."
+    "remarks": "Zusatzfund aus Traulokal-Datenbank; auf regionalem Merkblatt separat prüfen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a595eb5f-ef22-5957-8b32-df872d52f955",
@@ -9899,7 +10531,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d60c765e-1f4d-5498-969b-a1598e88932a",
@@ -9925,7 +10558,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3f4257b4-ec7b-515b-a953-550ab055dbd4",
@@ -9951,7 +10585,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "faf4d89f-0cc2-5eb3-a4cd-64442065defd",
@@ -9977,7 +10612,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "527cdef9-d6cc-5063-8d9f-aaff7b31272c",
@@ -10003,7 +10639,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "89f35fb0-0586-5583-8fdb-0223d9bbe2df",
@@ -10029,7 +10666,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d8fd1129-36c3-5a6d-b393-82de3b506353",
@@ -10055,7 +10693,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b874064e-1297-595a-b1a1-98a4b874f0b3",
@@ -10081,7 +10720,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "53223b03-12ae-55a9-8978-cedd244a2ade",
@@ -10107,7 +10747,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3d4bb717-fdd7-5d20-b983-02398139f6c1",
@@ -10133,7 +10774,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4db99064-69c5-584e-8fa3-56419349639a",
@@ -10159,7 +10801,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e4f324cc-8309-5a5e-8421-dcf51baabcc6",
@@ -10185,7 +10828,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "17f15f92-e221-5d18-bbde-ab3699ba9ed8",
@@ -10211,7 +10855,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a881ce6-7307-5f8f-bba3-e4543b51109d",
@@ -10237,13 +10882,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ea88647b-eb07-5fde-b310-8db8b2a2892b",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:18",
     "standesamt_id": "zivilstandsamt-sarganserland-wangs-sg",
     "standesamt_name": "Zivilstandsamt Sarganserland",
@@ -10293,7 +10942,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://zivile-trauung.ch/traulokal/schloss-dottenwil/",
     "sourceUrl": "https://zivile-trauung.ch/traulokal/schloss-dottenwil/",
-    "remarks": "In diesem Traulokal gemäss Detailquelle nur möglich, wenn mindestens eine Partei in Wittenbach wohnt."
+    "remarks": "In diesem Traulokal gemäss Detailquelle nur möglich, wenn mindestens eine Partei in Wittenbach wohnt.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "527ad4ad-3e6c-581c-b4e2-d728fd100ee0",
@@ -10319,7 +10969,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "33a0195c-bff2-5e01-a47f-20656ca36c9b",
@@ -10345,7 +10996,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "standesamt_id": "zivilstandsamt-rapperswil-jona-jona-sg",
@@ -10369,25 +11021,12 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "outdoorCeremonyAvailable": false,
     "seasonalAvailability": "Gemäss offiziellen Terminen/Verfügbarkeit",
     "venueUrl": "https://zivile-trauung.ch/traulokal/schloss-rapperswil/",
-    "imageUrl": "",
     "officialConfirmed": true,
     "sourceUrl": "https://zivile-trauung.ch/traulokal/schloss-rapperswil/",
     "sourceType": "Gemeinde/Zivilstandsamt",
-    "beautyStatus": "Top-Schönheit",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
-      "castle",
-      "lake",
-      "city",
-      "old-town",
-      "premium",
-      "historic",
-      "schloss",
-      "see",
-      "altstadt",
-      "panorama",
-      "historisch",
-      "edel",
       "featured",
       "romantic"
     ],
@@ -10419,7 +11058,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a279902a-23e2-5967-b75e-dd1caff895b1",
@@ -10445,7 +11085,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "42742aae-08a1-54f6-859e-a7018bb31ec4",
@@ -10471,7 +11112,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "59bd865a-94c2-5665-a543-55eb6767fc3d",
@@ -10497,7 +11139,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "88bee159-e7a7-57aa-9dfd-f779d0828bff",
@@ -10523,7 +11166,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0c52c9da-1738-56ad-bd9d-0fdc960e56e7",
@@ -10549,7 +11193,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bff6ba6a-36b4-5032-b1ba-77ed0476a736",
@@ -10575,7 +11220,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1d4d0eae-0339-5f56-acb2-6327c2497b7e",
@@ -10601,7 +11247,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d4bc443a-8fe5-5708-aedc-f4b4b36d9091",
@@ -10627,7 +11274,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1e394566-663a-539d-bfab-61cddff140eb",
@@ -10653,7 +11301,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5f861aad-3fe5-5963-a437-851461b900ae",
@@ -10679,7 +11328,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ce157bc8-6318-57bb-9c4a-4c2998f3a4dd",
@@ -10705,7 +11355,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "89798fae-8856-55a5-a5b4-c67cd45f814b",
@@ -10731,7 +11382,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "47ed4931-a955-5bdc-8f39-b02a816f2c00",
@@ -10757,7 +11409,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "53da71aa-d3ec-590a-88ab-5ab2bea7ca4e",
@@ -10783,7 +11436,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1ab57810-0da5-50b9-ab31-92b6b75a0baf",
@@ -10809,7 +11463,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "21d970bd-6b45-5487-a181-b836fbf2d075",
@@ -10835,7 +11490,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "91e47cf2-1629-58c8-a31e-16eb8d1bf3dc",
@@ -10861,7 +11517,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4636deaa-ad72-5a47-83fc-4502edaa7e69",
@@ -10887,7 +11544,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9d472811-93a2-5bae-aad7-853892214546",
@@ -10913,7 +11571,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "350c17f7-a5e4-59d1-af19-8d909e75ea81",
@@ -10939,7 +11598,170 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "4e1ee9e7-16fd-5b23-9030-4e3ad87d1d26",
+    "standesamt_id": "zivilstandsamt-solothurn-solothurn-so",
+    "standesamt_name": "Zivilstandsamt Solothurn",
+    "traulokal_name": "Palais Besenval",
+    "adresse": "",
+    "ort": "Solothurn",
+    "kanton": "SO",
+    "beschreibung": "Trauzimmer des Zivilstandsamts Solothurn; genaue Adresse im öffentlichen Amtsquellen-Auszug nicht separat bestätigt.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/adressen-zivilstandsaemter/",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/adressen-zivilstandsaemter/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "e5f82e18-9dad-5d60-8fb9-475c7e167621",
+    "standesamt_id": "zivilstandsamt-thal-gau-balsthal-so",
+    "standesamt_name": "Zivilstandsamt Thal-Gäu",
+    "traulokal_name": "Schloss Neu-Bechburg",
+    "adresse": "",
+    "ort": "Oensingen",
+    "kanton": "SO",
+    "beschreibung": "Offizieller Schlosstrauungsort gemäss Kanton Solothurn; Schlossseite nennt Hochzeiten und Kontaktdaten.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://www.neu-bechburg.ch/",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/schlosstrauungen/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "d6894ba3-88df-5314-bc22-3b5dbbf88d1c",
+    "standesamt_id": "zivilstandsamt-solothurn-solothurn-so",
+    "standesamt_name": "Zivilstandsamt Solothurn",
+    "traulokal_name": "Schloss Waldegg",
+    "adresse": "Waldeggstrasse 1",
+    "ort": "Feldbrunnen-St. Niklaus",
+    "kanton": "SO",
+    "beschreibung": "Ziviltrauungen im festlichen Theatersaal; Fotomöglichkeit in den Gärten.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 60,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://schloss-waldegg.so.ch/vermietung/ziviltrauungen/",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/schlosstrauungen/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "1e085e70-c337-5022-a571-648317e75b6c",
+    "standesamt_id": "zivilstandsamt-olten-gosgen-olten-1-facher-so",
+    "standesamt_name": "Zivilstandsamt Olten-Gösgen",
+    "traulokal_name": "Schloss Wartenfels",
+    "adresse": "Schlossstrasse 26",
+    "ort": "Lostorf",
+    "kanton": "SO",
+    "beschreibung": "Offizieller Schlosstrauungsort gemäss Kanton Solothurn; Schlossseite nennt Ziviltrauungen als Anlassnutzung.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://schloss-wartenfels.ch/de/schloss-garten/das-schloss/",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/schlosstrauungen/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "4614601a-279a-5670-8215-bead3b8af9e3",
+    "standesamt_id": "zivilstandsamt-olten-gosgen-olten-1-facher-so",
+    "standesamt_name": "Zivilstandsamt Olten-Gösgen",
+    "traulokal_name": "Schlosshof Niedergösgen",
+    "adresse": "",
+    "ort": "Niedergösgen",
+    "kanton": "SO",
+    "beschreibung": "Trauungen im Schlosshof an publizierten Daten; vollzogen durch Zivilstandsamt Olten-Gösgen.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://www.niedergoesgen.ch/dienstleistungen/34837",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/schlosstrauungen/",
+    "remarks": "",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "cc0ff846-670e-5b9e-89b9-e262442c5b32",
+    "standesamt_id": "zivilstandsamt-solothurn-solothurn-so",
+    "standesamt_name": "Zivilstandsamt Solothurn",
+    "traulokal_name": "Schlössli Vorderbleichenberg",
+    "adresse": "Asylweg 15",
+    "ort": "Biberist",
+    "kanton": "SO",
+    "beschreibung": "Offizieller Schlosstrauungsort gemäss Kanton Solothurn; Ort/Adresse via offizielle Standortseite des Schlösschens.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://www.schloesschen-biberist.ch/",
+    "sourceUrl": "https://so.ch/verwaltung/volkswirtschaftsdepartement/amt-fuer-gemeinden/zivilstandsamt/schlosstrauungen/",
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "875c4947-7d67-569f-a259-ed678316cf64",
@@ -10965,7 +11787,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "010ca390-82b7-5347-b4a2-376b2497ea71",
@@ -10991,7 +11814,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9734ae87-1b5e-513c-87e2-201807011cf5",
@@ -11017,7 +11841,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a84afdf9-ea4d-5fa3-9ff6-f7bf8af8c590",
@@ -11043,7 +11868,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d6e2b109-5b0a-5e99-ba7d-a8eab0156fba",
@@ -11069,7 +11895,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "58b4c382-7274-5ab6-a006-929928436f9e",
@@ -11095,7 +11922,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "81f7c544-d3d8-5280-b0f7-9c22343ff8c7",
@@ -11121,7 +11949,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "01ff5bb0-6dc1-57ff-be20-b5153bafb7a0",
@@ -11147,7 +11976,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "004198bf-1d39-5785-b7c1-e3ff8a6a6e59",
@@ -11173,7 +12003,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3e2b9831-b26e-5bf9-a01e-15b11307daa7",
@@ -11199,7 +12030,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9295697b-e774-5d08-bca1-55b33aa7bb2e",
@@ -11225,7 +12057,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "713185c0-a4e7-58be-919b-7d68e887692d",
@@ -11251,7 +12084,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a393082-e437-5085-a759-1b0b0cfc2a27",
@@ -11277,7 +12111,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "77f7ce0c-263e-54ab-b231-e07256dbc89f",
@@ -11303,7 +12138,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "454428d7-07b0-5608-ab64-685d5834b7be",
@@ -11329,7 +12165,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "70ddd78b-1333-5502-b9c9-33cc499cc6c4",
@@ -11355,7 +12192,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c113c50-d11b-5882-8670-468c0491f918",
@@ -11381,7 +12219,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7807956f-3be0-520b-befd-a2f0cd363924",
@@ -11407,7 +12246,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "717e6f05-b4e0-5819-8ced-6bc12b887510",
@@ -11433,7 +12273,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "094cd7df-7a41-57f2-96c2-72a079e4da52",
@@ -11459,7 +12300,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d39a7dd-e035-5945-bae9-7b157bdf0003",
@@ -11485,7 +12327,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0540e44a-4c9a-5383-adab-facb2075c087",
@@ -11511,7 +12354,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "49ac3727-6893-5b4e-8a8c-45f5465b58da",
@@ -11537,7 +12381,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fcbbf6dc-7ca4-552b-8558-38dccbe2747a",
@@ -11563,7 +12408,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bc5811c6-67da-50e6-a650-c91a4c35602d",
@@ -11589,7 +12435,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "597c07cf-edca-5020-be81-9c9d3473a61c",
@@ -11615,7 +12462,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "132046d2-ffbb-5f92-a591-ebce5ff729f2",
@@ -11641,7 +12489,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f445de3b-70ff-5146-bb63-54c4e7e4f09a",
@@ -11667,7 +12516,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4f09877e-bb05-581c-a314-a3e937c2ee6e",
@@ -11693,7 +12543,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c1eca235-fc08-5a0a-9b88-6d70b8db5285",
@@ -11719,7 +12570,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4add1206-14a9-534a-b02f-2d8fecd38555",
@@ -11745,7 +12597,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2fd3e98b-c6dc-560d-bc92-1d6a01b75545",
@@ -11771,13 +12624,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c6d3d621-e916-5ba1-8b9d-d3014c0a66e8",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:10",
     "standesamt_id": "servizio-circondariale-dello-stato-civile-di-bellinzona-bellinzona-ti",
     "standesamt_name": "Servizio circondariale dello stato civile di Bellinzona",
@@ -11801,7 +12658,12 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "imageUrl": "/venues/bellinzona/sasso-corbaro.jpg",
+    "imageAlt": "Castello Sasso Corbaro in Bellinzona",
+    "imageSource": "Fortezza di Bellinzona",
+    "imageAttribution": "Fortezza di Bellinzona",
+    "imageStatus": "approved"
   },
   {
     "canonicalId": "06d8c585-6825-56e5-9335-6ad3b3ffa283",
@@ -11827,7 +12689,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4770976e-7346-588b-bc0a-c1a738491f29",
@@ -11853,7 +12716,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4f20dd07-8893-555c-85d9-c2eec631d36c",
@@ -11879,7 +12743,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a28e7c98-711d-5e8b-850d-3d68ab8eee2d",
@@ -11905,7 +12770,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ac16f2c1-255f-5a74-87e3-71e3eb719550",
@@ -11931,7 +12797,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b0f4f16e-f2b0-593c-b1da-2fea07526033",
@@ -11957,7 +12824,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e1e46119-e033-5a81-b718-7cfad332fe6e",
@@ -11983,7 +12851,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "75e0ee8c-0623-51cb-acb5-f79ece7ddc2e",
@@ -12009,7 +12878,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "276c46fa-87c7-5c66-9a78-47038c15fa77",
@@ -12035,7 +12905,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "51e8662b-97b7-5e12-997c-3ec2bea014d9",
@@ -12061,7 +12932,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b0d97966-0407-5e63-81d5-5624d5e89d17",
@@ -12087,7 +12959,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2afd5635-86ec-5f3e-aa69-ff7735f05534",
@@ -12113,7 +12986,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5e345967-5e50-5817-98ef-884e699515be",
@@ -12139,7 +13013,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5cf76110-28d2-55a2-aee9-3f82c5cf2174",
@@ -12165,7 +13040,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0e1a6e73-4051-5c13-8f5f-00b56c8ed153",
@@ -12191,7 +13067,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "776efdba-5725-5083-8ea1-369c9f13a921",
@@ -12217,7 +13094,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1629918a-2e4c-525b-a07f-eafe22e56c1f",
@@ -12243,7 +13121,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fe3ecfef-2c3b-5589-aca9-e85522803bcf",
@@ -12269,7 +13148,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "32c174c3-99ef-5f1f-97d1-0c065a6d7daf",
@@ -12295,7 +13175,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "872bbd27-3edb-5763-8895-cb0c4cadc49a",
@@ -12321,7 +13202,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4efc9028-8f35-52e2-b7fe-4c093d3564f9",
@@ -12347,7 +13229,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4dc2a0d5-6d0a-5ce9-aa51-af153ab3a478",
@@ -12373,7 +13256,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "649f14f6-e274-5a26-b4ee-a4d334dec208",
@@ -12399,7 +13283,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6e63fac3-80f8-5a0f-a836-1631c9664ae0",
@@ -12425,7 +13310,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "95ac8bf5-f82a-5534-b880-3d17de1d441c",
@@ -12451,7 +13337,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "59cbb0c3-c241-58b7-b77c-72ad7146703c",
@@ -12477,7 +13364,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8323e690-817e-5443-abb4-acaba591b6e2",
@@ -12503,7 +13391,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d3192033-94cc-531f-b694-4b48718a1b8f",
@@ -12529,7 +13418,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2ffca50-765c-54a4-b909-419f28696eb2",
@@ -12555,7 +13445,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f4c0007f-30c4-56dc-a1f3-dfa624e8e179",
@@ -12581,7 +13472,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1986b9bc-55c4-5216-8e61-4a640ffd10bb",
@@ -12607,7 +13499,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a3259681-6cb6-5aea-98ed-77ff1e387177",
@@ -12633,7 +13526,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "da5c7055-fca1-5406-876a-bd914d05836b",
@@ -12659,7 +13553,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d7270918-dad6-5c3f-860f-bec7821c707a",
@@ -12685,7 +13580,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "abcb711f-b9fa-5429-8b51-c98e04c9670c",
@@ -12711,7 +13607,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "64dd6810-54b2-5bb8-b6ca-1287a08fcb55",
@@ -12737,7 +13634,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0680a74c-35c2-5b6c-aa82-011a4510f6e7",
@@ -12763,7 +13661,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7a24408d-95c6-5d61-b657-1ffd7df47070",
@@ -12789,7 +13688,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f18e69f1-f649-56ea-8ab4-d7838f9125ca",
@@ -12815,7 +13715,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1a4313dc-b884-5740-851b-2e48f296d577",
@@ -12841,7 +13742,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0ad4782e-3b25-5586-9031-f3964c5f1cea",
@@ -12867,7 +13769,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1b72b596-51c2-510e-b7c0-a9006de875dd",
@@ -12893,7 +13796,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3b164be9-8831-5a22-ab75-868d374c0050",
@@ -12919,7 +13823,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3cee9cf7-a59d-5459-aed1-38dd3404ac15",
@@ -12945,7 +13850,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d9d9fb8-7888-55be-b73d-672c920b08ec",
@@ -12971,7 +13877,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5b2c0116-d573-5026-aede-3d7b97c1e874",
@@ -12997,7 +13904,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7176087a-1f98-51b1-b57a-7f47d48d891e",
@@ -13023,7 +13931,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7bf4ebb9-beb0-5bbc-99a9-795adb67959b",
@@ -13049,7 +13958,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7c817c0c-bd35-5e65-a253-dc48d707c41a",
@@ -13075,7 +13985,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "830b26bd-a944-5251-a1cb-864b29bea1fd",
@@ -13101,7 +14012,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "899d9173-9ffc-586a-bae5-3e24ee2f1955",
@@ -13127,7 +14039,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8f17e590-d045-5a50-8d37-bcd8f1c45ed8",
@@ -13153,7 +14066,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9deda169-0a13-5990-b860-a9ba3a953c4c",
@@ -13179,7 +14093,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9eeb7d2a-09f2-53e3-a19c-dd0dd7722634",
@@ -13205,7 +14120,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a6ece817-8029-52dc-bdc1-28f173ac7df2",
@@ -13231,7 +14147,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cd69c208-83c3-5b8c-a429-25bb2a6b8df9",
@@ -13257,7 +14174,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e2f5da65-dac7-55de-9c19-b0a3b7cf3210",
@@ -13283,7 +14201,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2f7649c-20df-570f-885c-0def1e8e4598",
@@ -13309,7 +14228,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c0d3b2bf-af40-567f-ae07-99fa4012e13d",
@@ -13335,7 +14255,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0fb7e5d7-291e-5d64-97b9-607fcafe2e0c",
@@ -13361,7 +14282,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3dd2318a-9f0a-5407-ab35-9630a6d98434",
@@ -13387,7 +14309,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "554796bb-d089-54da-87d2-0fafa82171b8",
@@ -13413,7 +14336,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6513d756-27ee-5526-afd2-1bfc305f0bb1",
@@ -13439,7 +14363,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6ffb34a9-6bce-52c2-98b8-8eca91c1ba93",
@@ -13465,7 +14390,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8d34db49-28b4-5f9e-b388-642ec0221a5b",
@@ -13491,7 +14417,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9a4e9d1a-79ee-513e-8c1a-c24d2a72557f",
@@ -13517,7 +14444,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bd3c20f5-ef09-5774-ae58-43e8e1e1a520",
@@ -13543,7 +14471,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "df9bdd80-e114-521a-905e-5b43b1205a28",
@@ -13569,7 +14498,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ed6f2c21-0e59-508a-989e-27348290f6f1",
@@ -13595,7 +14525,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9a8ed086-a570-55d0-b60f-65a9aa169fd3",
@@ -13621,7 +14552,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "59dcdc6a-a7ce-5ddf-b99d-d4324dde6f76",
@@ -13647,7 +14579,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3624f9e5-97ab-5f67-add5-e0be353c5dc6",
@@ -13673,7 +14606,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "61ac1726-9041-5533-a6a3-d7476d4497b4",
@@ -13699,7 +14633,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "212cb865-cd27-5091-b6b0-9eb379e89ce8",
@@ -13725,7 +14660,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "114bb9d9-2460-567d-b493-f5b8a5262a05",
@@ -13751,7 +14687,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8786b07a-3ae1-54a6-8ec2-04e30989f1a6",
@@ -13777,7 +14714,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "11e2af77-110a-5f96-9291-daca945f73d5",
@@ -13803,7 +14741,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "15264793-ea5f-5fda-ab28-0f011e916592",
@@ -13829,7 +14768,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "25051f05-932e-5b64-a639-74ebef626a19",
@@ -13855,7 +14795,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "359030a4-d99b-5f7d-8a0c-a656826e6533",
@@ -13881,7 +14822,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5b9a93cc-2431-5702-8b84-27f616e42e9e",
@@ -13907,7 +14849,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c63ccbe-33c9-55dd-98ac-a78994f07c9c",
@@ -13933,7 +14876,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "80786ed9-98b7-57df-8d12-143cc02a8d60",
@@ -13959,7 +14903,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a3e678fa-146c-5082-b471-7447d5c9bb9f",
@@ -13985,7 +14930,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0b2e2c1d-b4ac-5f0c-998d-224b7d019830",
@@ -14011,7 +14957,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1b61cd6e-c618-5815-b259-44dd5001c02c",
@@ -14037,7 +14984,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "82142ada-dc55-5257-bfd9-77443eae1dda",
@@ -14063,7 +15011,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f7bc567b-a828-5f79-aaa3-3b023fbb69c6",
@@ -14089,7 +15038,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "05c7bd8f-7b68-5a3e-a46e-28211fbfb20c",
@@ -14115,7 +15065,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "107055c6-863c-5581-bf3f-4072189f61e3",
@@ -14141,7 +15092,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "10c90ae7-9c1d-5e44-ad4d-bd9711c4afdb",
@@ -14167,7 +15119,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "11640808-81ff-5ef9-b8b8-d1ae7859c4a4",
@@ -14193,7 +15146,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1a2afccc-4c67-5f4b-999f-7819858926e9",
@@ -14219,7 +15173,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1e56f0e7-b8cc-5b4e-886d-daba5d825413",
@@ -14245,7 +15200,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1eb44ecc-a437-52f4-9df6-8b5b0b106cbc",
@@ -14271,7 +15227,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "20f90f2f-9567-5b4e-ae50-3cce12e40a9c",
@@ -14297,7 +15254,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "227db8e1-9d3f-5587-92bc-4653ea4d8dfd",
@@ -14323,7 +15281,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "242fc287-108e-5041-a3d1-e7a8143836bd",
@@ -14349,7 +15308,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "269ba4a9-2cc5-565b-8742-410e1b7feede",
@@ -14375,7 +15335,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "26f50ad7-88aa-56c9-8639-2e43c8167e0a",
@@ -14401,7 +15362,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "29e0f53f-8604-5720-ba2d-71e724bd661b",
@@ -14427,7 +15389,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2a25aa87-66d6-5654-869e-fe18c6ad9ec1",
@@ -14453,7 +15416,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "31144eb7-fc3c-5465-8a58-05f71ca32452",
@@ -14479,7 +15443,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "35ef5686-80e9-516f-8c28-a49d664222c2",
@@ -14505,7 +15470,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3b41fc50-2dc9-5ebe-b3e1-2b1b7eb9d0f3",
@@ -14531,7 +15497,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "44e273a9-8815-5287-9b08-120a5d26f769",
@@ -14557,7 +15524,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "493b3fa5-737b-5019-88aa-e9724ce51ccb",
@@ -14583,7 +15551,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "51e0fde3-74ff-5b9d-8f91-462ad81bd421",
@@ -14609,7 +15578,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "681a824e-4f9a-549d-9404-4f9c5937f96f",
@@ -14635,7 +15605,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6c72f377-dd9c-5111-85fd-f6a5c78197bf",
@@ -14661,7 +15632,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6c7f0bed-63a8-5fd0-8719-26c8c97122d3",
@@ -14687,7 +15659,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6e5e7ff5-989b-550e-8567-a21dc7560305",
@@ -14713,7 +15686,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6fa59952-2c08-5858-80c0-4af696670ef4",
@@ -14739,7 +15713,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "74b03d05-b7d1-588b-bb66-0244cfb82152",
@@ -14765,7 +15740,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "751f77a9-7fde-5cf5-8e5b-6b6f7b5758f9",
@@ -14791,7 +15767,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "792b3028-beef-59c5-9daa-c44f943e3952",
@@ -14817,7 +15794,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "883d589d-ad14-5e46-a58d-0d214580d8a5",
@@ -14843,7 +15821,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8ee720e5-4b32-56aa-ace9-9c5dc626032b",
@@ -14869,7 +15848,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "923f2c26-795d-5834-b257-19fd334d8dcf",
@@ -14895,7 +15875,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "94b33804-4eff-5f8d-b163-a3f829ea4c12",
@@ -14921,7 +15902,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9e416247-4535-501d-9a47-9cbc9d89cafa",
@@ -14947,7 +15929,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a4010379-8cce-5711-abf4-bd2e84ab8273",
@@ -14973,7 +15956,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a4b2189a-f3e9-5243-9056-d0ebd7f17c2b",
@@ -14999,7 +15983,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a6d6afea-8f34-5b74-b88b-8b00f62d8182",
@@ -15025,7 +16010,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a7fe23d1-9460-5ba5-8867-67908b573833",
@@ -15051,7 +16037,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a8149d19-0a84-551e-bdfd-97e9ece9ebf4",
@@ -15077,7 +16064,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a81915e8-a3ca-513b-9f3e-86cf4eba29c8",
@@ -15103,7 +16091,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a865ffe8-0dc9-5f7b-b7d8-b94fef295319",
@@ -15129,7 +16118,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "aa362464-8c7b-5a15-a43b-27983cbcf2ed",
@@ -15155,7 +16145,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "abc32359-5496-5ed6-8ddb-12a825ce4557",
@@ -15181,7 +16172,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "acd4c67a-f52e-598c-8054-dc5dfe7e9835",
@@ -15207,7 +16199,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ad251581-da60-5f50-a0b3-a3e634022e13",
@@ -15233,7 +16226,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b2ee6f4a-874a-5dd6-9401-d1947575caea",
@@ -15259,7 +16253,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bc396ee7-cc0f-516c-b670-0bcab6c4b1a5",
@@ -15285,7 +16280,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bc6b0c66-2214-5da8-b30d-d8fbaf65bded",
@@ -15311,7 +16307,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bd780614-cd41-5f9a-b8c0-be0a65f4aeef",
@@ -15337,7 +16334,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "be36f5f8-62e0-52a0-a3e7-91aef9ca2893",
@@ -15363,7 +16361,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c0c30635-55da-51cd-a5fe-43e7efe87856",
@@ -15389,7 +16388,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c4b4355c-2f9c-536d-8aac-5478f71c6ded",
@@ -15415,7 +16415,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c9b5e937-3ad1-5591-b886-d516c9fd0329",
@@ -15441,7 +16442,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ddfe4d12-228b-54d5-9664-ba8f5a2ae301",
@@ -15467,7 +16469,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "de721617-4c39-55c2-b67c-436895d82984",
@@ -15493,7 +16496,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e19590f7-16f0-5d0e-aab0-5bebcf069a0f",
@@ -15519,7 +16523,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f022b204-4b84-59bb-8065-24638659751c",
@@ -15545,7 +16550,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f8d18e45-4ff3-5511-8091-c1dd18c5a465",
@@ -15571,7 +16577,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "04fabef7-ab33-5a7d-bde3-96e1940ef9a1",
@@ -15597,7 +16604,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a0a2f05b-1c04-5758-b8d5-7fe053c12461",
@@ -15623,7 +16631,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "47eb03cf-3d3a-5f16-ac53-d9d252cf63c8",
@@ -15649,7 +16658,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1b335efe-c3e1-58b2-989f-fb7ceb35ba35",
@@ -15675,7 +16685,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1ba62a23-d751-581f-a610-d1a4c6bf1a26",
@@ -15701,7 +16712,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7ae02b56-1224-5633-84ad-8bf0b2270de1",
@@ -15727,7 +16739,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d8773364-a254-5938-9146-0ec98395250e",
@@ -15753,7 +16766,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e998e4c6-68a8-5612-870e-21c783f4b829",
@@ -15779,7 +16793,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c6a0be24-6280-55a9-ad37-4b36c511325d",
@@ -15805,7 +16820,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f394bfcc-0eaf-52f1-8014-653e443c04ba",
@@ -15831,7 +16847,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bafc20c6-e583-5585-bf30-faee7e7cbb94",
@@ -15857,7 +16874,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "67fabcde-4e30-554a-9746-724cafdac702",
@@ -15883,7 +16901,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "943088c2-988e-59d0-a6e7-120b7c75be92",
@@ -15909,7 +16928,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3e31db62-b6dd-52ae-b493-ef58dfeb9155",
@@ -15935,7 +16955,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "34a191f3-514a-5ad1-bf26-f5011c8f7a03",
@@ -15961,7 +16982,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "531852e6-0ad7-5f61-a6e7-6e7187eae121",
@@ -15987,7 +17009,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "56b6e96b-3205-53ce-949b-139f8b6611ca",
@@ -16013,7 +17036,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5dd4a4aa-d4a2-53a6-80f2-0f3e5c9ed628",
@@ -16039,7 +17063,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "845c80ac-5ea4-5fae-8456-9091de0bc5a0",
@@ -16065,7 +17090,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8fe3507e-cb40-56b1-b2ac-8614e4fe4e22",
@@ -16091,7 +17117,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d89d545d-ab79-5084-8c5c-d57529cdeb0c",
@@ -16117,7 +17144,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e73ad642-c0f1-521c-a72d-fff44238b4a3",
@@ -16143,7 +17171,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2935ca02-92db-5825-9820-4c08811ccdd8",
@@ -16169,7 +17198,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7edf3c0b-91e1-5556-95a8-b0deb8abdfcb",
@@ -16195,7 +17225,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "04f620cd-8a1d-5127-88af-219c8804b9a7",
@@ -16221,7 +17252,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "07e57b2c-83ac-5afe-adfd-db244b23709c",
@@ -16247,7 +17279,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6f9cd646-780a-5196-817a-59ec179b54d3",
@@ -16273,7 +17306,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "dedc66ee-0293-5a19-8c69-900f6a376a9d",
@@ -16299,7 +17333,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0132f67a-4507-57c7-b6a9-74e20024950c",
@@ -16325,7 +17360,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8b84cc84-df2e-5b9f-b097-71475b14a6f7",
@@ -16351,7 +17387,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d3d3c9e6-b739-5021-9484-b59d60b33bc9",
@@ -16377,7 +17414,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fcbf0199-80ce-5010-8a0a-f96e73cfdac0",
@@ -16403,7 +17441,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bae022b7-b97e-5975-b873-0930fe6173bc",
@@ -16429,7 +17468,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6ac6fd15-8dbe-5bf1-9714-ed689faede2c",
@@ -16455,7 +17495,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6eaf2427-4a91-5994-a3a0-e05010b423a6",
@@ -16481,7 +17522,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8fc5f9c6-6bc6-5212-938c-ab638d8658bd",
@@ -16507,7 +17549,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fe46c048-f537-5c5f-9fb2-b10e173ca8ac",
@@ -16533,7 +17576,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d4787c5b-6aa7-5866-bc02-d39ed756090e",
@@ -16559,7 +17603,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "99488a4d-0a4f-5a63-8da8-7e469704a609",
@@ -16585,7 +17630,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "52dbc8de-bd1d-54c6-b05e-5250cf207dd6",
@@ -16611,7 +17657,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "69a68152-d0db-5a9c-a2cf-b69ac92f1c44",
@@ -16637,7 +17684,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6c40833f-72b1-5225-8619-aa971ddeef8b",
@@ -16663,7 +17711,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9cd8edc9-a18f-53c5-aae6-654ceb8bf15b",
@@ -16689,7 +17738,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "aa677d44-361f-5944-857b-113574d87252",
@@ -16715,7 +17765,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c65022cc-e1b6-58e9-94d6-a1efff5ff038",
@@ -16741,7 +17792,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "085961ed-d3f4-5e39-a0fe-2d3d6713b74d",
@@ -16767,7 +17819,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "391b36c7-41a3-5d77-95e9-c9602a03b233",
@@ -16793,7 +17846,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "08f8bbca-006d-5359-b1bc-179d0fadfb6d",
@@ -16819,7 +17873,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0b596d41-d6e4-510d-9588-3dd9ab30aa1c",
@@ -16845,7 +17900,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4486cae7-ce6d-5999-aacc-88c37e9dab79",
@@ -16871,7 +17927,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "58ce1c92-ddf2-5e2e-b30e-e87b2e67c809",
@@ -16897,7 +17954,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "92c45cc8-e592-50e8-be9f-dcfe4848a415",
@@ -16923,7 +17981,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a9160fbb-d9e4-5d4b-8889-9821f5a37406",
@@ -16949,7 +18008,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d49dce07-fe89-5431-a1d9-5d6ffd2bbd4c",
@@ -16975,7 +18035,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f0ee0ec8-a7d1-59d7-aecd-f22d44a02a20",
@@ -17001,7 +18062,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f67028d2-5ced-53cc-92a3-3650175476a8",
@@ -17027,7 +18089,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fc4fecea-f21f-5f06-9f2a-8db533bba1d3",
@@ -17053,7 +18116,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c5f081c0-578b-52c2-ab18-37f3c195a612",
@@ -17079,7 +18143,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0c26ad93-1ba0-5a34-9679-c40f5a6049a9",
@@ -17105,7 +18170,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b64afc42-c472-5c8b-aecc-d2cc86826cfa",
@@ -17131,7 +18197,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "234343ac-f947-59a6-aee4-fb28a7746e40",
@@ -17157,7 +18224,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4b480cdc-ccda-59d2-a9a6-6b955fc77bd8",
@@ -17183,7 +18251,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7a61b1de-689a-59b3-89e1-eca1acca21fb",
@@ -17209,7 +18278,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "07785d34-bc11-5d80-92ac-c1d34fad0f99",
@@ -17235,7 +18305,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3fd8549d-4881-5740-ac2d-5d4ffffadca9",
@@ -17261,7 +18332,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a6e1304d-a7a1-54e0-8e73-7b1765dad55b",
@@ -17287,7 +18359,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2ba71eb-066c-5e7d-b9c1-7c302c5bf3cc",
@@ -17313,7 +18386,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8b092dfa-f827-5e33-985d-d2efc21dc6de",
@@ -17339,7 +18413,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "90c804f2-c415-591c-bbed-5f58abcc7686",
@@ -17365,7 +18440,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bd97891a-e610-517c-bd02-644fb5b2880f",
@@ -17391,7 +18467,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "03ab5baf-3078-5cc6-a188-9c731e8de666",
@@ -17417,7 +18494,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2122faf6-baa0-585f-bec1-7b36e8be4e73",
@@ -17443,7 +18521,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7ce656db-b8c3-55c1-a331-7edb23d50ea1",
@@ -17469,7 +18548,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8c33aa09-0c62-59fc-b4ee-4f7748a7f60f",
@@ -17495,7 +18575,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9015707a-81e0-5571-9164-246601c7feb6",
@@ -17521,7 +18602,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a8426fdb-25bc-5e2e-84d5-a3fdb301a399",
@@ -17547,7 +18629,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b2a08084-bdff-5246-b826-4f7e5c89f6ed",
@@ -17573,7 +18656,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d1a469db-c116-5f9a-92c7-75286a098369",
@@ -17599,7 +18683,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7d5814f0-b0d5-595e-b596-45cd87ac6bee",
@@ -17625,7 +18710,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0c3cadfe-60fe-5cf9-b78d-124c0707f94c",
@@ -17651,7 +18737,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0def3853-43f0-5b1c-81b7-9b76bf5480d7",
@@ -17677,7 +18764,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0ed899dc-431a-5446-8010-b9fdc974c509",
@@ -17703,7 +18791,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1034a48a-3c0c-5e72-80a0-ff7a297338ae",
@@ -17729,7 +18818,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "19b57f41-b7a0-5708-b3f4-8a04076e224e",
@@ -17755,7 +18845,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1af3dad2-b901-5ca8-9d3e-0de006c1b001",
@@ -17781,7 +18872,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "38dafcf9-d764-5e3d-8c2b-64365e364eb1",
@@ -17807,7 +18899,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4468ee95-c68b-5ec1-bf9b-c0fd4ec702f6",
@@ -17833,7 +18926,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d71441b-b458-5267-accf-56ade009cec4",
@@ -17859,7 +18953,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c38e6e7-630e-55c7-9ae9-bc9b976f1d8a",
@@ -17885,7 +18980,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7e7402c0-f081-51e8-a999-e4c4cb982bf5",
@@ -17911,7 +19007,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a9240ade-909f-593d-996a-dda44b75b5a4",
@@ -17937,7 +19034,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b40aebc8-d666-5ffe-84a4-f9014532b8ee",
@@ -17963,7 +19061,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bce348eb-1e09-50f8-9b70-d25a7b779086",
@@ -17989,7 +19088,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c0367ab1-1db8-5982-bc78-22658f926177",
@@ -18015,7 +19115,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e98e84af-c960-59b3-8817-9af78a7f907a",
@@ -18041,7 +19142,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "77ec620b-0015-5a85-9e81-31c9e205754e",
@@ -18067,7 +19169,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6f009cf8-761a-5879-b102-4d36017b8dd9",
@@ -18093,7 +19196,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
-    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen."
+    "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "24734908-9527-51df-bb4e-33f40ad8e6e7",
@@ -18119,7 +19223,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "abdc8ada-f442-5c1d-b06f-a0ce6d8e4376",
@@ -18145,7 +19250,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d57e3e38-4791-5d9b-82cf-debd389ba00e",
@@ -18171,7 +19277,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7bb277d4-ef61-58bf-aeec-119cff7fcd82",
@@ -18197,7 +19304,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5e2de59f-7a00-550d-ad82-e8e9be617b93",
@@ -18223,22 +19331,26 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e0f5890c-019d-5deb-aa8a-57019603d159",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:11",
     "standesamt_id": "servizio-circondariale-dello-stato-civile-di-locarno-locarno-ti",
     "standesamt_name": "Servizio circondariale dello stato civile di Locarno",
-    "traulokal_name": "Villa Emden",
+    "traulokal_name": "Villa Emden – Isole di Brissago",
     "adresse": "",
     "ort": "",
     "kanton": "TI",
     "beschreibung": "",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
     "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
     "maxCeremonyGuests": 40,
     "wheelchairAccessible": null,
     "parkingAvailable": null,
@@ -18247,13 +19359,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
     "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:11"
   },
   {
     "canonicalId": "295e5426-5ecd-5f18-b0dd-ca283e963d8d",
@@ -18279,7 +19391,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "65c31fb9-4bc0-5a74-a878-e54c5cad29e8",
@@ -18305,7 +19418,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "35b795b2-fa5b-5384-adad-75a750bdc8a7",
@@ -18331,7 +19445,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "07d28d53-a017-5120-b223-320195bca9fe",
@@ -18357,7 +19472,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3891edf0-5374-5b2f-ab39-779d2dd84394",
@@ -18383,13 +19499,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ed5f604c-4808-5229-ac5e-c5c38f385405",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:19",
     "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
     "standesamt_name": "Office de l'état civil du canton de Vaud",
@@ -18413,7 +19533,12 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "imageUrl": "/venues/aigle/chateau-aigle.jpg",
+    "imageAlt": "Trauraum im Château d’Aigle",
+    "imageSource": "Château d’Aigle",
+    "imageAttribution": "© Château d’Aigle",
+    "imageStatus": "approved"
   },
   {
     "canonicalId": "c30a01cb-50ab-579b-b06f-c0c6deda509a",
@@ -18439,7 +19564,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "967d437b-8ba5-5f01-8746-67ee26de5c42",
@@ -18465,7 +19591,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cf8cf908-e2cc-5068-8637-83c8840609b5",
@@ -18491,7 +19618,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "63687ff3-e088-5ba9-a680-d0563c8e5fa8",
@@ -18517,37 +19645,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
-  },
-  {
-    "canonicalId": "b186e8cc-d961-5471-9a19-2da842ee83b6",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:20",
-    "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
-    "standesamt_name": "Office de l'état civil du canton de Vaud",
-    "traulokal_name": "Château d'Oron",
-    "adresse": "",
-    "ort": "",
-    "kanton": "VD",
-    "beschreibung": "Lieu d'exception agréé par le canton de Vaud.",
-    "ceremonySaturday": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-doron",
-    "sourceUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-doron",
-    "remarks": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "imageUrl": "/venues/aigle/chateau-aigle.jpg",
+    "imageAlt": "Trauraum im Château d’Aigle",
+    "imageSource": "Château d’Aigle",
+    "imageAttribution": "© Château d’Aigle",
+    "imageStatus": "approved",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "96752559-d343-508e-befa-2f797c5acc4f",
@@ -18573,7 +19677,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0d1e377a-0282-512f-96bc-e0391b94c5f0",
@@ -18599,7 +19704,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "27e3d833-1721-529d-96f0-2a2c8e614e1b",
@@ -18625,7 +19731,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "eab28b5f-0d40-515c-8d34-6b6cb5ef446e",
@@ -18644,6 +19751,40 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-de-lucens",
     "sourceUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-de-lucens",
+    "remarks": "",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "b186e8cc-d961-5471-9a19-2da842ee83b6",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:20",
+    "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
+    "standesamt_name": "Office de l'état civil du canton de Vaud",
+    "traulokal_name": "Château d’Oron",
+    "adresse": "",
+    "ort": "",
+    "kanton": "VD",
+    "beschreibung": "Lieu d'exception agréé par le canton de Vaud.",
+    "ceremonySaturday": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-doron",
+    "sourceUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-doron",
     "remarks": "",
     "ceremonyMonday": null,
     "ceremonyTuesday": null,
@@ -18677,7 +19818,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "096ccc19-e635-57fd-bed7-7125e879ce08",
@@ -18703,7 +19845,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9bc25f75-26d5-50a3-a07d-945b6d233a7b",
@@ -18729,7 +19872,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "eb96725b-182f-5e2b-bc72-2ba319334118",
@@ -18755,7 +19899,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6eba8b26-85d8-5894-b851-fb07b3b5604a",
@@ -18781,7 +19926,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "77aa47b7-3a29-585b-9c66-7461408331da",
@@ -18807,7 +19953,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "13f79a32-0ef8-57bd-b74f-6824ab9512a5",
@@ -18833,7 +19980,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "186f9547-2a86-5c7e-b72c-deae14fbbe8b",
@@ -18859,7 +20007,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8aa56d46-c9b4-559a-b51d-d2858a366902",
@@ -18885,7 +20034,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5ea558fc-7034-55ea-b98e-d5f085982221",
@@ -18911,7 +20061,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0d8046d2-2de0-5ee9-9a5d-d5aa9afc8305",
@@ -18937,7 +20088,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "58b17bc1-d11a-52ce-a7b5-42d28372c493",
@@ -18963,7 +20115,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5e5b6c27-ca04-5515-abb5-2deaaa149db6",
@@ -18989,7 +20142,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "eded1b16-9038-578d-99e3-e9f4b9869f92",
@@ -19015,7 +20169,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1852f831-adbd-5fc8-b0b8-d9cf2fef0edc",
@@ -19041,7 +20196,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f2e634c3-ee56-5484-a10a-f5375e372c35",
@@ -19067,7 +20223,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a9dfb2e9-9df4-54b3-8119-d59437e899cc",
@@ -19093,7 +20250,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4c0738e0-9023-500d-a2b8-d7bc55941624",
@@ -19119,7 +20277,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9769ccc4-c9fa-5363-aa96-65f653971685",
@@ -19145,7 +20304,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cb2d4a5e-a278-55cb-87ae-f2333bcdb1c6",
@@ -19171,7 +20331,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b53730dc-e311-5d6c-aa5c-34550382a9f6",
@@ -19197,7 +20358,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f8b63021-f221-51d6-9355-a259eb8fa0f1",
@@ -19223,7 +20385,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9fda625a-5cc5-5948-a0b9-6ed62978dd41",
@@ -19249,7 +20412,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3cb4bc78-4623-5eb6-af56-8ed50e084ba6",
@@ -19275,7 +20439,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.vs.ch/web/spm/etat-civil",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "456c5b6d-b727-5ec0-bafb-d145d0de2cfd",
@@ -19301,7 +20466,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.vs.ch/web/spm/etat-civil",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f7a50172-e191-5d36-bb14-dac157b2f538",
@@ -19327,7 +20493,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.vs.ch/web/spm/etat-civil",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1bce7f09-717f-5b6b-b932-8d9177be77fa",
@@ -19353,7 +20520,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "24330b87-9121-5114-aab7-006d8218eb46",
@@ -19379,7 +20547,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7f179163-4ca0-55d7-819c-2e353c2164ba",
@@ -19405,7 +20574,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "15af042a-1a80-5e30-865f-1aeed5d3b1e6",
@@ -19431,7 +20601,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b34ffedb-1444-50f5-8f2a-5c19c833c002",
@@ -19457,7 +20628,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f3f12627-b147-5210-862a-d7da04a1e91f",
@@ -19483,7 +20655,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "92e6f718-9b0b-50ce-8a07-06b4b85840eb",
@@ -19509,7 +20682,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b93143b5-e0e0-5a03-a444-669cae881dbb",
@@ -19535,7 +20709,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c077fd1d-6b35-53e2-a6b8-d2eca07ae8a2",
@@ -19561,7 +20736,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9a27739e-be89-54c6-a5a1-b1991e5db03d",
@@ -19587,7 +20763,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "52dda89f-04f6-5ed3-ab8b-76984cc4e365",
@@ -19613,7 +20790,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7e14f90f-3078-5e09-958a-ece5e005c2cd",
@@ -19639,7 +20817,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3285860a-76ff-5d19-83f0-47f3404a931e",
@@ -19665,7 +20844,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0c532cdc-7827-5c74-9a82-4dca6e34daba",
@@ -19691,7 +20871,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b18b3b43-57cd-5980-a77d-f79349bb9a23",
@@ -19717,7 +20898,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a3b27328-d338-52b4-96d3-130e6fe2a26b",
@@ -19743,7 +20925,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3b46e384-3d2c-517b-b0d9-3ff59d9adb99",
@@ -19769,7 +20952,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7f77070b-e066-5d46-83dc-45277f493ae1",
@@ -19795,7 +20979,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.vs.ch/web/spm/etat-civil",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8beee063-5c32-5f0e-bd80-f1d23c48833a",
@@ -19821,7 +21006,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.vs.ch/web/spm/etat-civil",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f9f43bbb-90eb-5d47-b54e-02a33685b8a8",
@@ -19847,7 +21033,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "dcf42f17-d887-55f3-9e2f-0fdbd7d86be0",
@@ -19873,7 +21060,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d09435b4-81cf-50d1-acbd-a7f11b7eb9e3",
@@ -19899,7 +21087,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "56c585b7-5496-5f63-88fa-0dab5ee6cb6d",
@@ -19925,7 +21114,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "60c0f5bb-89b6-58b0-9b5b-4e9d0c7f00e2",
@@ -19951,7 +21141,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "dd26d9ab-ef43-55ec-a91d-c3d8c3068c15",
@@ -19977,7 +21168,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3bb569f4-4430-5049-b79c-a550bbacb899",
@@ -20003,7 +21195,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "27daf70f-e21d-58b2-9ce5-6f5c1e78ebc3",
@@ -20029,7 +21222,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "78dd63b0-e8da-54e1-9dff-2b9fd8ae6c3e",
@@ -20055,7 +21249,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "da970774-1f41-58a5-9a3f-5985e210a332",
@@ -20081,7 +21276,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "616c6dc0-18c2-5399-b40a-3e1b1f7a78a9",
@@ -20107,7 +21303,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b9b5ab03-f189-54ce-b75b-88f5bacf53a2",
@@ -20133,7 +21330,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f6174d71-887b-5838-9d10-31c46d3c387e",
@@ -20159,7 +21357,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "974ad034-a582-5504-ae33-072f46ae1b67",
@@ -20185,7 +21384,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9cf0b238-c403-5437-a192-782b4a6231e7",
@@ -20211,7 +21411,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "95f93370-1bf5-5048-b6fa-205e54d3fdc7",
@@ -20237,7 +21438,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bd2ea1dc-60ca-5af5-bece-31fbb4cc858e",
@@ -20263,7 +21465,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f26826d1-5eae-543c-9823-9edbbdb58959",
@@ -20289,7 +21492,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "50c21080-7c00-51f2-bdcd-b6ef0eb682ce",
@@ -20315,7 +21519,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a1ef430c-2563-544a-ae6b-448fb166ee0a",
@@ -20341,7 +21546,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "32c8cf2d-a76f-5b99-81be-2bd9ad092d87",
@@ -20367,7 +21573,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.rueti.ch/politik-verwaltung/dienstleistungen.html/222/service/847",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bdaa1cf5-63c9-5f47-8b25-cd90177557d4",
@@ -20393,7 +21600,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.rueti.ch/politik-verwaltung/dienstleistungen.html/222/service/847",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "71620e25-3f26-585b-b283-ba072d62f5c1",
@@ -20419,43 +21627,18 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "ef0dcff3-e25a-5003-94cf-4b8cc75781fb",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Anna-Stüssi-Haus Dänikon",
-    "adresse": "Oberdorfstrasse 3",
-    "ort": "Dänikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 29,
-    "wheelchairAccessible": false,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e8c81cbf-d303-537c-b935-9a86e458b82d",
     "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
     "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
-    "traulokal_name": "Autohalle Andelfingen – Autorack",
+    "traulokal_name": "Autohalle Andelfingen",
     "adresse": "Hostbachstrasse 4",
     "ort": "Andelfingen",
     "kanton": "ZH",
-    "beschreibung": "Autorack im ersten Obergeschoss der Autohalle Andelfingen.",
+    "beschreibung": "Offizielles Traulokal in der Autohalle Andelfingen; mögliche Räume umfassen Autorack und Cigar Lounge.",
     "ceremonyMonday": null,
     "ceremonyTuesday": null,
     "ceremonyWednesday": null,
@@ -20471,40 +21654,16 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://autohalle.ch/",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Offiziell als Trauraum des Zivilstandsamts Andelfingen aufgeführt; keine Medien freigegeben."
-  },
-  {
-    "canonicalId": "6c2bcfd8-a3d2-5ced-be7a-81cf54447355",
-    "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
-    "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
-    "traulokal_name": "Autohalle Andelfingen – Cigar Lounge",
-    "adresse": "Hostbachstrasse 4",
-    "ort": "Andelfingen",
-    "kanton": "ZH",
-    "beschreibung": "Cigar Lounge oberhalb des Restaurants in der Autohalle Andelfingen.",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "https://autohalle.ch/",
-    "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Offiziell als Trauraum des Zivilstandsamts Andelfingen aufgeführt; keine Medien freigegeben."
+    "remarks": "Auf ausdrücklichen Entscheid als ein öffentliches Traulokal geführt.",
+    "imageUrl": "/venues/autohalle/autohalle_final8112.jpg",
+    "imageAlt": "Für eine Trauung eingerichteter Raum in der Autohalle Andelfingen",
+    "imageSource": "Autohalle Classics GmbH",
+    "imageAttribution": "Autohalle Classics GmbH",
+    "imageStatus": "approved",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8ebae545-eed4-5093-93a5-9a0a8d1aafc0",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:03",
     "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
     "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
     "traulokal_name": "Bleulersaal Schloss Laufen",
@@ -20527,7 +21686,14 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:03"
   },
   {
     "canonicalId": "f346ad4f-c79a-5d8f-a022-4a3354d20743",
@@ -20553,7 +21719,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1e65e534-d941-5f87-86fa-ad2a11c5c841",
@@ -20579,7 +21746,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5c39d839-8f64-5f76-9e23-72550ccdc2e7",
@@ -20605,7 +21773,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1de24bda-aae0-59f1-a219-e0983d8a466c",
@@ -20631,7 +21800,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "standesamt_id": "zivilstandskreis-winterthur-winterthur-zh",
@@ -20655,7 +21825,6 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "outdoorCeremonyAvailable": false,
     "seasonalAvailability": "Gemäss Online-Kalender/Sondertermine",
     "venueUrl": "https://stadt.winterthur.ch/gemeinde/verwaltung/sicherheit-und-umwelt/melde-und-zivilstandswesen/zivilstandsamt/heirat/lokale-daten-und-zeiten/copy_of_casinotheater-winterthur",
-    "imageUrl": "",
     "officialConfirmed": true,
     "sourceUrl": "https://stadt.winterthur.ch/gemeinde/verwaltung/sicherheit-und-umwelt/melde-und-zivilstandswesen/zivilstandsamt/heirat/lokale-daten-und-zeiten",
     "sourceType": "Stadt/Zivilstandsamt",
@@ -20700,7 +21869,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "48d219b3-7edf-5ff7-8cd6-995ef0307639",
@@ -20726,7 +21896,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8f4c566a-7ddc-5170-a8bf-7e3c66148e78",
@@ -20752,7 +21923,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/653?selectedLocations=653",
-    "remarks": "ehei location"
+    "remarks": "ehei location",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "99830b3b-9878-5199-9e14-6cf3de174e24",
@@ -20778,7 +21950,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/653?selectedLocations=653",
-    "remarks": "ehei location"
+    "remarks": "ehei location",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "495cb5a5-b7dc-5b8b-afdd-715bcc0e137e",
@@ -20804,7 +21977,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f1940883-58d3-5c45-9fe0-2e64065e89ee",
@@ -20830,7 +22004,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5e9af7de-6657-59c1-a656-40c25c966bf1",
@@ -20856,7 +22031,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c1256c42-2146-54fa-b23e-132e12ef18c0",
@@ -20882,7 +22058,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4c77926e-9577-5fe7-8618-42efa4f26478",
@@ -20908,59 +22085,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "e3f024bc-0d4c-53d2-91f7-2cb77585db27",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Gemeindehaus Buchs",
-    "adresse": "Badenerstrasse 1",
-    "ort": "Buchs ZH",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 12,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "932ff897-78f3-53f0-81b7-38e9fad2b4f1",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Gemeindehaus Dällikon",
-    "adresse": "Schulstrasse 5",
-    "ort": "Dällikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 6,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ea7a4318-7aa4-5b67-95b1-39a7dabe50e9",
@@ -20986,7 +22112,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "552d3aee-6481-5c8d-80b3-d14695aaf541",
@@ -21012,7 +22139,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "auf Anfrage"
+    "remarks": "auf Anfrage",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "84d38021-53c9-5043-a156-6aaf52b20e97",
@@ -21038,7 +22166,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "auf Anfrage"
+    "remarks": "auf Anfrage",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2967ba28-a597-5710-82ce-03b4d999bbe9",
@@ -21064,33 +22193,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.horgen.ch/leben-in-horgen/zivilstand-geburt-tod/ehe/trauung.html/504",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "2e5f23d5-fa6a-58f0-bb0d-62473378e9ee",
-    "standesamt_id": "zivilstandskreis-horgen-horgen-zh",
-    "standesamt_name": "Zivilstandskreis Horgen",
-    "traulokal_name": "Gemeindehaus Horgen",
-    "adresse": "Bahnhofstrasse 10",
-    "ort": "Horgen",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.horgen.ch/leben-in-horgen/zivilstand-geburt-tod/ehe/trauung.html/504",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "551b96d0-5e15-577a-bc3c-c25138533928",
@@ -21116,7 +22220,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "62780ae7-6835-5174-8f6c-fc4a2887488d",
@@ -21142,7 +22247,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1848f427-5d0e-585a-bd79-993a67b7b96a",
@@ -21168,33 +22274,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "d07e5307-d5c7-5a5c-90fa-ffd916491c97",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Gemeindehaus Regensdorf / Amtliches Traulokal",
-    "adresse": "Watterstrasse 114",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 16,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3f7f0f1a-e75c-538f-95a2-f221820a2419",
@@ -21220,7 +22301,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "affb85cd-34c9-530e-bd6a-235ca7a574f3",
@@ -21246,7 +22328,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6af129f5-27c2-53b9-9ded-702f5d9372db",
@@ -21272,7 +22355,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cd9d53f4-1977-5a43-8d73-03826c2acd6c",
@@ -21298,7 +22382,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "47226172-45cc-5a53-9437-a2df7dffda0f",
@@ -21324,7 +22409,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "auf Anfrage"
+    "remarks": "auf Anfrage",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f9c63a70-3b59-543e-a6df-5abcc0ef092a",
@@ -21350,7 +22436,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "auf Anfrage"
+    "remarks": "auf Anfrage",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0203eeb1-cbba-5eb3-9309-e5b8bae595c1",
@@ -21376,7 +22463,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "29d599b9-5fe1-5e00-a57c-c1b58735ae12",
@@ -21402,7 +22490,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0e1a25e3-46ae-5818-a77e-3486a0ab67da",
@@ -21428,7 +22517,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "32e29dca-5f08-52ad-ac20-5447912407b8",
@@ -21454,33 +22544,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "81f39b55-3235-5833-91f4-ae91ecf73265",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Gemeindemuseum Regensdorf",
-    "adresse": "Mühlestrasse 22",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 14,
-    "wheelchairAccessible": false,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ece15f4a-49ce-534d-aaf7-f3f9f4f63894",
@@ -21506,7 +22571,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "460bf571-9d40-5035-957b-9e5b1d25bec1",
@@ -21532,7 +22598,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "29ef1842-4560-58ee-9d0d-4440b5e8bc6e",
@@ -21558,7 +22625,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.dielsdorf.ch/dienstleistungen/117682",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "5ecdf362-66ae-5e15-846b-92b7f0789c1d",
@@ -21584,7 +22652,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.dielsdorf.ch/dienstleistungen/117682",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d032933a-9be6-58b8-8059-87de3d10a1b6",
@@ -21610,7 +22679,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.dielsdorf.ch/dienstleistungen/117682",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d0cde73b-94f6-598c-b014-33fb0293679b",
@@ -21636,7 +22706,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.dielsdorf.ch/dienstleistungen/117682",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8bfd60dc-b325-5d4a-b80c-f59b7e79a303",
@@ -21662,7 +22733,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "98599a72-54cb-5f4e-861f-ae3bd71cfa3d",
@@ -21688,7 +22760,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d85ef651-178e-5c27-8b3f-4ce9774924aa",
@@ -21714,7 +22787,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c93231c4-41db-5e39-8899-014b01da1201",
@@ -21740,7 +22814,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "44a60792-bfdb-58b3-9d3c-ac47753825a3",
@@ -21766,33 +22841,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "8aa06e43-108b-5416-b794-de943b7c946a",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Kirchgemeindehaus Buchs",
-    "adresse": "Oberdorfstrasse 16",
-    "ort": "Buchs ZH",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": null,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "61e4c272-723b-5d60-a02f-cb9f37dda9d4",
@@ -21818,7 +22868,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c060910c-73fd-5c67-a224-cee75141c901",
@@ -21844,33 +22895,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "548dcc5e-0d48-5897-978e-388ddbc1d5eb",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Niklauskapelle",
-    "adresse": "Mühlestrasse 24",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 38,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "652e832b-33e3-51e8-90f9-4347377b4ff0",
@@ -21896,7 +22922,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7ef9d9d2-cb25-519c-8e18-f8539caf159b",
@@ -21922,7 +22949,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8611709a-6597-559a-950d-a060830cf2f0",
@@ -21948,7 +22976,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "48da7976-d850-5a6c-8b88-dfb8d659887a",
@@ -21974,7 +23003,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8b5887b6-2335-576c-890b-056a3dee2467",
@@ -22000,7 +23030,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.thalwil.ch/zivilstandgeburttodesfall/3012",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "afcb0f27-9481-5dd3-ac3b-124915ed9d19",
@@ -22026,7 +23057,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "efef3993-cac9-5c52-88b5-4391e81203b4",
@@ -22052,7 +23084,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3a520885-9b7b-5194-a7f2-ddbbe7d0658b",
@@ -22078,33 +23111,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "f05949de-3bcc-5a08-af5b-60eb5158d17b",
-    "standesamt_id": "zivilstandskreis-mannedorf-mannedorf-zh",
-    "standesamt_name": "Zivilstandskreis Männedorf",
-    "traulokal_name": "Prunkzimmer Untervogthaus",
-    "adresse": "Dorfgasse 37",
-    "ort": "Männedorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0167cd92-41e4-5011-9312-e279c27081ab",
@@ -22130,7 +23138,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.buelach.ch/dienstleistungen/100840",
-    "remarks": "Trauungen in Bülach: Rathaus-Saal"
+    "remarks": "Trauungen in Bülach: Rathaus-Saal",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ead545f7-c641-5332-a0e1-e2d4291c8d68",
@@ -22156,7 +23165,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.buelach.ch/dienstleistungen/100840",
-    "remarks": "Trauungen in Bülach: Rathaus-Saal"
+    "remarks": "Trauungen in Bülach: Rathaus-Saal",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3d391055-44ec-5a8e-8cd9-6aa41a58da9a",
@@ -22182,7 +23192,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "1ae084b3-206f-5298-9d6f-dd97d29e47ae",
@@ -22208,7 +23219,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.rueti.ch/politik-verwaltung/dienstleistungen.html/222/service/847",
-    "remarks": "April bis Oktober, Di-Fr nachmittags"
+    "remarks": "April bis Oktober, Di-Fr nachmittags",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6e878e08-1b97-517b-b648-6c87a5b46094",
@@ -22234,7 +23246,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.rueti.ch/politik-verwaltung/dienstleistungen.html/222/service/847",
-    "remarks": "April bis Oktober, Di-Fr nachmittags"
+    "remarks": "April bis Oktober, Di-Fr nachmittags",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6c81c3cc-a8af-5a33-be06-f5a0912a6ff7",
@@ -22260,7 +23273,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.waedenswil.ch/dienstleistungen/20889",
-    "remarks": "Trauung in Richterswil, vorbestimmte Freitage am Vormittag"
+    "remarks": "Trauung in Richterswil, vorbestimmte Freitage am Vormittag",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cbad20fa-b8aa-5bfa-9ff3-131d667a6004",
@@ -22286,14 +23300,11 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.waedenswil.ch/dienstleistungen/20889",
-    "remarks": "Trauung in Richterswil, vorbestimmte Freitage am Vormittag"
+    "remarks": "Trauung in Richterswil, vorbestimmte Freitage am Vormittag",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3c2e5efb-9e26-5347-ad93-2ed83c63dd07",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:09",
     "standesamt_id": "zivilstandskreis-bezirk-andelfingen-kleinandelfingen-zh",
     "standesamt_name": "Zivilstandskreis Bezirk Andelfingen",
     "traulokal_name": "Schloss Andelfingen",
@@ -22315,8 +23326,15 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "outdoorCeremonyAvailable": null,
     "seasonalAvailability": "",
     "venueUrl": "",
-    "sourceUrl": "https://www.zivba.ch/heirat/schloss-andelfingen.html/36",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:09"
   },
   {
     "canonicalId": "bba88098-7234-5090-9119-3c5fe9cdb1d6",
@@ -22342,7 +23360,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
-    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle"
+    "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "861b4599-ef98-54b9-b3d3-e1ec5fdbb613",
@@ -22368,14 +23387,16 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "historisches Schloss, nicht barrierefrei gemäss Quelle"
+    "remarks": "historisches Schloss, nicht barrierefrei gemäss Quelle",
+    "imageUrl": "/venues/greifensee/landvogtstube.jpg",
+    "imageAlt": "Landvogtstube im Schloss Greifensee",
+    "imageSource": "Stiftung Schloss Greifensee",
+    "imageAttribution": "Stiftung Schloss Greifensee",
+    "imageStatus": "approved",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "e3b29802-63c5-5fe4-8ad6-41fd634689cd",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:06",
     "standesamt_id": "zivilstandsamt-volketswil-volketswil-zh",
     "standesamt_name": "Zivilstandsamt Volketswil",
     "traulokal_name": "Schloss Greifensee - Landvogtstube",
@@ -22398,7 +23419,19 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "historisches Schloss, nicht barrierefrei gemäss Quelle"
+    "remarks": "historisches Schloss, nicht barrierefrei gemäss Quelle",
+    "imageUrl": "/venues/greifensee/landvogtstube.jpg",
+    "imageAlt": "Landvogtstube im Schloss Greifensee",
+    "imageSource": "Stiftung Schloss Greifensee",
+    "imageAttribution": "Stiftung Schloss Greifensee",
+    "imageStatus": "approved",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:06"
   },
   {
     "canonicalId": "39d37718-e2dd-536f-b656-45e667246e3b",
@@ -22424,7 +23457,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "Spezialdaten 2027"
+    "remarks": "Spezialdaten 2027",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "7a3ccaa8-3e21-572a-98a2-48477d6d4d13",
@@ -22450,7 +23484,46 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
-    "remarks": "Spezialdaten 2027"
+    "remarks": "Spezialdaten 2027",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "5e2d1aa5-8c05-5ef2-b8e7-08e70abc8f39",
+    "standesamt_id": "zivilstandskreis-illnau-effretikon-effretikon-zh",
+    "standesamt_name": "Zivilstandskreis Illnau-Effretikon",
+    "traulokal_name": "Schloss Kyburg",
+    "adresse": "Schloss 1, 8314 Kyburg",
+    "ort": "Kyburg",
+    "kanton": "ZH",
+    "beschreibung": "",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://schlosskyburg.ch/",
+    "sourceUrl": "https://www.ilef.ch/_docn/5584138/20250306_BER_Geschaeftsbericht_2024.pdf",
+    "remarks": "",
+    "imageUrl": "/venues/kyburg/schloss-kyburg.jpg",
+    "imageAlt": "Trauzimmer im Schloss Kyburg",
+    "imageSource": "Museum Schloss Kyburg",
+    "imageAttribution": "Museum Schloss Kyburg",
+    "imageStatus": "approved",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:07"
   },
   {
     "canonicalId": "47e0df3f-4748-5828-9eff-482915cd1282",
@@ -22476,7 +23549,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d6c8a02a-917a-5538-b592-7947e5cd2c90",
@@ -22502,7 +23576,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2bdcef0d-2b04-51fd-a0fb-65d17d780d21",
@@ -22528,59 +23603,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "71057894-92e0-5e54-a70c-3c1952c1f5d0",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Seeholz-Beizli",
-    "adresse": "Im Seeholz 15",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 39,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "206a6bb9-ad3d-50f5-aee5-ff7a7ee4744f",
-    "standesamt_id": "zivilstandskreis-dubendorf-dubendorf-zh",
-    "standesamt_name": "Zivilstandskreis Dübendorf",
-    "traulokal_name": "Stadthaus Dübendorf",
-    "adresse": "Usterstrasse 2",
-    "ort": "Dübendorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.duebendorf.ch/dienstleistungen/24644",
-    "remarks": "Trauzimmer gemäss Eheschliessungen"
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "edcaf7dc-2510-5834-a4f1-c19049a37344",
@@ -22606,7 +23630,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.duebendorf.ch/dienstleistungen/24644",
-    "remarks": "Trauzimmer gemäss Eheschliessungen"
+    "remarks": "Trauzimmer gemäss Eheschliessungen",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "22abaf1f-9675-5fd6-a214-790a698d6056",
@@ -22632,7 +23657,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d558cbb-9959-5cc4-8fb0-0e9acee0a7e0",
@@ -22658,7 +23684,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "0542a34c-29bd-57cc-be9b-f2cbf858d899",
@@ -22684,7 +23711,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f945ffb9-f031-520d-930d-7037e74b67db",
@@ -22710,7 +23738,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kloten.ch/lebensereignisse/65407",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c17363ad-8bf7-52aa-ab0f-4c10059a5e07",
@@ -22736,7 +23765,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2008/12/081216a.html",
-    "remarks": "ehei result/search"
+    "remarks": "ehei result/search",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fec90bb7-142c-5f61-a673-82958a5c2672",
@@ -22762,7 +23792,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2008/12/081216a.html",
-    "remarks": "ehei result/search"
+    "remarks": "ehei result/search",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "26acae46-98be-54b8-976b-d460450651c9",
@@ -22788,7 +23819,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/10?selectedLocations=10",
-    "remarks": "ehei"
+    "remarks": "ehei",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b793d168-29b5-5dca-af54-816f0da8bfb2",
@@ -22814,7 +23846,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/10?selectedLocations=10",
-    "remarks": "ehei"
+    "remarks": "ehei",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8f32f2fa-f083-56d3-9e34-e604ff03716d",
@@ -22840,59 +23873,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "a1fca723-6ab7-53ea-acb9-acf49205979d",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Strohdachhaus Hüttikon - Altbergstübli",
-    "adresse": "Oetwilerstrasse 16",
-    "ort": "Hüttikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 10,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "ac7b750e-7eaa-5fa4-a88c-ef4c3e854849",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Strohdachhaus Hüttikon - Chindlistein-Kammer",
-    "adresse": "Oetwilerstrasse 16",
-    "ort": "Hüttikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 12,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f345156b-4389-55aa-9781-384e317848bc",
@@ -22918,7 +23900,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3b56687b-27b8-5bc5-9d55-795d824a220b",
@@ -22944,59 +23927,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "878db5b2-f31f-520e-8891-418f5302b98b",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Strohdachhaus Hüttikon - Furtbach-Kammer",
-    "adresse": "Oetwilerstrasse 16",
-    "ort": "Hüttikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 12,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "564a774d-7a24-518f-b5d9-bed004213636",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Strohdachhaus Hüttikon - Gewölbekeller",
-    "adresse": "Oetwilerstrasse 16",
-    "ort": "Hüttikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 29,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "ea39847f-c919-58b9-afd3-198abec216b3",
@@ -23022,33 +23954,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "5ad57f56-0fce-5dd7-a26a-81fec2f31cca",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Strohdachhaus Hüttikon - Lägernstübli",
-    "adresse": "Oetwilerstrasse 16",
-    "ort": "Hüttikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 15,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9b1a46bd-47d9-5282-94f0-9f53be860dba",
@@ -23074,7 +23981,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c37bd32a-693e-52f2-b0a4-b71d0e7ee875",
@@ -23100,7 +24008,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "6d97b32c-9303-5860-bca6-b71f3c2d7921",
@@ -23126,7 +24035,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://susthorgen.ch/heiraten-in-der-sust/",
-    "remarks": "Sust-Seite bestätigt zivile Trauungen durch Zivilstandsamt Horgen"
+    "remarks": "Sust-Seite bestätigt zivile Trauungen durch Zivilstandsamt Horgen",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "cbc51408-7a20-5b50-9c8e-accb8998343b",
@@ -23152,7 +24062,46 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://susthorgen.ch/heiraten-in-der-sust/",
-    "remarks": "Sust-Seite bestätigt zivile Trauungen durch Zivilstandsamt Horgen"
+    "remarks": "Sust-Seite bestätigt zivile Trauungen durch Zivilstandsamt Horgen",
+    "highlightLevel": 0
+  },
+  {
+    "canonicalId": "4da16f10-c089-5a8f-a4da-31d5163be545",
+    "standesamt_id": "zivilstandsamt-zurich-zurich-zh",
+    "standesamt_name": "Zivilstandsamt Zürich",
+    "traulokal_name": "The Dolder Grand",
+    "adresse": "Kurhausstrasse 65, 8032 Zürich",
+    "ort": "Zürich",
+    "kanton": "ZH",
+    "beschreibung": "",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "eveningCeremonyAvailable": null,
+    "maxCeremonyGuests": 0,
+    "wheelchairAccessible": null,
+    "parkingAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "seasonalAvailability": "",
+    "venueUrl": "https://www.thedoldergrand.com/",
+    "sourceUrl": "https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2026/03/neues-hochzeitslokal-seefeld.html",
+    "remarks": "",
+    "imageUrl": "/venues/dolder/dolder-hotel.jpg",
+    "imageAlt": "The Dolder Grand mit Veranstaltungsbereich",
+    "imageSource": "Dolder Hotel AG Photo Gallery",
+    "imageAttribution": "",
+    "imageStatus": "approved",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:05"
   },
   {
     "canonicalId": "aaaa499e-5be5-58d1-ad02-c7d276ed27a0",
@@ -23178,7 +24127,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d8b9a99b-df70-5c36-b1e4-fd6907d4462b",
@@ -23204,7 +24154,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "154837c3-4482-59ab-ab7c-ceeb4a5c7a46",
@@ -23230,7 +24181,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "75e970d0-f21c-5447-8485-08673363d3f3",
@@ -23256,7 +24208,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8724daaf-8661-598c-903f-4cdb5da6eb4c",
@@ -23282,7 +24235,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b71f72e4-ff6e-5799-8ffb-f39ba5fe8db3",
@@ -23308,7 +24262,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.adliswil.ch/dienstleistungen/30445",
-    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich."
+    "remarks": "Offizielle Adliswil-Seite bestätigt Trauungen in diesem Ort; exakter Raumname nicht öffentlich ersichtlich.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "25abcc2d-0e75-59c6-96ef-5586f502b999",
@@ -23334,7 +24289,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.duebendorf.ch/publikationen/539797",
-    "remarks": "Publikation offizielle Stadtseite"
+    "remarks": "Publikation offizielle Stadtseite",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "4d185631-1c73-51ef-8eec-fd20c4f63845",
@@ -23360,7 +24316,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.duebendorf.ch/dienstleistungen/24644",
-    "remarks": "Publikation offizielle Stadtseite"
+    "remarks": "Publikation offizielle Stadtseite",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "b4862732-5dd7-50dc-b856-53bca142b351",
@@ -23386,7 +24343,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "26017703-04da-5671-8867-0b95c07c7140",
@@ -23412,33 +24370,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
-  },
-  {
-    "canonicalId": "6f6945d7-a24f-503c-b668-38aeb9391ff7",
-    "standesamt_id": "zivilstandskreis-winterthur-winterthur-zh",
-    "standesamt_name": "Zivilstandskreis Winterthur",
-    "traulokal_name": "Trauungen am Schalter Winterthur",
-    "adresse": "Pionierstrasse 7",
-    "ort": "Winterthur",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
     "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://stadt.winterthur.ch/gemeinde/verwaltung/sicherheit-und-umwelt/melde-und-zivilstandswesen/zivilstandsamt/heirat/lokale-daten-und-zeiten",
-    "remarks": ""
+    "highlightLevel": 0
   },
   {
     "canonicalId": "8786c892-fed2-5a92-81d4-138e850bcaaf",
@@ -23464,7 +24397,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://stadt.winterthur.ch/gemeinde/verwaltung/sicherheit-und-umwelt/melde-und-zivilstandswesen/zivilstandsamt/heirat/lokale-daten-und-zeiten/schaltertrauung",
     "sourceUrl": "https://stadt.winterthur.ch/gemeinde/verwaltung/sicherheit-und-umwelt/melde-und-zivilstandswesen/zivilstandsamt/heirat/lokale-daten-und-zeiten",
-    "remarks": "Seit Oktober 2024; Montag bis Freitag zu den Öffnungszeiten; Reservation telefonisch/persönlich bis spätestens eine Woche vorher."
+    "remarks": "Seit Oktober 2024; Montag bis Freitag zu den Öffnungszeiten; Reservation telefonisch/persönlich bis spätestens eine Woche vorher.",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "22722a74-32b0-582d-93a2-9402cd5dbccc",
@@ -23490,33 +24424,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.pfaeffikon.ch/trauzimmer-gemeindehaus-bauma/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "d9e3fc9a-a168-508c-837d-80452df8e29d",
-    "standesamt_id": "zivilstandskreis-pfaffikon-pfaffikon-zh-zh",
-    "standesamt_name": "Zivilstandskreis Pfäffikon",
-    "traulokal_name": "Trauzimmer Gemeindehaus Bauma",
-    "adresse": "Dorfstrasse 41",
-    "ort": "Bauma",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 16,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.pfaeffikon.ch/trauzimmer-gemeindehaus-bauma/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3b79fe97-6571-51bb-a836-a177a07a284c",
@@ -23542,33 +24451,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
-  },
-  {
-    "canonicalId": "7bca611b-812b-5537-bcab-a6b1648f06ac",
-    "standesamt_id": "zivilstandskreis-mannedorf-mannedorf-zh",
-    "standesamt_name": "Zivilstandskreis Männedorf",
-    "traulokal_name": "Trauzimmer Gemeindehaus Männedorf",
-    "adresse": "Bahnhofstrasse 10",
-    "ort": "Männedorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
     "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": null,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a4e396bb-1cd3-54ac-926c-6b7f6fc19cae",
@@ -23594,33 +24478,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.maennedorf.ch/_doc/3557552",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "729574ad-1ac1-51f9-98eb-2eb7f0abdd28",
-    "standesamt_id": "zivilstandskreis-pfaffikon-pfaffikon-zh-zh",
-    "standesamt_name": "Zivilstandskreis Pfäffikon",
-    "traulokal_name": "Trauzimmer Gemeindehaus Pfäffikon",
-    "adresse": "Hochstrasse 1",
-    "ort": "Pfäffikon ZH",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 20,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.pfaeffikon.ch/trauzimmer-gemeindehaus-pfaeffikon/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d21ee178-181c-58a2-8eb2-3bfebaf7966b",
@@ -23646,7 +24505,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.pfaeffikon.ch/trauzimmer-gemeindehaus-pfaeffikon/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "60c03dcb-ef07-5845-bf36-36cdac3d6c66",
@@ -23672,7 +24532,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "bf757760-4762-51f7-822e-e5a21d195ff4",
@@ -23698,7 +24559,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.pfaeffikon.ch/heiraten/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "fc7d5cbe-49e8-5feb-9d85-09f867d3f7a5",
@@ -23724,7 +24586,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.pfaeffikon.ch/heiraten/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "2015f22d-2dd3-5d78-b01b-6f0744fd14ec",
@@ -23750,33 +24613,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.ilef.ch/ehegeburttod/36334",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "8c27fa22-3ec9-5438-b313-0e6956241735",
-    "standesamt_id": "zivilstandskreis-illnau-effretikon-effretikon-zh",
-    "standesamt_name": "Zivilstandskreis Illnau-Effretikon",
-    "traulokal_name": "Trauzimmer Stadthaus Effretikon",
-    "adresse": "Märtplatz 29",
-    "ort": "Effretikon",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 0,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.ilef.ch/ehegeburttod/36334",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d19d2c08-12b6-56db-91d0-7528ca484fe6",
@@ -23802,33 +24640,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.uster.ch/dienstleistungen/6778",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "d239db3f-3711-525b-8d40-ff8d81e12a83",
-    "standesamt_id": "zivilstandskreis-uster-uster-zh",
-    "standesamt_name": "Zivilstandskreis Uster",
-    "traulokal_name": "Trauzimmer Stadthaus Uster",
-    "adresse": "Bahnhofstrasse 17",
-    "ort": "Uster",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": null,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.uster.ch/dienstleistungen/6778",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "f0905a41-ec2e-572c-a9ea-4d2e9bd4f1d8",
@@ -23854,33 +24667,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
-  },
-  {
-    "canonicalId": "207d0945-d20f-5f30-919f-7ed8172e76aa",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Villa Gut Katzensee",
-    "adresse": "Im Gut Katzensee 35",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
     "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 24,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "highlightLevel": 0
   },
   {
     "canonicalId": "aa8b5548-dc9b-5b8b-9a41-472530c87369",
@@ -23906,13 +24694,17 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "975c00a8-84c0-5b5c-91f9-b53e1664ecb3",
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
+    "tags": [
+      "featured",
+      "romantic"
+    ],
     "websitePriority": "Top20:08",
     "standesamt_id": "zivilstandskreis-winterthur-winterthur-zh",
     "standesamt_name": "Zivilstandskreis Winterthur",
@@ -23962,7 +24754,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyThursday": null,
     "ceremonyFriday": null,
     "ceremonySunday": null,
-    "eveningCeremonyAvailable": null
+    "eveningCeremonyAvailable": null,
+    "highlightLevel": 0
   },
   {
     "canonicalId": "38476c38-10e4-5a9a-9b6d-578dba194e32",
@@ -23988,7 +24781,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "https://www.kuesnacht.ch/gemeinde/verwaltung/abteilungen/zentrale-dienste/zivilstandsamt.page/914",
     "sourceUrl": "https://www.herrliberg.ch/themen-a-z/thema-j.html/441",
-    "remarks": "Gemeinde Herrliberg bestätigt als eines der Traulokale"
+    "remarks": "Gemeinde Herrliberg bestätigt als eines der Traulokale",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "496296d7-ab84-5db6-9d85-701a20081046",
@@ -24014,7 +24808,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.herrliberg.ch/themen-a-z/thema-j.html/441",
-    "remarks": "Gemeinde Herrliberg bestätigt als eines der Traulokale"
+    "remarks": "Gemeinde Herrliberg bestätigt als eines der Traulokale",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "c99be9eb-be0e-5c55-941a-6a947c9285f0",
@@ -24040,7 +24835,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/11?selectedLocations=11",
-    "remarks": "Offizielle Medienmitteilung 2008"
+    "remarks": "Offizielle Medienmitteilung 2008",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d10ec3a2-ac56-58f1-a6a4-9a995fe9eff9",
@@ -24066,7 +24862,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/11?selectedLocations=11",
-    "remarks": "Offizielle Medienmitteilung 2008"
+    "remarks": "Offizielle Medienmitteilung 2008",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "39cb2ca1-d945-56b2-b32a-3f55a6dfa949",
@@ -24092,7 +24889,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/656?selectedLocations=656",
-    "remarks": "ehei location"
+    "remarks": "ehei location",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "a8ebf642-abcb-5cad-a5d2-66f61b4b3240",
@@ -24118,7 +24916,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/656?selectedLocations=656",
-    "remarks": "ehei location"
+    "remarks": "ehei location",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "3ba76c11-8985-5ca3-8dd9-9633c47b62b3",
@@ -24144,33 +24943,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
-  },
-  {
-    "canonicalId": "4dca224e-b321-5ffb-8345-ba989e3f8eca",
-    "standesamt_id": "zivilstandskreis-furttal-regensdorf-zh",
-    "standesamt_name": "Zivilstandskreis Furttal",
-    "traulokal_name": "Wöschhüsli Gut Katzensee",
-    "adresse": "Im Gut Katzensee 35",
-    "ort": "Regensdorf",
-    "kanton": "ZH",
-    "beschreibung": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySaturday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "maxCeremonyGuests": 18,
-    "wheelchairAccessible": false,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www.zivilstandsamt-furttal.ch/start-themen/ehevorbereitung-trauung/traulokale/",
-    "remarks": ""
+    "remarks": "",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "d9cf5afe-1742-5644-8587-975f9f068c5c",
@@ -24196,14 +24970,11 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.kuesnacht.ch/gemeinde/verwaltung/abteilungen/zentrale-dienste/zivilstandsamt.page/914",
-    "remarks": "Trauung im Zivilstandskreis bestätigt"
+    "remarks": "Trauung im Zivilstandskreis bestätigt",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "00344d1e-1343-559c-8bab-1587c38c2f86",
-    "beautyStatus": "Top 20",
-    "highlightLevel": 5,
-    "tags": ["featured", "romantic"],
-    "websitePriority": "Top20:04",
     "standesamt_id": "zivilstandsamt-zurich-zurich-zh",
     "standesamt_name": "Zivilstandsamt Zürich",
     "traulokal_name": "Zoo Zürich",
@@ -24226,7 +24997,14 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/13?selectedLocations=13",
-    "remarks": "Masoala Regenwald oder Lewa Savanne"
+    "remarks": "Masoala Regenwald oder Lewa Savanne",
+    "beautyStatus": "Top 20",
+    "highlightLevel": 5,
+    "tags": [
+      "featured",
+      "romantic"
+    ],
+    "websitePriority": "Top20:04"
   },
   {
     "canonicalId": "9b721cb7-e0da-567c-93ce-e8801f3d0b07",
@@ -24252,7 +25030,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/13?selectedLocations=13",
-    "remarks": "Masoala Regenwald oder Lewa Savanne"
+    "remarks": "Masoala Regenwald oder Lewa Savanne",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "948aa28f-5c30-546c-9217-8f47f1ab4800",
@@ -24278,7 +25057,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2008/12/081216a.html",
-    "remarks": "Offizielle Medienmitteilung 2008 / lokaler Betreiber bestätigt offizielles Traulokal"
+    "remarks": "Offizielle Medienmitteilung 2008 / lokaler Betreiber bestätigt offizielles Traulokal",
+    "highlightLevel": 0
   },
   {
     "canonicalId": "9bb0e7ba-d166-5090-95de-023b7fa5f423",
@@ -24304,6 +25084,7 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "seasonalAvailability": "",
     "venueUrl": "",
     "sourceUrl": "https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2008/12/081216a.html",
-    "remarks": "Offizielle Medienmitteilung 2008 / lokaler Betreiber bestätigt offizielles Traulokal"
+    "remarks": "Offizielle Medienmitteilung 2008 / lokaler Betreiber bestätigt offizielles Traulokal",
+    "highlightLevel": 0
   }
 ];

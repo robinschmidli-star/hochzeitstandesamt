@@ -534,6 +534,8 @@ export function HomePageClient() {
   );
 }
 
+// Kept temporarily for the existing alternative language-selector layout.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function TopLanguageChooser({
   t,
   language,
@@ -591,6 +593,8 @@ function TopLanguageChooser({
   );
 }
 
+// Kept temporarily for the existing alternative mobile language-selector layout.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function MobileLanguageChooser({
   t,
   language,
@@ -645,6 +649,7 @@ function MobileLanguageChooser({
 }
 
 function UnifiedLanguageChooser({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   t,
   language,
   extraLanguage,
@@ -832,8 +837,6 @@ function UnifiedMobileLanguageChooser({
 }
 
 function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
-  const privacyNotice = "privacyNotice" in t ? t.privacyNotice : translations.de.privacyNotice;
-  const marketingOptIn = "marketingOptIn" in t ? t.marketingOptIn : translations.de.marketingOptIn;
   const weekdays = ["Mo", "Di", "Mi", "Do", "Fr", "Sa"];
   const searchSuggestions = useMemo(() => {
     const suggestions = new Set<string>();
@@ -879,7 +882,7 @@ function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
             <span className="ml-1 hidden text-soft-ink transition group-open:inline">-</span>
           </summary>
           <div className="mt-3 grid gap-3 border-t border-linen pt-3">
-            <div className="grid gap-3 md:grid-cols-2">
+            <div className="grid gap-3">
               <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
                 {t.canton}
                 <select name="canton" className="focus-ring h-11 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink">
@@ -891,16 +894,6 @@ function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
                   ))}
                 </select>
               </label>
-              <div className="grid min-w-0 gap-2">
-                <label className="grid min-w-0 gap-1.5 text-sm font-medium text-ink">
-                  {t.email}
-                  <input name="email" type="email" placeholder="name@example.ch" className="focus-ring h-11 w-full rounded-lg border border-linen px-3 text-soft-ink" />
-                </label>
-                <label className="flex gap-3 text-sm leading-6 text-soft-ink">
-                  <input name="marketingOptIn" type="checkbox" value="yes" className="mt-1 h-4 w-4 rounded border-linen accent-sage" />
-                  <span>{marketingOptIn}</span>
-                </label>
-              </div>
             </div>
             <fieldset className="grid gap-2 text-sm font-medium text-ink">
               <legend>Bevorzugte Trautage</legend>
@@ -918,7 +911,6 @@ function LocalizedSearchForm({ t }: { t: (typeof translations)[Language] }) {
           </div>
         </details>
       </div>
-      <p className="text-[11px] leading-5 text-soft-ink/75">{privacyNotice}</p>
     </form>
   );
 }
@@ -1146,6 +1138,8 @@ function LocalizedOfficeCard({ office, t }: { office: SwissRegistryOffice; t: (t
           <h2 className="mt-1 text-xl font-semibold text-ink">{office.name}</h2>
         </div>
         {media.url ? (
+          // Approved media may come from provenance-controlled external hosts.
+          // eslint-disable-next-line @next/next/no-img-element
           <img src={media.url} alt={media.alt} className="h-12 w-12 object-contain" loading="lazy" />
         ) : null}
       </div>

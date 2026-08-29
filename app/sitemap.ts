@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { guides } from "@/lib/data";
 import { registryCantons, swissRegistryOffices } from "@/lib/registry-data";
 import { municipalityPages } from "@/lib/municipalities";
-import { indexableLocales } from "@/lib/i18n";
+import { defaultLocale, indexableLocales } from "@/lib/i18n";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
@@ -13,14 +13,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`),
     ...guides.map((guide) => `/ratgeber/${guide.slug}`)
   ];
-  const lastModified = new Date();
   const canonicalPages = paths.map((path) => ({
-    url: `${base}${path}`,
-    lastModified
+    url: `${base}${path}`
   }));
-  const localizedPages = indexableLocales.flatMap((locale) => paths.map((path) => ({
-    url: `${base}/${locale}${path}`,
-    lastModified
-  })));
+  const localizedPaths = [
+    "",
+    ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`)
+  ];
+  const localizedPages = indexableLocales
+    .filter((locale) => locale !== defaultLocale)
+    .flatMap((locale) => localizedPaths.map((path) => ({ url: `${base}/${locale}${path}` })));
   return [...canonicalPages, ...localizedPages];
 }

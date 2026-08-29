@@ -6,7 +6,7 @@ import {
   PopularSearchLinks,
   SwitzerlandMapSection
 } from "@/components/HomeSearchExperience";
-import { defaultLocale, getDictionary, indexableLocales, isLocale, locales, type Locale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, hreflangForLocale, indexableLocales, isLocale, locales, type Locale } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,10 +24,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: dictionary["hero.title"],
     description: dictionary["hero.subtitle"],
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
+      canonical: locale === defaultLocale ? baseUrl : `${baseUrl}/${locale}`,
       languages: {
-        ...Object.fromEntries(indexableLocales.map((item) => [item, `${baseUrl}/${item}`])),
-        "x-default": `${baseUrl}/${defaultLocale}`
+        ...Object.fromEntries(indexableLocales.map((item) => [
+          hreflangForLocale(item),
+          item === defaultLocale ? baseUrl : `${baseUrl}/${item}`
+        ])),
+        "x-default": baseUrl
       }
     },
     robots: indexableLocales.includes(locale) ? undefined : { index: false, follow: true }
@@ -38,14 +41,15 @@ export default async function LocalizedHomePage({ params }: Props) {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dictionary = await getDictionary(locale);
+  const pathPrefix = locale === defaultLocale ? "" : `/${locale}`;
 
   return (
     <>
-      <HomeHeroSearch dictionary={dictionary} />
-      <PopularSearchLinks dictionary={dictionary} />
-      <SwitzerlandMapSection />
-      <FeaturedRegistryOffices dictionary={dictionary} />
-      <HomeGuideTeasers dictionary={dictionary} />
+      <HomeHeroSearch dictionary={dictionary} pathPrefix={pathPrefix} />
+      <PopularSearchLinks dictionary={dictionary} pathPrefix={pathPrefix} />
+      <SwitzerlandMapSection dictionary={dictionary} locale={locale} />
+      <FeaturedRegistryOffices dictionary={dictionary} pathPrefix={pathPrefix} />
+      <HomeGuideTeasers dictionary={dictionary} pathPrefix={pathPrefix} />
     </>
   );
 }

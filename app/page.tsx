@@ -14,7 +14,7 @@ export default async function HomePage() {
     <>
       <HomeHeroSearch dictionary={dictionary} />
       <PopularSearchLinks dictionary={dictionary} />
-      <SwitzerlandMapSection />
+      <SwitzerlandMapSection dictionary={dictionary} />
       <FeaturedRegistryOffices dictionary={dictionary} />
       <HomeGuideTeasers dictionary={dictionary} />
     </>

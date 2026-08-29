@@ -12,23 +12,16 @@ export const indexableLocales = locales.filter(
   (locale) => languageConfig.languages[locale].indexable
 );
 
-const legacyLanguageNames: Record<Locale, string> = {
-  de: "Deutsch",
-  en: "English",
-  fr: "Français",
-  it: "Italiano",
-  es: "Español",
-  pt: "Português",
-  nl: "Nederlands",
-  sr: "Srpski",
-  sq: "Shqip",
-  tr: "Türkçe",
-  hr: "Hrvatski",
-  bs: "Bosanski",
-  uk: "Українська",
-  pl: "Polski",
-  ro: "Română"
+const localeHreflangs: Partial<Record<Locale, string>> = {
+  de: "de-CH",
+  fr: "fr-CH",
+  it: "it-CH",
+  en: "en"
 };
+
+export function hreflangForLocale(locale: Locale) {
+  return localeHreflangs[locale] ?? locale;
+}
 
 export const languageNames = Object.fromEntries(
   locales.map((locale) => [locale, languageConfig.languages[locale].name])

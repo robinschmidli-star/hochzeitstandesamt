@@ -6,64 +6,23 @@ import { searchRegistryOffices } from "@/lib/search";
 import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
 import { registrySearchLabels } from "@/lib/registry-search-labels";
 import { headers } from "next/headers";
-import { prisma } from "@/lib/prisma";
 
-export const metadata = createMetadata({
+const searchMetadata = {
   title: "Standesamt finden in der Schweiz",
   description: "Suche Zivilstandsämter nach Kanton, Gemeinde, Postleitzahl oder Name des Zivilstandskreises.",
   path: "/standesamt-finden"
-});
+};
 
-function getParam(params: Record<string, string | string[] | undefined>, key: string) {
-  const value = params[key];
-  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
-}
-
-function getParams(params: Record<string, string | string[] | undefined>, key: string) {
-  const value = params[key];
-  if (!value) return [];
-  return Array.isArray(value) ? value : [value];
-}
-
-async function saveSearchLead(params: Record<string, string | string[] | undefined>) {
-  if (getParam(params, "submitted") !== "1") return;
-
-  const dateStart = getParam(params, "dateStart");
-  const dateEnd = getParam(params, "dateEnd");
-  const lead = {
-    lead_type: "registry_search",
-    source_page: "/standesamt-finden",
-    first_name: "",
-    last_name: "",
-    email: getParam(params, "email"),
-    phone: "",
-    address: "",
-    canton: getParam(params, "canton"),
-    wedding_location: getParam(params, "query"),
-    wedding_date: dateStart || dateEnd ? `${dateStart || "offen"} bis ${dateEnd || "offen"}` : "",
-    wedding_date_start: dateStart,
-    wedding_date_end: dateEnd,
-    preferred_weekdays: getParams(params, "preferredWeekdays"),
-    date_flexibility: getParam(params, "dateFlexibility"),
-    legal_topic: "",
-    message: "",
-    consent_privacy: false,
-    consent_forwarding: false,
-    marketing_opt_in: getParam(params, "marketingOptIn") === "yes",
-    created_at: new Date().toISOString(),
-    status: "new"
+export async function generateMetadata({
+  searchParams
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  return {
+    ...createMetadata(searchMetadata),
+    ...(Object.keys(params).length ? { robots: { index: false, follow: true } } : {})
   };
-
-  await prisma.websiteLead.create({
-    data: {
-      leadType: lead.lead_type,
-      email: lead.email,
-      firstName: lead.first_name,
-      payload: lead,
-      dedupeWeddingDate: lead.wedding_date || null,
-      dedupeLocation: lead.wedding_location || null
-    }
-  });
 }
 
 export default async function RegistrySearchPage({
@@ -75,7 +34,6 @@ export default async function RegistrySearchPage({
   const query = typeof params.query === "string" ? params.query : "";
   const canton = typeof params.canton === "string" ? params.canton : "";
   const postalCode = typeof params.postalCode === "string" ? params.postalCode : "";
-  await saveSearchLead(params);
   const results = searchRegistryOffices({ query, canton, postalCode });
   const requestedLocale = (await headers()).get("x-site-locale") ?? defaultLocale;
   const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
@@ -105,6 +63,12 @@ export default async function RegistrySearchPage({
             <OfficeCard key={office.slug} office={office} labels={labels} />
           ))}
         </div>
+        {results.length === 0 ? (
+          <div className="rounded-xl border border-linen bg-white p-6 text-center shadow-soft">
+            <h3 className="text-xl font-semibold text-ink">{labels.noResults}</h3>
+            <p className="mt-2 text-sm leading-6 text-soft-ink">{labels.noResultsHint}</p>
+          </div>
+        ) : null}
       </section>
     </main>
   );

@@ -1,4 +1,5 @@
 import { repairText } from "@/lib/search-experience";
+import { swissRegistryOffices } from "@/lib/registry-data";
 import type { CeremonyVenue, SwissRegistryOffice } from "@/lib/types";
 
 export type SafeMedia = {
@@ -9,6 +10,7 @@ export type SafeMedia = {
   attribution?: string;
   status: "approved" | "fallback_crest" | "placeholder";
   fit: "cover" | "contain";
+  fallback?: SafeMedia;
 };
 
 type ImageLike = {
@@ -38,17 +40,8 @@ export function registryOfficeMedia(office: SwissRegistryOffice): SafeMedia {
   const approved = approvedImage(office, office.name);
   if (approved) return approved;
 
-  if (office.coatOfArmsUrl) {
-    return {
-      url: office.coatOfArmsUrl,
-      alt: repairText(office.mediaAlt || office.imageAlt || `Wappen ${office.city}`),
-      source: repairText(office.imageSource),
-      license: repairText(office.imageLicense || office.mediaLicenseNote),
-      attribution: repairText(office.imageAttribution),
-      status: "fallback_crest",
-      fit: "contain"
-    };
-  }
+  const crest = officeCoatOfArmsMedia(office);
+  if (crest) return crest;
 
   return {
     alt: repairText(`Bildplatzhalter für ${office.name}`),
@@ -57,9 +50,30 @@ export function registryOfficeMedia(office: SwissRegistryOffice): SafeMedia {
   };
 }
 
+function officeCoatOfArmsMedia(office: SwissRegistryOffice): SafeMedia | null {
+  if (!office.coatOfArmsUrl) return null;
+
+  return {
+    url: office.coatOfArmsUrl,
+    alt: repairText(office.mediaAlt || `Wappen ${office.city}`),
+    license: repairText(office.mediaLicenseNote),
+    status: "fallback_crest",
+    fit: "contain"
+  };
+}
+
 export function ceremonyVenueMedia(venue: CeremonyVenue): SafeMedia {
   const approved = approvedImage(venue, venue.traulokal_name);
-  if (approved) return approved;
+  const office = swissRegistryOffices.find(
+    (item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id
+  );
+  const fallback = office ? officeCoatOfArmsMedia(office) : null;
+
+  if (approved) {
+    return fallback ? { ...approved, fallback } : approved;
+  }
+
+  if (fallback?.url) return fallback;
 
   return {
     alt: repairText(`Bildplatzhalter für ${venue.traulokal_name}`),

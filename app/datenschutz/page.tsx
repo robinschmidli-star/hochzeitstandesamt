@@ -16,12 +16,12 @@ const sections = [
   },
   {
     title: "2. Verantwortliche Stelle",
-    paragraphs: ["RS Schmidli Consulting, Stockenerstrasse 23, 8405 Winterthur, Schweiz", "E-Mail: robinschmidli@gmail.com"]
+    paragraphs: ["RS Schmidli Consulting, Stockenerstrasse 23, 8405 Winterthur, Schweiz", "E-Mail: kontakt@hochzeitstandesamt.ch"]
   },
   {
     title: "3. Welche Daten wir erfassen",
     paragraphs: [
-      "Wenn Sie unsere Suchfunktion, Kontaktformulare oder Leadformulare nutzen, können wir insbesondere Vorname, Nachname, E-Mail-Adresse, Telefonnummer, Wohnort oder Adresse, Ort der Heirat, Angaben zum Zivilstand oder familienrechtlichen Anliegen, Inhalte Ihrer Nachricht sowie weitere freiwillig eingegebene Informationen erfassen.",
+      "Wenn Sie unsere Suchfunktion oder Formulare nutzen, können wir insbesondere Vorname, E-Mail-Adresse, Wohn- oder Wunschort, Hochzeitsdatum, Angaben zu Ihrer Suche oder Anbieterwünschen, Inhalte Ihrer Nachricht sowie weitere freiwillig eingegebene Informationen erfassen.",
       "Beim Besuch der Website können automatisch technische Daten erhoben werden, insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp, Browserversion, Betriebssystem, Referrer-URL, Geräteinformationen und Nutzungsverhalten auf der Website.",
       "Wenn Sie Formularfelder mittels Browser- oder Google-Autofill ausfüllen, können die eingegebenen Daten beim Absenden des Formulars gespeichert werden."
     ]
@@ -29,79 +29,65 @@ const sections = [
   {
     title: "4. Zweck der Datenbearbeitung",
     paragraphs: [
-      "Wir bearbeiten personenbezogene Daten insbesondere zur Bereitstellung und zum Betrieb der Website, zur Bearbeitung von Anfragen, zur Vermittlung von geeigneten Familienrechtsanwälten, zur Kontaktaufnahme mit Nutzern, zur Verbesserung unserer Dienstleistungen, zur Analyse der Nutzung der Website, zur Missbrauchs- und Sicherheitsprävention sowie für Marketing- und Kommunikationszwecke."
+      "Wir bearbeiten personenbezogene Daten insbesondere zur Bereitstellung und zum Betrieb der Website, zur Bearbeitung von Anfragen, zum Speichern von Suchen und zur Zusendung angeforderter Informationen, zur Verbesserung unserer Dienstleistungen, zur Analyse der Nutzung der Website, zur Missbrauchs- und Sicherheitsprävention sowie für Marketing- und Kommunikationszwecke, sofern Sie darin eingewilligt haben."
     ]
   },
   {
-    title: "5. Leadvermittlung an Anwälte",
-    paragraphs: [
-      "Wenn Sie über unsere Plattform eine Anfrage stellen, können Ihre Angaben an passende Anwälte, Notare oder Kanzleien in Ihrer Region weitergeleitet werden.",
-      "Dabei können insbesondere Name, Kontaktdaten, Wohnort, Ort der Heirat und die Beschreibung Ihres Anliegens weitergegeben werden. Die Weitergabe erfolgt ausschliesslich zum Zweck der Kontaktvermittlung.",
-      "Mit dem Absenden Ihrer Anfrage erklären Sie sich mit dieser Weitergabe einverstanden, sofern die entsprechende Einwilligung im Formular erteilt wurde."
-    ]
-  },
-  {
-    title: "6. Rechtsgrundlagen",
+    title: "5. Rechtsgrundlagen",
     paragraphs: [
       "Die Bearbeitung personenbezogener Daten erfolgt gestützt auf Ihre Einwilligung, die Durchführung vorvertraglicher Massnahmen, berechtigte Interessen am Betrieb und der Verbesserung der Website sowie gesetzliche Verpflichtungen."
     ]
   },
   {
-    title: "7. Cookies und ähnliche Technologien",
+    title: "6. Cookies und ähnliche Technologien",
     paragraphs: [
       "Unsere Website kann Cookies und ähnliche Technologien verwenden. Cookies dienen insbesondere dazu, die Benutzerfreundlichkeit zu verbessern, Funktionen der Website bereitzustellen, Besucherstatistiken zu analysieren und Marketingmassnahmen zu unterstützen.",
       "Sie können Cookies jederzeit über Ihre Browsereinstellungen einschränken oder deaktivieren."
     ]
   },
   {
-    title: "8. Google-Dienste",
+    title: "7. Google-Dienste",
     paragraphs: [
       "Unsere Website kann Dienste von Google verwenden, insbesondere Google Analytics, Google Fonts, Google Maps, Google Autofill / Google Places API, Google Ads oder Remarketing. Dabei können Daten an Server von Google übertragen werden.",
       "Weitere Informationen finden Sie unter https://policies.google.com/privacy."
     ]
   },
   {
-    title: "9. Speicherung und Aufbewahrung",
+    title: "8. Speicherung und Aufbewahrung",
     paragraphs: ["Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen."]
   },
   {
-    title: "10. Datensicherheit",
+    title: "9. Datensicherheit",
     paragraphs: [
       "Wir treffen angemessene technische und organisatorische Sicherheitsmassnahmen zum Schutz Ihrer Daten. Trotz sorgfältiger Sicherheitsmassnahmen kann eine absolute Sicherheit bei der Datenübertragung im Internet nicht garantiert werden."
     ]
   },
   {
-    title: "11. Weitergabe an Dritte",
+    title: "10. Weitergabe an Dritte",
     paragraphs: [
-      "Eine Weitergabe personenbezogener Daten an Dritte erfolgt nur, wenn dies zur Vertragserfüllung erforderlich ist, wenn Sie eingewilligt haben, wenn wir gesetzlich dazu verpflichtet sind, an technische Dienstleister wie Hosting-, Analyse- oder CRM-Anbieter oder an vermittelte Anwälte, Notare oder Kanzleien."
+      "Eine Weitergabe personenbezogener Daten an Dritte erfolgt nur, wenn dies zur Vertragserfüllung erforderlich ist, wenn Sie eingewilligt haben, wenn wir gesetzlich dazu verpflichtet sind oder soweit technische Dienstleister wie Hosting-, Analyse- oder CRM-Anbieter für uns tätig sind."
     ]
   },
   {
-    title: "12. Hosting und Drittanbieter",
+    title: "11. Hosting und Drittanbieter",
     paragraphs: [
-      "Unsere Website wird bei der Hosting-Anbieterin green.ch betrieben. Dabei können personenbezogene Daten auf Servern in der Schweiz, der EU oder anderen Ländern gespeichert werden. Wir achten darauf, dass dabei ein angemessenes Datenschutzniveau gewährleistet wird."
+      "Unsere Website wird über Vercel bereitgestellt. Dabei können technische Verbindungsdaten durch Vercel verarbeitet werden. Anfragen und Nutzungsdaten werden in der für diese Website konfigurierten PostgreSQL-Datenbank gespeichert. Die jeweils eingesetzten Anbieter werden vertraglich und technisch so eingebunden, dass ein angemessenes Datenschutzniveau gewährleistet wird."
     ]
   },
   {
-    title: "13. Ihre Rechte",
+    title: "12. Ihre Rechte",
     paragraphs: [
       "Sie haben im Rahmen des anwendbaren Datenschutzrechts insbesondere das Recht auf Auskunft über gespeicherte Daten, Berichtigung unrichtiger Daten, Löschung personenbezogener Daten, Einschränkung der Bearbeitung, Widerspruch gegen bestimmte Datenbearbeitungen sowie Widerruf einer Einwilligung.",
       "Anfragen können an die oben genannte Kontaktadresse gerichtet werden."
     ]
   },
   {
-    title: "14. Keine Rechtsberatung",
-    paragraphs: [
-      "Die Inhalte dieser Website stellen keine Rechtsberatung dar. Die Vermittlung eines Kontakts zu einem Anwalt, Notar oder einer Kanzlei begründet kein Mandatsverhältnis mit dem Betreiber dieser Website."
-    ]
-  },
-  {
-    title: "15. Änderungen dieser Datenschutzerklärung",
+    title: "13. Änderungen dieser Datenschutzerklärung",
     paragraphs: ["Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. Es gilt jeweils die auf dieser Website veröffentlichte aktuelle Version."]
   },
   {
-    title: "16. Kontakt",
-    paragraphs: ["Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren: robinschmidli@gmail.com"]
+    title: "14. Kontakt",
+    paragraphs: ["Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren: kontakt@hochzeitstandesamt.ch"]
   }
 ];
 

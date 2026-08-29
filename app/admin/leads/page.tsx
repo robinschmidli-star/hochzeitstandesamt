@@ -14,7 +14,6 @@ type Lead = {
   legal_topic: string;
   message: string;
   consent_privacy: boolean;
-  consent_forwarding: boolean;
   created_at: string;
   status: "new" | "contacted" | "forwarded" | "closed";
 };
@@ -37,7 +36,6 @@ async function getLeads() {
       legal_topic: payload.legal_topic ?? "",
       message: payload.message ?? "",
       consent_privacy: payload.consent_privacy ?? false,
-      consent_forwarding: payload.consent_forwarding ?? false,
       created_at: row.createdAt.toISOString(),
       status: row.status as Lead["status"]
     } satisfies Lead;

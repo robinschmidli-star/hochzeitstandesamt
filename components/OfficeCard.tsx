@@ -18,6 +18,8 @@ export function OfficeCard({ office, labels = defaultRegistrySearchLabels }: { o
           <h2 className="mt-1 text-xl font-semibold text-ink">{repairText(office.name)}</h2>
         </div>
         {media.url ? (
+          // Approved media may come from provenance-controlled external hosts.
+          // eslint-disable-next-line @next/next/no-img-element
           <img src={media.url} alt={media.alt} className="h-12 w-12 object-contain" loading="lazy" />
         ) : (
           <span className="rounded-full bg-linen px-3 py-1 text-xs font-semibold text-sage">{city}</span>

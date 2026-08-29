@@ -6,12 +6,9 @@ import { registryCantons } from "@/lib/registry-data";
 import { repairText } from "@/lib/search-experience";
 import type { Dictionary } from "@/lib/i18n";
 import de from "@/locales/de.json";
-import postalCodes from "switzerland-postal-codes/dist/postal-codes-full.json";
+import { NameSearch } from "@/components/NameSearch";
 
 type SearchType = "date" | "location" | "style";
-type PostalCodeEntry = { name: string; canton: string; latitude: string; longitude: string };
-
-const postalCodeEntries = postalCodes as Record<string, PostalCodeEntry[]>;
 const currentYear = new Date().getFullYear();
 const years = Array.from({ length: 4 }, (_, index) => String(currentYear + index));
 const months = [["01", "Januar"], ["02", "Februar"], ["03", "März"], ["04", "April"], ["05", "Mai"], ["06", "Juni"], ["07", "Juli"], ["08", "August"], ["09", "September"], ["10", "Oktober"], ["11", "November"], ["12", "Dezember"]];
@@ -31,12 +28,6 @@ const searchTypes = [
   { type: "location" as const, icon: "location" as const, titleKey: "search.location.title", textKey: "search.location.text" },
   { type: "style" as const, icon: "heart" as const, titleKey: "search.style.title", textKey: "search.style.text" }
 ];
-
-function getPlaceFromPostalCode(value: string) {
-  const code = value.trim().match(/^\d{4}$/)?.[0];
-  const entry = code ? postalCodeEntries[code]?.[0] : undefined;
-  return code && entry ? `${code} ${repairText(entry.name)}` : "";
-}
 
 function createTranslator(dictionary: Dictionary) {
   const fallback = de as Dictionary;
@@ -99,9 +90,9 @@ export function SearchEntryCards({ selectedSearchType, onSelect, t }: {
   );
 }
 
-export function DateSearchForm({ t }: { t: (key: string) => string }) {
+export function DateSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
   return (
-    <form action="/search" className="grid gap-5">
+    <form action={`${pathPrefix}/search`} className="grid gap-5">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-medium text-ink">
           {t("search.month")}
@@ -138,19 +129,34 @@ export function DateSearchForm({ t }: { t: (key: string) => string }) {
   );
 }
 
-export function LocationSearchForm({ t }: { t: (key: string) => string }) {
+export function LocationSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
   const [locationValue, setLocationValue] = useState("");
   const [locationHint, setLocationHint] = useState("");
+  const postalLookup = useRef<AbortController | null>(null);
 
   function handleLocationChange(event: ChangeEvent<HTMLInputElement>) {
     const nextValue = event.target.value;
-    const place = getPlaceFromPostalCode(nextValue);
-    setLocationValue(place || nextValue);
-    setLocationHint(place ? `${t("search.locationHint")}: ${place}` : "");
+    setLocationValue(nextValue);
+    setLocationHint("");
+    postalLookup.current?.abort();
+    if (!/^\d{4}$/.test(nextValue.trim())) return;
+
+    const controller = new AbortController();
+    postalLookup.current = controller;
+    void fetch(`/api/postal-code?q=${encodeURIComponent(nextValue.trim())}`, { signal: controller.signal })
+      .then((response) => response.ok ? response.json() as Promise<{ place?: string }> : { place: "" })
+      .then(({ place }) => {
+        if (!place) return;
+        setLocationValue(place);
+        setLocationHint(`${t("search.locationHint")}: ${place}`);
+      })
+      .catch((error) => {
+        if (!(error instanceof DOMException && error.name === "AbortError")) setLocationHint("");
+      });
   }
 
   return (
-    <form action="/search" className="grid gap-5">
+    <form action={`${pathPrefix}/search`} className="grid gap-5">
       <label className="grid gap-2 text-sm font-medium text-ink">
         {t("search.locationLabel")}
         <input name="location" value={locationValue} onChange={handleLocationChange} placeholder={t("search.locationPlaceholder")} className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
@@ -179,9 +185,9 @@ export function LocationSearchForm({ t }: { t: (key: string) => string }) {
   );
 }
 
-export function StyleSearchForm({ t }: { t: (key: string) => string }) {
+export function StyleSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
   return (
-    <form action="/search" className="grid gap-5">
+    <form action={`${pathPrefix}/search`} className="grid gap-5">
       <div className="flex flex-wrap gap-2">
         {tags.map(([value, labelKey]) => (
           <label key={value} className="cursor-pointer">
@@ -202,11 +208,11 @@ export function StyleSearchForm({ t }: { t: (key: string) => string }) {
   );
 }
 
-export function ExpandedSearchPanel({ selectedSearchType, t }: { selectedSearchType: SearchType; t: (key: string) => string }) {
+export function ExpandedSearchPanel({ selectedSearchType, t, pathPrefix = "" }: { selectedSearchType: SearchType; t: (key: string) => string; pathPrefix?: string }) {
   const content = {
-    date: { icon: "date" as const, title: t("search.datePanel.title"), text: t("search.datePanel.text"), form: <DateSearchForm t={t} /> },
-    location: { icon: "location" as const, title: t("search.locationPanel.title"), text: t("search.locationPanel.text"), form: <LocationSearchForm t={t} /> },
-    style: { icon: "heart" as const, title: t("search.stylePanel.title"), text: t("search.stylePanel.text"), form: <StyleSearchForm t={t} /> }
+    date: { icon: "date" as const, title: t("search.datePanel.title"), text: t("search.datePanel.text"), form: <DateSearchForm t={t} pathPrefix={pathPrefix} /> },
+    location: { icon: "location" as const, title: t("search.locationPanel.title"), text: t("search.locationPanel.text"), form: <LocationSearchForm t={t} pathPrefix={pathPrefix} /> },
+    style: { icon: "heart" as const, title: t("search.stylePanel.title"), text: t("search.stylePanel.text"), form: <StyleSearchForm t={t} pathPrefix={pathPrefix} /> }
   }[selectedSearchType];
 
   return (
@@ -223,7 +229,7 @@ export function ExpandedSearchPanel({ selectedSearchType, t }: { selectedSearchT
   );
 }
 
-export function HomeHeroSearchClient({ dictionary }: { dictionary: Dictionary }) {
+export function HomeHeroSearchClient({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const [selectedSearchType, setSelectedSearchType] = useState<SearchType | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const t = createTranslator(dictionary);
@@ -240,8 +246,11 @@ export function HomeHeroSearchClient({ dictionary }: { dictionary: Dictionary })
 
   return (
     <div className="mt-8 grid gap-5">
+      <section className="rounded-2xl border border-linen bg-white p-5 shadow-soft sm:p-6">
+        <NameSearch dictionary={dictionary} pathPrefix={pathPrefix} />
+      </section>
       <SearchEntryCards selectedSearchType={selectedSearchType} onSelect={selectSearchType} t={t} />
-      <div ref={panelRef}>{selectedSearchType ? <ExpandedSearchPanel selectedSearchType={selectedSearchType} t={t} /> : null}</div>
+      <div ref={panelRef}>{selectedSearchType ? <ExpandedSearchPanel selectedSearchType={selectedSearchType} t={t} pathPrefix={pathPrefix} /> : null}</div>
     </div>
   );
 }

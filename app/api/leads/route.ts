@@ -2,35 +2,57 @@ import { NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { rateLimit } from "@/lib/rate-limit";
 
-const schema = z.object({
-  leadType: z.string().min(1),
-  firstName: z.string().min(1),
-  email: z.string().email(),
-  sourcePage: z.string().min(1),
-  consentPrivacy: z.string().optional(),
-  consentForwarding: z.string().optional()
-});
+const localPath = z.string().startsWith("/").max(500).refine((value) => !value.startsWith("//"));
+const shortText = z.string().trim().max(120);
+const optionalText = z.string().trim().max(500).optional().default("");
+
+const formBase = {
+  firstName: shortText.min(1),
+  email: z.string().trim().email().max(254),
+  sourcePage: localPath,
+  consentPrivacy: z.literal("on")
+};
+
+const schema = z.discriminatedUnion("leadType", [
+  z.object({
+    ...formBase,
+    leadType: z.literal("checklist"),
+    registryOfficeSlug: z.string().trim().max(120).optional().default(""),
+    cantonSlug: z.string().trim().max(20).optional().default(""),
+    weddingDate: z.string().trim().max(10).optional().default(""),
+    language: z.enum(["DE", "FR", "IT", "EN"]).optional().default("DE")
+  }).strict(),
+  z.object({
+    ...formBase,
+    leadType: z.literal("vendor_request"),
+    city: shortText.optional().default(""),
+    guestCount: z.string().trim().max(5).regex(/^\d*$/).optional().default(""),
+    requestedVendorCategories: z.array(z.string().trim().max(80)).max(12).optional().default([]),
+    message: z.string().trim().max(2_000).optional().default("")
+  }).strict()
+]);
 
 const searchLeadSchema = z.object({
   leadType: z.literal("search_save"),
-  email: z.string().email(),
-  firstName: z.string().optional().default(""),
-  language: z.string().optional().default("de"),
+  email: z.string().trim().email().max(254),
+  firstName: shortText.optional().default(""),
+  language: z.enum(["de", "fr", "it", "en"]).default("de"),
   marketingConsent: z.boolean().default(false),
-  sourcePage: z.string().min(1),
+  sourcePage: localPath,
   searchType: z.enum(["date_search", "location_search", "beautiful_locations", "saturday_search"]),
-  weddingDate: z.string().optional().default(""),
-  desiredDate: z.string().optional().default(""),
-  dateRangeStart: z.string().optional().default(""),
-  dateRangeEnd: z.string().optional().default(""),
-  weekday: z.string().optional().default(""),
+  weddingDate: optionalText,
+  desiredDate: optionalText,
+  dateRangeStart: optionalText,
+  dateRangeEnd: optionalText,
+  weekday: optionalText,
   elopement: z.boolean().optional().default(false),
-  location: z.string().optional().default(""),
-  canton: z.string().optional().default(""),
-  city: z.string().optional().default(""),
-  selectedVenueIds: z.array(z.string()).optional().default([]),
-  favoriteVenueIds: z.array(z.string()).optional().default([])
+  location: optionalText,
+  canton: shortText.optional().default(""),
+  city: shortText.optional().default(""),
+  selectedVenueIds: z.array(z.string().max(100)).max(20).optional().default([]),
+  favoriteVenueIds: z.array(z.string().max(100)).max(20).optional().default([])
 });
 
 
@@ -48,8 +70,12 @@ async function existingSearchLeadId(email: string, weddingDate: string, location
 }
 
 export async function POST(request: Request) {
-  if (request.headers.get("content-type")?.includes("application/json")) {
-    const parsed = searchLeadSchema.safeParse(await request.json());
+  const limited = await rateLimit(request, "leads", 10, 60 * 60_000);
+  if (limited) return limited;
+
+  try {
+    if (request.headers.get("content-type")?.includes("application/json")) {
+      const parsed = searchLeadSchema.safeParse(await request.json());
 
     if (!parsed.success) {
       return NextResponse.json({ ok: false, message: "Bitte prüfe deine E-Mail-Adresse." }, { status: 400 });
@@ -98,32 +124,43 @@ export async function POST(request: Request) {
       }
     });
 
-    return NextResponse.json({ ok: true });
-  }
+      return NextResponse.json({ ok: true });
+    }
 
-  const formData = await request.formData();
-  const data = Object.fromEntries(formData.entries());
-  const parsed = schema.safeParse(data);
+    const formData = await request.formData();
+    const raw = Object.fromEntries(formData.entries());
+    const parsed = schema.safeParse(raw.leadType === "vendor_request" ? {
+      ...raw,
+      requestedVendorCategories: formData.getAll("requestedVendorCategories").map(String)
+    } : raw);
 
-  if (!parsed.success || data.consentPrivacy !== "on" || (data.leadType === "family_law" && data.consentForwarding !== "on")) {
-    return NextResponse.json({ ok: false, message: "Bitte prüfe die Angaben und die Datenschutzeinwilligung." }, { status: 400 });
-  }
+    if (!parsed.success) {
+      return NextResponse.json({ ok: false, message: "Bitte prüfe die Angaben und die Datenschutzeinwilligung." }, { status: 400 });
+    }
 
-  const lead = {
-    lead_type: String(data.leadType),
-    source_page: String(data.sourcePage),
-    first_name: String(data.firstName),
-    last_name: String(data.lastName ?? ""),
-    email: String(data.email),
-    phone: String(data.phone ?? ""),
-    address: String(data.address ?? ""),
-    canton: String(data.canton ?? data.cantonSlug ?? ""),
-    wedding_location: String(data.weddingLocation ?? data.registryOfficeSlug ?? ""),
-    wedding_date: String(data.weddingDate ?? ""),
-    legal_topic: String(data.legalTopic ?? ""),
-    message: String(data.message ?? ""),
-    consent_privacy: data.consentPrivacy === "on",
-    consent_forwarding: data.consentForwarding === "on",
+  const data = parsed.data;
+  const lead = data.leadType === "checklist" ? {
+    lead_type: data.leadType,
+    source_page: data.sourcePage,
+    first_name: data.firstName,
+    email: data.email,
+    canton: data.cantonSlug,
+    wedding_location: data.registryOfficeSlug,
+    wedding_date: data.weddingDate,
+    language: data.language.toLowerCase(),
+    consent_privacy: true,
+    created_at: new Date().toISOString(),
+    status: "new"
+  } : {
+    lead_type: data.leadType,
+    source_page: data.sourcePage,
+    first_name: data.firstName,
+    email: data.email,
+    city: data.city,
+    guest_count: data.guestCount ? Number(data.guestCount) : null,
+    requested_vendor_categories: data.requestedVendorCategories,
+    message: data.message,
+    consent_privacy: true,
     created_at: new Date().toISOString(),
     status: "new"
   };
@@ -136,5 +173,14 @@ export async function POST(request: Request) {
     }
   });
 
-  return NextResponse.redirect(new URL(`/danke?type=${encodeURIComponent(parsed.data.leadType)}`, request.url), 303);
+    return NextResponse.redirect(new URL(`/danke?type=${encodeURIComponent(data.leadType)}`, request.url), 303);
+  } catch (error) {
+    if (error instanceof z.ZodError || error instanceof SyntaxError) {
+      return NextResponse.json({ ok: false, message: "Bitte prüfe deine Angaben." }, { status: 400 });
+    }
+    return NextResponse.json(
+      { ok: false, message: "Die Anfrage konnte nicht gespeichert werden." },
+      { status: 500 }
+    );
+  }
 }

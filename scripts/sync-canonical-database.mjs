@@ -6,9 +6,12 @@ import pg from "pg";
 
 const { Client } = pg;
 const checkOnly = process.argv.includes("--check");
-const connectionString = process.env.PUBLIC_REPLICA_DATABASE_URL;
+const connectionString =
+  process.env.WEB_PUBLIC_REPLICA_DATABASE_URL ?? process.env.PUBLIC_REPLICA_DATABASE_URL;
 if (!connectionString) {
-  throw new Error("PUBLIC_REPLICA_DATABASE_URL is required and must expose only the curated web_public_* contract");
+  throw new Error(
+    "WEB_PUBLIC_REPLICA_DATABASE_URL or PUBLIC_REPLICA_DATABASE_URL is required and must expose only the curated web_public_* contract"
+  );
 }
 
 const registryPath = path.resolve("lib/registry-data.ts");
@@ -65,11 +68,6 @@ const boolean = (value) => {
 const list = (value) =>
   [...new Set(text(value).split(/[,;|\n]+/).map((item) => item.trim()).filter(Boolean))];
 
-function uniqueMatch(items, key) {
-  const matches = items.filter((item) => key(item));
-  return matches.length === 1 ? matches[0] : null;
-}
-
 function uniqueSlug(base, used, suffix) {
   let candidate = base;
   if (used.has(candidate)) candidate = `${base}-${suffix}`;
@@ -115,18 +113,12 @@ try {
 const mediaByEntityId = new Map(mediaRows.map((row) => [String(row.entity_id), row]));
 function publicMediaFields(entityId) {
   const media = mediaByEntityId.get(String(entityId));
-  if (!media) {
-    return {
-      imageUrl: undefined,
-      imageAlt: undefined,
-      imageSource: undefined,
-      imageLicense: undefined,
-      imageAttribution: undefined,
-      imageStatus: undefined
-    };
-  }
+  // The public replica may not expose the optional media contract yet. In that
+  // case, retain provenance-reviewed media already present in the TS snapshot.
+  const imageUrl = text(media?.image_url);
+  if (!imageUrl) return {};
   return {
-    imageUrl: text(media.image_url),
+    imageUrl,
     imageAlt: text(media.image_alt),
     imageSource: text(media.image_source),
     imageLicense: undefined,
@@ -137,7 +129,9 @@ function publicMediaFields(entityId) {
 
 const cantonByCode = new Map(existingCantons.map((item) => [item.code, item]));
 const oldOfficeByKey = new Map();
+const oldOfficeByCanonicalId = new Map();
 for (const office of existingOffices) {
+  if (office.canonicalId) oldOfficeByCanonicalId.set(String(office.canonicalId), office);
   const key = `${office.canton}|${normalize(office.name)}`;
   const values = oldOfficeByKey.get(key) ?? [];
   values.push(office);
@@ -151,7 +145,9 @@ const offices = officeRows.map((row) => {
   const profile = row.profile ?? {};
   const canton = text(row.canton_code || profile.region_code).toUpperCase();
   const oldMatches = oldOfficeByKey.get(`${canton}|${normalize(row.name)}`) ?? [];
-  const old = oldMatches.length === 1 ? oldMatches[0] : null;
+  const old =
+    oldOfficeByCanonicalId.get(String(row.id)) ??
+    (oldMatches.length === 1 ? oldMatches[0] : null);
   if (old) matchedOldOfficeIds.add(old.id);
   const cantonInfo = cantonByCode.get(canton);
   const city = text(row.city || profile.locality || profile.municipality);
@@ -183,6 +179,9 @@ const offices = officeRows.map((row) => {
     responsibleMunicipalities:
       municipalities.length > 0 ? municipalities : old?.responsibleMunicipalities ?? [],
     map: old?.map ?? cantonInfo?.map ?? [],
+    coatOfArmsUrl: text(profile.coat_of_arms_url || old?.coatOfArmsUrl),
+    mediaAlt: text(profile.coat_of_arms_alt || old?.mediaAlt),
+    mediaLicenseNote: text(profile.coat_of_arms_source_note || old?.mediaLicenseNote),
     ceremonySaturday: boolean(profile.saturday_available ?? old?.ceremonySaturday),
     phase1CheckedAt: text(profile.last_verified_at || old?.phase1CheckedAt),
     ...publicMediaFields(row.id)
@@ -211,13 +210,15 @@ for (const assignment of assignmentRows) {
   assignmentsByVenue.set(venueId, officeIds);
 }
 const oldVenueByKey = new Map();
+const oldVenueByCanonicalId = new Map();
 for (const venue of existingVenues) {
+  if (venue.canonicalId) oldVenueByCanonicalId.set(String(venue.canonicalId), venue);
   const key = `${venue.kanton}|${normalize(venue.traulokal_name)}`;
   const values = oldVenueByKey.get(key) ?? [];
   values.push(venue);
   oldVenueByKey.set(key, values);
 }
-const matchedOldVenueNames = new Set();
+const matchedOldVenueIds = new Set();
 const ambiguousVenueAssignments = [];
 const venues = [];
 for (const row of venueRows) {
@@ -235,8 +236,15 @@ for (const row of venueRows) {
   const office = canonicalOfficeById.get(officeIds[0]);
   if (!office) continue;
   const oldMatches = oldVenueByKey.get(`${canton}|${normalize(row.name)}`) ?? [];
-  const old = oldMatches.length === 1 ? oldMatches[0] : null;
-  if (old) matchedOldVenueNames.add(`${old.kanton}|${old.traulokal_name}`);
+  const old = oldVenueByCanonicalId.get(String(row.id)) ?? (oldMatches.length === 1 ? oldMatches[0] : null);
+  if (old) matchedOldVenueIds.add(old.canonicalId ?? `${old.kanton}|${old.traulokal_name}`);
+  const beautyStatus = text(profile.beauty_status || old?.beautyStatus);
+  const highlightLevel = number(profile.highlight_level ?? old?.highlightLevel);
+  const profileTags = Array.isArray(profile.tags)
+    ? [...new Set(profile.tags.map(text).filter(Boolean))]
+    : [];
+  const tags = profileTags.length > 0 ? profileTags : old?.tags ?? [];
+  const websitePriority = text(profile.website_priority || old?.websitePriority);
   venues.push({
     ...(old ?? {}),
     canonicalId: String(row.id),
@@ -265,6 +273,10 @@ for (const row of venueRows) {
     venueUrl: text(row.website || profile.website || profile.source_url_detail || old?.venueUrl),
     sourceUrl: text(profile.source_url_detail || profile.source_url || old?.sourceUrl),
     remarks: text(profile.notes || profile.review_note || old?.remarks),
+    ...(beautyStatus ? { beautyStatus } : {}),
+    ...(highlightLevel !== null ? { highlightLevel } : {}),
+    ...(tags.length > 0 ? { tags } : {}),
+    ...(websitePriority ? { websitePriority } : {}),
     ...publicMediaFields(row.id)
   });
 }
@@ -294,8 +306,8 @@ const report = {
   publicVenues: venues.length,
   matchedExistingOffices: matchedOldOfficeIds.size,
   unmatchedExistingOffices: existingOffices.length - matchedOldOfficeIds.size,
-  matchedExistingVenues: matchedOldVenueNames.size,
-  unmatchedExistingVenues: existingVenues.length - matchedOldVenueNames.size,
+  matchedExistingVenues: matchedOldVenueIds.size,
+  unmatchedExistingVenues: existingVenues.length - matchedOldVenueIds.size,
   withheldVenuesWithoutExactlyOnePublicOffice: ambiguousVenueAssignments.length,
   withheldVenueDetails: ambiguousVenueAssignments,
   files

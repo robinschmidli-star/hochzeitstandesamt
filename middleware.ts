@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { isLocale } from "@/lib/i18n";
+import { defaultLocale, isLocale } from "@/lib/i18n";
 
 const adminSessionCookie = "admin_session";
 
@@ -31,8 +31,17 @@ export async function middleware(request: NextRequest) {
       return NextResponse.redirect(loginUrl);
     }
   }
+  if (pathname.startsWith("/admin")) {
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
   const segments = pathname.split("/").filter(Boolean);
   const locale = segments[0];
+
+  if (locale === defaultLocale && segments.length === 1) {
+    return NextResponse.redirect(new URL("/", request.url), 308);
+  }
 
   if (!isLocale(locale) || segments.length === 1) {
     return NextResponse.next();
@@ -42,7 +51,12 @@ export async function middleware(request: NextRequest) {
   url.pathname = `/${segments.slice(1).join("/")}`;
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-site-locale", locale);
-  return NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+  const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+  const localizedSection = segments[1];
+  if (!new Set(["search", "zivilstandsamt"]).has(localizedSection)) {
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+  }
+  return response;
 }
 
 export const config = {

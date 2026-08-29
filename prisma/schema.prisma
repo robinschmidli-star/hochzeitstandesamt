@@ -164,6 +164,18 @@ model AnalyticsEvent {
   @@map("analytics_events")
 }
 
+model RateLimitBucket {
+  namespace  String
+  clientHash String   @map("client_hash")
+  count      Int
+  resetAt    DateTime @map("reset_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@id([namespace, clientHash])
+  @@index([resetAt], map: "rate_limit_buckets_reset_at_idx")
+  @@map("rate_limit_buckets")
+}
+
 model Vendor {
   id               String       @id @default(cuid())
   companyName      String       @map("company_name")

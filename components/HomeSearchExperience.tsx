@@ -2,8 +2,10 @@ import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { HomeHeroSearchClient } from "@/components/HomeHeroSearchClient";
 import { SwissMap } from "@/components/SwissMap";
-import { ceremonyVenues } from "@/lib/ceremony-venues";
-import type { Dictionary } from "@/lib/i18n";
+import { publicCeremonyVenues } from "@/lib/public-venues";
+import { swissRegistryOffices } from "@/lib/registry-data";
+import { defaultLocale, type Dictionary, type Locale } from "@/lib/i18n";
+import { registrySearchLabels } from "@/lib/registry-search-labels";
 import { ceremonyVenueMedia } from "@/lib/safe-media";
 import de from "@/locales/de.json";
 
@@ -12,7 +14,7 @@ function createTranslator(dictionary: Dictionary) {
   return (key: string) => dictionary[key] ?? fallback[key] ?? key;
 }
 
-export function HomeHeroSearch({ dictionary }: { dictionary: Dictionary }) {
+export function HomeHeroSearch({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const t = createTranslator(dictionary);
 
   return (
@@ -21,13 +23,13 @@ export function HomeHeroSearch({ dictionary }: { dictionary: Dictionary }) {
         <p className="text-sm font-semibold uppercase tracking-[0.1em] text-champagne">{t("hero.eyebrow")}</p>
         <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-[1.02] text-ink sm:text-6xl sm:leading-[0.98]">{t("hero.title")}</h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-soft-ink">{t("hero.subtitle")}</p>
-        <HomeHeroSearchClient dictionary={dictionary} />
+        <HomeHeroSearchClient dictionary={dictionary} pathPrefix={pathPrefix} />
       </div>
     </section>
   );
 }
 
-export function PopularSearchLinks({ dictionary }: { dictionary: Dictionary }) {
+export function PopularSearchLinks({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const t = createTranslator(dictionary);
   const links = [
     ["/search?tag=featured", t("popular.featured")],
@@ -40,7 +42,7 @@ export function PopularSearchLinks({ dictionary }: { dictionary: Dictionary }) {
       <h2 className="text-3xl font-semibold text-ink">{t("popular.title")}</h2>
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {links.map(([href, label]) => (
-          <Link key={href} href={href} className="focus-ring rounded-xl border border-linen bg-white p-4 font-semibold text-ink shadow-soft transition hover:border-champagne hover:text-sage">
+          <Link key={href} href={`${pathPrefix}${href}`} className="focus-ring rounded-xl border border-linen bg-white p-4 font-semibold text-ink shadow-soft transition hover:border-champagne hover:text-sage">
             {label}
           </Link>
         ))}
@@ -49,19 +51,30 @@ export function PopularSearchLinks({ dictionary }: { dictionary: Dictionary }) {
   );
 }
 
-export function SwitzerlandMapSection() {
+export function SwitzerlandMapSection({
+  dictionary,
+  locale = defaultLocale
+}: {
+  dictionary: Dictionary;
+  locale?: Locale;
+}) {
   return (
     <section className="mx-auto max-w-7xl px-4 pb-8 pt-2 sm:px-6 lg:px-8">
-      <SwissMap />
+      <SwissMap labels={registrySearchLabels(dictionary, locale)} />
     </section>
   );
 }
 
-export function FeaturedRegistryOffices({ dictionary }: { dictionary: Dictionary }) {
+export function FeaturedRegistryOffices({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const t = createTranslator(dictionary);
-  const featured = ceremonyVenues
+  const featured = publicCeremonyVenues
     .filter((venue) => venue.websitePriority?.startsWith("Top20:"))
-    .sort((left, right) => left.websitePriority!.localeCompare(right.websitePriority!));
+    .sort((left, right) => left.websitePriority!.localeCompare(right.websitePriority!))
+    .map((venue) => ({
+      venue,
+      officeSlug: swissRegistryOffices.find((office) => office.id === venue.standesamt_id || office.slug === venue.standesamt_id)?.slug
+    }))
+    .filter((item): item is { venue: (typeof publicCeremonyVenues)[number]; officeSlug: string } => Boolean(item.officeSlug));
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -70,10 +83,10 @@ export function FeaturedRegistryOffices({ dictionary }: { dictionary: Dictionary
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{t("featured.eyebrow")}</p>
           <h2 className="mt-2 text-3xl font-semibold text-ink">{t("featured.title")}</h2>
         </div>
-        <Link href="/standesamt-finden" className="text-sm font-semibold text-sage">{t("featured.all")}</Link>
+        <Link href={`${pathPrefix}/standesamt-finden`} className="text-sm font-semibold text-sage">{t("featured.all")}</Link>
       </div>
       <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {featured.map((venue) => (
+        {featured.map(({ venue, officeSlug }) => (
           <article key={venue.canonicalId} className="overflow-hidden rounded-xl border border-linen bg-white shadow-soft">
             <div className="flex h-40 items-center justify-center bg-linen/70">
               <SafeMediaFrame media={ceremonyVenueMedia(venue)} className="h-full w-full" />
@@ -82,7 +95,7 @@ export function FeaturedRegistryOffices({ dictionary }: { dictionary: Dictionary
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">Traulokal · {venue.ort || venue.kanton}</p>
               <h3 className="mt-2 text-xl font-semibold text-ink">{venue.traulokal_name}</h3>
               <p className="mt-3 text-sm leading-6 text-soft-ink">{venue.beschreibung || venue.standesamt_name}</p>
-              <Link href={`/zivilstandsamt/${venue.standesamt_id}`} className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
+              <Link href={`${pathPrefix}/zivilstandsamt/${officeSlug}`} className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
             </div>
           </article>
         ))}
@@ -91,7 +104,7 @@ export function FeaturedRegistryOffices({ dictionary }: { dictionary: Dictionary
   );
 }
 
-export function HomeGuideTeasers({ dictionary }: { dictionary: Dictionary }) {
+export function HomeGuideTeasers({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const t = createTranslator(dictionary);
   const guides = [
     [t("guides.saturday"), "/search?weekday=saturday&saturdayOnly=true"],
@@ -119,7 +132,7 @@ export function HomeGuideTeasers({ dictionary }: { dictionary: Dictionary }) {
               ))}
             </ol>
           </div>
-          <Link href="/heiraten-schweiz" className="focus-ring inline-flex w-fit rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
+          <Link href={`${pathPrefix}/heiraten-schweiz`} className="focus-ring inline-flex w-fit rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
             Hochzeits-Journey entdecken →
           </Link>
         </div>
@@ -127,7 +140,7 @@ export function HomeGuideTeasers({ dictionary }: { dictionary: Dictionary }) {
       <h3 className="mt-8 text-xl font-semibold text-ink">Weitere Ratgeber</h3>
       <div className="mt-5 grid gap-3 md:grid-cols-2">
         {guides.map(([label, href]) => (
-          <Link key={label} href={href} className="focus-ring rounded-xl border border-linen bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-sage/25 hover:text-sage">
+          <Link key={label} href={`${pathPrefix}${href}`} className="focus-ring rounded-xl border border-linen bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-sage/25 hover:text-sage">
             {label}
           </Link>
         ))}

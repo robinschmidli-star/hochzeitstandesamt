@@ -81,11 +81,11 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             <button
               type="button"
               className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-white text-sage shadow-soft md:hidden"
-              aria-label={mobileMenuOpen ? "Menü schliessen" : "Menü öffnen"}
+              aria-label={mobileMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((open) => !open)}
             >
-              <span className="sr-only">{mobileMenuOpen ? "Menü schliessen" : "Menü öffnen"}</span>
+              <span className="sr-only">{mobileMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}</span>
               <span className="grid gap-1">
                 <span className={`block h-0.5 w-4 rounded-full bg-current transition ${mobileMenuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
                 <span className={`block h-0.5 w-4 rounded-full bg-current transition ${mobileMenuOpen ? "opacity-0" : ""}`} />

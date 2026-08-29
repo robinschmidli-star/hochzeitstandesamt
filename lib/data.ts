@@ -177,14 +177,14 @@ export const guides: GuideArticle[] = [
     slug: "gueterstand-ehevertrag-schweiz",
     metaTitle: "Güterstand & Ehevertrag Schweiz | Was Paare vor der Hochzeit wissen sollten",
     metaDescription:
-      "Welche finanziellen Folgen hat eine Ehe in der Schweiz? Überblick zu Errungenschaftsbeteiligung, Gütertrennung, Gütergemeinschaft und Ehevertrag – mit regionaler Anwaltsvermittlung.",
+      "Welche finanziellen Folgen hat eine Ehe in der Schweiz? Überblick zu Errungenschaftsbeteiligung, Gütertrennung, Gütergemeinschaft und Ehevertrag.",
     excerpt:
       "Überblick zu Errungenschaftsbeteiligung, Gütergemeinschaft, Gütertrennung und den finanziellen Folgen der Ehe.",
     sourceName: "ch.ch - Eine Dienstleistung des Bundes, der Kantone und Gemeinden",
     sourceUrl:
       "https://www.ch.ch/de/familie-und-partnerschaft/heirat--konkubinat--partenariat/wirtschaftliche-folgen-der-ehe-guterstand/",
     sourceDescription:
-      "Zusammenfassung auf Basis der offiziellen ch.ch-Seite zu den wirtschaftlichen Folgen der Ehe und zum Güterstand. Für konkrete Fragen zum Ehevertrag oder Güterstand empfiehlt ch.ch den Kontakt mit einer Anwältin, einem Anwalt, einer Notarin oder einem Notar.",
+      "Zusammenfassung auf Basis der offiziellen ch.ch-Seite zu den wirtschaftlichen Folgen der Ehe und zum Güterstand.",
     content: [
       "Die Ehe hat in der Schweiz finanzielle Folgen. Der Güterstand regelt, wem während der Ehe welches Vermögen gehört und wie Vermögen und Schulden bei Scheidung, Trennung oder Tod verteilt werden.",
       "In der Schweiz gibt es drei Güterstände: die Errungenschaftsbeteiligung, die Gütergemeinschaft und die Gütertrennung.",
@@ -218,7 +218,7 @@ export const guides: GuideArticle[] = [
       {
         question: "Ist eine Beratung vor der Hochzeit sinnvoll?",
         answer:
-          "Eine Beratung kann sinnvoll sein, wenn ihr rechtliche oder finanzielle Fragen klären möchtet. hochzeitstandesamt.ch bietet selbst keine Rechtsberatung, sondern vermittelt passende regionale Kontakte."
+          "Eine fachliche Beratung kann sinnvoll sein, wenn ihr rechtliche oder finanzielle Fragen klären möchtet. hochzeitstandesamt.ch bietet selbst keine Rechtsberatung."
       }
     ]
   },  {

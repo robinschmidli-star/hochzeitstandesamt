@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Faq } from "@/components/Faq";
-import { ChecklistForm, FamilyLawLeadForm } from "@/components/LeadForm";
+import { ChecklistForm } from "@/components/LeadForm";
 import { guides } from "@/lib/data";
 import { createMetadata, faqSchema } from "@/lib/seo";
 
@@ -132,8 +132,7 @@ function FamilyLawGuidePage({ guide }: { guide: (typeof guides)[number] }) {
             Güterstand & Ehevertrag: Was Paare vor der Hochzeit wissen sollten
           </h1>
           <p className="mt-5 text-lg leading-8 text-soft-ink">
-            Die Ehe hat nicht nur emotionale, sondern auch finanzielle und rechtliche Folgen. Wir erklären die wichtigsten Grundlagen verständlich
-            und helfen euch bei Bedarf, passende Familienrechtsanwälte oder Notare in eurer Region zu finden.
+            Die Ehe hat nicht nur emotionale, sondern auch finanzielle und rechtliche Folgen. Wir erklären die wichtigsten Grundlagen verständlich.
           </p>
         </div>
       </section>
@@ -155,12 +154,8 @@ function FamilyLawGuidePage({ guide }: { guide: (typeof guides)[number] }) {
         <p className="mt-5 max-w-3xl leading-7 text-soft-ink">
           Wenn einer dieser Punkte auf euch zutrifft, kann eine kurze juristische Abklärung sinnvoll sein.
         </p>
-        <a href="#ersteinschaetzung" className="focus-ring mt-5 inline-flex rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
-          Passende Anwälte in meiner Region finden
-        </a>
       </section>
 
-      <FamilyLawLeadForm sourcePage={`/ratgeber/${guide.slug}`} />
       <Faq items={guide.faq} />
       <aside className="rounded-xl border border-champagne/30 bg-paper p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">Quelle</p>
