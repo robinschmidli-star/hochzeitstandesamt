@@ -18,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const localizedPaths = [
     "",
+    "/search",
+    "/standesamt-finden",
+    "/ratgeber",
     ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`)
   ];
   const localizedPages = indexableLocales

@@ -342,7 +342,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
         <p className="mt-3 leading-7 text-soft-ink">
           {t("office.marriageContract.description")}
         </p>
-        <Link href={withLocalePath("/ratgeber/gueterstand-ehevertrag-schweiz", locale)} className="focus-ring mt-5 inline-flex rounded-lg border border-sage/15 px-5 py-3 font-semibold text-sage transition hover:border-sage/30">
+        <Link href="/ratgeber/gueterstand-ehevertrag-schweiz" hrefLang="de" className="focus-ring mt-5 inline-flex rounded-lg border border-sage/15 px-5 py-3 font-semibold text-sage transition hover:border-sage/30">
           {t("office.marriageContract.action")}
         </Link>
       </section>

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { languageNames, locales, type Locale, withLocalePath } from "@/lib/i18n";
+import { languageNames, languageSwitchPath, locales, type Locale } from "@/lib/i18n";
 
 export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
   const pathname = usePathname();
@@ -9,7 +9,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
   const chooseLanguage = (locale: Locale) => {
     window.localStorage.setItem("preferred-language", locale);
     document.documentElement.lang = locale;
-    window.location.href = withLocalePath(pathname, locale);
+    window.location.href = languageSwitchPath(pathname, locale);
   };
 
   return (

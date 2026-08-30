@@ -8,6 +8,7 @@ export function createMetadata(input: {
   description: string;
   path?: string;
   type?: "website" | "article";
+  locale?: string;
 }): Metadata {
   const url = `${siteUrl}${input.path ?? ""}`;
 
@@ -20,7 +21,7 @@ export function createMetadata(input: {
       description: input.description,
       url,
       siteName: "hochzeitstandesamt.ch",
-      locale: "de_CH",
+      locale: input.locale ?? "de_CH",
       type: input.type ?? "website"
     }
   };

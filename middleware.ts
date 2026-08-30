@@ -48,14 +48,21 @@ export async function middleware(request: NextRequest) {
   }
 
   const url = request.nextUrl.clone();
+  const localizedSection = segments[1];
+  const localizedRouteSupported =
+    localizedSection === "search" ||
+    localizedSection === "standesamt-finden" ||
+    localizedSection === "zivilstandsamt" ||
+    (localizedSection === "ratgeber" && segments.length === 2);
+  if (!localizedRouteSupported) {
+    url.pathname = localizedSection === "ratgeber" ? `/${locale}/ratgeber` : `/${locale}`;
+    url.search = "";
+    return NextResponse.redirect(url, 308);
+  }
   url.pathname = `/${segments.slice(1).join("/")}`;
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-site-locale", locale);
   const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
-  const localizedSection = segments[1];
-  if (!new Set(["search", "zivilstandsamt"]).has(localizedSection)) {
-    response.headers.set("X-Robots-Tag", "noindex, follow");
-  }
   return response;
 }
 

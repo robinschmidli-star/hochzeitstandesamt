@@ -1,0 +1,12 @@
+.git
+.next
+.vercel
+node_modules
+.env*
+reports
+storage
+coverage
+dist
+leads-export.csv
+*.log
+tsconfig.tsbuildinfo

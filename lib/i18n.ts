@@ -46,5 +46,40 @@ export function withLocalePath(path: string, locale: Locale) {
   const parts = cleanPath.split("/").filter(Boolean);
   const withoutLocale = isLocale(parts[0]) ? parts.slice(1) : parts;
 
+  if (locale === defaultLocale) {
+    return withoutLocale.length ? `/${withoutLocale.join("/")}` : "/";
+  }
   return `/${[locale, ...withoutLocale].join("/")}`;
+}
+
+export function isLocalizedContentPath(path: string) {
+  const pathname = path.split(/[?#]/, 1)[0] || "/";
+  const parts = pathname.split("/").filter(Boolean);
+  const withoutLocale = isLocale(parts[0]) ? parts.slice(1) : parts;
+  const normalized = withoutLocale.length ? `/${withoutLocale.join("/")}` : "/";
+
+  return (
+    normalized === "/" ||
+    normalized === "/search" ||
+    normalized === "/standesamt-finden" ||
+    normalized === "/ratgeber" ||
+    normalized.startsWith("/zivilstandsamt/")
+  );
+}
+
+export function withAvailableLocalePath(path: string, locale: Locale) {
+  return locale === defaultLocale || isLocalizedContentPath(path)
+    ? withLocalePath(path, locale)
+    : withLocalePath(path, defaultLocale);
+}
+
+export function languageSwitchPath(path: string, locale: Locale) {
+  if (locale === defaultLocale || isLocalizedContentPath(path)) {
+    return withLocalePath(path, locale);
+  }
+  const pathname = path.split(/[?#]/, 1)[0] || "/";
+  const parts = pathname.split("/").filter(Boolean);
+  const withoutLocale = isLocale(parts[0]) ? parts.slice(1) : parts;
+  const fallback = withoutLocale[0] === "ratgeber" ? "/ratgeber" : "/";
+  return withLocalePath(fallback, locale);
 }

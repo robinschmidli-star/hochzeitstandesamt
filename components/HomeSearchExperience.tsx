@@ -113,18 +113,19 @@ export function HomeGuideTeasers({ dictionary, pathPrefix = "" }: { dictionary: 
     [t("guides.beautiful"), "/search?tag=romantic"],
     [t("guides.outside"), "/ratgeber/heiraten-schweiz-offizielle-informationen"]
   ];
+  const localizedHref = (href: string) => href.startsWith("/ratgeber/") ? href : `${pathPrefix}${href}`;
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-semibold text-ink">{t("guides.title")}</h2>
       <div className="mt-5 rounded-2xl border border-champagne/40 bg-paper p-6 shadow-soft sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">Euer Weg zum Ja-Wort</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{t("guides.journeyEyebrow")}</p>
         <div className="mt-3 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <h3 className="text-2xl font-semibold text-ink sm:text-3xl">Wie funktioniert eine standesamtliche Hochzeit in der Schweiz?</h3>
-            <p className="mt-3 max-w-2xl leading-7 text-soft-ink">Von der Ehevorbereitung bis zur Trauung – die wichtigsten Schritte einfach erklärt.</p>
-            <ol className="mt-6 grid gap-3 sm:grid-cols-5" aria-label="Die fünf Schritte der Hochzeits-Journey">
-              {["💍 Start", "📄 Vorbereitung", "🏛️ Trauort", "📅 Termin", "❤️ Heiraten"].map((step, index) => (
+            <h3 className="text-2xl font-semibold text-ink sm:text-3xl">{t("guides.journeyTitle")}</h3>
+            <p className="mt-3 max-w-2xl leading-7 text-soft-ink">{t("guides.journeyDescription")}</p>
+            <ol className="mt-6 grid gap-3 sm:grid-cols-5" aria-label={t("guides.journeyAria")}>
+              {t("guides.journeySteps").split("|").map((step, index) => (
                 <li key={step} className="flex flex-col items-start gap-2 text-sm font-semibold text-ink sm:flex-row sm:items-center sm:justify-between">
                   <span>{step}</span>
                   {index < 4 ? <span className="text-champagne" aria-hidden="true"><span className="sm:hidden">↓</span><span className="hidden sm:inline">→</span></span> : null}
@@ -132,16 +133,18 @@ export function HomeGuideTeasers({ dictionary, pathPrefix = "" }: { dictionary: 
               ))}
             </ol>
           </div>
-          <Link href={`${pathPrefix}/heiraten-schweiz`} className="focus-ring inline-flex w-fit rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
-            Hochzeits-Journey entdecken →
+          <Link href="/heiraten-schweiz" hrefLang="de" className="focus-ring inline-flex w-fit rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
+            {t("guides.journeyAction")} →
           </Link>
+          {pathPrefix ? <p className="text-xs font-semibold text-soft-ink">{t("guides.germanOnly")}</p> : null}
         </div>
       </div>
-      <h3 className="mt-8 text-xl font-semibold text-ink">Weitere Ratgeber</h3>
+      <h3 className="mt-8 text-xl font-semibold text-ink">{t("guides.more")}</h3>
       <div className="mt-5 grid gap-3 md:grid-cols-2">
         {guides.map(([label, href]) => (
-          <Link key={label} href={`${pathPrefix}${href}`} className="focus-ring rounded-xl border border-linen bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-sage/25 hover:text-sage">
-            {label}
+          <Link key={label} href={localizedHref(href)} hrefLang={href.startsWith("/ratgeber/") ? "de" : undefined} className="focus-ring rounded-xl border border-linen bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-sage/25 hover:text-sage">
+            <span>{label}</span>
+            {pathPrefix && href.startsWith("/ratgeber/") ? <span className="mt-2 block text-xs font-medium text-soft-ink">{t("guides.germanOnly")}</span> : null}
           </Link>
         ))}
       </div>

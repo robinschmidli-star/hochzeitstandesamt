@@ -18,7 +18,7 @@ import hr from "@/locales/hr.json";
 import bs from "@/locales/bs.json";
 import uk from "@/locales/uk.json";
 import pl from "@/locales/pl.json";
-import { defaultLocale, isLocale, type Dictionary, type Locale, withLocalePath } from "@/lib/i18n";
+import { defaultLocale, isLocale, isLocalizedContentPath, type Dictionary, type Locale, withAvailableLocalePath, withLocalePath } from "@/lib/i18n";
 
 const dictionaries: Partial<Record<Locale, Dictionary>> = { de, en, fr, it, es, pt, nl, sr, sq, tr, hr, bs, uk, pl };
 
@@ -49,7 +49,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
     const storedLocale = isLocale(savedLocale ?? undefined) ? savedLocale as Locale : null;
 
-    if (!isLocale(firstSegment) && storedLocale && storedLocale !== defaultLocale) {
+    if (!isLocale(firstSegment) && storedLocale && storedLocale !== defaultLocale && isLocalizedContentPath(pathname)) {
       window.location.href = withLocalePath(pathname, storedLocale);
       return;
     }
@@ -69,7 +69,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             {nav.slice(1).map((item) => (
               <Link
                 key={item.href}
-                href={withLocalePath(item.href, locale)}
+                href={withAvailableLocalePath(item.href, locale)}
                 className={item.disabled ? "text-soft-ink/55 transition hover:text-soft-ink" : "transition hover:text-sage"}
                 title={item.disabled ? t("nav.venues") : undefined}
               >
@@ -101,7 +101,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
               {nav.slice(1).map((item) => (
                 <Link
                   key={item.href}
-                  href={withLocalePath(item.href, locale)}
+                  href={withAvailableLocalePath(item.href, locale)}
                   className={
                     item.disabled
                       ? "rounded-xl px-3 py-3 text-soft-ink/55"
@@ -126,7 +126,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             <p className="font-semibold">{t("footer.platform")}</p>
             <div className="mt-3 grid gap-2 text-sm text-white/70">
               {nav.slice(1).map((item) => (
-                <Link key={item.href} href={withLocalePath(item.href, locale)} className={item.disabled ? "text-white/45 hover:text-white/70" : "hover:text-white"}>
+                <Link key={item.href} href={withAvailableLocalePath(item.href, locale)} className={item.disabled ? "text-white/45 hover:text-white/70" : "hover:text-white"}>
                   {item.label}
                 </Link>
               ))}
@@ -135,9 +135,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           <div>
             <p className="font-semibold">{t("footer.legal")}</p>
             <div className="mt-3 grid gap-2 text-sm text-white/70">
-              <Link href={withLocalePath("/kontakt", locale)} className="hover:text-white">{t("nav.contact")}</Link>
-              <Link href={withLocalePath("/datenschutz", locale)} className="hover:text-white">{t("footer.privacy")}</Link>
-              <Link href={withLocalePath("/impressum", locale)} className="hover:text-white">{t("footer.imprint")}</Link>
+              <Link href={withAvailableLocalePath("/kontakt", locale)} className="hover:text-white">{t("nav.contact")}</Link>
+              <Link href={withAvailableLocalePath("/datenschutz", locale)} className="hover:text-white">{t("footer.privacy")}</Link>
+              <Link href={withAvailableLocalePath("/impressum", locale)} className="hover:text-white">{t("footer.imprint")}</Link>
             </div>
           </div>
         </div>
