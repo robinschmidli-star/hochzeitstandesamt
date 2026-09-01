@@ -1,7 +1,26 @@
 import type { Metadata } from "next";
 import type { CeremonyVenue, SwissRegistryOffice } from "@/lib/types";
+import { defaultLocale, hreflangForLocale, indexableLocales, type Dictionary, type Locale } from "@/lib/i18n";
+import { hasActiveSearch, parseSearchParams, type RawSearchParams } from "@/lib/discovery";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
+
+export function discoveryMetadata(dictionary: Dictionary, locale: Locale, rawParams: RawSearchParams): Metadata {
+  const path = locale === defaultLocale ? "" : `/${locale}`;
+  const params = parseSearchParams(rawParams);
+  const filtered = hasActiveSearch(params) || Boolean(params.page);
+  return {
+    ...createMetadata({ title: dictionary["hero.title"], description: dictionary["hero.subtitle"], path, locale: hreflangForLocale(locale).replace("-", "_") }),
+    alternates: {
+      canonical: `${siteUrl}${path}`,
+      languages: {
+        ...Object.fromEntries(indexableLocales.map((item) => [hreflangForLocale(item), `${siteUrl}${item === defaultLocale ? "" : `/${item}`}`])),
+        "x-default": siteUrl
+      }
+    },
+    robots: filtered || !indexableLocales.includes(locale) ? { index: false, follow: true } : { index: true, follow: true }
+  };
+}
 
 export function createMetadata(input: {
   title: string;

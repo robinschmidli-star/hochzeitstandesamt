@@ -40,7 +40,9 @@ export async function middleware(request: NextRequest) {
   const locale = segments[0];
 
   if (locale === defaultLocale && segments.length === 1) {
-    return NextResponse.redirect(new URL("/", request.url), 308);
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return NextResponse.redirect(url, 308);
   }
 
   if (!isLocale(locale) || segments.length === 1) {

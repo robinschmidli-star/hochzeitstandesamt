@@ -1,6 +1,7 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { hasActiveSearch, parseSearchParams } from "@/lib/discovery";
 
 function id(key: string, storage: Storage) { const current = storage.getItem(key); if (current) return current; const value = crypto.randomUUID(); storage.setItem(key, value); return value; }
 export function track(eventName: string, properties: Record<string, string | number | boolean | string[]> = {}) {
@@ -8,7 +9,13 @@ export function track(eventName: string, properties: Record<string, string | num
 }
 export function Analytics() {
   const pathname = usePathname(); const params = useSearchParams();
-  useEffect(() => { track("page_view", { referrer: document.referrer.slice(0, 250), language: navigator.language }); if (pathname === "/search") track("search_completed", { filters: Array.from(params.keys()).filter((key) => params.get(key)) }); }, [pathname, params]);
+  useEffect(() => {
+    track("page_view", { referrer: document.referrer.slice(0, 250), language: navigator.language });
+    const searchPage = /^\/(?:fr|it|en|de)?\/?(?:search|standesamt-finden)?\/?$/.test(pathname);
+    if (searchPage && hasActiveSearch(parseSearchParams(Object.fromEntries(params)))) {
+      track("search_completed", { filters: Array.from(params.keys()).filter((key) => params.get(key)) });
+    }
+  }, [pathname, params]);
   return null;
 }
 export function TrackOnMount({ eventName, properties = {} }: { eventName: string; properties?: Record<string, string | number | boolean | string[]> }) {

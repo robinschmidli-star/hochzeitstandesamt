@@ -7,7 +7,7 @@ import { defaultLocale, indexableLocales } from "@/lib/i18n";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
   const paths = [
-    "", "/standesamt-finden", "/heiraten-schweiz", "/anbieter-finden", "/anbieter/floristik", "/anbieter/floristik/unico-florales-design", "/ratgeber", "/kontakt", "/datenschutz", "/impressum",
+    "", "/heiraten-schweiz", "/anbieter-finden", "/anbieter/floristik", "/anbieter/floristik/unico-florales-design", "/ratgeber", "/kontakt", "/datenschutz", "/impressum",
     ...registryCantons.map((canton) => `/kanton/${canton.slug}`),
     ...municipalityPages.map((page) => `/standesamt/${page.slug}`),
     ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`),
@@ -18,8 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const localizedPaths = [
     "",
-    "/search",
-    "/standesamt-finden",
     "/ratgeber",
     ...swissRegistryOffices.map((office) => `/zivilstandsamt/${office.slug}`)
   ];

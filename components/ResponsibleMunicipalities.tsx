@@ -35,7 +35,7 @@ export function ResponsibleMunicipalities({ municipalities, dictionary, locale }
         {municipalities.map((municipality, index) => (
           <a
             key={municipality}
-            href={`${withLocalePath("/standesamt-finden", locale)}?query=${encodeURIComponent(municipality)}&submitted=1`}
+            href={`${withLocalePath("/", locale)}?name=${encodeURIComponent(municipality)}&submitted=1#results`}
             className={`focus-ring rounded-full bg-linen px-3 py-1 text-sm text-soft-ink transition hover:bg-sage/10 hover:text-sage ${
               !expanded && index >= visibleLimit ? "hidden" : ""
             }`}

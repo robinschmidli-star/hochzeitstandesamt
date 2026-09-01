@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import pg from "pg";
+import { boolean, number, text, venueFacts } from "./venue-facts.mjs";
 
 const { Client } = pg;
 const checkOnly = process.argv.includes("--check");
@@ -55,16 +56,6 @@ const normalize = (value = "") =>
     .trim();
 
 const slugify = (value) => normalize(value).replace(/ /g, "-") || "eintrag";
-const text = (value) => (value == null ? "" : String(value).trim());
-const number = (value) => {
-  const parsed = Number(String(value ?? "").replace(",", "."));
-  return Number.isFinite(parsed) ? parsed : null;
-};
-const boolean = (value) => {
-  if (value === true || /^(true|yes|ja|1)$/i.test(text(value))) return true;
-  if (value === false || /^(false|no|nein|0)$/i.test(text(value))) return false;
-  return null;
-};
 const list = (value) =>
   [...new Set(text(value).split(/[,;|\n]+/).map((item) => item.trim()).filter(Boolean))];
 
@@ -255,22 +246,9 @@ for (const row of venueRows) {
     ort: text(row.city || profile.locality || profile.municipality),
     kanton: canton,
     beschreibung: text(profile.description_de || old?.beschreibung),
-    ceremonyMonday: boolean(profile.monday_available ?? old?.ceremonyMonday),
-    ceremonyTuesday: boolean(profile.tuesday_available ?? old?.ceremonyTuesday),
-    ceremonyWednesday: boolean(profile.wednesday_available ?? old?.ceremonyWednesday),
-    ceremonyThursday: boolean(profile.thursday_available ?? old?.ceremonyThursday),
-    ceremonyFriday: boolean(profile.friday_available ?? old?.ceremonyFriday),
-    ceremonySaturday: boolean(profile.saturday_available ?? old?.ceremonySaturday),
-    ceremonySunday: boolean(profile.sunday_available ?? old?.ceremonySunday),
-    eveningCeremonyAvailable: boolean(
-      profile.evening_available ?? old?.eveningCeremonyAvailable
-    ),
-    maxCeremonyGuests: number(profile.max_personen ?? profile.max_personen_raw ?? old?.maxCeremonyGuests),
-    wheelchairAccessible: boolean(profile.rollstuhlgangig ?? old?.wheelchairAccessible),
-    parkingAvailable: boolean(profile.parkplatze ?? old?.parkingAvailable),
-    outdoorCeremonyAvailable: boolean(profile.aussenbereich ?? old?.outdoorCeremonyAvailable),
-    seasonalAvailability: text(profile.ceremony_times_raw || old?.seasonalAvailability),
-    venueUrl: text(row.website || profile.website || profile.source_url_detail || old?.venueUrl),
+    ...venueFacts(profile, old ?? {}),
+    ...(profile.official_ceremony_possible != null ? { officialConfirmed: boolean(profile.official_ceremony_possible) } : {}),
+    venueUrl: text(profile.information_url || row.website || profile.website || profile.source_url_detail || old?.venueUrl),
     sourceUrl: text(profile.source_url_detail || profile.source_url || old?.sourceUrl),
     remarks: text(profile.notes || profile.review_note || old?.remarks),
     ...(beautyStatus ? { beautyStatus } : {}),

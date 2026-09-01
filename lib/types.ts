@@ -159,6 +159,12 @@ export type SwissRegistryOffice = LicensedImageFields & {
 };
 
 export type CeremonyVenue = LicensedImageFields & {
+  ceremonyDaysNote?: string;
+  ceremonyTimes?: string;
+  capacityNote?: string;
+  parkingDescription?: string;
+  indoor?: boolean | null;
+  reservationRequired?: boolean | null;
   canonicalId?: string;
   standesamt_id: string;
   standesamt_name: string;

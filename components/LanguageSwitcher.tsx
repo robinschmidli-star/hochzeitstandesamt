@@ -9,7 +9,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
   const chooseLanguage = (locale: Locale) => {
     window.localStorage.setItem("preferred-language", locale);
     document.documentElement.lang = locale;
-    window.location.href = languageSwitchPath(pathname, locale);
+    window.location.href = `${languageSwitchPath(pathname, locale)}${window.location.search}${window.location.hash}`;
   };
 
   return (

@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   overflow-wrap: anywhere;
   background: #f7f5f2;
   color: #222222;

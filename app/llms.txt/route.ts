@@ -8,7 +8,7 @@ export function GET() {
 > Strukturierte Such- und Informationsplattform für Schweizer Zivilstandsämter und offizielle Traulokale. Angaben dienen der Orientierung; verbindlich sind die verlinkten Behörden.
 
 ## Zentrale Bereiche
-- [Standesamt finden](${siteUrl}/standesamt-finden): Suche nach Kanton, Gemeinde, Ort und Eigenschaften.
+- [Standesamt finden](${siteUrl}/): Suche nach Kanton, Gemeinde, Ort und Eigenschaften.
 - [Alle Kantone](${siteUrl}/): ${registryCantons.length} Kantone mit ${swissRegistryOffices.length} öffentlichen Zivilstandsämtern.
 - [Ratgeber](${siteUrl}/ratgeber): Redaktionelle Informationen zur zivilen Trauung.
 - [Vollständiges öffentliches Verzeichnis](${siteUrl}/llms-full.txt): Ämter, Traulokale und kanonische URLs.

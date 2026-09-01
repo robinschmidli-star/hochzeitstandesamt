@@ -5,7 +5,15 @@ import { swissCantonPaths } from "@/lib/swiss-map-paths";
 import { defaultRegistrySearchLabels, type RegistrySearchLabels } from "@/lib/registry-search-labels";
 import { withLocalePath } from "@/lib/i18n";
 
-export function SwissMap({ embedded = false, selectedCanton = "", labels = defaultRegistrySearchLabels }: { embedded?: boolean; selectedCanton?: string; labels?: RegistrySearchLabels }) {
+export function SwissMap({ embedded = false, selectedCanton = "", labels = defaultRegistrySearchLabels, searchPath = "/standesamt-finden", searchQuery = "" }: { embedded?: boolean; selectedCanton?: string; labels?: RegistrySearchLabels; searchPath?: string; searchQuery?: string }) {
+  const cantonHref = (canton?: string) => {
+    const query = new URLSearchParams(searchQuery);
+    query.delete("page");
+    if (canton) query.set("canton", canton);
+    else query.delete("canton");
+    if (searchPath === "/") query.set("submitted", "1");
+    return `${withLocalePath(searchPath, labels.locale)}${query.size ? `?${query}` : ""}${searchPath === "/" ? "#results" : ""}`;
+  };
   const selectedShape = swissCantonPaths.find((shape) => shape.code === selectedCanton);
   const selectedCantonInfo = registryCantons.find((canton) => canton.code === selectedCanton);
   const selectedOfficePoints = selectedCanton
@@ -41,7 +49,7 @@ export function SwissMap({ embedded = false, selectedCanton = "", labels = defau
       <div className={`${embedded ? "mt-3 h-[300px] sm:h-[360px] lg:h-[400px]" : "mt-6"} flex flex-col overflow-hidden rounded-xl bg-linen/70 p-3 sm:p-5`}>
         {selectedCantonInfo ? (
           <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-            <a href={withLocalePath("/standesamt-finden", labels.locale)} className="focus-ring rounded-lg border border-sage/15 bg-white px-3 py-1.5 text-sm font-semibold text-sage transition hover:border-sage/30">
+            <a href={cantonHref()} className="focus-ring rounded-lg border border-sage/15 bg-white px-3 py-1.5 text-sm font-semibold text-sage transition hover:border-sage/30">
               {labels.back}
             </a>
             <span className="text-sm text-soft-ink">{selectedOfficePoints.length} {labels.offices}</span>
@@ -60,7 +68,7 @@ export function SwissMap({ embedded = false, selectedCanton = "", labels = defau
               const label = `${repairText(canton.name)}: ${canton.officeCount} ${labels.offices}`;
               const isSelected = selectedCanton === shape.code;
               return (
-                <a key={shape.code} href={`${withLocalePath("/standesamt-finden", labels.locale)}?canton=${shape.code}`} aria-label={label}>
+                <a key={shape.code} href={cantonHref(shape.code)} aria-label={label}>
                   <path
                     d={shape.d}
                     className={`transition hover:fill-champagne focus:fill-champagne ${
@@ -79,7 +87,7 @@ export function SwissMap({ embedded = false, selectedCanton = "", labels = defau
           </g>
           {!selectedCanton
             ? swissCantonPaths.map((shape) => (
-                <a key={`${shape.code}-label`} href={`${withLocalePath("/standesamt-finden", labels.locale)}?canton=${shape.code}`} aria-hidden="true">
+                <a key={`${shape.code}-label`} href={cantonHref(shape.code)} aria-hidden="true" tabIndex={-1}>
                   <text
                     x={shape.label[0]}
                     y={shape.label[1]}

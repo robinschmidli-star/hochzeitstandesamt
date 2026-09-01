@@ -1,256 +1,86 @@
-"use client";
-
-import type { ChangeEvent } from "react";
-import { useRef, useState } from "react";
-import { registryCantons } from "@/lib/registry-data";
-import { repairText } from "@/lib/search-experience";
-import type { Dictionary } from "@/lib/i18n";
-import de from "@/locales/de.json";
 import { NameSearch } from "@/components/NameSearch";
+import { SearchDateFields } from "@/components/SearchDateFields";
+import { repairText, type SearchParams } from "@/lib/search-experience";
+import { registryCantons } from "@/lib/registry-data";
+import type { Dictionary } from "@/lib/i18n";
 
-type SearchType = "date" | "location" | "style";
-const currentYear = new Date().getFullYear();
-const years = Array.from({ length: 4 }, (_, index) => String(currentYear + index));
-const months = [["01", "Januar"], ["02", "Februar"], ["03", "März"], ["04", "April"], ["05", "Mai"], ["06", "Juni"], ["07", "Juli"], ["08", "August"], ["09", "September"], ["10", "Oktober"], ["11", "November"], ["12", "Dezember"]];
-const tags = [
-  ["featured", "tag.featured"],
-  ["castle", "tag.castle"],
-  ["lake", "tag.lake"],
-  ["mountains", "tag.mountains"],
-  ["historic", "tag.historic"],
-  ["modern", "tag.modern"],
-  ["romantic", "tag.romantic"],
-  ["city", "tag.city"],
-  ["nature", "tag.nature"]
-];
-const searchTypes = [
-  { type: "date" as const, icon: "date" as const, titleKey: "search.date.title", textKey: "search.date.text" },
-  { type: "location" as const, icon: "location" as const, titleKey: "search.location.title", textKey: "search.location.text" },
-  { type: "style" as const, icon: "heart" as const, titleKey: "search.style.title", textKey: "search.style.text" }
-];
-
-function createTranslator(dictionary: Dictionary) {
-  const fallback = de as Dictionary;
-  return (key: string) => dictionary[key] ?? fallback[key] ?? key;
-}
-
-function Icon({ type }: { type: "date" | "location" | "heart" }) {
-  const path =
-    type === "date"
-      ? "M7 3v3M17 3v3M4 8h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
-      : type === "location"
-        ? "M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11ZM12 10.5h.01"
-        : "M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z";
-
+export function HomeHeroSearchClient({ dictionary, pathPrefix = "", params = {} }: { dictionary: Dictionary; pathPrefix?: string; params?: SearchParams }) {
+  const t = (key: string) => dictionary[key] ?? key;
+  const inputClass = "focus-ring h-12 min-w-0 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink";
+  const advanced = ["location", "weekday", "tag", "elopement", "wheelchair", "parking", "evening", "outdoor", "onlineBooking", "multipleVenues", "postalCode", "preferredWeekdays"] as const;
   return (
-    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-sage/10 text-sage">
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current stroke-2">
-        <path d={path} strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
-  );
-}
-
-export function SearchTypeCard({ type, icon, titleKey, textKey, selected, onSelect, t }: {
-  type: SearchType;
-  icon: "date" | "location" | "heart";
-  titleKey: string;
-  textKey: string;
-  selected: boolean;
-  onSelect: (type: SearchType) => void;
-  t: (key: string) => string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={() => onSelect(type)}
-      className={`focus-ring grid h-full gap-4 rounded-xl border bg-white p-5 text-left shadow-soft transition hover:-translate-y-0.5 hover:border-champagne ${selected ? "border-sage" : "border-linen"}`}
-    >
-      <Icon type={icon} />
-      <div>
-        <h2 className="text-2xl font-semibold text-ink">{t(titleKey)}</h2>
-        <p className="mt-2 text-sm leading-6 text-soft-ink">{t(textKey)}</p>
-      </div>
-      <span className="mt-auto inline-flex justify-center rounded-lg bg-sage px-4 py-3 text-sm font-semibold text-white">{t("search.start")}</span>
-    </button>
-  );
-}
-
-export function SearchEntryCards({ selectedSearchType, onSelect, t }: {
-  selectedSearchType: SearchType | null;
-  onSelect: (type: SearchType) => void;
-  t: (key: string) => string;
-}) {
-  return (
-    <div className={`grid gap-4 ${selectedSearchType ? "md:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-3"}`}>
-      {searchTypes.map((item) => (
-        <SearchTypeCard key={item.type} {...item} selected={selectedSearchType === item.type} onSelect={onSelect} t={t} />
-      ))}
-    </div>
-  );
-}
-
-export function DateSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
-  return (
-    <form action={`${pathPrefix}/search`} className="grid gap-5">
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.month")}
-          <select name="month" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">{t("search.monthPlaceholder")}</option>
-            {months.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-          </select>
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.year")}
-          <select name="year" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">{t("search.yearPlaceholder")}</option>
-            {years.map((year) => <option key={year} value={year}>{year}</option>)}
-          </select>
-        </label>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.weekday")}
-          <select name="weekday" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="saturday">{t("search.saturday")}</option>
-            <option value="friday">{t("search.friday")}</option>
-            <option value="thursday">{t("search.thursday")}</option>
-            <option value="any">{t("search.any")}</option>
-          </select>
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.dateOptional")}
-          <input name="date" type="date" className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
-        </label>
-      </div>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitDate")}</button>
-    </form>
-  );
-}
-
-export function LocationSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
-  const [locationValue, setLocationValue] = useState("");
-  const [locationHint, setLocationHint] = useState("");
-  const postalLookup = useRef<AbortController | null>(null);
-
-  function handleLocationChange(event: ChangeEvent<HTMLInputElement>) {
-    const nextValue = event.target.value;
-    setLocationValue(nextValue);
-    setLocationHint("");
-    postalLookup.current?.abort();
-    if (!/^\d{4}$/.test(nextValue.trim())) return;
-
-    const controller = new AbortController();
-    postalLookup.current = controller;
-    void fetch(`/api/postal-code?q=${encodeURIComponent(nextValue.trim())}`, { signal: controller.signal })
-      .then((response) => response.ok ? response.json() as Promise<{ place?: string }> : { place: "" })
-      .then(({ place }) => {
-        if (!place) return;
-        setLocationValue(place);
-        setLocationHint(`${t("search.locationHint")}: ${place}`);
-      })
-      .catch((error) => {
-        if (!(error instanceof DOMException && error.name === "AbortError")) setLocationHint("");
-      });
-  }
-
-  return (
-    <form action={`${pathPrefix}/search`} className="grid gap-5">
-      <label className="grid gap-2 text-sm font-medium text-ink">
-        {t("search.locationLabel")}
-        <input name="location" value={locationValue} onChange={handleLocationChange} placeholder={t("search.locationPlaceholder")} className="focus-ring h-12 rounded-lg border border-linen px-3 text-soft-ink" />
-        {locationHint ? <span className="text-xs font-medium text-sage">{locationHint}</span> : null}
-      </label>
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.radius")}
-          <select name="radius" defaultValue="50" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="10">10 km</option>
-            <option value="25">25 km</option>
-            <option value="50">50 km</option>
-            <option value="100">100 km</option>
-          </select>
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-ink">
-          {t("search.cantonOptional")}
-          <select name="canton" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-            <option value="">{t("search.allCantons")}</option>
-            {registryCantons.map((canton) => <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>)}
-          </select>
-        </label>
-      </div>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitLocation")}</button>
-    </form>
-  );
-}
-
-export function StyleSearchForm({ t, pathPrefix = "" }: { t: (key: string) => string; pathPrefix?: string }) {
-  return (
-    <form action={`${pathPrefix}/search`} className="grid gap-5">
-      <div className="flex flex-wrap gap-2">
-        {tags.map(([value, labelKey]) => (
-          <label key={value} className="cursor-pointer">
-            <input type="radio" name="tag" value={value} className="peer sr-only" />
-            <span className="inline-flex rounded-full border border-linen bg-paper px-3 py-2 text-sm font-semibold text-soft-ink transition peer-checked:border-champagne peer-checked:bg-champagne peer-checked:text-white">{t(labelKey)}</span>
-          </label>
-        ))}
-      </div>
-      <label className="grid gap-2 text-sm font-medium text-ink">
-        {t("search.regionOptional")}
-        <select name="canton" className="focus-ring h-12 rounded-lg border border-linen bg-white px-3 text-soft-ink">
-          <option value="">{t("search.allRegions")}</option>
-          {registryCantons.map((canton) => <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>)}
-        </select>
-      </label>
-      <button className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">{t("search.submitStyle")}</button>
-    </form>
-  );
-}
-
-export function ExpandedSearchPanel({ selectedSearchType, t, pathPrefix = "" }: { selectedSearchType: SearchType; t: (key: string) => string; pathPrefix?: string }) {
-  const content = {
-    date: { icon: "date" as const, title: t("search.datePanel.title"), text: t("search.datePanel.text"), form: <DateSearchForm t={t} pathPrefix={pathPrefix} /> },
-    location: { icon: "location" as const, title: t("search.locationPanel.title"), text: t("search.locationPanel.text"), form: <LocationSearchForm t={t} pathPrefix={pathPrefix} /> },
-    style: { icon: "heart" as const, title: t("search.stylePanel.title"), text: t("search.stylePanel.text"), form: <StyleSearchForm t={t} pathPrefix={pathPrefix} /> }
-  }[selectedSearchType];
-
-  return (
-    <section className="rounded-2xl border border-linen bg-white p-5 shadow-soft sm:p-7">
-      <div className="grid gap-5 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-        <div>
-          <Icon type={content.icon} />
-          <h2 className="mt-4 text-3xl font-semibold text-ink">{content.title}</h2>
-          <p className="mt-3 text-sm leading-6 text-soft-ink">{content.text}</p>
+    <section className="mt-5 min-w-0 rounded-2xl border border-linen bg-white p-4 shadow-soft sm:p-6">
+      <NameSearch key={JSON.stringify(params)} dictionary={dictionary} defaultValue={params.name} pathPrefix={pathPrefix} hiddenParams={{ submitted: "1" }} quickFilters={
+        <div key="filters" className="grid gap-3">
+          <div className="grid min-w-0 gap-3 sm:grid-cols-3">
+            <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+              {t("search.cantonOptional")}
+              <select name="canton" defaultValue={params.canton || ""} className={inputClass}>
+                <option value="">{t("search.allCantons")}</option>
+                {registryCantons.map((canton) => <option key={canton.code} value={canton.code}>{repairText(canton.name)}</option>)}
+              </select>
+            </label>
+            <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+              {t("results.minimumGuests")}
+              <input name="maxGuests" defaultValue={params.maxGuests} type="number" min="1" max="1000" className={inputClass} />
+            </label>
+            <label className="flex min-h-12 cursor-pointer items-center gap-2 self-end rounded-lg border border-linen px-3 py-2 text-sm text-soft-ink">
+              <input name="saturdayOnly" value="true" defaultChecked={params.saturdayOnly === "true"} type="checkbox" className="h-5 w-5 shrink-0 accent-sage" />
+              {t("results.saturdayOnly")}
+            </label>
+          </div>
+          <details open={advanced.some((key) => params[key]) || undefined} className="rounded-lg border border-linen px-3">
+            <summary className="focus-ring min-h-11 cursor-pointer py-3 text-sm font-semibold text-sage">{t("homeSearch.moreFilters")}</summary>
+            <div className="grid gap-4 pb-4">
+              <div className="grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                  {t("search.locationLabel")}
+                  <input name="location" defaultValue={params.location} placeholder={t("search.locationPlaceholder")} className={inputClass} />
+                </label>
+                <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                  {t("search.radius")}
+                  <select name="radius" defaultValue={params.radius || "50"} className={inputClass}>
+                    {[10, 25, 50, 100].map((radius) => <option key={radius} value={radius}>{radius} km</option>)}
+                  </select>
+                </label>
+                <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                  {t("search.weekday")}
+                  <select name="weekday" defaultValue={params.weekday || ""} className={inputClass}>
+                    <option value="">{t("results.all")}</option>
+                    {["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].map((day) => <option key={day} value={day}>{t(`weekday.short.${day}`)}</option>)}
+                  </select>
+                </label>
+                <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                  {t("results.style")}
+                  <select name="tag" defaultValue={params.tag || ""} className={inputClass}>
+                    <option value="">{t("results.all")}</option>
+                    {["featured", "castle", "lake", "mountains", "historic", "modern", "romantic", "city", "nature"].map((tag) => <option key={tag} value={tag}>{t(`tag.${tag}`)}</option>)}
+                  </select>
+                </label>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {[["elopement", "true", "results.elopement"], ["wheelchair", "yes", "results.wheelchair"], ["parking", "yes", "results.parking"], ["evening", "yes", "results.evening"], ["outdoor", "yes", "results.outdoor"], ["onlineBooking", "yes", "results.onlineBooking"], ["multipleVenues", "yes", "results.multipleVenues"]].map(([name, value, label]) => (
+                  <label key={name} className="flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-linen px-3 py-2 text-sm text-soft-ink">
+                    <input name={name} value={value} defaultChecked={params[name as keyof SearchParams] === value} type="checkbox" className="h-5 w-5 shrink-0 accent-sage" />
+                    {t(label)}
+                  </label>
+                ))}
+              </div>
+              {params.postalCode ? <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                {t("discovery.postalCode")}
+                <input name="postalCode" defaultValue={params.postalCode} className={inputClass} />
+              </label> : null}
+              {params.preferredWeekdays ? <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
+                {t("registry.weekdays")}
+                <input name="preferredWeekdays" defaultValue={params.preferredWeekdays} className={inputClass} />
+              </label> : null}
+              <button className="focus-ring min-h-12 justify-self-start rounded-lg bg-sage px-5 py-3 font-semibold text-white">{t("results.applyFilters")}</button>
+            </div>
+          </details>
         </div>
-        {content.form}
-      </div>
+      }>
+        <SearchDateFields key="dates" dictionary={dictionary} params={params} locale={pathPrefix.slice(1) || "de"} />
+      </NameSearch>
     </section>
-  );
-}
-
-export function HomeHeroSearchClient({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
-  const [selectedSearchType, setSelectedSearchType] = useState<SearchType | null>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-  const t = createTranslator(dictionary);
-
-  const selectSearchType = (type: SearchType) => {
-    setSelectedSearchType(type);
-    window.setTimeout(() => {
-      const panelTop = panelRef.current?.getBoundingClientRect().top;
-      if (typeof panelTop === "number" && window.innerWidth < 768) {
-        window.scrollTo({ top: window.scrollY + panelTop - 96, behavior: "smooth" });
-      }
-    }, 80);
-  };
-
-  return (
-    <div className="mt-8 grid gap-5">
-      <section className="rounded-2xl border border-linen bg-white p-5 shadow-soft sm:p-6">
-        <NameSearch dictionary={dictionary} pathPrefix={pathPrefix} />
-      </section>
-      <SearchEntryCards selectedSearchType={selectedSearchType} onSelect={selectSearchType} t={t} />
-      <div ref={panelRef}>{selectedSearchType ? <ExpandedSearchPanel selectedSearchType={selectedSearchType} t={t} pathPrefix={pathPrefix} /> : null}</div>
-    </div>
   );
 }

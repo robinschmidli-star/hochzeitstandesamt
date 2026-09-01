@@ -46,7 +46,7 @@ export function buildNameSearchSuggestions(): NameSearchSuggestion[] {
     canton: office.canton,
     place: office.city,
     href: `/zivilstandsamt/${office.slug}`,
-    searchText: [office.name, office.city, office.cantonName, ...(office.ceremonyLocations ?? [])].join(" ")
+    searchText: [office.name, office.city, office.postalCode, office.cantonName, ...office.responsibleMunicipalities, ...(office.ceremonyLocations ?? [])].join(" ")
   }));
   const seenVenues = new Set<string>();
 

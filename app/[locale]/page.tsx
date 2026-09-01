@@ -1,55 +1,22 @@
-import type { Metadata } from "next";
-import {
-  FeaturedRegistryOffices,
-  HomeGuideTeasers,
-  HomeHeroSearch,
-  PopularSearchLinks,
-  SwitzerlandMapSection
-} from "@/components/HomeSearchExperience";
-import { defaultLocale, getDictionary, hreflangForLocale, indexableLocales, isLocale, locales, type Locale } from "@/lib/i18n";
+import { HomeSearchPage } from "@/components/HomeSearchExperience";
+import { defaultLocale, getDictionary, isLocale, locales } from "@/lib/i18n";
+import type { RawSearchParams } from "@/lib/discovery";
+import { discoveryMetadata } from "@/lib/seo";
 
-type Props = { params: Promise<{ locale: string }> };
+type Props = { params: Promise<{ locale: string }>; searchParams: Promise<RawSearchParams> };
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props) {
   const { locale: rawLocale } = await params;
-  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
-  const dictionary = await getDictionary(locale);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
-
-  return {
-    title: dictionary["hero.title"],
-    description: dictionary["hero.subtitle"],
-    alternates: {
-      canonical: locale === defaultLocale ? baseUrl : `${baseUrl}/${locale}`,
-      languages: {
-        ...Object.fromEntries(indexableLocales.map((item) => [
-          hreflangForLocale(item),
-          item === defaultLocale ? baseUrl : `${baseUrl}/${item}`
-        ])),
-        "x-default": baseUrl
-      }
-    },
-    robots: indexableLocales.includes(locale) ? undefined : { index: false, follow: true }
-  };
+  const locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  return discoveryMetadata(await getDictionary(locale), locale, await searchParams);
 }
 
-export default async function LocalizedHomePage({ params }: Props) {
+export default async function LocalizedHomePage({ params, searchParams }: Props) {
   const { locale: rawLocale } = await params;
-  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
-  const dictionary = await getDictionary(locale);
-  const pathPrefix = locale === defaultLocale ? "" : `/${locale}`;
-
-  return (
-    <>
-      <HomeHeroSearch dictionary={dictionary} pathPrefix={pathPrefix} />
-      <PopularSearchLinks dictionary={dictionary} pathPrefix={pathPrefix} />
-      <SwitzerlandMapSection dictionary={dictionary} locale={locale} />
-      <FeaturedRegistryOffices dictionary={dictionary} pathPrefix={pathPrefix} />
-      <HomeGuideTeasers dictionary={dictionary} pathPrefix={pathPrefix} />
-    </>
-  );
+  const locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  return <HomeSearchPage dictionary={await getDictionary(locale)} rawParams={await searchParams} locale={locale} />;
 }

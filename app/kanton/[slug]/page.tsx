@@ -43,7 +43,7 @@ export default async function CantonPage({ params }: Props) {
           <OfficeCard key={office.slug} office={office} />
         ))}
       </div>
-      <Link href={`/standesamt-finden?canton=${canton.code}`} className="focus-ring justify-self-start rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
+      <Link href={`/?canton=${canton.code}#results`} className="focus-ring justify-self-start rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
         Suche im Kanton {canton.name} öffnen
       </Link>
     </main>

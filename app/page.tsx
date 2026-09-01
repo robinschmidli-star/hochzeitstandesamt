@@ -1,22 +1,14 @@
-import {
-  FeaturedRegistryOffices,
-  HomeGuideTeasers,
-  HomeHeroSearch,
-  PopularSearchLinks,
-  SwitzerlandMapSection
-} from "@/components/HomeSearchExperience";
+import { HomeSearchPage } from "@/components/HomeSearchExperience";
 import { defaultLocale, getDictionary } from "@/lib/i18n";
+import type { RawSearchParams } from "@/lib/discovery";
+import { discoveryMetadata } from "@/lib/seo";
 
-export default async function HomePage() {
-  const dictionary = await getDictionary(defaultLocale);
+type Props = { searchParams: Promise<RawSearchParams> };
 
-  return (
-    <>
-      <HomeHeroSearch dictionary={dictionary} />
-      <PopularSearchLinks dictionary={dictionary} />
-      <SwitzerlandMapSection dictionary={dictionary} />
-      <FeaturedRegistryOffices dictionary={dictionary} />
-      <HomeGuideTeasers dictionary={dictionary} />
-    </>
-  );
+export async function generateMetadata({ searchParams }: Props) {
+  return discoveryMetadata(await getDictionary(defaultLocale), defaultLocale, await searchParams);
+}
+
+export default async function HomePage({ searchParams }: Props) {
+  return <HomeSearchPage dictionary={await getDictionary(defaultLocale)} rawParams={await searchParams} />;
 }

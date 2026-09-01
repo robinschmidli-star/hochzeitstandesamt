@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { headers } from "next/headers";
 import { Analytics } from "@/components/Analytics";
 import { SiteChrome } from "@/components/SiteChrome";
-import { hreflangForLocale, indexableLocales } from "@/lib/i18n";
+import { defaultLocale, hreflangForLocale, indexableLocales, isLocale } from "@/lib/i18n";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
@@ -27,12 +28,15 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode; params: Promise<{ locale?: string }> }>) {
+  const routeParams = await params;
+  const requestedLocale = (await headers()).get("x-site-locale") ?? routeParams.locale;
+  const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
   return (
-    <html lang="de-CH">
+    <html lang={hreflangForLocale(locale)} data-scroll-behavior="smooth">
       <body className="min-h-screen font-sans antialiased">
         <Suspense><Analytics /></Suspense>
-        <SiteChrome>{children}</SiteChrome>
+        <SiteChrome initialLocale={locale}>{children}</SiteChrome>
       </body>
     </html>
   );

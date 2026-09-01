@@ -9,7 +9,7 @@ export default function NotFound() {
         Der Eintrag ist möglicherweise nicht mehr öffentlich oder die Adresse ist nicht korrekt.
       </p>
       <div className="flex flex-wrap justify-center gap-3">
-        <Link href="/standesamt-finden" className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white">
+        <Link href="/" className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white">
           Standesamt finden
         </Link>
         <Link href="/" className="focus-ring rounded-lg border border-sage/15 px-5 py-3 font-semibold text-sage">

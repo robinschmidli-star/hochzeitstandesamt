@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SafeMediaFrame } from "@/components/SafeMediaFrame";
+import { SearchResults } from "@/components/SearchResultsExperience";
 import { HomeHeroSearchClient } from "@/components/HomeHeroSearchClient";
 import { SwissMap } from "@/components/SwissMap";
-import { publicCeremonyVenues } from "@/lib/public-venues";
-import { swissRegistryOffices } from "@/lib/registry-data";
+import type { SearchParams } from "@/lib/search-experience";
+import { discoveryHref, hasActiveSearch, parseSearchParams, type RawSearchParams } from "@/lib/discovery";
 import { defaultLocale, type Dictionary, type Locale } from "@/lib/i18n";
 import { registrySearchLabels } from "@/lib/registry-search-labels";
-import { ceremonyVenueMedia } from "@/lib/safe-media";
 import de from "@/locales/de.json";
 
 function createTranslator(dictionary: Dictionary) {
@@ -14,35 +13,39 @@ function createTranslator(dictionary: Dictionary) {
   return (key: string) => dictionary[key] ?? fallback[key] ?? key;
 }
 
-export function HomeHeroSearch({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
+export function HomeHeroSearch({ dictionary, pathPrefix = "", params }: { dictionary: Dictionary; pathPrefix?: string; params: SearchParams }) {
   const t = createTranslator(dictionary);
 
   return (
     <section className="bg-paper">
-      <div className="mx-auto max-w-7xl px-4 pb-5 pt-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pb-5 pt-6 sm:px-6 sm:pt-10 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.1em] text-champagne">{t("hero.eyebrow")}</p>
-        <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-[1.02] text-ink sm:text-6xl sm:leading-[0.98]">{t("hero.title")}</h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-soft-ink">{t("hero.subtitle")}</p>
-        <HomeHeroSearchClient dictionary={dictionary} pathPrefix={pathPrefix} />
+        <h1 className="mt-3 max-w-5xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">{t("hero.title")}</h1>
+        <p className="mt-3 max-w-3xl text-base leading-6 text-soft-ink sm:mt-5 sm:text-lg sm:leading-8">{t("hero.subtitle")}</p>
+        <HomeHeroSearchClient dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
       </div>
     </section>
   );
 }
 
-export function PopularSearchLinks({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
+export function PopularSearchLinks({ dictionary, pathPrefix = "", params }: { dictionary: Dictionary; pathPrefix?: string; params: SearchParams }) {
   const t = createTranslator(dictionary);
-  const links = [
-    ["/search?tag=featured", t("popular.featured")],
-    ["/search?tag=lake", t("popular.lake")],
-    ["/search?tag=castle", t("popular.castle")]
+  const links: [SearchParams, string][] = [
+    [{ tag: "featured" }, t("popular.featured")],
+    [{ tag: "lake" }, t("popular.lake")],
+    [{ tag: "castle" }, t("popular.castle")],
+    [{ tag: "historic" }, t("tag.historic")],
+    [{ tag: "nature" }, t("tag.nature")],
+    [{ elopement: "true" }, t("results.elopement")],
+    [{ saturdayOnly: "true" }, t("guides.saturday")]
   ];
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-6 pt-0 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-semibold text-ink">{t("popular.title")}</h2>
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {links.map(([href, label]) => (
-          <Link key={href} href={`${pathPrefix}${href}`} className="focus-ring rounded-xl border border-linen bg-white p-4 font-semibold text-ink shadow-soft transition hover:border-champagne hover:text-sage">
+        {links.map(([filters, label]) => (
+          <Link key={label} href={discoveryHref(params, { ...filters, submitted: "1" }, pathPrefix)} className="focus-ring rounded-xl border border-linen bg-white p-4 font-semibold text-ink shadow-soft transition hover:border-champagne hover:text-sage">
             {label}
           </Link>
         ))}
@@ -53,53 +56,16 @@ export function PopularSearchLinks({ dictionary, pathPrefix = "" }: { dictionary
 
 export function SwitzerlandMapSection({
   dictionary,
-  locale = defaultLocale
+  locale = defaultLocale,
+  params
 }: {
   dictionary: Dictionary;
   locale?: Locale;
+  params: SearchParams;
 }) {
   return (
     <section className="mx-auto max-w-7xl px-4 pb-8 pt-2 sm:px-6 lg:px-8">
-      <SwissMap labels={registrySearchLabels(dictionary, locale)} />
-    </section>
-  );
-}
-
-export function FeaturedRegistryOffices({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
-  const t = createTranslator(dictionary);
-  const featured = publicCeremonyVenues
-    .filter((venue) => venue.websitePriority?.startsWith("Top20:"))
-    .sort((left, right) => left.websitePriority!.localeCompare(right.websitePriority!))
-    .map((venue) => ({
-      venue,
-      officeSlug: swissRegistryOffices.find((office) => office.id === venue.standesamt_id || office.slug === venue.standesamt_id)?.slug
-    }))
-    .filter((item): item is { venue: (typeof publicCeremonyVenues)[number]; officeSlug: string } => Boolean(item.officeSlug));
-
-  return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{t("featured.eyebrow")}</p>
-          <h2 className="mt-2 text-3xl font-semibold text-ink">{t("featured.title")}</h2>
-        </div>
-        <Link href={`${pathPrefix}/standesamt-finden`} className="text-sm font-semibold text-sage">{t("featured.all")}</Link>
-      </div>
-      <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {featured.map(({ venue, officeSlug }) => (
-          <article key={venue.canonicalId} className="overflow-hidden rounded-xl border border-linen bg-white shadow-soft">
-            <div className="flex h-40 items-center justify-center bg-linen/70">
-              <SafeMediaFrame media={ceremonyVenueMedia(venue)} className="h-full w-full" />
-            </div>
-            <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">Traulokal · {venue.ort || venue.kanton}</p>
-              <h3 className="mt-2 text-xl font-semibold text-ink">{venue.traulokal_name}</h3>
-              <p className="mt-3 text-sm leading-6 text-soft-ink">{venue.beschreibung || venue.standesamt_name}</p>
-              <Link href={`${pathPrefix}/zivilstandsamt/${officeSlug}`} className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
-            </div>
-          </article>
-        ))}
-      </div>
+      <SwissMap labels={registrySearchLabels(dictionary, locale)} searchPath="/" selectedCanton={params.canton} searchQuery={discoveryHref(params).split("?")[1]?.split("#")[0]} />
     </section>
   );
 }
@@ -107,47 +73,39 @@ export function FeaturedRegistryOffices({ dictionary, pathPrefix = "" }: { dicti
 export function HomeGuideTeasers({ dictionary, pathPrefix = "" }: { dictionary: Dictionary; pathPrefix?: string }) {
   const t = createTranslator(dictionary);
   const guides = [
-    [t("guides.saturday"), "/search?weekday=saturday&saturdayOnly=true"],
+    [t("homeSearch.guideProcess"), "/ratgeber/heiraten-schweiz-ablauf"],
+    [t("homeSearch.guideDocuments"), "/ratgeber/dokumente-standesamtliche-hochzeit"],
     [t("guides.reserve"), "/ratgeber/heiraten-schweiz-offizielle-informationen"],
-    [t("guides.cost"), "/ratgeber/heiraten-schweiz-offizielle-informationen"],
-    [t("guides.beautiful"), "/search?tag=romantic"],
-    [t("guides.outside"), "/ratgeber/heiraten-schweiz-offizielle-informationen"]
+    [t("guides.cost"), "/ratgeber/heiraten-schweiz-offizielle-informationen"]
   ];
-  const localizedHref = (href: string) => href.startsWith("/ratgeber/") ? href : `${pathPrefix}${href}`;
-
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-semibold text-ink">{t("guides.title")}</h2>
-      <div className="mt-5 rounded-2xl border border-champagne/40 bg-paper p-6 shadow-soft sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{t("guides.journeyEyebrow")}</p>
-        <div className="mt-3 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div>
-            <h3 className="text-2xl font-semibold text-ink sm:text-3xl">{t("guides.journeyTitle")}</h3>
-            <p className="mt-3 max-w-2xl leading-7 text-soft-ink">{t("guides.journeyDescription")}</p>
-            <ol className="mt-6 grid gap-3 sm:grid-cols-5" aria-label={t("guides.journeyAria")}>
-              {t("guides.journeySteps").split("|").map((step, index) => (
-                <li key={step} className="flex flex-col items-start gap-2 text-sm font-semibold text-ink sm:flex-row sm:items-center sm:justify-between">
-                  <span>{step}</span>
-                  {index < 4 ? <span className="text-champagne" aria-hidden="true"><span className="sm:hidden">↓</span><span className="hidden sm:inline">→</span></span> : null}
-                </li>
-              ))}
-            </ol>
-          </div>
-          <Link href="/heiraten-schweiz" hrefLang="de" className="focus-ring inline-flex w-fit rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
-            {t("guides.journeyAction")} →
-          </Link>
-          {pathPrefix ? <p className="text-xs font-semibold text-soft-ink">{t("guides.germanOnly")}</p> : null}
-        </div>
-      </div>
-      <h3 className="mt-8 text-xl font-semibold text-ink">{t("guides.more")}</h3>
-      <div className="mt-5 grid gap-3 md:grid-cols-2">
+    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-semibold text-ink">{t("guides.journeyTitle")}</h2>
+      <p className="mt-3 max-w-2xl text-soft-ink">{t("guides.journeyDescription")}</p>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {guides.map(([label, href]) => (
-          <Link key={label} href={localizedHref(href)} hrefLang={href.startsWith("/ratgeber/") ? "de" : undefined} className="focus-ring rounded-xl border border-linen bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-sage/25 hover:text-sage">
-            <span>{label}</span>
-            {pathPrefix && href.startsWith("/ratgeber/") ? <span className="mt-2 block text-xs font-medium text-soft-ink">{t("guides.germanOnly")}</span> : null}
-          </Link>
+          <Link key={label} href={href} hrefLang="de" className="focus-ring rounded-xl border border-linen bg-white p-4 font-semibold text-ink hover:text-sage">{label}</Link>
         ))}
       </div>
+      {pathPrefix ? <p className="mt-2 text-xs text-soft-ink">{t("guides.germanOnly")}</p> : null}
+      <div className="mt-4 flex flex-wrap gap-4">
+        <Link href={`${pathPrefix}/ratgeber`} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("homeSearch.allGuides")} →</Link>
+        <Link href="/heiraten-schweiz" hrefLang="de" className="focus-ring inline-flex min-h-11 items-center text-sm text-sage">{t("guides.journeyAction")}</Link>
+      </div>
     </section>
+  );
+}
+
+export function HomeSearchPage({ dictionary, rawParams, locale = defaultLocale }: { dictionary: Dictionary; rawParams: RawSearchParams; locale?: Locale }) {
+  const params = parseSearchParams(rawParams);
+  const pathPrefix = locale === defaultLocale ? "" : `/${locale}`;
+  return (
+    <main>
+      <HomeHeroSearch dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
+      <SearchResults params={params} dictionary={dictionary} pathPrefix={pathPrefix} initial={!hasActiveSearch(params)} />
+      <PopularSearchLinks dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
+      <SwitzerlandMapSection dictionary={dictionary} locale={locale} params={params} />
+      <HomeGuideTeasers dictionary={dictionary} pathPrefix={pathPrefix} />
+    </main>
   );
 }

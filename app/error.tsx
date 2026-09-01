@@ -12,7 +12,7 @@ export default function ErrorPage({ reset }: { error: Error & { digest?: string 
         <button onClick={reset} className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white">
           Erneut versuchen
         </button>
-        <Link href="/standesamt-finden" className="focus-ring rounded-lg border border-sage/15 px-5 py-3 font-semibold text-sage">
+        <Link href="/" className="focus-ring rounded-lg border border-sage/15 px-5 py-3 font-semibold text-sage">
           Zur Suche
         </Link>
       </div>

@@ -82,7 +82,7 @@ function ceremonyDays(source: {
   ceremonyFriday?: boolean | null;
   ceremonySaturday?: boolean | null;
   ceremonySunday?: boolean | null;
-}, dictionary: Dictionary) {
+}, dictionary: Dictionary, includeNegative = false) {
   return [
     [dictionary["weekday.short.monday"], source.ceremonyMonday],
     [dictionary["weekday.short.tuesday"], source.ceremonyTuesday],
@@ -92,8 +92,8 @@ function ceremonyDays(source: {
     [dictionary["weekday.short.saturday"], source.ceremonySaturday],
     [dictionary["weekday.short.sunday"], source.ceremonySunday]
   ]
-    .filter(([, value]) => value === true)
-    .map(([day]) => day)
+    .filter(([, value]) => value === true || (includeNegative && value === false))
+    .map(([day, value]) => value === false ? `${day}: ${dictionary["common.no"]}` : day)
     .join(", ");
 }
 
@@ -177,7 +177,6 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(registryOfficeSchema(cleanOffice, cleanVenues)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: t("nav.home"), url: `https://hochzeitstandesamt.ch${withLocalePath("/", locale)}` },
-        { name: t("nav.registries"), url: `https://hochzeitstandesamt.ch${withLocalePath("/standesamt-finden", locale)}` },
         { name: cleanOffice.name, url: `https://hochzeitstandesamt.ch/zivilstandsamt/${office.slug}` }
       ])) }} />
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -275,7 +274,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
             {officeVenues.length ? (
               <div className="mt-4 grid gap-4 md:grid-cols-2">
                 {officeVenues.map((venue, index) => {
-                  const venueDays = ceremonyDays(venue, dictionary) || t("common.noInformationAvailable");
+                  const venueDays = ceremonyDays(venue, dictionary, true) || t("common.noInformationAvailable");
                   const venueMedia = ceremonyVenueMedia(venue);
                   return (
                     <article key={`${venue.standesamt_id}-${venue.traulokal_name}-${index}`} className="rounded-lg border border-linen bg-linen/40 p-4">
@@ -288,9 +287,14 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
                         <InfoItem label={t("office.field.address")} value={info([venue.adresse, venue.ort].filter(Boolean).join(", "), dictionary)} />
                         <InfoItem label={t("office.field.description")} value={info(venue.beschreibung, dictionary)} />
                         <InfoItem label={t("office.field.possibleWeddingDays")} value={venueDays} />
+                        {venue.ceremonyDaysNote ? <InfoItem label={t("verification.field.conditions")} value={repairText(venue.ceremonyDaysNote)} /> : null}
+                        {venue.ceremonyTimes ? <InfoItem label={t("verification.field.ceremony_times")} value={repairText(venue.ceremonyTimes)} /> : null}
                         <InfoItem label={t("office.field.maxGuests")} value={info(venue.maxCeremonyGuests, dictionary)} />
+                        {venue.capacityNote ? <InfoItem label={t("verification.field.capacity_max")} value={repairText(venue.capacityNote)} /> : null}
                         <InfoItem label={t("office.field.wheelchairAccessible")} value={boolInfo(venue.wheelchairAccessible, dictionary)} />
-                        <InfoItem label={t("office.field.parking")} value={boolInfo(venue.parkingAvailable, dictionary)} />
+                        <InfoItem label={t("office.field.parking")} value={venue.parkingDescription ? repairText(venue.parkingDescription) : boolInfo(venue.parkingAvailable, dictionary)} />
+                        {venue.indoor != null ? <InfoItem label={t("verification.field.indoor")} value={boolInfo(venue.indoor, dictionary)} /> : null}
+                        {venue.reservationRequired != null ? <InfoItem label={t("verification.field.reservation_required")} value={boolInfo(venue.reservationRequired, dictionary)} /> : null}
                         <InfoItem label={t("office.field.outdoorWedding")} value={boolInfo(venue.outdoorCeremonyAvailable, dictionary)} />
                         <InfoItem label={t("office.field.seasonalUse")} value={info(venue.seasonalAvailability, dictionary)} />
                       </dl>

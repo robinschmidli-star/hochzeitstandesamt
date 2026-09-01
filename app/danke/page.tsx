@@ -9,7 +9,7 @@ export default async function ThanksPage({ searchParams }: { searchParams: Promi
       <p className="mt-4 leading-8 text-soft-ink">
         Wir haben deine Angaben mit deiner Einwilligung gespeichert.
       </p>
-      <Link href="/standesamt-finden" className="focus-ring mt-8 inline-flex rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
+      <Link href="/" className="focus-ring mt-8 inline-flex rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90">
         Zur Suche zurück
       </Link>
     </main>

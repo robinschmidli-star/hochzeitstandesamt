@@ -19,7 +19,7 @@ export function SearchForm({ compact = false, embedded = false, labels = default
 
   return (
     <form
-      action={withLocalePath("/standesamt-finden", labels.locale)}
+      action={`${withLocalePath("/", labels.locale)}#results`}
       className={`grid gap-4 ${
         embedded ? "" : "rounded-xl border border-linen bg-white p-4 shadow-soft"
       }`}

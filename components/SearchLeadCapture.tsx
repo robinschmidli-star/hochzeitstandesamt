@@ -114,7 +114,7 @@ export function SearchLeadCapture({ params }: { params: SearchParams }) {
           </label>
           <p className="text-xs leading-5 text-soft-ink/80">
             Wir verwenden deine Angaben, um deine Suche zu speichern und dir passende Informationen zur Hochzeitsplanung zu senden. Details findest du in der{" "}
-            <Link href={`/${locale}/datenschutz`} className="font-semibold text-sage">Datenschutzerklärung</Link>.
+            <Link href="/datenschutz" className="font-semibold text-sage">Datenschutzerklärung</Link>.
           </p>
           <button disabled={status === "saving"} className="focus-ring rounded-lg bg-sage px-5 py-3 font-semibold text-white transition hover:bg-sage/90 disabled:cursor-wait disabled:opacity-70">
             {status === "saving" ? "Speichern..." : "Suche speichern"}

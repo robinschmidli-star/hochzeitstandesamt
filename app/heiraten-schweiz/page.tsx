@@ -32,7 +32,7 @@ const steps: readonly JourneyStep[] = [
     icon: "🏛️",
     title: "Trauort finden",
     text: "Wo möchtet ihr heiraten? Entdeckt Standesämter und offizielle Traulokale in der ganzen Schweiz.",
-    link: ["/standesamt-finden", "Standesämter & Traulokale entdecken →"],
+    link: ["/", "Standesämter & Traulokale entdecken →"],
     featured: true
   },
   {

@@ -1,19 +1,22 @@
 "use client";
 
-import { useEffect, useId, useState, type KeyboardEvent } from "react";
+import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { NameSearchSuggestion } from "@/lib/name-search";
 import type { Dictionary } from "@/lib/i18n";
 import de from "@/locales/de.json";
 
-export function NameSearch({ dictionary, defaultValue = "", compact = false, pathPrefix = "", hiddenParams = {} }: {
+export function NameSearch({ dictionary, defaultValue = "", compact = false, pathPrefix = "", hiddenParams = {}, children, quickFilters }: {
   dictionary: Dictionary;
   defaultValue?: string;
   compact?: boolean;
   pathPrefix?: string;
   hiddenParams?: Record<string, string | undefined>;
+  children?: ReactNode;
+  quickFilters?: ReactNode;
 }) {
+  const formRef = useRef<HTMLFormElement>(null);
   const [value, setValue] = useState(defaultValue);
   const [focused, setFocused] = useState(false);
   const [matches, setMatches] = useState<NameSearchSuggestion[]>([]);
@@ -48,6 +51,19 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
 
   const showPanel = focused && value.trim().length >= 2;
 
+  function selectSuggestion(suggestion: NameSearchSuggestion) {
+    if (!children || !formRef.current) {
+      router.push(`${pathPrefix}${suggestion.href}`);
+      return;
+    }
+    const params = new URLSearchParams();
+    new FormData(formRef.current).forEach((value, key) => {
+      if (typeof value === "string") params.append(key, value);
+    });
+    params.set("name", suggestion.name);
+    router.push(`${pathPrefix || "/"}?${params}#results`);
+  }
+
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (!showPanel || !matches.length) return;
     if (event.key === "ArrowDown") {
@@ -58,14 +74,14 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
       setActiveIndex((current) => (current <= 0 ? matches.length - 1 : current - 1));
     } else if (event.key === "Enter" && activeIndex >= 0) {
       event.preventDefault();
-      router.push(`${pathPrefix}${matches[activeIndex].href}`);
+      selectSuggestion(matches[activeIndex]);
     } else if (event.key === "Escape") {
       setFocused(false);
     }
   }
 
   return (
-    <form action={`${pathPrefix}/search`} className="relative grid gap-2" role="search">
+    <form ref={formRef} action={`${pathPrefix || "/"}#results`} className="relative grid min-w-0 gap-3" role="search">
       {Object.entries(hiddenParams).map(([name, hiddenValue]) => hiddenValue && name !== "name" ? <input key={name} type="hidden" name={name} value={hiddenValue} /> : null)}
       <label htmlFor={compact ? "name-search-filter" : "name-search-home"} className="text-sm font-medium text-ink">
         {t("nameSearch.label")}
@@ -87,17 +103,23 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
           aria-expanded={showPanel}
           aria-controls={listboxId}
           aria-activedescendant={activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined}
-          className="focus-ring h-12 min-w-0 flex-1 rounded-lg border border-linen bg-white px-3 text-base text-soft-ink"
+          className="focus-ring h-12 min-h-12 min-w-0 flex-1 rounded-lg border border-linen bg-white px-3 text-base text-soft-ink"
         />
-        <button className="focus-ring min-h-12 rounded-lg bg-sage px-5 py-3 font-semibold text-white">
+        {!children ? <button className="focus-ring min-h-12 rounded-lg bg-sage px-5 py-3 font-semibold text-white">
           {t("nameSearch.submit")}
-        </button>
+        </button> : null}
       </div>
-      <p className="text-xs text-soft-ink">{t("nameSearch.help")}</p>
+      <p className="hidden text-xs text-soft-ink sm:block">{t("nameSearch.help")}</p>
+      {children}
+      {children ? <div className="flex flex-col gap-2 sm:flex-row">
+        <button className="focus-ring min-h-12 rounded-lg bg-sage px-5 py-3 font-semibold text-white">{t("homeSearch.submit")}</button>
+        <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-12 items-center justify-center rounded-lg border border-linen px-5 py-3 font-semibold text-sage">{t("discovery.reset")}</Link>
+      </div> : null}
+      {quickFilters}
       {showPanel ? (
         <div id={listboxId} className="absolute left-0 right-0 top-[5.25rem] z-50 max-h-[min(24rem,55vh)] overflow-y-auto rounded-xl border border-linen bg-white p-1 shadow-xl sm:right-32" role="listbox">
           {matches.length ? matches.map((suggestion, index) => (
-            <Link key={suggestion.id} id={`${listboxId}-${index}`} href={`${pathPrefix}${suggestion.href}`} onMouseDown={(event) => event.preventDefault()} onMouseEnter={() => setActiveIndex(index)} role="option" aria-selected={activeIndex === index} className={`focus-ring flex min-h-14 items-center justify-between gap-3 rounded-lg px-3 py-2 ${activeIndex === index ? "bg-paper" : "hover:bg-paper"}`}>
+            <Link key={suggestion.id} id={`${listboxId}-${index}`} href={`${pathPrefix}${suggestion.href}`} onClick={children ? (event) => { event.preventDefault(); selectSuggestion(suggestion); } : undefined} onMouseDown={(event) => event.preventDefault()} onMouseEnter={() => setActiveIndex(index)} role="option" aria-selected={activeIndex === index} className={`focus-ring flex min-h-14 items-center justify-between gap-3 rounded-lg px-3 py-2 ${activeIndex === index ? "bg-paper" : "hover:bg-paper"}`}>
               <span className="min-w-0">
                 <span className="block truncate font-semibold text-ink">{suggestion.name}</span>
                 <span className="block text-xs text-soft-ink">

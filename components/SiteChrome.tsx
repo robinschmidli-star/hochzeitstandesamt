@@ -27,22 +27,22 @@ function getLocaleFromPath(pathname: string): Locale {
   return isLocale(firstSegment) ? firstSegment : defaultLocale;
 }
 
-export function SiteChrome({ children }: { children: React.ReactNode }) {
+export function SiteChrome({ children, initialLocale = defaultLocale }: { children: React.ReactNode; initialLocale?: Locale }) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const locale = getLocaleFromPath(pathname);
+  const [mounted, setMounted] = useState(false);
+  const locale = mounted ? getLocaleFromPath(pathname) : initialLocale;
   const fallback = de as Dictionary;
   const dictionary = { ...fallback, ...(dictionaries[locale] ?? {}) };
   const t = (key: string) => dictionary[key] ?? fallback[key] ?? key;
-  const nav = [
-    { href: "/", label: t("nav.home") },
-    { href: "/standesamt-finden", label: t("nav.registries") },
+  const nav: { href: string; label: string; disabled?: boolean }[] = [
+    { href: "/", label: t("nav.registries") },
     { href: "/ratgeber", label: t("nav.guides") },
-    { href: "/anbieter-finden", label: t("nav.venues"), disabled: true },
     { href: "/kontakt", label: t("nav.contact") }
   ];
 
   useEffect(() => {
+    setMounted(true);
     setMobileMenuOpen(false);
     const firstSegment = pathname.split("/").filter(Boolean)[0];
     const savedLocale = window.localStorage.getItem("preferred-language");
@@ -50,7 +50,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     const storedLocale = isLocale(savedLocale ?? undefined) ? savedLocale as Locale : null;
 
     if (!isLocale(firstSegment) && storedLocale && storedLocale !== defaultLocale && isLocalizedContentPath(pathname)) {
-      window.location.href = withLocalePath(pathname, storedLocale);
+      window.location.href = `${withLocalePath(pathname, storedLocale)}${window.location.search}${window.location.hash}`;
       return;
     }
 
@@ -66,7 +66,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             hochzeitstandesamt.ch
           </Link>
           <nav className="hidden items-center gap-5 text-sm text-soft-ink md:flex">
-            {nav.slice(1).map((item) => (
+            {nav.map((item) => (
               <Link
                 key={item.href}
                 href={withAvailableLocalePath(item.href, locale)}
@@ -98,7 +98,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen ? (
           <nav className="max-h-[calc(100dvh-4rem-env(safe-area-inset-top))] overflow-y-auto border-t border-linen bg-paper px-4 py-3 shadow-soft md:hidden">
             <div className="mx-auto grid max-w-7xl gap-2 text-sm text-soft-ink">
-              {nav.slice(1).map((item) => (
+              {nav.map((item) => (
                 <Link
                   key={item.href}
                   href={withAvailableLocalePath(item.href, locale)}
@@ -125,7 +125,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           <div>
             <p className="font-semibold">{t("footer.platform")}</p>
             <div className="mt-3 grid gap-2 text-sm text-white/70">
-              {nav.slice(1).map((item) => (
+              {nav.filter((item) => item.href === "/ratgeber").map((item) => (
                 <Link key={item.href} href={withAvailableLocalePath(item.href, locale)} className={item.disabled ? "text-white/45 hover:text-white/70" : "hover:text-white"}>
                   {item.label}
                 </Link>
