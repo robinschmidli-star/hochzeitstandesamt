@@ -813,13 +813,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "cbaf0a1f-875a-5a8e-9c8a-80e9e7023d7e",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:13",
+    "websitePriority": "Top20:13",
     "standesamt_id": "regionales-zivilstandsamt-brugg-brugg-ag",
     "standesamt_name": "Regionales Zivilstandsamt Brugg",
     "traulokal_name": "Restaurant Schloss Habsburg",
@@ -923,13 +923,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "https://www.museumaargau.ch/schloss-hallwyl/raeume-mieten-und-feiern",
     "sourceUrl": "https://www.museumaargau.ch/schloss-hallwyl/raeume-mieten-und-feiern",
     "remarks": "Top-20-Rang 12; drei Hallwyl-Trauorte separat erfasst; vor Merge Dublettenprüfung durchführen.",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:12"
+    "websitePriority": "Top20:12"
   },
   {
     "canonicalId": "ef74b07e-ce8f-58d2-a132-e014431a3081",
@@ -956,13 +956,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "https://www.museumaargau.ch/raeume-mieten-und-feiern/detail/ziviltraulokal-salon",
     "sourceUrl": "https://www.museumaargau.ch/raeume-mieten-und-feiern/detail/ziviltraulokal-salon",
     "remarks": "Top-20-Rang 14; alle offiziellen Wildegg-Ziviltrauungsräume separat erfasst; vor Merge Dublettenprüfung durchführen.",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:14"
+    "websitePriority": "Top20:14"
   },
   {
     "canonicalId": "9f580a74-0251-5f46-8902-18aa56f7f97c",
@@ -3158,13 +3158,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "819333a4-efe8-5d1c-b45f-b18add5fb5a3",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:01",
+    "websitePriority": "Top20:01",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Oberhofen",
@@ -3192,17 +3192,18 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageAlt": "Sommersaal im Schloss Oberhofen",
     "imageSource": "Stiftung Schloss Oberhofen",
     "imageAttribution": "Stiftung Schloss Oberhofen",
-    "imageStatus": "approved"
+    "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true
   },
   {
     "canonicalId": "8673029d-2ba7-54be-950c-c16a1954a52f",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:15",
+    "websitePriority": "Top20:15",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Schadau",
@@ -3256,13 +3257,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "f8ae6f21-ebe4-5a76-bf1e-ce643c3ff755",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:02",
+    "websitePriority": "Top20:02",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schloss Spiez",
@@ -3424,13 +3425,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "da067a71-7a88-57e9-8d51-e98d7904c299",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:16",
+    "websitePriority": "Top20:16",
     "standesamt_id": "zivilstandsamt-oberland-west-thun-be",
     "standesamt_name": "Zivilstandsamt Oberland West",
     "traulokal_name": "Schlossberg Thun",
@@ -10887,13 +10888,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "ea88647b-eb07-5fde-b310-8db8b2a2892b",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:18",
+    "websitePriority": "Top20:18",
     "standesamt_id": "zivilstandsamt-sarganserland-wangs-sg",
     "standesamt_name": "Zivilstandsamt Sarganserland",
     "traulokal_name": "Sargans, Schloss",
@@ -11024,13 +11025,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "officialConfirmed": true,
     "sourceUrl": "https://zivile-trauung.ch/traulokal/schloss-rapperswil/",
     "sourceType": "Gemeinde/Zivilstandsamt",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:17",
+    "websitePriority": "Top20:17",
     "remarks": "zusätzlich an einigen Freitagen/Samstagen",
     "canonicalId": "ad7b549a-e537-56ca-a606-dfbaaf270e62"
   },
@@ -12629,13 +12630,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "c6d3d621-e916-5ba1-8b9d-d3014c0a66e8",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:10",
+    "websitePriority": "Top20:10",
     "standesamt_id": "servizio-circondariale-dello-stato-civile-di-bellinzona-bellinzona-ti",
     "standesamt_name": "Servizio circondariale dello stato civile di Bellinzona",
     "traulokal_name": "Castello Sasso Corbaro",
@@ -19359,13 +19360,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "",
     "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
     "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:11"
+    "websitePriority": "Top20:11"
   },
   {
     "canonicalId": "295e5426-5ecd-5f18-b0dd-ca283e963d8d",
@@ -19504,13 +19505,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "ed5f604c-4808-5229-ac5e-c5c38f385405",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:19",
+    "websitePriority": "Top20:19",
     "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
     "standesamt_name": "Office de l'état civil du canton de Vaud",
     "traulokal_name": "Aigle – Château d'Aigle",
@@ -19763,13 +19764,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "b186e8cc-d961-5471-9a19-2da842ee83b6",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:20",
+    "websitePriority": "Top20:20",
     "standesamt_id": "office-de-l-etat-civil-du-canton-de-vaud-lausanne-vd",
     "standesamt_name": "Office de l'état civil du canton de Vaud",
     "traulokal_name": "Château d’Oron",
@@ -21660,6 +21661,7 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Autohalle Classics GmbH",
     "imageAttribution": "Autohalle Classics GmbH",
     "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
     "highlightLevel": 0
   },
   {
@@ -21687,13 +21689,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
     "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:03"
+    "websitePriority": "Top20:03"
   },
   {
     "canonicalId": "f346ad4f-c79a-5d8f-a022-4a3354d20743",
@@ -23328,13 +23330,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "",
     "sourceUrl": "https://www.zivba.ch/heirat/infos-zur-heirat.html/35",
     "remarks": "Traulokale gemäss offizieller/kommunaler Quelle",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:09"
+    "websitePriority": "Top20:09"
   },
   {
     "canonicalId": "bba88098-7234-5090-9119-3c5fe9cdb1d6",
@@ -23393,6 +23395,7 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Stiftung Schloss Greifensee",
     "imageAttribution": "Stiftung Schloss Greifensee",
     "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
     "highlightLevel": 0
   },
   {
@@ -23425,13 +23428,14 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Stiftung Schloss Greifensee",
     "imageAttribution": "Stiftung Schloss Greifensee",
     "imageStatus": "approved",
-    "beautyStatus": "Kuratierte Auswahl",
+    "publicDisplayWithoutCreditApproved": true,
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:06"
+    "websitePriority": "Top20:06"
   },
   {
     "canonicalId": "39d37718-e2dd-536f-b656-45e667246e3b",
@@ -23517,13 +23521,14 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Museum Schloss Kyburg",
     "imageAttribution": "Museum Schloss Kyburg",
     "imageStatus": "approved",
-    "beautyStatus": "Kuratierte Auswahl",
+    "publicDisplayWithoutCreditApproved": true,
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:07"
+    "websitePriority": "Top20:07"
   },
   {
     "canonicalId": "47e0df3f-4748-5828-9eff-482915cd1282",
@@ -24095,13 +24100,31 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Dolder Hotel AG Photo Gallery",
     "imageAttribution": "",
     "imageStatus": "approved",
-    "beautyStatus": "Kuratierte Auswahl",
+    "publicDisplayWithoutCreditApproved": true,
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:05"
+    "websitePriority": "Top20:05",
+    "galleryImages": [
+      {
+        "url": "/venues/dolder/dolder-hotel.jpg",
+        "alt": "The Dolder Grand mit Veranstaltungsbereich",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/dolder/dolder-terrasse.jpg",
+        "alt": "Aussenansicht des The Dolder Grand",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/dolder/dolder-trauung.jpg",
+        "alt": "Festlich gedeckter Trauraum im The Dolder Grand",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ]
   },
   {
     "canonicalId": "aaaa499e-5be5-58d1-ad02-c7d276ed27a0",
@@ -24699,13 +24722,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
   },
   {
     "canonicalId": "975c00a8-84c0-5b5c-91f9-b53e1664ecb3",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:08",
+    "websitePriority": "Top20:08",
     "standesamt_id": "zivilstandskreis-winterthur-winterthur-zh",
     "standesamt_name": "Zivilstandskreis Winterthur",
     "traulokal_name": "Villa Lindengut",
@@ -24998,13 +25021,13 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "",
     "sourceUrl": "https://ehei.stzh.ch/ehei/hochzeit-locations/13?selectedLocations=13",
     "remarks": "Masoala Regenwald oder Lewa Savanne",
-    "beautyStatus": "Kuratierte Auswahl",
+    "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
       "featured",
       "romantic"
     ],
-    "websitePriority": "Curated20:04"
+    "websitePriority": "Top20:04"
   },
   {
     "canonicalId": "9b721cb7-e0da-567c-93ce-e8801f3d0b07",

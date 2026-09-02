@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
-import { SafeMediaFrame } from "@/components/SafeMediaFrame";
+import { VenueGallery } from "@/components/VenueGallery";
 import { contentTranslations } from "@/lib/content-translations";
 import { defaultLocale, getDictionary, hreflangForLocale, indexableLocales, isLocale, withLocalePath, type Locale } from "@/lib/i18n";
 import { publicCeremonyVenues } from "@/lib/public-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
-import { ceremonyVenueMedia } from "@/lib/safe-media";
+import { ceremonyVenueGallery } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import { breadcrumbSchema, createMetadata } from "@/lib/seo";
 import type { CeremonyVenue } from "@/lib/types";
@@ -79,7 +79,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
   const office = swissRegistryOffices.find((item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
   const translations = await contentTranslations("wedding_venue", [id], locale, "description");
   const description = repairText(translations.get(id) || venue.beschreibung);
-  const media = ceremonyVenueMedia(venue);
+  const media = ceremonyVenueGallery(venue);
   const externalUrl = venue.venueUrl?.startsWith("https://") ? venue.venueUrl : "";
   const sourceUrl = venue.sourceUrl?.startsWith("https://") ? venue.sourceUrl : "";
   const path = withLocalePath(`/trauort/${id}`, locale);
@@ -122,7 +122,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         ...(office ? [{ name: repairText(office.name), url: `https://hochzeitstandesamt.ch${withLocalePath(`/zivilstandsamt/${office.slug}`, locale)}` }] : []),
         { name: repairText(venue.traulokal_name), url: `https://hochzeitstandesamt.ch${path}` }
       ])) }} />
-      <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <section>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{repairText([venue.ort, venue.kanton].filter(Boolean).join(" · "))}</p>
           <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{repairText(venue.traulokal_name)}</h1>
@@ -131,10 +131,16 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
             {office ? <Link href={withLocalePath(`/zivilstandsamt/${office.slug}`, locale)} className="focus-ring inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{repairText(office.name)}</Link> : null}
           </div>
         </div>
-        <div className="h-72 overflow-hidden rounded-xl border border-linen bg-linen/40 shadow-soft">
-          <SafeMediaFrame media={media} className="h-full w-full" placeholderLabel={t("media.placeholder")} />
-        </div>
       </section>
+      <VenueGallery
+        images={media}
+        openLabel={t("gallery.open")}
+        closeLabel={t("gallery.close")}
+        previousLabel={t("gallery.previous")}
+        nextLabel={t("gallery.next")}
+        moreLabel={t("gallery.more")}
+        placeholderLabel={t("media.placeholder")}
+      />
       <div className="grid gap-5 lg:grid-cols-2">
         <DetailSection title={t("venue.section.location")} items={locationItems} />
         <DetailSection title={t("venue.section.ceremony")} items={ceremonyItems} />

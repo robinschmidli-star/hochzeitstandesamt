@@ -7,6 +7,7 @@ import type { CeremonyVenue } from "@/lib/types";
 import { discoveryHref, paginateResults } from "@/lib/discovery";
 import type { Dictionary } from "@/lib/i18n";
 import { ceremonyVenuePath } from "@/lib/public-venues";
+import { registryCantons } from "@/lib/registry-data";
 
 export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { office: EnrichedRegistryOffice; dictionary: Dictionary; pathPrefix?: string }) {
   const officialUrl = office.website_url || office.officialUrl;
@@ -100,10 +101,14 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
   const venueMode = initial || params.tag === "featured";
   const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
   const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(matches, params.page, initial ? 6 : 12);
+  const selectedCanton = registryCantons.find((canton) => canton.code === params.canton);
+  const resultsTitle = selectedCanton
+    ? t("results.cantonTitle").replace("{canton}", repairText(selectedCanton.name))
+    : initial ? t("featured.title") : `${total} ${t(venueMode ? "results.venues" : "results.results")}`;
   return (
     <section id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 id="results-title" className="text-3xl font-semibold text-ink">{initial ? t("featured.title") : `${total} ${t(venueMode ? "results.venues" : "results.results")}`}</h2>
+        <h2 id="results-title" className="text-3xl font-semibold text-ink sm:text-4xl">{resultsTitle}</h2>
         {!initial ? <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("discovery.reset")}</Link> : null}
       </div>
       <div className={`mt-5 grid gap-4 ${venueMode ? "md:grid-cols-2 lg:grid-cols-3" : "lg:grid-cols-2"}`}>

@@ -193,7 +193,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
               <div className="mx-auto h-24 w-24 overflow-hidden rounded-lg">
                 <SafeMediaFrame media={officeMedia} className="h-full w-full" imageClassName="h-full w-full" placeholderLabel={t("media.placeholder")} />
               </div>
-              <figcaption className="mt-2 text-xs text-soft-ink">{officeMedia.status === "approved" ? t("media.image") : t("media.placeholder")}</figcaption>
+              {officeMedia.status === "approved" ? <figcaption className="mt-2 text-xs text-soft-ink">{t("media.image")}</figcaption> : null}
             </figure>
           ) : null}
         </section>

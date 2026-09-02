@@ -75,6 +75,13 @@ export type LicensedImageFields = {
   imageLicense?: string;
   imageAttribution?: string;
   imageStatus?: ImageStatus;
+  /** Explicit rights approval for public display without a visible credit line. */
+  publicDisplayWithoutCreditApproved?: boolean;
+  galleryImages?: Array<{
+    url: string;
+    alt?: string;
+    publicDisplayWithoutCreditApproved: boolean;
+  }>;
   imageCandidateUrl?: string;
   imageCandidateNote?: string;
   imageCandidateStatus?: "manual_permission_required";
@@ -87,6 +94,8 @@ export type RegistryCanton = {
   officeCount: number;
   municipalityCount: number;
   map: number[];
+  coatOfArmsUrl?: string;
+  mediaAlt?: string;
 };
 
 export type SwissRegistryOffice = LicensedImageFields & {
@@ -159,6 +168,8 @@ export type SwissRegistryOffice = LicensedImageFields & {
 };
 
 export type CeremonyVenue = LicensedImageFields & {
+  coatOfArmsUrl?: string;
+  mediaAlt?: string;
   ceremonyDaysNote?: string;
   ceremonyTimes?: string;
   capacityNote?: string;

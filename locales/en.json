@@ -239,6 +239,7 @@
   "results.distance": "{distance} km away",
   "results.eyebrow": "Find your civil ceremony",
   "results.title": "Find a registry office and ceremony venue",
+  "results.cantonTitle": "Ceremony venues in the Canton of {canton}",
   "results.intro": "Search for the responsible registry office or filter its venues by region, date and features. Availability must be confirmed directly with the office.",
   "homeSearch.submit": "Find ceremony venues",
   "homeSearch.moreFilters": "More filters",

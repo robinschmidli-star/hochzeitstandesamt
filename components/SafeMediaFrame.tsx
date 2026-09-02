@@ -42,10 +42,3 @@ export function SafeMediaFrame({
     />
   );
 }
-
-export function SafeMediaAttribution({ media, label = "Bild" }: { media: SafeMedia; label?: string }) {
-  const parts = [media.attribution, media.source, media.license].filter(Boolean);
-  if (!parts.length) return null;
-
-  return <p className="mt-2 text-xs leading-5 text-soft-ink">{label}: {parts.join(" · ")}</p>;
-}

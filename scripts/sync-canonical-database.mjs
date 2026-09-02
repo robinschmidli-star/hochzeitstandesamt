@@ -105,20 +105,40 @@ try {
   await client.end();
 }
 
-const mediaByEntityId = new Map(mediaRows.map((row) => [String(row.entity_id), row]));
-function publicMediaFields(entityId) {
-  const media = mediaByEntityId.get(String(entityId));
+const mediaByEntityId = new Map();
+for (const row of mediaRows) {
+  const entityId = String(row.entity_id);
+  mediaByEntityId.set(entityId, [...(mediaByEntityId.get(entityId) ?? []), row]);
+}
+for (const rows of mediaByEntityId.values()) {
+  rows.sort((left, right) =>
+    Number(Boolean(right.is_primary)) - Number(Boolean(left.is_primary)) ||
+    Number(left.sort_order ?? 0) - Number(right.sort_order ?? 0) ||
+    text(left.image_url).localeCompare(text(right.image_url))
+  );
+}
+function publicMediaFields(entityId, previous = {}) {
+  const media = mediaByEntityId.get(String(entityId)) ?? [];
   // The public replica may not expose the optional media contract yet. In that
   // case, retain provenance-reviewed media already present in the TS snapshot.
-  const imageUrl = text(media?.image_url);
+  const primary = media[0];
+  const imageUrl = text(primary?.image_url);
   if (!imageUrl) return {};
   return {
     imageUrl,
-    imageAlt: text(media.image_alt),
-    imageSource: text(media.image_source),
-    imageLicense: undefined,
-    imageAttribution: text(media.image_attribution),
-    imageStatus: "approved"
+    imageAlt: text(primary.image_alt),
+    imageStatus: "approved",
+    publicDisplayWithoutCreditApproved:
+      primary.public_display_without_credit_approved === true ||
+      primary.permission_status === "allowed",
+    ...((media.length > 1 || previous.imageUrl === imageUrl) && (media.length > 1 || previous.galleryImages?.length > 1) ? {
+      galleryImages: media.length > 1 ? media.map((item) => ({
+        url: text(item.image_url),
+        alt: text(item.image_alt),
+        publicDisplayWithoutCreditApproved:
+          item.public_display_without_credit_approved === true || item.permission_status === "allowed"
+      })) : previous.galleryImages
+    } : {})
   };
 }
 
@@ -179,7 +199,7 @@ const offices = officeRows.map((row) => {
     mediaLicenseNote: text(profile.coat_of_arms_source_note || old?.mediaLicenseNote),
     ceremonySaturday: boolean(profile.saturday_available ?? old?.ceremonySaturday),
     phase1CheckedAt: text(profile.last_verified_at || old?.phase1CheckedAt),
-    ...publicMediaFields(row.id)
+    ...publicMediaFields(row.id, old)
   };
   canonicalOfficeById.set(String(row.id), result);
   return result;
@@ -259,7 +279,7 @@ for (const row of venueRows) {
     ...(highlightLevel !== null ? { highlightLevel } : {}),
     ...(tags.length > 0 ? { tags } : {}),
     ...(websitePriority ? { websitePriority } : {}),
-    ...publicMediaFields(row.id)
+    ...publicMediaFields(row.id, old)
   });
 }
 
