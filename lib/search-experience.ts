@@ -205,6 +205,12 @@ function preferredDays(value?: string) {
 }
 
 export function featuredCeremonyVenues(params: SearchParams = {}) {
+  return searchCeremonyVenues(params)
+    .filter((venue) => /^Curated20:\d{2}$/.test(venue.websitePriority ?? ""))
+    .sort((left, right) => (left.websitePriority ?? "").localeCompare(right.websitePriority ?? ""));
+}
+
+export function searchCeremonyVenues(params: SearchParams = {}) {
   const nameQuery = params.name?.trim() ?? "";
   const locationQuery = normalize(params.location);
   const cantonQuery = normalize(params.canton);
@@ -216,7 +222,6 @@ export function featuredCeremonyVenues(params: SearchParams = {}) {
   const preferred = preferredDays(params.preferredWeekdays);
 
   return publicCeremonyVenues
-    .filter((venue) => /^Curated20:\d{2}$/.test(venue.websitePriority ?? ""))
     .filter((venue) => {
       const office = swissRegistryOffices.find((item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
       if (!office) return false;
@@ -236,9 +241,11 @@ export function featuredCeremonyVenues(params: SearchParams = {}) {
       if (Number.isFinite(minimumGuests) && minimumGuests > 0 && (!venue.maxCeremonyGuests || venue.maxCeremonyGuests < minimumGuests)) return false;
       return true;
     })
-    .sort((left, right) =>
-      (left.websitePriority ?? "").localeCompare(right.websitePriority ?? "")
-    );
+    .sort((left, right) => venueRank(left, nameQuery) - venueRank(right, nameQuery) || left.traulokal_name.localeCompare(right.traulokal_name, "de-CH"));
+}
+
+function venueRank(venue: CeremonyVenue, query: string) {
+  return nameMatchRank(venue.traulokal_name, query, [], [venue.ort, venue.adresse, venue.standesamt_name]) ?? 99;
 }
 
 function getSaturdayAvailability(office: SwissRegistryOffice) {
@@ -376,4 +383,25 @@ export function searchExperienceOffices(params: SearchParams) {
       if (typeof a.distanceKm === "number" && typeof b.distanceKm === "number") return a.distanceKm - b.distanceKm;
       return a.canton.localeCompare(b.canton, "de-CH") || a.name.localeCompare(b.name, "de-CH");
     });
+}
+
+export function searchExperienceResults(params: SearchParams): Array<CeremonyVenue | EnrichedRegistryOffice> {
+  if (!params.name?.trim()) return searchExperienceOffices(params);
+  const venues = searchCeremonyVenues(params);
+  const offices = searchExperienceOffices(params);
+  return [...venues, ...offices].sort((left, right) => {
+    const leftVenue = "traulokal_name" in left;
+    const rightVenue = "traulokal_name" in right;
+    const leftBaseRank = leftVenue
+      ? venueRank(left, params.name!)
+      : nameMatchRank(left.name, params.name!, left.ceremonyLocations ?? [], [left.city, ...left.responsibleMunicipalities, left.postalCode]) ?? 99;
+    const rightBaseRank = rightVenue
+      ? venueRank(right, params.name!)
+      : nameMatchRank(right.name, params.name!, right.ceremonyLocations ?? [], [right.city, ...right.responsibleMunicipalities, right.postalCode]) ?? 99;
+    const leftRank = leftBaseRank === 0 && !leftVenue ? 1 : leftBaseRank;
+    const rightRank = rightBaseRank === 0 && !rightVenue ? 1 : rightBaseRank;
+    return leftRank - rightRank ||
+      Number(leftVenue) - Number(rightVenue) ||
+      (leftVenue ? left.traulokal_name : left.name).localeCompare(rightVenue ? right.traulokal_name : right.name, "de-CH");
+  });
 }

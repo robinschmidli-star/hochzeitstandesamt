@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { SearchLeadCapture } from "@/components/SearchLeadCapture";
-import { swissRegistryOffices } from "@/lib/registry-data";
 import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
-import { featuredCeremonyVenues, searchExperienceOffices, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
+import { featuredCeremonyVenues, searchExperienceResults, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
 import type { CeremonyVenue } from "@/lib/types";
 import { discoveryHref, paginateResults } from "@/lib/discovery";
 import type { Dictionary } from "@/lib/i18n";
+import { ceremonyVenuePath } from "@/lib/public-venues";
 
 export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { office: EnrichedRegistryOffice; dictionary: Dictionary; pathPrefix?: string }) {
   const officialUrl = office.website_url || office.officialUrl;
@@ -60,7 +60,6 @@ export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { of
 
 export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact = false }: { venue: CeremonyVenue; dictionary: Dictionary; pathPrefix?: string; compact?: boolean }) {
   const media = ceremonyVenueMedia(venue);
-  const officeSlug = swissRegistryOffices.find((office) => office.id === venue.standesamt_id || office.slug === venue.standesamt_id)?.slug;
   const t = (key: string) => dictionary[key] ?? key;
 
   return (
@@ -80,12 +79,12 @@ export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact 
         </p> : null}
         {typeof venue.maxCeremonyGuests === "number" && venue.maxCeremonyGuests > 0 ? <p className="mt-2 text-sm text-soft-ink">{t("office.field.maxGuests")}: {venue.maxCeremonyGuests}</p> : null}
         {venue.standesamt_name ? <p className="mt-2 text-xs leading-5 text-soft-ink">{t("homeSearch.responsibleOffice")}: {repairText(venue.standesamt_name)}</p> : null}
-        {officeSlug ? <Link
-          href={`${pathPrefix}/zivilstandsamt/${officeSlug}#trauorte`}
+        <Link
+          href={`${pathPrefix}${ceremonyVenuePath(venue)}`}
           className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white"
         >
           {t("featured.details")}
-        </Link> : null}
+        </Link>
       </div>
     </article>
   );
@@ -99,7 +98,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
 }) {
   const t = (key: string) => dictionary[key] ?? key;
   const venueMode = initial || params.tag === "featured";
-  const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceOffices(params);
+  const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
   const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(matches, params.page, initial ? 6 : 12);
   return (
     <section id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">

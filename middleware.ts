@@ -55,6 +55,7 @@ export async function middleware(request: NextRequest) {
     localizedSection === "search" ||
     localizedSection === "standesamt-finden" ||
     localizedSection === "zivilstandsamt" ||
+    localizedSection === "trauort" ||
     (localizedSection === "ratgeber" && segments.length === 2);
   if (!localizedRouteSupported) {
     url.pathname = localizedSection === "ratgeber" ? `/${locale}/ratgeber` : `/${locale}`;

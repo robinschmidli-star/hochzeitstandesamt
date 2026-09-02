@@ -10,11 +10,15 @@ export function GET(request: Request) {
   const matches = suggestions
     .map((suggestion) => ({
       suggestion,
-      rank: nameMatchRank(suggestion.name, query, [suggestion.searchText])
+      rank: (() => {
+        const rank = nameMatchRank(suggestion.name, query, [suggestion.searchText]);
+        return rank === 0 && suggestion.type === "office" ? 1 : rank;
+      })()
     }))
     .filter((entry): entry is { suggestion: (typeof suggestions)[number]; rank: number } => entry.rank !== null)
     .sort((left, right) =>
-      left.rank - right.rank || left.suggestion.name.localeCompare(right.suggestion.name, "de-CH")
+      left.rank - right.rank ||
+      left.suggestion.name.localeCompare(right.suggestion.name, "de-CH")
     )
     .slice(0, 8)
     .map(({ suggestion }) => suggestion);

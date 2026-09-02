@@ -4,10 +4,10 @@ import { ChecklistForm } from "@/components/LeadForm";
 import { TrackOnMount } from "@/components/Analytics";
 import { headers } from "next/headers";
 import { ResponsibleMunicipalities } from "@/components/ResponsibleMunicipalities";
-import { SafeMediaAttribution, SafeMediaFrame } from "@/components/SafeMediaFrame";
+import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Faq } from "@/components/Faq";
-import { publicCeremonyVenues } from "@/lib/public-venues";
+import { ceremonyVenuePath, publicCeremonyVenues } from "@/lib/public-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
 import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
@@ -193,7 +193,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
               <div className="mx-auto h-24 w-24 overflow-hidden rounded-lg">
                 <SafeMediaFrame media={officeMedia} className="h-full w-full" imageClassName="h-full w-full" placeholderLabel={t("media.placeholder")} />
               </div>
-              <figcaption className="mt-2 text-xs text-soft-ink">{officeMedia.status === "approved" ? t("media.image") : officeMedia.status === "fallback_crest" ? t("media.crest") : t("media.placeholder")}</figcaption>
+              <figcaption className="mt-2 text-xs text-soft-ink">{officeMedia.status === "approved" ? t("media.image") : t("media.placeholder")}</figcaption>
             </figure>
           ) : null}
         </section>
@@ -281,8 +281,11 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
                       <div className="mb-4 h-40 overflow-hidden rounded-lg">
                         <SafeMediaFrame media={venueMedia} className="h-full w-full" placeholderLabel={t("media.placeholder")} />
                       </div>
-                      <SafeMediaAttribution media={venueMedia} label={t("media.image")} />
-                      <h4 className="font-semibold text-ink">{venue.traulokal_name}</h4>
+                      <h4 className="font-semibold text-ink">
+                        <Link href={withLocalePath(ceremonyVenuePath(venue), locale)} className="focus-ring rounded-sm transition hover:text-sage hover:underline">
+                          {venue.traulokal_name}
+                        </Link>
+                      </h4>
                       <dl className="mt-3 grid gap-3 text-sm text-soft-ink">
                         <InfoItem label={t("office.field.address")} value={info([venue.adresse, venue.ort].filter(Boolean).join(", "), dictionary)} />
                         <InfoItem label={t("office.field.description")} value={info(venue.beschreibung, dictionary)} />
@@ -298,11 +301,9 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
                         <InfoItem label={t("office.field.outdoorWedding")} value={boolInfo(venue.outdoorCeremonyAvailable, dictionary)} />
                         <InfoItem label={t("office.field.seasonalUse")} value={info(venue.seasonalAvailability, dictionary)} />
                       </dl>
-                      {httpsUrl(venue.venueUrl) ? (
-                        <a href={venue.venueUrl} target="_blank" rel="noopener noreferrer" className="focus-ring mt-4 inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
+                      <Link href={withLocalePath(ceremonyVenuePath(venue), locale)} className="focus-ring mt-4 inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
                           {t("office.action.viewVenue")}
-                        </a>
-                      ) : null}
+                      </Link>
                     </article>
                   );
                 })}
@@ -319,9 +320,6 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
           <div className="h-72">
             <SafeMediaFrame media={officeMedia} className="h-full w-full" placeholderLabel={t("media.placeholder")} />
           </div>
-          <figcaption className="px-5 pb-4">
-            <SafeMediaAttribution media={officeMedia} label={t("media.image")} />
-          </figcaption>
         </figure>
       ) : null}
 

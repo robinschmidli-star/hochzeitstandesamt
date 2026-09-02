@@ -1,5 +1,6 @@
 import { publicCeremonyVenues } from "@/lib/public-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
+import { ceremonyVenuePath } from "@/lib/public-venues";
 
 export type NameSearchSuggestion = {
   id: string;
@@ -20,18 +21,35 @@ export const normalizeNameSearch = (value = "") =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
+function editDistance(left: string, right: string) {
+  const row = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex++) {
+    let diagonal = row[0];
+    row[0] = leftIndex;
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex++) {
+      const previous = row[rightIndex];
+      row[rightIndex] = Math.min(
+        row[rightIndex] + 1,
+        row[rightIndex - 1] + 1,
+        diagonal + Number(left[leftIndex - 1] !== right[rightIndex - 1])
+      );
+      diagonal = previous;
+    }
+  }
+  return row[right.length];
+}
+
 export function nameMatchRank(name: string, query: string, alternatives: string[] = [], context: string[] = []) {
   const needle = normalizeNameSearch(query);
   if (!needle) return null;
   const normalizedName = normalizeNameSearch(name);
   if (normalizedName === needle) return 0;
-  if (normalizedName.startsWith(needle)) return 1;
-  if (normalizedName.includes(needle)) return 2;
+  if (normalizedName.startsWith(needle)) return 2;
+  if (normalizedName.includes(needle)) return 3;
   const normalizedAlternatives = alternatives.map(normalizeNameSearch);
-  if (normalizedAlternatives.some((value) => value === needle)) return 0;
-  if (normalizedAlternatives.some((value) => value.startsWith(needle))) return 1;
-  if (normalizedAlternatives.some((value) => value.includes(needle))) return 2;
-  if (context.some((value) => normalizeNameSearch(value).includes(needle))) return 3;
+  if (normalizedAlternatives.some((value) => value === needle || value.startsWith(needle) || value.includes(needle))) return 4;
+  if (context.some((value) => normalizeNameSearch(value).includes(needle))) return /^\d/.test(needle) ? 6 : 5;
+  if (needle.length >= 6 && editDistance(normalizedName, needle) <= Math.max(2, Math.floor(needle.length * 0.12))) return 7;
   return null;
 }
 
@@ -63,7 +81,7 @@ export function buildNameSearchSuggestions(): NameSearchSuggestion[] {
       type: "venue",
       canton: venue.kanton || office.canton,
       place: venue.ort || office.city,
-      href: `/zivilstandsamt/${office.slug}#trauorte`,
+      href: ceremonyVenuePath(venue),
       searchText: [name, venue.ort, venue.adresse, venue.standesamt_name].join(" ")
     });
   }

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { buildNameSearchSuggestions, nameMatchRank } from "../lib/name-search";
-import { featuredCeremonyVenues, searchExperienceOffices, searchWeekday } from "../lib/search-experience";
+import { featuredCeremonyVenues, searchExperienceOffices, searchExperienceResults, searchWeekday } from "../lib/search-experience";
 import { swissRegistryOffices } from "../lib/registry-data";
 import { withAvailableLocalePath } from "../lib/i18n";
 import { discoveryHref, hasActiveSearch, paginateResults, parseSearchParams } from "../lib/discovery";
@@ -74,6 +74,30 @@ test("name, town, postcode and venue names use the central search", () => {
 
 test("postcode suggestions are available", () => {
   assert.ok(buildNameSearchSuggestions().some((item) => nameMatchRank(item.name, "8001", [item.searchText]) !== null));
+});
+
+test("concrete venue and office names rank as independent internal results", () => {
+  const cases = [
+    ["The Dolder Grand", "The Dolder Grand", "venue"],
+    ["Dolder", "The Dolder Grand", "venue"],
+    ["Zivilstandsamt Zürich", "Zivilstandsamt Zürich", "office"],
+    ["Zürich", "Zivilstandsamt Zürich", "office"],
+    ["8001", "Zivilstandsamt Zürich", "office"],
+    ["Blausee", "Hotel Blausee", "venue"],
+    ["Amtshaus Saanen", "Amthaus Saanen", "venue"]
+  ] as const;
+
+  for (const [query, expectedName, expectedType] of cases) {
+    const first = searchExperienceResults({ name: query })[0];
+    assert.ok(first, query);
+    assert.equal("traulokal_name" in first ? first.traulokal_name : first.name, expectedName, query);
+    assert.equal("traulokal_name" in first ? "venue" : "office", expectedType, query);
+  }
+
+  const dolder = buildNameSearchSuggestions().find((item) => item.name === "The Dolder Grand");
+  assert.ok(dolder);
+  assert.match(dolder.href, /^\/trauort\/[0-9a-f-]+$/);
+  assert.equal(searchExperienceResults({ name: "The Dolder Grand", canton: "ZH" })[0], searchExperienceResults({ name: "The Dolder Grand" })[0]);
 });
 
 test("date uses offered weekdays, invalid dates do not invent availability", () => {
