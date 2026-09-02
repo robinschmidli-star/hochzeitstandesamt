@@ -18,6 +18,7 @@ export function GET(request: Request) {
     .filter((entry): entry is { suggestion: (typeof suggestions)[number]; rank: number } => entry.rank !== null)
     .sort((left, right) =>
       left.rank - right.rank ||
+      Number(left.suggestion.type === "venue") - Number(right.suggestion.type === "venue") ||
       left.suggestion.name.localeCompare(right.suggestion.name, "de-CH")
     )
     .slice(0, 8)
