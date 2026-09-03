@@ -64,7 +64,7 @@ export function SwitzerlandMapSection({
   params: SearchParams;
 }) {
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-8 pt-2 sm:px-6 lg:px-8">
+    <section id="canton-map" className="mx-auto max-w-7xl scroll-mt-24 px-4 pb-8 pt-2 sm:px-6 lg:px-8">
       <SwissMap labels={registrySearchLabels(dictionary, locale)} searchPath="/" selectedCanton={params.canton} searchQuery={discoveryHref(params).split("?")[1]?.split("#")[0]} />
     </section>
   );

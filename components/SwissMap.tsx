@@ -12,7 +12,7 @@ export function SwissMap({ embedded = false, selectedCanton = "", labels = defau
     if (canton) query.set("canton", canton);
     else query.delete("canton");
     if (searchPath === "/") query.set("submitted", "1");
-    return `${withLocalePath(searchPath, labels.locale)}${query.size ? `?${query}` : ""}${searchPath === "/" ? "#results" : ""}`;
+    return `${withLocalePath(searchPath, labels.locale)}${query.size ? `?${query}` : ""}${searchPath === "/" ? "#canton-map" : ""}`;
   };
   const selectedShape = swissCantonPaths.find((shape) => shape.code === selectedCanton);
   const selectedCantonInfo = registryCantons.find((canton) => canton.code === selectedCanton);
