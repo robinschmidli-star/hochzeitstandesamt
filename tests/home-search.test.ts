@@ -96,7 +96,7 @@ test("concrete venue and office names rank as independent internal results", () 
 
   const dolder = buildNameSearchSuggestions().find((item) => item.name === "The Dolder Grand");
   assert.ok(dolder);
-  assert.match(dolder.href, /^\/trauort\/[0-9a-f-]+$/);
+  assert.match(dolder.href, /^\/trauort\/[a-z0-9]+(?:-[a-z0-9]+)*$/);
   assert.equal(searchExperienceResults({ name: "The Dolder Grand", canton: "ZH" })[0], searchExperienceResults({ name: "The Dolder Grand" })[0]);
 });
 

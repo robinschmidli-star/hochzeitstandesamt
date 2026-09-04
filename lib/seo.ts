@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CeremonyVenue, SwissRegistryOffice } from "@/lib/types";
 import { defaultLocale, hreflangForLocale, indexableLocales, type Dictionary, type Locale } from "@/lib/i18n";
 import { hasActiveSearch, parseSearchParams, type RawSearchParams } from "@/lib/discovery";
+import { ceremonyVenuePath } from "@/lib/public-venues";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
 
@@ -113,7 +114,8 @@ export function registryOfficeSchema(
             name: venue.traulokal_name,
             ...(venue.canonicalId ? { identifier: venue.canonicalId } : {}),
             ...(venue.beschreibung ? { description: venue.beschreibung } : {}),
-            ...(venue.venueUrl ? { url: venue.venueUrl } : {}),
+            url: `${siteUrl}${ceremonyVenuePath(venue)}`,
+            ...(venue.venueUrl ? { sameAs: venue.venueUrl } : {}),
             address: {
               "@type": "PostalAddress",
               streetAddress: venue.adresse || undefined,

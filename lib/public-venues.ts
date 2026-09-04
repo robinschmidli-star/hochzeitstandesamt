@@ -12,5 +12,11 @@ export function dedupePublicVenues(venues: CeremonyVenue[]) {
 export const publicCeremonyVenues = dedupePublicVenues(ceremonyVenues);
 
 export function ceremonyVenuePath(venue: CeremonyVenue) {
-  return `/trauort/${venue.canonicalId}`;
+  return `/trauort/${venue.slug}`;
+}
+
+export function ceremonyVenueByRouteKey(routeKey: string) {
+  return publicCeremonyVenues.find(
+    (venue) => venue.slug === routeKey || venue.canonicalId === routeKey
+  );
 }

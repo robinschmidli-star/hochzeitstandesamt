@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { dedupePublicVenues } from "../lib/public-venues";
+import { ceremonyVenueByRouteKey, ceremonyVenuePath, dedupePublicVenues } from "../lib/public-venues";
 import { ceremonyVenues } from "../lib/ceremony-venues";
 import { swissRegistryOffices } from "../lib/registry-data";
 import type { CeremonyVenue } from "../lib/types.ts";
 
 const venue = (values: Partial<CeremonyVenue>): CeremonyVenue => ({
   canonicalId: "00000000-0000-0000-0000-000000000001",
+  slug: "gemeindesaal-ort-a",
   standesamt_id: "office",
   standesamt_name: "Office",
   traulokal_name: "Gemeindesaal",
@@ -52,13 +53,22 @@ test("all canonical venues have one internal page and a valid office relation", 
     [office.canonicalId, office.id, office.slug].filter(Boolean)
   ));
   assert.equal(new Set(ceremonyVenues.map((item) => item.canonicalId)).size, ceremonyVenues.length);
+  assert.equal(new Set(ceremonyVenues.map((item) => item.slug)).size, ceremonyVenues.length);
   assert.ok(ceremonyVenues.every((item) => item.canonicalId && officeIds.has(item.standesamt_id)));
-  assert.ok(ceremonyVenues.every((item) => /^\/trauort\/[0-9a-f-]{36}$/.test(`/trauort/${item.canonicalId}`)));
+  assert.ok(ceremonyVenues.every((item) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.slug)));
 });
 
 test("all Top 20 venues retain direct internal detail pages", () => {
   const top20 = ceremonyVenues.filter((item) => item.websitePriority?.startsWith("Top20:"));
   assert.deepEqual(top20.map((item) => item.websitePriority).sort(),
     Array.from({ length: 20 }, (_, index) => `Top20:${String(index + 1).padStart(2, "0")}`));
-  assert.ok(top20.every((item) => /^\/trauort\/[0-9a-f-]{36}$/.test(`/trauort/${item.canonicalId}`)));
+  assert.ok(top20.every((item) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.slug)));
+});
+
+test("slug routes are canonical while UUID routes remain resolvable for redirects", () => {
+  for (const item of ceremonyVenues) {
+    assert.equal(ceremonyVenuePath(item), `/trauort/${item.slug}`);
+    assert.equal(ceremonyVenueByRouteKey(item.slug)?.canonicalId, item.canonicalId);
+    assert.equal(ceremonyVenueByRouteKey(item.canonicalId!)?.slug, item.slug);
+  }
 });

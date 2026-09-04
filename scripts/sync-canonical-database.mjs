@@ -64,6 +64,8 @@ const list = (value) =>
 function uniqueSlug(base, used, suffix) {
   let candidate = base;
   if (used.has(candidate)) candidate = `${base}-${suffix}`;
+  let counter = 2;
+  while (used.has(candidate)) candidate = `${base}-${suffix}-${counter++}`;
   used.add(candidate);
   return candidate;
 }
@@ -236,6 +238,7 @@ for (const venue of existingVenues) {
 const matchedOldVenueIds = new Set();
 const ambiguousVenueAssignments = [];
 const venues = [];
+const usedVenueSlugs = new Set();
 for (const row of venueRows) {
   const profile = row.profile ?? {};
   const canton = text(row.canton_code || profile.region_code).toUpperCase();
@@ -260,9 +263,15 @@ for (const row of venueRows) {
     : [];
   const tags = profileTags.length > 0 ? profileTags : old?.tags ?? [];
   const websitePriority = text(profile.website_priority || old?.websitePriority);
+  const slug = uniqueSlug(
+    text(old?.slug || row.canonical_slug) || slugify(row.name),
+    usedVenueSlugs,
+    slugify(`${row.city || profile.locality || profile.municipality || canton}-${canton}-${String(row.id).slice(0, 8)}`)
+  );
   venues.push({
     ...(old ?? {}),
     canonicalId: String(row.id),
+    slug,
     standesamt_id: office.canonicalId,
     standesamt_name: office.name,
     traulokal_name: text(row.name),

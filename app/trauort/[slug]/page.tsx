@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { headers } from "next/headers";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { VenueGallery } from "@/components/VenueGallery";
 import { contentTranslations } from "@/lib/content-translations";
 import { defaultLocale, getDictionary, hreflangForLocale, indexableLocales, isLocale, withLocalePath, type Locale } from "@/lib/i18n";
-import { publicCeremonyVenues } from "@/lib/public-venues";
+import { ceremonyVenueByRouteKey, ceremonyVenuePath, publicCeremonyVenues } from "@/lib/public-venues";
 import { swissRegistryOffices } from "@/lib/registry-data";
 import { ceremonyVenueGallery } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import { breadcrumbSchema, createMetadata } from "@/lib/seo";
 import type { CeremonyVenue } from "@/lib/types";
 
-type Props = { params: Promise<{ id: string }> };
+type Props = { params: Promise<{ slug: string }> };
 
 type DetailItem = { label: string; value: string };
 
@@ -40,17 +40,17 @@ function ceremonyDays(venue: CeremonyVenue, dictionary: Record<string, string>) 
 }
 
 export function generateStaticParams() {
-  return publicCeremonyVenues.map((venue) => ({ id: venue.canonicalId! }));
+  return publicCeremonyVenues.map((venue) => ({ slug: venue.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { id } = await params;
-  const venue = publicCeremonyVenues.find((item) => item.canonicalId === id);
+  const { slug } = await params;
+  const venue = ceremonyVenueByRouteKey(slug);
   if (!venue) return {};
   const rawLocale = (await headers()).get("x-site-locale") ?? defaultLocale;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hochzeitstandesamt.ch";
-  const path = `/trauort/${id}`;
+  const path = ceremonyVenuePath(venue);
   const localizedPath = withLocalePath(path, locale);
   return {
     ...createMetadata({
@@ -69,22 +69,24 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CeremonyVenueDetailPage({ params }: Props) {
-  const { id } = await params;
-  const venue = publicCeremonyVenues.find((item) => item.canonicalId === id);
+  const { slug } = await params;
+  const venue = ceremonyVenueByRouteKey(slug);
   if (!venue) notFound();
   const rawLocale = (await headers()).get("x-site-locale") ?? defaultLocale;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  if (slug !== venue.slug) permanentRedirect(withLocalePath(ceremonyVenuePath(venue), locale));
   const dictionary = await getDictionary(locale);
   const t = (key: string) => dictionary[key] ?? key;
   const office = swissRegistryOffices.find((item) =>
     item.canonicalId === venue.standesamt_id || item.id === venue.standesamt_id || item.slug === venue.standesamt_id
   );
-  const translations = await contentTranslations("wedding_venue", [id], locale, "description");
-  const description = repairText(translations.get(id) || venue.beschreibung);
+  const canonicalId = venue.canonicalId!;
+  const translations = await contentTranslations("wedding_venue", [canonicalId], locale, "description");
+  const description = repairText(translations.get(canonicalId) || venue.beschreibung);
   const media = ceremonyVenueGallery(venue);
   const externalUrl = venue.venueUrl?.startsWith("https://") ? venue.venueUrl : "";
   const sourceUrl = venue.sourceUrl?.startsWith("https://") ? venue.sourceUrl : "";
-  const path = withLocalePath(`/trauort/${id}`, locale);
+  const path = withLocalePath(ceremonyVenuePath(venue), locale);
   const yes = t("common.yes");
   const no = t("common.no");
   const days = ceremonyDays(venue, dictionary);

@@ -177,6 +177,7 @@ export type CeremonyVenue = LicensedImageFields & {
   indoor?: boolean | null;
   reservationRequired?: boolean | null;
   canonicalId?: string;
+  slug: string;
   standesamt_id: string;
   standesamt_name: string;
   traulokal_name: string;
