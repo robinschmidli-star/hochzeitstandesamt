@@ -117,6 +117,12 @@ test("combined postcode, canton and Saturday filters remain effective", () => {
   assert.equal(searchExperienceOffices({ name: "8001", canton: "GE" }).length, 0);
 });
 
+test("radius uses the central place search as its origin", () => {
+  const results = searchExperienceOffices({ name: "Zürich", radius: "10" });
+  assert.ok(results.length > 0);
+  assert.ok(results.every((office) => typeof office.distanceKm === "number" && office.distanceKm <= 10));
+});
+
 test("existing style, capacity and accessibility filters are reused", () => {
   assert.ok(searchExperienceOffices({ tag: "castle" }).every((office) => office.tags.includes("castle")));
   const venues = featuredCeremonyVenues({ maxGuests: "20", wheelchair: "yes" });
@@ -133,7 +139,7 @@ test("localized search and inspiration URLs retain parameters", () => {
 test("all enabled languages include homepage labels", () => {
   for (const locale of ["de", "fr", "it", "en"]) {
     const dictionary = JSON.parse(readFileSync(new URL(`../locales/${locale}.json`, import.meta.url), "utf8"));
-    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.moreFilters", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides"]) {
+    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.title", "homeSearch.date", "homeSearch.guests", "homeSearch.moreFilters", "homeSearch.when", "homeSearch.exactDate", "homeSearch.flexibleDate", "homeSearch.monthYear", "homeSearch.dateRange", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides"]) {
       assert.ok(dictionary[key], `${locale}: ${key}`);
     }
   }

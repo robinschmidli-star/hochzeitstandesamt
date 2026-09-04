@@ -81,9 +81,9 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
   }
 
   return (
-    <form ref={formRef} action={`${pathPrefix || "/"}#results`} className="relative grid min-w-0 gap-3" role="search">
+    <form ref={formRef} action={`${pathPrefix || "/"}#results`} className="relative grid min-w-0 gap-2" role="search">
       {Object.entries(hiddenParams).map(([name, hiddenValue]) => hiddenValue && name !== "name" ? <input key={name} type="hidden" name={name} value={hiddenValue} /> : null)}
-      <label htmlFor={compact ? "name-search-filter" : "name-search-home"} className="text-sm font-medium text-ink">
+      <label htmlFor={compact ? "name-search-filter" : "name-search-home"} className="text-sm font-semibold text-ink">
         {t("nameSearch.label")}
       </label>
       <div className="flex min-w-0 flex-col gap-2 sm:flex-row">
@@ -103,19 +103,19 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
           aria-expanded={showPanel}
           aria-controls={listboxId}
           aria-activedescendant={activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined}
-          className="focus-ring h-12 min-h-12 min-w-0 flex-1 rounded-lg border border-linen bg-white px-3 text-base text-soft-ink"
+          className="focus-ring h-12 min-h-12 min-w-0 flex-1 rounded-lg border border-linen bg-white px-3 text-base text-soft-ink shadow-sm"
         />
         {!children ? <button className="focus-ring min-h-12 rounded-lg bg-sage px-5 py-3 font-semibold text-white">
           {t("nameSearch.submit")}
         </button> : null}
       </div>
-      <p className="hidden text-xs text-soft-ink sm:block">{t("nameSearch.help")}</p>
+      <p className="hidden text-[11px] leading-4 text-soft-ink/75 sm:block">{t("nameSearch.help")}</p>
       {children}
-      {children ? <div className="flex flex-col gap-2 sm:flex-row">
-        <button className="focus-ring min-h-12 rounded-lg bg-sage px-5 py-3 font-semibold text-white">{t("homeSearch.submit")}</button>
-        <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-12 items-center justify-center rounded-lg border border-linen px-5 py-3 font-semibold text-sage">{t("discovery.reset")}</Link>
-      </div> : null}
       {quickFilters}
+      {children ? <div className="flex flex-col items-stretch gap-1 sm:flex-row sm:items-center">
+        <button className="focus-ring min-h-11 rounded-lg bg-sage px-6 py-2.5 font-semibold text-white shadow-sm transition hover:bg-sage/90">{t("homeSearch.submit")} →</button>
+        <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center justify-center px-4 py-2 text-sm font-semibold text-sage hover:underline">{t("discovery.reset")}</Link>
+      </div> : null}
       {showPanel ? (
         <div id={listboxId} className="absolute left-0 right-0 top-[5.25rem] z-50 max-h-[min(24rem,55vh)] overflow-y-auto rounded-xl border border-linen bg-white p-1 shadow-xl sm:right-32" role="listbox">
           {matches.length ? matches.map((suggestion, index) => (
