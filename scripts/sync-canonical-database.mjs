@@ -263,7 +263,7 @@ for (const row of venueRows) {
   venues.push({
     ...(old ?? {}),
     canonicalId: String(row.id),
-    standesamt_id: office.id,
+    standesamt_id: office.canonicalId,
     standesamt_name: office.name,
     traulokal_name: text(row.name),
     adresse: text(row.address_line1 || profile.address_raw),

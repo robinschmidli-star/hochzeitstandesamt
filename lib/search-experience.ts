@@ -137,7 +137,7 @@ function repairedMunicipalities(office: SwissRegistryOffice) {
 }
 
 function getVenues(office: SwissRegistryOffice) {
-  return publicCeremonyVenues.filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug);
+  return publicCeremonyVenues.filter((venue) => venue.standesamt_id === office.canonicalId || venue.standesamt_id === office.id || venue.standesamt_id === office.slug);
 }
 
 export function isElopementSuitableVenue(venue: CeremonyVenue) {
@@ -173,7 +173,7 @@ function getOfficeTags(office: SwissRegistryOffice) {
   if (/(park|wald|garten|natur|see|berge)/.test(text)) tags.add("nature");
   if (/(zivilstandsamt|regionales|office)/.test(text)) tags.add("romantic");
   if (/(modern|zentrum|stadthaus)/.test(text)) tags.add("modern");
-  if (venues.some((venue) => venue.websitePriority?.startsWith("Curated20:"))) {
+  if (venues.some((venue) => venue.websitePriority?.startsWith("Top20:"))) {
     tags.add("featured");
   }
 
@@ -206,7 +206,7 @@ function preferredDays(value?: string) {
 
 export function featuredCeremonyVenues(params: SearchParams = {}) {
   return searchCeremonyVenues(params)
-    .filter((venue) => /^Curated20:\d{2}$/.test(venue.websitePriority ?? ""))
+    .filter((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? ""))
     .sort((left, right) => (left.websitePriority ?? "").localeCompare(right.websitePriority ?? ""));
 }
 
@@ -223,7 +223,7 @@ export function searchCeremonyVenues(params: SearchParams = {}) {
 
   return publicCeremonyVenues
     .filter((venue) => {
-      const office = swissRegistryOffices.find((item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
+      const office = swissRegistryOffices.find((item) => item.canonicalId === venue.standesamt_id || item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
       if (!office) return false;
       if (!matchesPostalCode(office, params.postalCode)) return false;
       if (preferred.length && !preferred.some((day) => venue[`ceremony${day[0].toUpperCase()}${day.slice(1)}` as keyof CeremonyVenue] === true)) return false;
@@ -335,7 +335,7 @@ export function enrichOffice(office: SwissRegistryOffice, origin?: { lat: number
 }
 
 export function searchExperienceOffices(params: SearchParams) {
-  const origin = findCoordinates(params.location);
+  const origin = findCoordinates(params.location || params.name);
   const radius = Number(params.radius || 0);
   const weekday = searchWeekday(params);
   const tag = params.tag;

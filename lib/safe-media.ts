@@ -59,7 +59,7 @@ function venueFallbackMedia(venue: CeremonyVenue): SafeMedia {
   if (ownCrest) return ownCrest;
 
   const responsibleOffice = swissRegistryOffices.find(
-    (office) => office.id === venue.standesamt_id || office.slug === venue.standesamt_id
+    (office) => office.canonicalId === venue.standesamt_id || office.id === venue.standesamt_id || office.slug === venue.standesamt_id
   );
   const officeCrest = responsibleOffice && coatOfArmsMedia(
     responsibleOffice.coatOfArmsUrl,

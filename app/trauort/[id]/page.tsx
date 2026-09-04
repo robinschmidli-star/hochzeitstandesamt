@@ -76,7 +76,9 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dictionary = await getDictionary(locale);
   const t = (key: string) => dictionary[key] ?? key;
-  const office = swissRegistryOffices.find((item) => item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
+  const office = swissRegistryOffices.find((item) =>
+    item.canonicalId === venue.standesamt_id || item.id === venue.standesamt_id || item.slug === venue.standesamt_id
+  );
   const translations = await contentTranslations("wedding_venue", [id], locale, "description");
   const description = repairText(translations.get(id) || venue.beschreibung);
   const media = ceremonyVenueGallery(venue);

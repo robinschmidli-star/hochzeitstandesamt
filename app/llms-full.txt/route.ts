@@ -12,8 +12,10 @@ export function GET() {
   }
 
   const offices = swissRegistryOffices.map((office) => {
-    const venues = venuesByOffice.get(office.id) ?? venuesByOffice.get(office.slug) ?? [];
-    const municipalitySummary = office.responsibleMunicipalities.slice(0, 20).join(", ");
+    const venues = (office.canonicalId ? venuesByOffice.get(office.canonicalId) : undefined) ?? venuesByOffice.get(office.id) ?? venuesByOffice.get(office.slug) ?? [];
+    const municipalitySummary = Array.isArray(office.responsibleMunicipalities)
+      ? office.responsibleMunicipalities.slice(0, 20).join(", ")
+      : office.responsibleMunicipalities;
     return [
       `## ${office.name}`,
       `- URL: ${siteUrl}/zivilstandsamt/${office.slug}`,

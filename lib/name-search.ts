@@ -55,7 +55,11 @@ export function nameMatchRank(name: string, query: string, alternatives: string[
 
 export function buildNameSearchSuggestions(): NameSearchSuggestion[] {
   const officesById = new Map(
-    swissRegistryOffices.flatMap((office) => [[office.id, office], [office.slug, office]] as const)
+    swissRegistryOffices.flatMap((office) => [
+      ...(office.canonicalId ? [[office.canonicalId, office] as const] : []),
+      [office.id, office] as const,
+      [office.slug, office] as const
+    ])
   );
   const suggestions: NameSearchSuggestion[] = swissRegistryOffices.map((office) => ({
     id: `office:${office.slug}`,

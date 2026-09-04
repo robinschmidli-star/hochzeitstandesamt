@@ -130,7 +130,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
     ceremonyLocations: office.ceremonyLocations?.map(repairText)
   };
   const matchingVenues = publicCeremonyVenues
-    .filter((venue) => venue.standesamt_id === office.id || venue.standesamt_id === office.slug)
+    .filter((venue) => venue.standesamt_id === office.canonicalId || venue.standesamt_id === office.id || venue.standesamt_id === office.slug)
   const venueTranslations = await contentTranslations(
     "wedding_venue",
     matchingVenues.flatMap((venue) => venue.canonicalId ? [venue.canonicalId] : []),

@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { dedupePublicVenues } from "../lib/public-venues.ts";
+import { dedupePublicVenues } from "../lib/public-venues";
+import { ceremonyVenues } from "../lib/ceremony-venues";
+import { swissRegistryOffices } from "../lib/registry-data";
 import type { CeremonyVenue } from "../lib/types.ts";
 
 const venue = (values: Partial<CeremonyVenue>): CeremonyVenue => ({
@@ -37,13 +39,26 @@ test("same generic name in different places remains separate", () => {
   assert.equal(result.length, 2);
 });
 
-test("duplicates supplement missing values without overwriting conflicts", () => {
+test("distinct canonical venues are never collapsed by similar names", () => {
   const result = dedupePublicVenues([
     venue({ canonicalId: "a", officialConfirmed: true, adresse: "", maxCeremonyGuests: 20 }),
     venue({ canonicalId: "b", adresse: "Dorfstrasse 1", maxCeremonyGuests: 40 })
   ]);
-  assert.equal(result.length, 1);
-  assert.equal(result[0].canonicalId, "a");
-  assert.equal(result[0].adresse, "Dorfstrasse 1");
-  assert.equal(result[0].maxCeremonyGuests, 20);
+  assert.equal(result.length, 2);
+});
+
+test("all canonical venues have one internal page and a valid office relation", () => {
+  const officeIds = new Set(swissRegistryOffices.flatMap((office) =>
+    [office.canonicalId, office.id, office.slug].filter(Boolean)
+  ));
+  assert.equal(new Set(ceremonyVenues.map((item) => item.canonicalId)).size, ceremonyVenues.length);
+  assert.ok(ceremonyVenues.every((item) => item.canonicalId && officeIds.has(item.standesamt_id)));
+  assert.ok(ceremonyVenues.every((item) => /^\/trauort\/[0-9a-f-]{36}$/.test(`/trauort/${item.canonicalId}`)));
+});
+
+test("all Top 20 venues retain direct internal detail pages", () => {
+  const top20 = ceremonyVenues.filter((item) => item.websitePriority?.startsWith("Top20:"));
+  assert.deepEqual(top20.map((item) => item.websitePriority).sort(),
+    Array.from({ length: 20 }, (_, index) => `Top20:${String(index + 1).padStart(2, "0")}`));
+  assert.ok(top20.every((item) => /^\/trauort\/[0-9a-f-]{36}$/.test(`/trauort/${item.canonicalId}`)));
 });
