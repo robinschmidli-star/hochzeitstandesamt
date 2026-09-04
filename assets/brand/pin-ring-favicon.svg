@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Pin and ring mark</title>
+  <path fill="#1F3A36" d="M256 54C132.3 54 52 137.4 52 246.5 52 357.6 166.7 447.3 256 504c89.3-56.7 204-146.4 204-257.5C460 137.4 379.7 54 256 54Z"/>
+  <circle cx="256" cy="232" r="91" fill="none" stroke="#C7A26A" stroke-width="46"/>
+  <path fill="#C7A26A" d="m256 38 46 42-18 42h-56l-18-42 46-42Z"/>
+</svg>
