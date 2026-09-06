@@ -28,6 +28,7 @@ export function VenueGallery({ images, openLabel, closeLabel, previousLabel, nex
   const approvedImages = images.filter((image) => image.url);
   const displayImages = approvedImages.length ? approvedImages : images;
   const hasMultiple = displayImages.length > 1;
+  const isCrestFallback = displayImages.length === 1 && displayImages[0].status === "fallback_crest";
   const previewImages = displayImages.slice(1, 5);
 
   const move = useCallback((direction: number) => setActiveIndex((current) => {
@@ -52,16 +53,16 @@ export function VenueGallery({ images, openLabel, closeLabel, previousLabel, nex
   }, [activeIndex, hasMultiple, move]);
 
   const open = (index: number) => {
-    if (displayImages[index]?.url) setActiveIndex(index);
+    if (displayImages[index]?.url && displayImages[index].status !== "fallback_crest") setActiveIndex(index);
   };
 
   return (
     <>
-      <div className={`grid h-72 overflow-hidden rounded-xl bg-linen/40 shadow-soft sm:h-96 ${hasMultiple ? "lg:grid-cols-2 lg:gap-1" : ""}`}>
-        <button type="button" onClick={() => open(0)} aria-label={openLabel} className="focus-ring group relative min-h-0 overflow-hidden text-left">
+      <div className={`grid overflow-hidden rounded-xl bg-linen/40 shadow-soft ${isCrestFallback ? "h-52 sm:h-64" : "h-72 sm:h-96"} ${hasMultiple ? "lg:grid-cols-2 lg:gap-1" : ""}`}>
+        <button type="button" onClick={() => open(0)} disabled={isCrestFallback} aria-label={openLabel} className="focus-ring group relative min-h-0 overflow-hidden text-left disabled:cursor-default">
           <GalleryImage image={displayImages[0]} />
           {hasMultiple ? <span className="absolute bottom-3 right-3 rounded-full bg-ink/80 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur sm:hidden">1 / {displayImages.length}</span> : null}
-          <span className="absolute inset-0 bg-black/0 transition group-hover:bg-black/5" />
+          {!isCrestFallback ? <span className="absolute inset-0 bg-black/0 transition group-hover:bg-black/5" /> : null}
         </button>
         {hasMultiple ? <div className="hidden grid-cols-2 grid-rows-2 gap-1 lg:grid">
           {previewImages.map((image, offset) => {

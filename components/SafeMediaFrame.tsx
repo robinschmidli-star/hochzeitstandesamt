@@ -24,7 +24,25 @@ export function SafeMediaFrame({
     );
   }
 
-  const fitClass = activeMedia.fit === "contain" ? "object-contain p-5" : "object-cover";
+  if (activeMedia.status === "fallback_crest") {
+    return (
+      <div className={`flex items-center justify-center bg-linen/40 p-4 sm:p-6 ${className}`}>
+        {/* Keep raster crests at their intrinsic size; only large assets are scaled down. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={activeMedia.url}
+          alt={activeMedia.alt}
+          loading="lazy"
+          onError={() => setActiveMedia({
+            alt: media.alt,
+            status: "placeholder",
+            fit: "cover"
+          })}
+          className="h-auto w-auto max-h-[160px] max-w-[160px] object-contain sm:max-h-[220px] sm:max-w-[240px]"
+        />
+      </div>
+    );
+  }
 
   return (
     // Dynamic licensed media relies on the native element's tolerant loading behavior.
@@ -38,7 +56,7 @@ export function SafeMediaFrame({
         status: "placeholder",
         fit: "cover"
       })}
-      className={`${fitClass} ${imageClassName || "h-full w-full"}`}
+      className={`object-cover ${imageClassName || "h-full w-full"}`}
     />
   );
 }
