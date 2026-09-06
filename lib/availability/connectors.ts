@@ -41,7 +41,7 @@ function isoDate(date: Date) {
   return date.toISOString().slice(0, 10);
 }
 
-function parseGermanPublishedDates(html: string): NormalizedAvailabilitySlot[] {
+export function parseGermanPublishedDates(html: string): NormalizedAvailabilitySlot[] {
   const text = decodeHtml(html);
   const pattern = /\b(0?[1-9]|[12]\d|3[01])\.?\s+(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(20\d{2})\b/gi;
   const byDate = new Map<string, NormalizedAvailabilitySlot>();
@@ -93,7 +93,11 @@ const officialPublishedDatesHtmlConnector: AvailabilityConnector = {
     return response.text();
   },
   async normalize(payload) {
-    return parseGermanPublishedDates(payload);
+    const slots = parseGermanPublishedDates(payload);
+    if (!slots.length) {
+      throw new Error("No published wedding dates found; source layout may have changed");
+    }
+    return slots;
   },
 };
 
