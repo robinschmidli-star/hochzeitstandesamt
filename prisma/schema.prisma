@@ -298,3 +298,89 @@ model AvailabilitySyncRun {
   @@index([startedAt(sort: Desc)], map: "availability_sync_runs_started_idx")
   @@map("availability_sync_runs")
 }
+
+model Photographer {
+  id              String      @id @default(uuid()) @db.Uuid
+  name            String
+  websiteUrl      String?     @map("website_url")
+  instagramHandle String?     @map("instagram_handle")
+  email           String?
+  region          String?
+  notes           String?
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+  photoLeads      PhotoLead[]
+
+  @@index([name], map: "photographers_name_idx")
+  @@map("photographers")
+}
+
+model PhotoLead {
+  id                String           @id @default(uuid()) @db.Uuid
+  targetType        String           @default("venue") @map("target_type")
+  targetCanonicalId String?          @map("target_canonical_id")
+  targetSlug        String           @map("target_slug")
+  photographerId    String?          @db.Uuid @map("photographer_id")
+  source            String
+  sourceUrl         String           @map("source_url")
+  imageUrl          String?          @map("image_url")
+  postDate          DateTime?        @map("post_date")
+  confidence        Int              @default(0)
+  status            String           @default("found")
+  contactedAt       DateTime?        @map("contacted_at")
+  lastCheckedAt     DateTime?        @map("last_checked_at")
+  fingerprint       String           @unique
+  metadata          Json?
+  createdAt         DateTime         @default(now()) @map("created_at")
+  updatedAt         DateTime         @updatedAt @map("updated_at")
+  photographer      Photographer?    @relation(fields: [photographerId], references: [id], onDelete: SetNull)
+  permission        PhotoPermission?
+  venuePhotos       VenuePhoto[]
+
+  @@unique([sourceUrl], map: "photo_leads_source_url_key")
+  @@index([targetType, targetSlug], map: "photo_leads_target_idx")
+  @@index([status, confidence(sort: Desc)], map: "photo_leads_status_idx")
+  @@index([photographerId], map: "photo_leads_photographer_idx")
+  @@map("photo_leads")
+}
+
+model PhotoPermission {
+  id                  String    @id @default(uuid()) @db.Uuid
+  photoLeadId         String    @unique @db.Uuid @map("photo_lead_id")
+  status              String    @default("pending")
+  requestedAt         DateTime? @map("requested_at")
+  respondedAt         DateTime? @map("responded_at")
+  usageTerms          String?   @map("usage_terms")
+  attributionRequired Boolean   @default(true) @map("attribution_required")
+  attributionText     String?   @map("attribution_text")
+  attributionUrl      String?   @map("attribution_url")
+  proofReference      String?   @map("proof_reference")
+  notes               String?
+  createdAt           DateTime  @default(now()) @map("created_at")
+  updatedAt           DateTime  @updatedAt @map("updated_at")
+  photoLead           PhotoLead @relation(fields: [photoLeadId], references: [id], onDelete: Cascade)
+
+  @@index([status], map: "photo_permissions_status_idx")
+  @@map("photo_permissions")
+}
+
+model VenuePhoto {
+  id                String     @id @default(uuid()) @db.Uuid
+  targetCanonicalId String?    @map("target_canonical_id")
+  targetSlug        String     @map("target_slug")
+  photoLeadId       String?    @db.Uuid @map("photo_lead_id")
+  imageUrl          String     @map("image_url")
+  altText           String?    @map("alt_text")
+  sortOrder         Int        @default(0) @map("sort_order")
+  active            Boolean    @default(true)
+  photographerName  String?    @map("photographer_name")
+  attributionText   String?    @map("attribution_text")
+  attributionUrl    String?    @map("attribution_url")
+  createdAt         DateTime   @default(now()) @map("created_at")
+  updatedAt         DateTime   @updatedAt @map("updated_at")
+  photoLead         PhotoLead? @relation(fields: [photoLeadId], references: [id], onDelete: SetNull)
+
+  @@index([targetSlug, active, sortOrder], map: "venue_photos_target_idx")
+  @@index([photoLeadId], map: "venue_photos_photo_lead_idx")
+  @@map("venue_photos")
+}
