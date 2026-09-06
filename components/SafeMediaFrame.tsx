@@ -7,11 +7,13 @@ export function SafeMediaFrame({
   media,
   className = "",
   imageClassName = "",
+  crestVariant = "intrinsic",
   placeholderLabel = "Bild folgt"
 }: {
   media: SafeMedia;
   className?: string;
   imageClassName?: string;
+  crestVariant?: "intrinsic" | "card";
   placeholderLabel?: string;
 }) {
   const [activeMedia, setActiveMedia] = useState(media);
@@ -38,7 +40,9 @@ export function SafeMediaFrame({
             status: "placeholder",
             fit: "cover"
           })}
-          className="h-auto w-auto max-h-[160px] max-w-[160px] object-contain sm:max-h-[220px] sm:max-w-[240px]"
+          className={crestVariant === "card"
+            ? "h-20 w-20 object-contain sm:h-24 sm:w-24"
+            : "h-auto w-auto max-h-[160px] max-w-[160px] object-contain sm:max-h-[220px] sm:max-w-[240px]"}
         />
       </div>
     );

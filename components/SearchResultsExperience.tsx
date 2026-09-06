@@ -17,7 +17,7 @@ export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { of
   return (
     <article className="grid gap-4 rounded-xl border border-linen bg-white p-4 shadow-soft sm:grid-cols-[140px_1fr]">
       <div className="flex h-36 items-center justify-center overflow-hidden rounded-lg bg-linen/70">
-        <SafeMediaFrame media={media} className="h-full w-full" />
+        <SafeMediaFrame media={media} className="h-full w-full" crestVariant="card" />
       </div>
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">{office.city} · {office.canton}</p>
@@ -66,7 +66,7 @@ export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact 
   return (
     <article className="overflow-hidden rounded-xl border border-linen bg-white shadow-soft">
       <div className={`${compact ? "h-40" : "h-52"} bg-linen/70`}>
-        <SafeMediaFrame media={media} className="h-full w-full" />
+        <SafeMediaFrame media={media} className="h-full w-full" crestVariant="card" />
       </div>
       <div className="p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.08em] text-champagne">
