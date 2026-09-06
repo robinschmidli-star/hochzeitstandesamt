@@ -7,12 +7,33 @@ import type { Dictionary } from "@/lib/i18n";
 export function HomeHeroSearchClient({ dictionary, pathPrefix = "", params = {} }: { dictionary: Dictionary; pathPrefix?: string; params?: SearchParams }) {
   const t = (key: string) => dictionary[key] ?? key;
   const inputClass = "focus-ring h-12 min-w-0 w-full rounded-lg border border-linen bg-white px-3 text-soft-ink";
-  const advanced = ["radius", "weekday", "tag", "saturdayOnly", "elopement", "wheelchair", "parking", "evening", "outdoor", "onlineBooking", "multipleVenues", "postalCode", "preferredWeekdays"] as const;
+  const advanced = ["radius", "weekday", "tag", "parking", "evening", "onlineBooking", "multipleVenues", "postalCode", "preferredWeekdays"] as const;
+  const visibleQuickFilters = [
+    ["saturdayOnly", "true", "results.saturdayOnly"],
+    ["elopement", "true", "results.elopement"],
+    ["outdoor", "yes", "results.outdoor"],
+    ["wheelchair", "yes", "results.wheelchair"]
+  ] as const;
+  const advancedQuickFilters = [
+    ["parking", "yes", "results.parking"],
+    ["evening", "yes", "results.evening"],
+    ["onlineBooking", "yes", "results.onlineBooking"],
+    ["multipleVenues", "yes", "results.multipleVenues"]
+  ] as const;
+
   return (
     <section className="mt-4 min-w-0 rounded-2xl bg-white p-4 shadow-soft sm:p-5">
       <h2 className="mb-3 text-xl font-semibold text-ink">{t("homeSearch.title")}</h2>
-      <NameSearch key={JSON.stringify(params)} dictionary={dictionary} defaultValue={params.name} pathPrefix={pathPrefix} hiddenParams={{ submitted: "1" }} quickFilters={
-        <div key="filters" className="grid gap-2">
+      <NameSearch key={JSON.stringify(params)} dictionary={dictionary} pathPrefix={pathPrefix} defaultValue={params.name} hiddenParams={{ submitted: "1" }} quickFilters={
+        <div key="filters" className="grid gap-3">
+          <div className="flex flex-wrap gap-2">
+            {visibleQuickFilters.map(([name, value, label]) => (
+              <label key={name} className="cursor-pointer">
+                <input name={name} value={value} defaultChecked={params[name as keyof SearchParams] === value} type="checkbox" className="peer sr-only" />
+                <span className="inline-flex min-h-11 items-center rounded-full border border-linen bg-paper px-4 py-2 text-sm font-medium text-soft-ink transition peer-checked:border-sage peer-checked:bg-sage peer-checked:text-white">{t(label)}</span>
+              </label>
+            ))}
+          </div>
           <details open={advanced.some((key) => params[key]) || undefined} className="group border-y border-linen">
             <summary className="focus-ring flex min-h-11 cursor-pointer list-none items-center justify-between py-2.5 text-sm font-semibold text-sage marker:hidden"><span>{t("homeSearch.moreFilters")}</span><span className="text-base transition-transform group-open:rotate-180">⌄</span></summary>
             <div className="grid gap-4 pb-2 pt-2">
@@ -39,7 +60,7 @@ export function HomeHeroSearchClient({ dictionary, pathPrefix = "", params = {} 
                 </label>
               </div>
               <div className="flex flex-wrap gap-2">
-                {[["saturdayOnly", "true", "results.saturdayOnly"], ["elopement", "true", "results.elopement"], ["wheelchair", "yes", "results.wheelchair"], ["parking", "yes", "results.parking"], ["evening", "yes", "results.evening"], ["outdoor", "yes", "results.outdoor"], ["onlineBooking", "yes", "results.onlineBooking"], ["multipleVenues", "yes", "results.multipleVenues"]].map(([name, value, label]) => (
+                {advancedQuickFilters.map(([name, value, label]) => (
                   <label key={name} className="cursor-pointer">
                     <input name={name} value={value} defaultChecked={params[name as keyof SearchParams] === value} type="checkbox" className="peer sr-only" />
                     <span className="inline-flex min-h-11 items-center rounded-full border border-linen bg-paper px-4 py-2 text-sm font-medium text-soft-ink transition peer-checked:border-sage peer-checked:bg-sage peer-checked:text-white">{t(label)}</span>

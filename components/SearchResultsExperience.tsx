@@ -100,7 +100,10 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
   const t = (key: string) => dictionary[key] ?? key;
   const venueMode = initial || params.tag === "featured";
   const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
-  const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(matches, params.page, initial ? 6 : 12);
+  const displayMatches = initial
+    ? (matches as CeremonyVenue[]).filter((venue) => ceremonyVenueMedia(venue).status === "approved")
+    : matches;
+  const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(displayMatches, params.page, initial ? 6 : 12);
   const selectedCanton = registryCantons.find((canton) => canton.code === params.canton);
   const resultsTitle = selectedCanton
     ? t("results.cantonTitle").replace("{canton}", repairText(selectedCanton.name))
@@ -112,8 +115,8 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
         {!initial ? <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("discovery.reset")}</Link> : null}
       </div>
       <div className={`mt-5 grid gap-4 ${venueMode ? "md:grid-cols-2 lg:grid-cols-3" : "lg:grid-cols-2"}`}>
-        {items.map((item) => "traulokal_name" in item
-          ? <FeaturedVenueCard key={item.canonicalId} venue={item} dictionary={dictionary} pathPrefix={pathPrefix} compact />
+        {items.map((item, index) => "traulokal_name" in item
+          ? <div key={item.canonicalId} className={initial && index >= 3 ? "hidden md:block" : undefined}><FeaturedVenueCard venue={item} dictionary={dictionary} pathPrefix={pathPrefix} compact /></div>
           : <RegistryOfficeCard key={item.slug} office={item} dictionary={dictionary} pathPrefix={pathPrefix} />)}
       </div>
       {total === 0 ? <div className="mt-4 rounded-xl border border-linen bg-white p-6 text-soft-ink">

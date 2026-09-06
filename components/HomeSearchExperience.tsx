@@ -103,8 +103,8 @@ export function HomeSearchPage({ dictionary, rawParams, locale = defaultLocale }
     <main>
       <HomeHeroSearch dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
       <SearchResults params={params} dictionary={dictionary} pathPrefix={pathPrefix} initial={!hasActiveSearch(params)} />
-      <PopularSearchLinks dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
       <SwitzerlandMapSection dictionary={dictionary} locale={locale} params={params} />
+      <PopularSearchLinks dictionary={dictionary} pathPrefix={pathPrefix} params={params} />
       <HomeGuideTeasers dictionary={dictionary} pathPrefix={pathPrefix} />
     </main>
   );
