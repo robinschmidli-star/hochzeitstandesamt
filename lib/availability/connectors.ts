@@ -43,36 +43,42 @@ function isoDate(date: Date) {
 
 export function parseGermanPublishedDates(html: string): NormalizedAvailabilitySlot[] {
   const text = decodeHtml(html);
-  const pattern = /\b(0?[1-9]|[12]\d|3[01])\.?\s+(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(20\d{2})\b/gi;
+  const sectionPattern = /(?:Trau)?termine\s+(20\d{2})([\s\S]*?)(?=(?:Trau)?termine\s+20\d{2}|Anreise|Reservation|Kosten|Kontakt|$)/gi;
+  const datePattern = /\b(0?[1-9]|[12]\d|3[01])\.?\s+(Januar|Februar|März|Maerz|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)(?:\s+(20\d{2}))?\b/gi;
   const byDate = new Map<string, NormalizedAvailabilitySlot>();
 
-  for (const match of text.matchAll(pattern)) {
-    const day = Number(match[1]);
-    const monthName = match[2].toLowerCase();
-    const year = Number(match[3]);
-    const month = MONTHS[monthName];
-    if (month === undefined) continue;
+  for (const section of text.matchAll(sectionPattern)) {
+    const sectionYear = Number(section[1]);
+    const sectionText = section[2];
 
-    const date = new Date(Date.UTC(year, month, day));
-    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) continue;
+    for (const match of sectionText.matchAll(datePattern)) {
+      const day = Number(match[1]);
+      const monthName = match[2].toLowerCase();
+      const year = match[3] ? Number(match[3]) : sectionYear;
+      const month = MONTHS[monthName];
+      if (month === undefined) continue;
 
-    const start = Math.max(0, (match.index ?? 0) - 50);
-    const end = Math.min(text.length, (match.index ?? 0) + match[0].length + 90);
-    const context = text.slice(start, end).toLowerCase();
-    const unavailable = /ausgebucht|belegt|nicht verfügbar|keine freien/.test(context);
-    const explicitlyAvailable = /\bfrei\b|verfügbar|freie termine?/.test(context);
-    const dateKey = isoDate(date);
+      const date = new Date(Date.UTC(year, month, day));
+      if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) continue;
 
-    const slot: NormalizedAvailabilitySlot = {
-      externalKey: dateKey,
-      date,
-      status: unavailable ? "unavailable" : explicitlyAvailable ? "available" : "unknown",
-      precision: "published_wedding_day",
-      rawReference: match[0],
-    };
+      const start = Math.max(0, (match.index ?? 0) - 50);
+      const end = Math.min(sectionText.length, (match.index ?? 0) + match[0].length + 90);
+      const context = sectionText.slice(start, end).toLowerCase();
+      const unavailable = /ausgebucht|belegt|nicht verfügbar|keine freien/.test(context);
+      const explicitlyAvailable = /\bfrei\b|verfügbar|freie termine?/.test(context);
+      const dateKey = isoDate(date);
 
-    const existing = byDate.get(dateKey);
-    if (!existing || (existing.status === "unknown" && slot.status !== "unknown")) byDate.set(dateKey, slot);
+      const slot: NormalizedAvailabilitySlot = {
+        externalKey: dateKey,
+        date,
+        status: unavailable ? "unavailable" : explicitlyAvailable ? "available" : "unknown",
+        precision: "published_wedding_day",
+        rawReference: match[0],
+      };
+
+      const existing = byDate.get(dateKey);
+      if (!existing || (existing.status === "unknown" && slot.status !== "unknown")) byDate.set(dateKey, slot);
+    }
   }
 
   return [...byDate.values()].sort((a, b) => a.date.getTime() - b.date.getTime());
