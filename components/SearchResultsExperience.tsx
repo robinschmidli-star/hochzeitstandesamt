@@ -100,7 +100,10 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
   const t = (key: string) => dictionary[key] ?? key;
   const venueMode = initial || params.tag === "featured";
   const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
-  const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(matches, params.page, initial ? 6 : 12);
+  const displayMatches = initial
+    ? (matches as CeremonyVenue[]).filter((venue) => ceremonyVenueMedia(venue).status === "approved")
+    : matches;
+  const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(displayMatches, params.page, initial ? 6 : 12);
   const selectedCanton = registryCantons.find((canton) => canton.code === params.canton);
   const resultsTitle = selectedCanton
     ? t("results.cantonTitle").replace("{canton}", repairText(selectedCanton.name))
