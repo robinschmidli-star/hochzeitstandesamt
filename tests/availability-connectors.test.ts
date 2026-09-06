@@ -21,10 +21,29 @@ test("parses published German wedding dates conservatively", () => {
   );
 });
 
+test("infers the year from the Termine heading", () => {
+  const slots = parseGermanPublishedDates(`
+    <h2>Termine 2027</h2>
+    <p>21. Mai (ausgebucht)</p>
+    <p>11. Juni</p>
+    <p>24. September</p>
+  `);
+
+  assert.deepEqual(
+    slots.map((slot) => [slot.date.toISOString().slice(0, 10), slot.status]),
+    [
+      ["2027-05-21", "unavailable"],
+      ["2027-06-11", "unknown"],
+      ["2027-09-24", "unknown"],
+    ],
+  );
+});
+
 test("deduplicates a date and keeps explicit status over unknown", () => {
   const slots = parseGermanPublishedDates(`
-    <p>05. Februar 2027</p>
-    <p>05. Februar 2027 – ausgebucht</p>
+    <h2>Termine 2027</h2>
+    <p>05. Februar</p>
+    <p>05. Februar – ausgebucht</p>
   `);
 
   assert.equal(slots.length, 1);
