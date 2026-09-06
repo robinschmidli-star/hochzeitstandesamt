@@ -62,6 +62,26 @@ test("venue media requires explicit approval for display without credit", () => 
   assert.equal(approved.fallback?.status === "fallback_crest" || approved.fallback?.status === "placeholder", true);
 });
 
+test("all seven provenance-reviewed Top20 venue photos are public", () => {
+  const slugs = [
+    "schloss-oberhofen",
+    "the-dolder-grand",
+    "schloss-greifensee-landvogtstube",
+    "schloss-kyburg",
+    "castello-sasso-corbaro",
+    "schlossberg-thun",
+    "aigle-chateau-d-aigle"
+  ];
+
+  for (const slug of slugs) {
+    const venue = ceremonyVenues.find((item) => item.slug === slug);
+    assert.ok(venue, `missing venue ${slug}`);
+    assert.ok(venue.imageUrl, `missing image ${slug}`);
+    assert.equal(venue.imageStatus, "approved", `unapproved image status ${slug}`);
+    assert.equal(ceremonyVenueMedia(venue).status, "approved", `media gate rejected ${slug}`);
+  }
+});
+
 test("public components do not render media source or attribution text", () => {
   const component = readFileSync(new URL("../components/SafeMediaFrame.tsx", import.meta.url), "utf8");
   const officePage = readFileSync(new URL("../app/zivilstandsamt/[slug]/page.tsx", import.meta.url), "utf8");
