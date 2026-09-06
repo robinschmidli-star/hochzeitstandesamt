@@ -126,11 +126,12 @@ model Lead {
   createdAt                 DateTime              @default(now()) @map("created_at")
   canton                    Canton?               @relation(fields: [cantonId], references: [id])
   city                      City?                 @relation(fields: [cityId], references: [id])
-  registryOffice            CivilRegistryOffice?   @relation(fields: [registryOfficeId], references: [id])
+  registryOffice            CivilRegistryOffice?  @relation(fields: [registryOfficeId], references: [id])
   vendorLeads               VendorLead[]
 
   @@map("leads")
 }
+
 model WebsiteLead {
   id                String   @id @default(uuid()) @db.Uuid
   leadType          String   @map("lead_type")
@@ -183,7 +184,7 @@ model Vendor {
   category         String
   contactName      String?      @map("contact_name")
   email            String
-  phone            String?
+  phone             String?
   websiteUrl       String?      @map("website_url")
   address          String?
   postalCode       String?      @map("postal_code")
@@ -233,4 +234,67 @@ model AdminUser {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("admin_users")
+}
+
+model AvailabilitySource {
+  id                    String             @id @default(uuid()) @db.Uuid
+  targetType            String             @map("target_type")
+  targetCanonicalId     String?            @map("target_canonical_id")
+  targetSlug            String             @map("target_slug")
+  providerType          String             @map("provider_type")
+  sourceUrl             String             @map("source_url")
+  connectorKey          String             @map("connector_key")
+  sourceQuality         String             @map("source_quality")
+  active                Boolean            @default(false)
+  syncFrequencyMinutes  Int                @default(1440) @map("sync_frequency_minutes")
+  lastCheckedAt         DateTime?          @map("last_checked_at")
+  lastSuccessAt         DateTime?          @map("last_success_at")
+  lastChangedAt         DateTime?          @map("last_changed_at")
+  lastError             String?            @map("last_error")
+  metadata              Json?
+  createdAt             DateTime           @default(now()) @map("created_at")
+  updatedAt             DateTime           @updatedAt @map("updated_at")
+  slots                 AvailabilitySlot[]
+
+  @@unique([targetType, targetSlug, sourceUrl], map: "availability_sources_target_source_key")
+  @@index([active, lastCheckedAt], map: "availability_sources_active_checked_idx")
+  @@index([targetCanonicalId], map: "availability_sources_canonical_idx")
+  @@index([targetType, targetSlug], map: "availability_sources_target_idx")
+  @@map("availability_sources")
+}
+
+model AvailabilitySlot {
+  id              String             @id @default(uuid()) @db.Uuid
+  sourceId        String             @db.Uuid @map("source_id")
+  externalKey     String             @map("external_key")
+  date            DateTime           @db.Date
+  startAt         DateTime?          @map("start_at")
+  endAt           DateTime?          @map("end_at")
+  status          String
+  precision       String
+  checkedAt       DateTime           @default(now()) @map("checked_at")
+  sourceUpdatedAt DateTime?          @map("source_updated_at")
+  rawReference    String?            @map("raw_reference")
+  createdAt       DateTime           @default(now()) @map("created_at")
+  updatedAt       DateTime           @updatedAt @map("updated_at")
+  source          AvailabilitySource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceId, externalKey], map: "availability_slots_source_external_key")
+  @@index([date, status], map: "availability_slots_date_status_idx")
+  @@index([sourceId, date], map: "availability_slots_source_date_idx")
+  @@map("availability_slots")
+}
+
+model AvailabilitySyncRun {
+  id                String    @id @default(uuid()) @db.Uuid
+  startedAt         DateTime  @default(now()) @map("started_at")
+  completedAt       DateTime? @map("completed_at")
+  status            String    @default("running")
+  checkedSources    Int       @default(0) @map("checked_sources")
+  successfulSources Int       @default(0) @map("successful_sources")
+  failedSources     Int       @default(0) @map("failed_sources")
+  metadata          Json?
+
+  @@index([startedAt(sort: Desc)], map: "availability_sync_runs_started_idx")
+  @@map("availability_sync_runs")
 }
