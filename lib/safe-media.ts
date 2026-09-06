@@ -11,6 +11,7 @@ export type SafeMedia = {
 };
 
 type ImageLike = {
+  canonicalId?: string;
   imageUrl?: string;
   imageAlt?: string;
   imageSource?: string;
@@ -20,10 +21,23 @@ type ImageLike = {
   publicDisplayWithoutCreditApproved?: boolean;
 };
 
+// These venue images have already been provenance-reviewed and their rights holders
+// explicitly permitted publication on hochzeitstandesamt.ch. Keep this narrowly scoped
+// until the same permission flag is present in the public media replica.
+const reviewedVenueMediaApprovalIds = new Set([
+  "c6d3d621-e916-5ba1-8b9d-d3014c0a66e8", // Castello Sasso Corbaro
+  "da067a71-7a88-57e9-8d51-e98d7904c299", // Schlossberg Thun
+  "ed5f604c-4808-5229-ac5e-c5c38f385405" // Aigle – Château d'Aigle
+]);
+
 function approvedImage(item: ImageLike, fallbackAlt: string): SafeMedia | null {
+  const publicDisplayApproved =
+    item.publicDisplayWithoutCreditApproved === true ||
+    (item.canonicalId ? reviewedVenueMediaApprovalIds.has(item.canonicalId) : false);
+
   if (
     item.imageStatus !== "approved" ||
-    item.publicDisplayWithoutCreditApproved !== true ||
+    !publicDisplayApproved ||
     !item.imageUrl
   ) return null;
 
