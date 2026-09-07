@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { ceremonyVenues } from "../lib/ceremony-venues";
+import { featuredCeremonyVenues } from "../lib/search-experience";
 import { ceremonyVenueGallery, ceremonyVenueMedia, registryOfficeMedia } from "../lib/safe-media";
 import { swissRegistryOffices } from "../lib/registry-data";
 
@@ -79,6 +80,19 @@ test("all seven provenance-reviewed Top20 venue photos are public", () => {
     assert.ok(venue.imageUrl, `missing image ${slug}`);
     assert.equal(venue.imageStatus, "approved", `unapproved image status ${slug}`);
     assert.equal(ceremonyVenueMedia(venue).status, "approved", `media gate rejected ${slug}`);
+  }
+});
+
+test("homepage featured six are always approved photo venues", () => {
+  const homepageVenues = featuredCeremonyVenues({})
+    .filter((venue) => ceremonyVenueMedia(venue).status === "approved")
+    .slice(0, 6);
+
+  assert.equal(homepageVenues.length, 6);
+  for (const venue of homepageVenues) {
+    const media = ceremonyVenueMedia(venue);
+    assert.equal(media.status, "approved", `homepage media is not a photo: ${venue.slug}`);
+    assert.ok(media.url, `homepage photo is missing: ${venue.slug}`);
   }
 });
 
