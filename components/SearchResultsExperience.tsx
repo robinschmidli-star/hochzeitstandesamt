@@ -87,7 +87,7 @@ export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact 
         {hasCalendar ? <p className="mt-2 inline-flex rounded-full bg-champagne/15 px-3 py-1 text-xs font-semibold text-sage">Kalender beim Amt verfügbar</p> : null}
         <div className="mt-4 flex flex-wrap gap-2">
           <Link href={`${pathPrefix}${ceremonyVenuePath(venue)}`} className="focus-ring inline-flex min-h-11 items-center rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
-          {venue.canonicalId ? <FavoriteButton canonicalId={venue.canonicalId} slug={venue.slug} source={compact ? "search_results" : "featured"} compact /> : null}
+          {venue.canonicalId ? <FavoriteButton canonicalId={venue.canonicalId} slug={venue.slug} source={compact ? "search_results" : "featured"} compact labels={{ add: t("favorite.add"), remove: t("favorite.remove"), saved: t("favorite.saved") }} /> : null}
         </div>
       </div>
     </article>
@@ -110,7 +110,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
     : initial ? t("featured.title") : `${total} ${t(venueMode ? "results.venues" : "results.results")}`;
   return (
     <section id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">
-      {!initial ? <SearchPreferenceCapture params={params} resultCount={total} /> : null}
+      {!initial ? <SearchPreferenceCapture params={params} resultCount={total} language={pathPrefix.slice(1) || "de"} /> : null}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 id="results-title" className="text-3xl font-semibold text-ink sm:text-4xl">{resultsTitle}</h2>
         {!initial ? <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("discovery.reset")}</Link> : null}
@@ -130,7 +130,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
         <p className="text-sm text-soft-ink">{t("discovery.page").replace("{page}", String(page)).replace("{pages}", String(pageCount))}</p>
         {page < pageCount ? <Link href={discoveryHref(params, { page: String(page + 1) }, pathPrefix)} className="focus-ring inline-flex min-h-11 items-center rounded-lg border border-linen px-4 py-2 font-semibold text-sage">{t("discovery.next")}</Link> : <span />}
       </nav> : null}
-      {!initial && !venueMode && total > 0 ? <SearchLeadCapture params={params} /> : null}
+      {!initial && !venueMode && total > 0 ? <SearchLeadCapture params={params} dictionary={dictionary} /> : null}
     </section>
   );
 }

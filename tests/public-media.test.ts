@@ -92,3 +92,18 @@ test("venue gallery keeps approved order, removes duplicates and rejects unappro
     "/fifth.jpg", "/sixth.jpg", "/seventh.jpg"
   ]);
 });
+
+test("Schloss Kyburg publishes multiple approved local gallery photos", () => {
+  const kyburg = ceremonyVenues.find((venue) => venue.slug === "schloss-kyburg");
+  assert.ok(kyburg);
+  assert.equal(kyburg.imageUrl, "/venues/kyburg/schloss-kyburg-aussenansicht.jpg");
+  assert.equal(kyburg.galleryImages?.[0]?.url, kyburg.imageUrl);
+  assert.ok((kyburg.galleryImages?.length ?? 0) > 1);
+  assert.ok(kyburg.galleryImages?.every((image) => image.url.startsWith("/venues/kyburg/")));
+  assert.ok(kyburg.galleryImages?.every((image) => image.publicDisplayWithoutCreditApproved === true));
+
+  const gallery = ceremonyVenueGallery(kyburg);
+  assert.ok(gallery.length > 1);
+  assert.ok(gallery.every((image) => image.url?.startsWith("/venues/kyburg/")));
+  assert.equal(new Set(gallery.map((image) => image.url)).size, gallery.length);
+});

@@ -1,0 +1,71 @@
+{
+  "sourcePage": "https://schlosskyburg.ch/anlass/",
+  "rightsHolder": "Museum Schloss Kyburg",
+  "permissionStatus": "granted",
+  "publicDisplayApproved": true,
+  "permissionEvidence": "E-Mail Jennifer Gastaldo, Museum Schloss Kyburg, 15.06.2026",
+  "permissionWording": "Nutzung der Bilder der Website auf hochzeitstandesamt.ch erlaubt",
+  "images": [
+    {
+      "localPath": "/venues/kyburg/schloss-kyburg-aussenansicht.jpg",
+      "originalFilename": "Header_Default.jpg",
+      "originalUrl": "https://schlosskyburg.ch/wp-content/themes/schlosskyburg/img/Header_Default.jpg",
+      "attribution": "Museum Schloss Kyburg",
+      "alt": "Schloss Kyburg aus der Vogelperspektive über dem bewaldeten Tösstal",
+      "mimeType": "image/jpeg",
+      "fileSizeBytes": 273250,
+      "width": 1640,
+      "height": 585,
+      "sha256": "68c0f72121f0f5495238aedb6aa8fa79d5622455ec206c7a01d72d37fc40ac41",
+      "primaryImage": true,
+      "sortOrder": 0,
+      "includedInPublicGallery": true
+    },
+    {
+      "localPath": "/venues/kyburg/schloss-kyburg-ziviltrauung.jpg",
+      "originalFilename": "332Tauben-1.jpg",
+      "originalUrl": "https://schlosskyburg.ch/wp-content/uploads/2019/03/332Tauben-1.jpg",
+      "attribution": "Museum Schloss Kyburg",
+      "alt": "Zwei Taubenfiguren als Detail der Ziviltrauung im Schloss Kyburg",
+      "mimeType": "image/jpeg",
+      "fileSizeBytes": 119431,
+      "width": 908,
+      "height": 604,
+      "sha256": "1bb84b62fb11dd6b9f84250f162bc582a688c0d3a15f531cbc197c472ebd2eaf",
+      "primaryImage": false,
+      "sortOrder": 2,
+      "includedInPublicGallery": true
+    },
+    {
+      "localPath": "/venues/kyburg/schloss-kyburg-schlosshof-zimbiss.jpg",
+      "originalFilename": "Zimbiss-Web-2019.jpg",
+      "originalUrl": "https://schlosskyburg.ch/wp-content/uploads/2019/06/Zimbiss-Web-2019.jpg",
+      "attribution": "Museum Schloss Kyburg",
+      "alt": "Für einen Z’Imbiss gedeckte Tafel im Schlosshof von Schloss Kyburg",
+      "mimeType": "image/jpeg",
+      "fileSizeBytes": 243631,
+      "width": 906,
+      "height": 604,
+      "sha256": "6b059a53b600877bf4dfd84f8eb69e3fd320c165e93ba507f7d4dbe9c1994153",
+      "primaryImage": false,
+      "sortOrder": 3,
+      "includedInPublicGallery": true
+    },
+    {
+      "localPath": "/venues/kyburg/schloss-kyburg-kindergeburtstag-drache.png",
+      "originalFilename": "JoJo-Drache.png",
+      "originalUrl": "https://schlosskyburg.ch/wp-content/uploads/2025/03/JoJo-Drache.png",
+      "attribution": "Museum Schloss Kyburg",
+      "alt": "Kindergeburtstags-Grafik mit den Ritterkindern und einem Drachen",
+      "mimeType": "image/png",
+      "fileSizeBytes": 170680,
+      "width": 760,
+      "height": 528,
+      "sha256": "b1fa8ae7c39ba3af0c526dac9f9d2d7420d897a24b8699920e006f3092f0b8a4",
+      "primaryImage": false,
+      "sortOrder": null,
+      "includedInPublicGallery": false,
+      "archiveReason": "Thematisch nicht für die Hochzeits- und Trauortgalerie geeignet"
+    }
+  ]
+}

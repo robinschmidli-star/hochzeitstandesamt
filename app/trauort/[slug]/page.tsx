@@ -12,6 +12,7 @@ import { breadcrumbSchema, createMetadata } from "@/lib/seo";
 import type { CeremonyVenue } from "@/lib/types";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { AvailabilityCheck } from "@/components/AvailabilityCheck";
+import { TrackOnMount } from "@/components/Analytics";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -128,6 +129,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
 
   return (
     <main className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+      <TrackOnMount eventName="venue_opened" properties={{ venue_id: canonicalId, venue_slug: venue.slug, venue_name: repairText(venue.traulokal_name), ...(officeCanonicalId ? { civil_registry_office_id: officeCanonicalId } : {}), canton: venue.kanton || office?.canton || "", language: locale }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: t("nav.home"), url: `https://hochzeitstandesamt.ch${withLocalePath("/", locale)}` },
         ...(office ? [{ name: repairText(office.name), url: `https://hochzeitstandesamt.ch${withLocalePath(`/zivilstandsamt/${office.slug}`, locale)}` }] : []),
@@ -140,7 +142,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
           {description ? <p className="mt-4 text-lg leading-8 text-soft-ink">{description}</p> : null}
           <div className="mt-6 flex flex-wrap gap-3">
             {office ? <Link href={withLocalePath(`/zivilstandsamt/${office.slug}`, locale)} className="focus-ring inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{repairText(office.name)}</Link> : null}
-            <FavoriteButton canonicalId={canonicalId} slug={venue.slug} source="venue_detail" />
+            <FavoriteButton canonicalId={canonicalId} slug={venue.slug} source="venue_detail" labels={{ add: t("favorite.add"), remove: t("favorite.remove"), saved: t("favorite.saved") }} />
           </div>
         </div>
       </section>
@@ -154,6 +156,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         placeholderLabel={t("media.placeholder")}
       />
       <AvailabilityCheck venueId={canonicalId} venueSlug={venue.slug} officeId={officeCanonicalId} officialUrl={officialReservationUrl}
+        labels={Object.fromEntries(Object.entries(dictionary).filter(([key]) => key.startsWith("availability.")))} language={locale}
         hasCalendar={office?.onlineCalendarAvailable === "true" || Boolean(office?.onlineCalendarUrl)} schedule={{ monday: venue.ceremonyMonday, tuesday: venue.ceremonyTuesday, wednesday: venue.ceremonyWednesday, thursday: venue.ceremonyThursday, friday: venue.ceremonyFriday, saturday: venue.ceremonySaturday, sunday: venue.ceremonySunday }} />
       <div className="grid gap-5 lg:grid-cols-2">
         <DetailSection title={t("venue.section.location")} items={locationItems} />

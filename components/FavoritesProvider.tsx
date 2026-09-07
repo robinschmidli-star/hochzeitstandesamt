@@ -32,7 +32,7 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
   const add = useCallback((favorite: Omit<StoredFavorite, "savedAt">, source: FavoriteSource) => {
     const saved = { ...favorite, savedAt: new Date().toISOString() };
     setFavorites((current) => { const next = addStoredFavorite({ version: 1, venues: current }, saved).venues; persist(next); return next; });
-    track("favorite_added", { venueId: favorite.canonicalId, venueSlug: favorite.slug, source });
+    track("favorite_added", { venue_id: favorite.canonicalId, venue_slug: favorite.slug, source });
     try {
       void fetch("/api/preferences/favorite", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
         body: JSON.stringify({ visitorId: browserId("hs_visitor", localStorage), sessionId: browserId("hs_session", sessionStorage), venueId: favorite.canonicalId, venueSlug: favorite.slug, searchContextId: sessionStorage.getItem("hs_search_context_id") || undefined })
@@ -42,7 +42,7 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
 
   const remove = useCallback((canonicalId: string, source: FavoriteSource) => {
     setFavorites((current) => { const next = removeStoredFavorite({ version: 1, venues: current }, canonicalId).venues; persist(next); return next; });
-    track("favorite_removed", { venueId: canonicalId, source });
+    track("favorite_removed", { venue_id: canonicalId, source });
     try {
       void fetch("/api/preferences/favorite", { method: "DELETE", headers: { "Content-Type": "application/json" }, keepalive: true,
         body: JSON.stringify({ visitorId: browserId("hs_visitor", localStorage), venueId: canonicalId })

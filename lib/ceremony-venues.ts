@@ -30467,12 +30467,38 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "https://schlosskyburg.ch/",
     "sourceUrl": "https://www.ilef.ch/_docn/5584138/20250306_BER_Geschaeftsbericht_2024.pdf",
     "remarks": "",
-    "imageUrl": "/venues/kyburg/schloss-kyburg.jpg",
-    "imageAlt": "Trauzimmer im Schloss Kyburg",
+    "imageUrl": "/venues/kyburg/schloss-kyburg-aussenansicht.jpg",
+    "imageAlt": "Schloss Kyburg aus der Vogelperspektive über dem bewaldeten Tösstal",
     "imageSource": "Museum Schloss Kyburg",
     "imageAttribution": "Museum Schloss Kyburg",
     "imageStatus": "approved",
     "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/kyburg/schloss-kyburg-aussenansicht.jpg",
+        "alt": "Schloss Kyburg aus der Vogelperspektive über dem bewaldeten Tösstal",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/kyburg/schloss-kyburg.jpg",
+        "alt": "Festlich eingerichtete Richterstube für Ziviltrauungen im Schloss Kyburg",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/kyburg/schloss-kyburg-ziviltrauung.jpg",
+        "alt": "Zwei Taubenfiguren als Detail der Ziviltrauung im Schloss Kyburg",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/kyburg/schloss-kyburg-schlosshof-zimbiss.jpg",
+        "alt": "Für einen Z’Imbiss gedeckte Tafel im Schlosshof von Schloss Kyburg",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [

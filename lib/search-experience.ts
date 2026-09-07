@@ -210,24 +210,34 @@ export function featuredCeremonyVenues(params: SearchParams = {}) {
     .sort((left, right) => (left.websitePriority ?? "").localeCompare(right.websitePriority ?? ""));
 }
 
-function hasApprovedPublicImage(venue: CeremonyVenue) {
+function hasApprovedPublicImage(item: CeremonyVenue | SwissRegistryOffice) {
   return Boolean(
-    venue.imageUrl &&
-    venue.imageStatus === "approved" &&
-    venue.publicDisplayWithoutCreditApproved === true
+    item.imageUrl &&
+    item.imageStatus === "approved" &&
+    item.publicDisplayWithoutCreditApproved === true
   );
 }
 
-/** Default homepage order before the visitor applies any search or filter. */
+function isTop20Result(item: CeremonyVenue | SwissRegistryOffice) {
+  if ("traulokal_name" in item) return /^Top20:\d{2}$/.test(item.websitePriority ?? "");
+  return getVenues(item).some((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? ""));
+}
+
+function compareMediaAndTop20Priority(left: CeremonyVenue | SwissRegistryOffice, right: CeremonyVenue | SwissRegistryOffice) {
+  const imageDifference = Number(hasApprovedPublicImage(right)) - Number(hasApprovedPublicImage(left));
+  if (imageDifference) return imageDifference;
+  return Number(isTop20Result(right)) - Number(isTop20Result(left));
+}
+
+/** The homepage only shows approved photos, with Top 20 venues first. */
 export function homepageCeremonyVenues() {
   return publicCeremonyVenues
-    .filter((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? ""))
-    .sort((left, right) => {
-      const leftHasImage = hasApprovedPublicImage(left);
-      const rightHasImage = hasApprovedPublicImage(right);
-      if (leftHasImage !== rightHasImage) return leftHasImage ? -1 : 1;
-      return (left.websitePriority ?? "").localeCompare(right.websitePriority ?? "");
-    });
+    .filter(hasApprovedPublicImage)
+    .sort((left, right) =>
+      Number(isTop20Result(right)) - Number(isTop20Result(left)) ||
+      (left.websitePriority ?? "Top20:99").localeCompare(right.websitePriority ?? "Top20:99") ||
+      left.traulokal_name.localeCompare(right.traulokal_name, "de-CH")
+    );
 }
 
 export function searchCeremonyVenues(params: SearchParams = {}) {
@@ -261,7 +271,11 @@ export function searchCeremonyVenues(params: SearchParams = {}) {
       if (Number.isFinite(minimumGuests) && minimumGuests > 0 && (!venue.maxCeremonyGuests || venue.maxCeremonyGuests < minimumGuests)) return false;
       return true;
     })
-    .sort((left, right) => venueRank(left, nameQuery) - venueRank(right, nameQuery) || left.traulokal_name.localeCompare(right.traulokal_name, "de-CH"));
+    .sort((left, right) =>
+      venueRank(left, nameQuery) - venueRank(right, nameQuery) ||
+      compareMediaAndTop20Priority(left, right) ||
+      left.traulokal_name.localeCompare(right.traulokal_name, "de-CH")
+    );
 }
 
 function venueRank(venue: CeremonyVenue, query: string) {
@@ -400,6 +414,8 @@ export function searchExperienceOffices(params: SearchParams) {
         const rankDifference = rank(a) - rank(b);
         if (rankDifference) return rankDifference;
       }
+      const discoveryPriority = compareMediaAndTop20Priority(a, b);
+      if (discoveryPriority) return discoveryPriority;
       if (typeof a.distanceKm === "number" && typeof b.distanceKm === "number") return a.distanceKm - b.distanceKm;
       return a.canton.localeCompare(b.canton, "de-CH") || a.name.localeCompare(b.name, "de-CH");
     });
@@ -421,6 +437,7 @@ export function searchExperienceResults(params: SearchParams): Array<CeremonyVen
     const leftRank = leftBaseRank === 0 && !leftVenue ? 1 : leftBaseRank;
     const rightRank = rightBaseRank === 0 && !rightVenue ? 1 : rightBaseRank;
     return leftRank - rightRank ||
+      compareMediaAndTop20Priority(left, right) ||
       Number(leftVenue) - Number(rightVenue) ||
       (leftVenue ? left.traulokal_name : left.name).localeCompare(rightVenue ? right.traulokal_name : right.name, "de-CH");
   });

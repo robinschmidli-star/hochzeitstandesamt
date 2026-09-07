@@ -7,14 +7,15 @@ import { browserId } from "@/lib/browser-identity";
 
 type Schedule = Partial<Record<"monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday", boolean | null>>;
 
-export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, officialUrl, hasCalendar = false, compact = false }: {
+export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, officialUrl, labels = {}, language = "de", hasCalendar = false, compact = false }: {
   venueId: string; venueSlug: string; officeId?: string; schedule: Schedule; officialUrl?: string;
-  hasCalendar?: boolean; compact?: boolean;
+  labels?: Record<string, string>; language?: string; hasCalendar?: boolean; compact?: boolean;
 }) {
   const [date, setDate] = useState("");
   const [status, setStatus] = useState<AvailabilityStatus>("unknown");
   const viewed = useRef(false);
   const hasOfficialCheck = Boolean(officialUrl?.startsWith("https://"));
+  const t = (key: string) => labels[key] ?? key;
 
   useEffect(() => {
     try {
@@ -32,7 +33,9 @@ export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, offi
   function checkDate() {
     const next = availabilityForDate(date, schedule, hasOfficialCheck);
     setStatus(next);
-    track("date_checked", { venueId, venueSlug, date, availabilityStatus: next });
+    const properties = { venue_id: venueId, venue_slug: venueSlug, ...(officeId ? { civil_registry_office_id: officeId } : {}), language, date, availability_status: next };
+    track("availability_clicked", properties);
+    track("date_checked", properties);
     if (next === "unavailable") track("availability_no_match", { venueId, venueSlug, date });
     try {
       void fetch("/api/preferences/availability", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
@@ -40,14 +43,14 @@ export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, offi
       }).catch(() => undefined);
     } catch { /* intent persistence is non-blocking */ }
   }
-  function officialClick() { track("official_link_clicked", { venueId, venueSlug, date: date || "none", availabilityStatus: status }); }
+  function officialClick() { track("official_link_clicked", { venue_id: venueId, venue_slug: venueSlug, ...(officeId ? { civil_registry_office_id: officeId } : {}), language, date: date || "none", availability_status: status }); }
 
   return <section className={compact ? "mt-4 border-t border-linen pt-4" : "rounded-xl border border-linen bg-white p-5 shadow-soft"} aria-labelledby={`availability-${venueId}`}>
-    <h2 id={`availability-${venueId}`} className={compact ? "font-semibold text-ink" : "text-xl font-semibold text-ink"}>Wunschdatum prüfen</h2>
-    <p className="mt-1 text-sm text-soft-ink">Dies ist keine verbindliche Reservierung. Die definitive Verfügbarkeit bestätigt das zuständige Amt.</p>
-    <div className="mt-3 flex flex-wrap items-end gap-2"><label className="grid gap-1 text-sm font-semibold text-ink">Datum<input type="date" value={date} onChange={(event) => { setDate(event.target.value); setStatus("unknown"); }} className="focus-ring min-h-11 rounded-lg border border-linen bg-white px-3 font-normal" /></label><button type="button" disabled={!date} onClick={checkDate} className="focus-ring min-h-11 rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50">Prüfen</button></div>
-    <p className={`mt-3 rounded-lg px-3 py-2 text-sm font-semibold ${statusClass}`} aria-live="polite">{availabilityLabels[status]}</p>
-    {hasCalendar ? <p className="mt-2 text-xs text-soft-ink">Online-Kalender bzw. Terminprüfung beim Amt vorhanden.</p> : <p className="mt-2 text-xs text-soft-ink">Keine Live-Kalenderdaten vorhanden.</p>}
-    {hasOfficialCheck ? <a href={officialUrl} onClick={officialClick} target="_blank" rel="noopener noreferrer" className="focus-ring mt-3 inline-flex min-h-11 items-center rounded-lg border border-sage/20 px-4 py-2 text-sm font-semibold text-sage">Offizielle Reservation prüfen ↗</a> : null}
+    <h2 id={`availability-${venueId}`} className={compact ? "font-semibold text-ink" : "text-xl font-semibold text-ink"}>{t("availability.title")}</h2>
+    <p className="mt-1 text-sm text-soft-ink">{t("availability.disclaimer")}</p>
+    <div className="mt-3 flex flex-wrap items-end gap-2"><label className="grid gap-1 text-sm font-semibold text-ink">{t("availability.date")}<input type="date" value={date} onChange={(event) => { setDate(event.target.value); setStatus("unknown"); }} className="focus-ring min-h-11 rounded-lg border border-linen bg-white px-3 font-normal" /></label><button type="button" disabled={!date} onClick={checkDate} className="focus-ring min-h-11 rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50">{t("availability.check")}</button></div>
+    <p className={`mt-3 rounded-lg px-3 py-2 text-sm font-semibold ${statusClass}`} aria-live="polite">{labels[`availability.status.${status}`] ?? availabilityLabels[status]}</p>
+    {hasCalendar ? <p className="mt-2 text-xs text-soft-ink">{t("availability.calendarAvailable")}</p> : <p className="mt-2 text-xs text-soft-ink">{t("availability.noLiveData")}</p>}
+    {hasOfficialCheck ? <a href={officialUrl} onClick={officialClick} target="_blank" rel="noopener noreferrer" className="focus-ring mt-3 inline-flex min-h-11 items-center rounded-lg border border-sage/20 px-4 py-2 text-sm font-semibold text-sage">{t("availability.officialCheck")} ↗</a> : null}
   </section>;
 }

@@ -8,6 +8,7 @@ import { withAvailableLocalePath } from "../lib/i18n";
 import { discoveryHref, hasActiveSearch, paginateResults, parseSearchParams } from "../lib/discovery";
 import { discoveryMetadata } from "../lib/seo";
 import de from "../locales/de.json";
+import type { CeremonyVenue } from "../lib/types";
 
 test("legacy URLs and repeated weekday fields share the homepage state", () => {
   assert.deepEqual(parseSearchParams({ query: " Zürich ", canton: "ZH", preferredWeekdays: ["Mo", "Sa"], unknown: "ignored" }), {
@@ -100,6 +101,26 @@ test("concrete venue and office names rank as independent internal results", () 
   assert.equal(searchExperienceResults({ name: "The Dolder Grand", canton: "ZH" })[0], searchExperienceResults({ name: "The Dolder Grand" })[0]);
 });
 
+test("venue-first ranking tolerates case, accents and spelling variants", () => {
+  for (const query of ["DOLDER", "dolder", "The Dolder Grand"]) {
+    const first = searchExperienceResults({ name: query })[0];
+    assert.ok(first && "traulokal_name" in first, query);
+    assert.equal(first.traulokal_name, "The Dolder Grand", query);
+  }
+  const zurich = searchExperienceResults({ name: "Zürich" });
+  const zurichAscii = searchExperienceResults({ name: "zurich" });
+  assert.equal("traulokal_name" in zurich[0] ? zurich[0].traulokal_name : zurich[0].name, "traulokal_name" in zurichAscii[0] ? zurichAscii[0].traulokal_name : zurichAscii[0].name);
+});
+
+test("exact venue result keeps its detail route in every core language", () => {
+  const venue = searchExperienceResults({ name: "Dolder", canton: "ZH" })[0];
+  assert.ok(venue && "traulokal_name" in venue);
+  for (const locale of ["de", "fr", "it", "en"] as const) {
+    const href = withAvailableLocalePath(`/trauort/${venue.slug}`, locale);
+    assert.equal(href, `${locale === "de" ? "" : `/${locale}`}/trauort/${venue.slug}`);
+  }
+});
+
 test("date uses offered weekdays, invalid dates do not invent availability", () => {
   assert.equal(searchWeekday({ date: "2026-09-05" }), "saturday");
   assert.equal(searchWeekday({ date: "2026-09-04" }), "friday");
@@ -130,28 +151,36 @@ test("existing style, capacity and accessibility filters are reused", () => {
   assert.ok(featuredCeremonyVenues().length >= 6);
 });
 
-test("homepage chooses six Top 20 venues and prefers approved images", () => {
+test("homepage only shows approved photos and prioritizes Top 20 venues", () => {
   const venues = homepageCeremonyVenues();
   const homepageSelection = venues.slice(0, 6);
-  const firstWithoutImage = venues.findIndex((venue) => !(
-    venue.imageStatus === "approved" &&
-    venue.publicDisplayWithoutCreditApproved === true &&
-    Boolean(venue.imageUrl)
-  ));
+  const firstNonTop20 = venues.findIndex((venue) => !/^Top20:\d{2}$/.test(venue.websitePriority ?? ""));
 
-  assert.equal(homepageSelection.length, 6);
-  assert.ok(venues.every((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? "")));
-  assert.ok(firstWithoutImage > 0);
-  assert.ok(venues.slice(0, firstWithoutImage).every((venue) =>
+  assert.ok(homepageSelection.length > 0);
+  assert.ok(venues.every((venue) =>
     venue.imageStatus === "approved" &&
     venue.publicDisplayWithoutCreditApproved === true &&
     Boolean(venue.imageUrl)
   ));
-  assert.ok(venues.slice(firstWithoutImage).every((venue) => !(
-    venue.imageStatus === "approved" &&
-    venue.publicDisplayWithoutCreditApproved === true &&
-    Boolean(venue.imageUrl)
-  )));
+  assert.ok(firstNonTop20 > 0);
+  assert.ok(venues.slice(0, firstNonTop20).every((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? "")));
+  assert.ok(venues.slice(firstNonTop20).every((venue) => !/^Top20:\d{2}$/.test(venue.websitePriority ?? "")));
+  assert.deepEqual(
+    venues.slice(0, firstNonTop20).map((venue) => venue.websitePriority),
+    ["Top20:01", "Top20:05", "Top20:06", "Top20:07"]
+  );
+});
+
+test("ambiguous venue results prefer approved photos and then Top 20 entries", () => {
+  const results = searchExperienceResults({ name: "Schloss Greifensee - Landvogtstube" });
+  const matchingVenues = results.filter((result): result is CeremonyVenue =>
+    "traulokal_name" in result && result.traulokal_name === "Schloss Greifensee - Landvogtstube"
+  );
+  assert.ok(matchingVenues.length > 1);
+  assert.equal(matchingVenues[0].websitePriority, "Top20:06");
+  assert.ok(matchingVenues.every((venue) =>
+    venue.imageStatus === "approved" && venue.publicDisplayWithoutCreditApproved === true
+  ));
 });
 
 test("localized search and inspiration URLs retain parameters", () => {
@@ -163,7 +192,7 @@ test("localized search and inspiration URLs retain parameters", () => {
 test("all enabled languages include homepage labels", () => {
   for (const locale of ["de", "fr", "it", "en"]) {
     const dictionary = JSON.parse(readFileSync(new URL(`../locales/${locale}.json`, import.meta.url), "utf8"));
-    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.title", "homeSearch.date", "homeSearch.guests", "homeSearch.moreFilters", "homeSearch.when", "homeSearch.exactDate", "homeSearch.flexibleDate", "homeSearch.monthYear", "homeSearch.dateRange", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides"]) {
+    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.title", "homeSearch.date", "homeSearch.guests", "homeSearch.moreFilters", "homeSearch.when", "homeSearch.exactDate", "homeSearch.flexibleDate", "homeSearch.monthYear", "homeSearch.dateRange", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides", "availability.title", "availability.status.unknown", "availability.status.unavailable", "availability.status.source_error", "lead.title", "lead.submit", "lead.error", "favorite.add", "favorite.remove", "shortlist.title", "shortlist.emptyTitle", "shortlist.loading"]) {
       assert.ok(dictionary[key], `${locale}: ${key}`);
     }
   }
