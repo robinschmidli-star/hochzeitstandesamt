@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { headers } from "next/headers";
 import { Analytics } from "@/components/Analytics";
 import { SiteChrome } from "@/components/SiteChrome";
+import { FavoritesProvider } from "@/components/FavoritesProvider";
 import { defaultLocale, hreflangForLocale, indexableLocales, isLocale } from "@/lib/i18n";
 import "./globals.css";
 
@@ -36,7 +37,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     <html lang={hreflangForLocale(locale)} data-scroll-behavior="smooth">
       <body className="min-h-screen font-sans antialiased">
         <Suspense><Analytics /></Suspense>
-        <SiteChrome initialLocale={locale}>{children}</SiteChrome>
+        <FavoritesProvider><SiteChrome initialLocale={locale}>{children}</SiteChrome></FavoritesProvider>
       </body>
     </html>
   );

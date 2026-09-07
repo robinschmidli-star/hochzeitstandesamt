@@ -19,7 +19,7 @@ function GalleryImage({ image }: { image: SafeMedia }) {
   if (!image.url) {
     return <span className="flex h-full w-full items-center justify-center bg-linen/70 px-4 text-center text-sm font-semibold text-soft-ink">{image.alt}</span>;
   }
-  return <SafeMediaFrame media={image} className="h-full w-full" imageClassName="h-full w-full" />;
+  return <figure className="relative h-full w-full"><SafeMediaFrame media={image} className="h-full w-full" imageClassName="h-full w-full" />{image.attribution ? <figcaption className="absolute bottom-2 left-2 rounded bg-black/65 px-2 py-1 text-xs text-white">Foto: {image.attributionUrl ? <a href={image.attributionUrl} target="_blank" rel="noopener noreferrer" className="underline" onClick={(event) => event.stopPropagation()}>{image.attribution}</a> : image.attribution}</figcaption> : null}</figure>;
 }
 
 export function VenueGallery({ images, openLabel, closeLabel, previousLabel, nextLabel, moreLabel, placeholderLabel }: Props) {
@@ -86,6 +86,7 @@ export function VenueGallery({ images, openLabel, closeLabel, previousLabel, nex
           touchStart.current = null;
         }}>
           <Image src={displayImages[activeIndex].url!} alt={displayImages[activeIndex].alt || placeholderLabel} fill priority sizes="100vw" className="object-contain" />
+          {displayImages[activeIndex].attribution ? <p className="absolute bottom-4 left-4 rounded bg-black/65 px-2 py-1 text-sm text-white">Foto: {displayImages[activeIndex].attributionUrl ? <a href={displayImages[activeIndex].attributionUrl} target="_blank" rel="noopener noreferrer" className="underline">{displayImages[activeIndex].attribution}</a> : displayImages[activeIndex].attribution}</p> : null}
         </div>
         <span className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/45 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur">{activeIndex + 1} / {displayImages.length}</span>
         {hasMultiple ? <>

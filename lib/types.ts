@@ -74,12 +74,15 @@ export type LicensedImageFields = {
   imageSource?: string;
   imageLicense?: string;
   imageAttribution?: string;
+  attributionUrl?: string;
   imageStatus?: ImageStatus;
   /** Explicit rights approval for public display without a visible credit line. */
   publicDisplayWithoutCreditApproved?: boolean;
   galleryImages?: Array<{
     url: string;
     alt?: string;
+    attribution?: string;
+    attributionUrl?: string;
     publicDisplayWithoutCreditApproved: boolean;
   }>;
   imageCandidateUrl?: string;

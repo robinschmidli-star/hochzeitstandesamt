@@ -23,6 +23,7 @@ const sections = [
     paragraphs: [
       "Wenn Sie unsere Suchfunktion oder Formulare nutzen, können wir insbesondere Vorname, E-Mail-Adresse, Wohn- oder Wunschort, Hochzeitsdatum, Angaben zu Ihrer Suche oder Anbieterwünschen, Inhalte Ihrer Nachricht sowie weitere freiwillig eingegebene Informationen erfassen.",
       "Beim Besuch der Website können automatisch technische Daten erhoben werden, insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp, Browserversion, Betriebssystem, Referrer-URL, Geräteinformationen und Nutzungsverhalten auf der Website.",
+      "Für Merkliste, Suchpräferenzen und Verfügbarkeitsabfragen speichern wir im Browser stabile Trauort-Referenzen und Suchparameter. Zusätzlich speichern wir diese Angaben serverseitig unter einem aus einer zufälligen Browser-Kennung gebildeten Hash. Die Preference-Daten enthalten keine Namen, E-Mail-Adressen oder Telefonnummern.",
       "Wenn Sie Formularfelder mittels Browser- oder Google-Autofill ausfüllen, können die eingegebenen Daten beim Absenden des Formulars gespeichert werden."
     ]
   },
@@ -30,6 +31,7 @@ const sections = [
     title: "4. Zweck der Datenbearbeitung",
     paragraphs: [
       "Wir bearbeiten personenbezogene Daten insbesondere zur Bereitstellung und zum Betrieb der Website, zur Bearbeitung von Anfragen, zum Speichern von Suchen und zur Zusendung angeforderter Informationen, zur Verbesserung unserer Dienstleistungen, zur Analyse der Nutzung der Website, zur Missbrauchs- und Sicherheitsprävention sowie für Marketing- und Kommunikationszwecke, sofern Sie darin eingewilligt haben."
+      ,"Pseudonymisierte Such-, Favoriten- und Verfügbarkeitsdaten verwenden wir, um Nachfrage und den Weg von der Suche bis zur offiziellen Reservationsmöglichkeit aggregiert auszuwerten."
     ]
   },
   {
@@ -43,6 +45,7 @@ const sections = [
     paragraphs: [
       "Unsere Website kann Cookies und ähnliche Technologien verwenden. Cookies dienen insbesondere dazu, die Benutzerfreundlichkeit zu verbessern, Funktionen der Website bereitzustellen, Besucherstatistiken zu analysieren und Marketingmassnahmen zu unterstützen.",
       "Sie können Cookies jederzeit über Ihre Browsereinstellungen einschränken oder deaktivieren."
+      ,"Favoriten und die letzte Suche werden im lokalen Speicher des Browsers abgelegt. Sie können diese Daten durch Entfernen der Favoriten beziehungsweise durch Löschen der Website-Daten im Browser zurücksetzen."
     ]
   },
   {

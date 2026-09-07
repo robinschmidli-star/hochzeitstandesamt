@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { buildNameSearchSuggestions, nameMatchRank } from "../lib/name-search";
-import { featuredCeremonyVenues, searchExperienceOffices, searchExperienceResults, searchWeekday } from "../lib/search-experience";
+import { featuredCeremonyVenues, homepageCeremonyVenues, searchExperienceOffices, searchExperienceResults, searchWeekday } from "../lib/search-experience";
 import { swissRegistryOffices } from "../lib/registry-data";
 import { withAvailableLocalePath } from "../lib/i18n";
 import { discoveryHref, hasActiveSearch, paginateResults, parseSearchParams } from "../lib/discovery";
@@ -128,6 +128,30 @@ test("existing style, capacity and accessibility filters are reused", () => {
   const venues = featuredCeremonyVenues({ maxGuests: "20", wheelchair: "yes" });
   assert.ok(venues.every((venue) => venue.maxCeremonyGuests! >= 20 && venue.wheelchairAccessible === true));
   assert.ok(featuredCeremonyVenues().length >= 6);
+});
+
+test("homepage chooses six Top 20 venues and prefers approved images", () => {
+  const venues = homepageCeremonyVenues();
+  const homepageSelection = venues.slice(0, 6);
+  const firstWithoutImage = venues.findIndex((venue) => !(
+    venue.imageStatus === "approved" &&
+    venue.publicDisplayWithoutCreditApproved === true &&
+    Boolean(venue.imageUrl)
+  ));
+
+  assert.equal(homepageSelection.length, 6);
+  assert.ok(venues.every((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? "")));
+  assert.ok(firstWithoutImage > 0);
+  assert.ok(venues.slice(0, firstWithoutImage).every((venue) =>
+    venue.imageStatus === "approved" &&
+    venue.publicDisplayWithoutCreditApproved === true &&
+    Boolean(venue.imageUrl)
+  ));
+  assert.ok(venues.slice(firstWithoutImage).every((venue) => !(
+    venue.imageStatus === "approved" &&
+    venue.publicDisplayWithoutCreditApproved === true &&
+    Boolean(venue.imageUrl)
+  )));
 });
 
 test("localized search and inspiration URLs retain parameters", () => {

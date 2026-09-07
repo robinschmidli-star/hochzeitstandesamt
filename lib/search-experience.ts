@@ -210,6 +210,26 @@ export function featuredCeremonyVenues(params: SearchParams = {}) {
     .sort((left, right) => (left.websitePriority ?? "").localeCompare(right.websitePriority ?? ""));
 }
 
+function hasApprovedPublicImage(venue: CeremonyVenue) {
+  return Boolean(
+    venue.imageUrl &&
+    venue.imageStatus === "approved" &&
+    venue.publicDisplayWithoutCreditApproved === true
+  );
+}
+
+/** Default homepage order before the visitor applies any search or filter. */
+export function homepageCeremonyVenues() {
+  return publicCeremonyVenues
+    .filter((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? ""))
+    .sort((left, right) => {
+      const leftHasImage = hasApprovedPublicImage(left);
+      const rightHasImage = hasApprovedPublicImage(right);
+      if (leftHasImage !== rightHasImage) return leftHasImage ? -1 : 1;
+      return (left.websitePriority ?? "").localeCompare(right.websitePriority ?? "");
+    });
+}
+
 export function searchCeremonyVenues(params: SearchParams = {}) {
   const nameQuery = params.name?.trim() ?? "";
   const locationQuery = normalize(params.location);

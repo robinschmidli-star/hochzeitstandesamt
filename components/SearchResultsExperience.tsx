@@ -2,12 +2,14 @@ import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { SearchLeadCapture } from "@/components/SearchLeadCapture";
 import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
-import { featuredCeremonyVenues, searchExperienceResults, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
+import { featuredCeremonyVenues, homepageCeremonyVenues, searchExperienceResults, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
 import type { CeremonyVenue } from "@/lib/types";
 import { discoveryHref, paginateResults } from "@/lib/discovery";
 import type { Dictionary } from "@/lib/i18n";
 import { ceremonyVenuePath } from "@/lib/public-venues";
-import { registryCantons } from "@/lib/registry-data";
+import { registryCantons, swissRegistryOffices } from "@/lib/registry-data";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { SearchPreferenceCapture } from "@/components/SearchPreferenceCapture";
 
 export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { office: EnrichedRegistryOffice; dictionary: Dictionary; pathPrefix?: string }) {
   const officialUrl = office.website_url || office.officialUrl;
@@ -62,6 +64,8 @@ export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { of
 export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact = false }: { venue: CeremonyVenue; dictionary: Dictionary; pathPrefix?: string; compact?: boolean }) {
   const media = ceremonyVenueMedia(venue);
   const t = (key: string) => dictionary[key] ?? key;
+  const office = swissRegistryOffices.find((item) => item.canonicalId === venue.standesamt_id || item.id === venue.standesamt_id || item.slug === venue.standesamt_id);
+  const hasCalendar = Boolean(office?.onlineCalendarUrl?.startsWith("https://"));
 
   return (
     <article className="overflow-hidden rounded-xl border border-linen bg-white shadow-soft">
@@ -80,12 +84,11 @@ export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact 
         </p> : null}
         {typeof venue.maxCeremonyGuests === "number" && venue.maxCeremonyGuests > 0 ? <p className="mt-2 text-sm text-soft-ink">{t("office.field.maxGuests")}: {venue.maxCeremonyGuests}</p> : null}
         {venue.standesamt_name ? <p className="mt-2 text-xs leading-5 text-soft-ink">{t("homeSearch.responsibleOffice")}: {repairText(venue.standesamt_name)}</p> : null}
-        <Link
-          href={`${pathPrefix}${ceremonyVenuePath(venue)}`}
-          className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white"
-        >
-          {t("featured.details")}
-        </Link>
+        {hasCalendar ? <p className="mt-2 inline-flex rounded-full bg-champagne/15 px-3 py-1 text-xs font-semibold text-sage">Kalender beim Amt verfügbar</p> : null}
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href={`${pathPrefix}${ceremonyVenuePath(venue)}`} className="focus-ring inline-flex min-h-11 items-center rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
+          {venue.canonicalId ? <FavoriteButton canonicalId={venue.canonicalId} slug={venue.slug} source={compact ? "search_results" : "featured"} compact /> : null}
+        </div>
       </div>
     </article>
   );
@@ -99,7 +102,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
 }) {
   const t = (key: string) => dictionary[key] ?? key;
   const venueMode = initial || params.tag === "featured";
-  const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
+  const matches = initial ? homepageCeremonyVenues() : venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
   const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(matches, params.page, initial ? 6 : 12);
   const selectedCanton = registryCantons.find((canton) => canton.code === params.canton);
   const resultsTitle = selectedCanton
@@ -107,6 +110,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
     : initial ? t("featured.title") : `${total} ${t(venueMode ? "results.venues" : "results.results")}`;
   return (
     <section id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">
+      {!initial ? <SearchPreferenceCapture params={params} resultCount={total} /> : null}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 id="results-title" className="text-3xl font-semibold text-ink sm:text-4xl">{resultsTitle}</h2>
         {!initial ? <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("discovery.reset")}</Link> : null}

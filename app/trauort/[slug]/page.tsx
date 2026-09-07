@@ -10,6 +10,8 @@ import { ceremonyVenueGallery } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import { breadcrumbSchema, createMetadata } from "@/lib/seo";
 import type { CeremonyVenue } from "@/lib/types";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { AvailabilityCheck } from "@/components/AvailabilityCheck";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -118,6 +120,11 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
     venue.remarks ? { label: t("verification.field.conditions"), value: repairText(venue.remarks) } : null,
     venue.beautyStatus ? { label: t("venue.field.classification"), value: repairText(venue.beautyStatus) } : null
   ].filter((item): item is DetailItem => item !== null);
+  const officialReservationUrl = office?.onlineCalendarUrl?.startsWith("https://") ? office.onlineCalendarUrl
+    : office?.appointmentBookingUrl?.startsWith("https://") ? office.appointmentBookingUrl
+    : office?.appointment_url?.startsWith("https://") ? office.appointment_url
+    : externalUrl || sourceUrl;
+  const officeCanonicalId = office?.canonicalId && /^[0-9a-f-]{36}$/i.test(office.canonicalId) ? office.canonicalId : undefined;
 
   return (
     <main className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
@@ -133,6 +140,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
           {description ? <p className="mt-4 text-lg leading-8 text-soft-ink">{description}</p> : null}
           <div className="mt-6 flex flex-wrap gap-3">
             {office ? <Link href={withLocalePath(`/zivilstandsamt/${office.slug}`, locale)} className="focus-ring inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{repairText(office.name)}</Link> : null}
+            <FavoriteButton canonicalId={canonicalId} slug={venue.slug} source="venue_detail" />
           </div>
         </div>
       </section>
@@ -145,6 +153,8 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         moreLabel={t("gallery.more")}
         placeholderLabel={t("media.placeholder")}
       />
+      <AvailabilityCheck venueId={canonicalId} venueSlug={venue.slug} officeId={officeCanonicalId} officialUrl={officialReservationUrl}
+        hasCalendar={office?.onlineCalendarAvailable === "true" || Boolean(office?.onlineCalendarUrl)} schedule={{ monday: venue.ceremonyMonday, tuesday: venue.ceremonyTuesday, wednesday: venue.ceremonyWednesday, thursday: venue.ceremonyThursday, friday: venue.ceremonyFriday, saturday: venue.ceremonySaturday, sunday: venue.ceremonySunday }} />
       <div className="grid gap-5 lg:grid-cols-2">
         <DetailSection title={t("venue.section.location")} items={locationItems} />
         <DetailSection title={t("venue.section.ceremony")} items={ceremonyItems} />

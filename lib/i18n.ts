@@ -63,6 +63,7 @@ export function isLocalizedContentPath(path: string) {
     normalized === "/search" ||
     normalized === "/standesamt-finden" ||
     normalized === "/ratgeber" ||
+    normalized === "/merkliste" ||
     normalized.startsWith("/trauort/") ||
     normalized.startsWith("/zivilstandsamt/")
   );

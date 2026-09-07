@@ -129,16 +129,23 @@ function publicMediaFields(entityId, previous = {}) {
   return {
     imageUrl,
     imageAlt: text(primary.image_alt),
+    imageAttribution: text(primary.image_attribution),
+    attributionUrl: text(primary.attribution_url),
     imageStatus: "approved",
     publicDisplayWithoutCreditApproved:
       primary.public_display_without_credit_approved === true ||
-      primary.permission_status === "allowed",
+      primary.permission_status === "allowed" ||
+      primary.permission_status === "allowed_with_attribution",
     ...((media.length > 1 || previous.imageUrl === imageUrl) && (media.length > 1 || previous.galleryImages?.length > 1) ? {
       galleryImages: media.length > 1 ? media.map((item) => ({
         url: text(item.image_url),
         alt: text(item.image_alt),
+        attribution: text(item.image_attribution),
+        attributionUrl: text(item.attribution_url),
         publicDisplayWithoutCreditApproved:
-          item.public_display_without_credit_approved === true || item.permission_status === "allowed"
+          item.public_display_without_credit_approved === true ||
+          item.permission_status === "allowed" ||
+          item.permission_status === "allowed_with_attribution"
       })) : previous.galleryImages
     } : {})
   };

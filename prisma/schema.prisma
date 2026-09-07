@@ -164,6 +164,99 @@ model AnalyticsEvent {
   @@map("analytics_events")
 }
 
+enum AvailabilityStatus {
+  available
+  unavailable
+  unknown
+  manual_check
+  not_supported
+
+  @@map("availability_status")
+}
+
+model VisitorPreferenceProfile {
+  id                    String                 @id @default(uuid()) @db.Uuid
+  visitorHash           String                 @unique(map: "visitor_preference_profiles_visitor_hash_key") @map("visitor_hash")
+  firstSeenAt           DateTime               @default(now()) @map("first_seen_at")
+  lastSeenAt            DateTime               @default(now()) @updatedAt @map("last_seen_at")
+  locale                String?
+  country               String?
+  searchContexts        SearchContext[]
+  favoriteVenues        FavoriteVenue[]
+  availabilityInterests AvailabilityInterest[]
+
+  @@index([lastSeenAt(sort: Desc)], map: "visitor_preference_profiles_last_seen_at_idx")
+  @@map("visitor_preference_profiles")
+}
+
+model SearchContext {
+  id           String                   @id @default(uuid()) @db.Uuid
+  visitorHash  String                   @map("visitor_hash")
+  sessionId    String?                  @map("session_id") @db.Uuid
+  canton       String?
+  date         DateTime?                @db.Date
+  dateFrom     DateTime?                @map("date_from") @db.Date
+  dateTo       DateTime?                @map("date_to") @db.Date
+  guests       Int?
+  saturdayOnly Boolean?                 @map("saturday_only")
+  tag          String?
+  elopement    Boolean?
+  outdoor      Boolean?
+  radiusKm     Int?                     @map("radius_km")
+  resultCount  Int?                     @map("result_count")
+  createdAt    DateTime                 @default(now()) @map("created_at")
+  visitor      VisitorPreferenceProfile @relation(fields: [visitorHash], references: [visitorHash], onDelete: Cascade)
+  favorites    FavoriteVenue[]
+
+  @@index([visitorHash, createdAt(sort: Desc)], map: "search_contexts_visitor_time_idx")
+  @@index([createdAt(sort: Desc)], map: "search_contexts_created_at_idx")
+  @@index([canton, createdAt(sort: Desc)], map: "search_contexts_canton_time_idx")
+  @@index([date], map: "search_contexts_date_idx")
+  @@map("search_contexts")
+}
+
+model FavoriteVenue {
+  id              String                   @id @default(uuid()) @db.Uuid
+  visitorHash     String                   @map("visitor_hash")
+  venueId         String                   @map("venue_id") @db.Uuid
+  venueSlug       String                   @map("venue_slug")
+  searchContextId String?                  @map("search_context_id") @db.Uuid
+  savedAt         DateTime                 @default(now()) @map("saved_at")
+  removedAt       DateTime?                @map("removed_at")
+  visitor         VisitorPreferenceProfile @relation(fields: [visitorHash], references: [visitorHash], onDelete: Cascade)
+  searchContext   SearchContext?           @relation(fields: [searchContextId], references: [id], onDelete: SetNull)
+
+  // A removed favorite is reactivated in place. Analytics retains add/remove history.
+  @@unique([visitorHash, venueId], map: "favorite_venues_visitor_venue_key")
+  @@index([venueId, removedAt], map: "favorite_venues_venue_active_idx")
+  @@index([venueSlug], map: "favorite_venues_venue_slug_idx")
+  @@index([searchContextId], map: "favorite_venues_search_context_id_idx")
+  @@index([savedAt(sort: Desc)], map: "favorite_venues_saved_at_idx")
+  @@map("favorite_venues")
+}
+
+model AvailabilityInterest {
+  id                 String                   @id @default(uuid()) @db.Uuid
+  visitorHash        String                   @map("visitor_hash")
+  sessionId          String?                  @map("session_id") @db.Uuid
+  venueId            String                   @map("venue_id") @db.Uuid
+  venueSlug          String                   @map("venue_slug")
+  officeId           String?                  @map("office_id") @db.Uuid
+  requestedDate      DateTime?                @map("requested_date") @db.Date
+  requestedDateFrom  DateTime?                @map("requested_date_from") @db.Date
+  requestedDateTo    DateTime?                @map("requested_date_to") @db.Date
+  availabilityStatus AvailabilityStatus       @default(unknown) @map("availability_status")
+  checkedAt          DateTime                 @default(now()) @map("checked_at")
+  visitor            VisitorPreferenceProfile @relation(fields: [visitorHash], references: [visitorHash], onDelete: Cascade)
+
+  @@index([visitorHash, checkedAt(sort: Desc)], map: "availability_interests_visitor_time_idx")
+  @@index([venueId, checkedAt(sort: Desc)], map: "availability_interests_venue_time_idx")
+  @@index([officeId, checkedAt(sort: Desc)], map: "availability_interests_office_time_idx")
+  @@index([requestedDate], map: "availability_interests_requested_date_idx")
+  @@index([availabilityStatus, checkedAt(sort: Desc)], map: "availability_interests_status_time_idx")
+  @@map("availability_interests")
+}
+
 model RateLimitBucket {
   namespace  String
   clientHash String   @map("client_hash")

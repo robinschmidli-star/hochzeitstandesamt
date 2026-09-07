@@ -19,6 +19,7 @@ import bs from "@/locales/bs.json";
 import uk from "@/locales/uk.json";
 import pl from "@/locales/pl.json";
 import { defaultLocale, isLocale, isLocalizedContentPath, type Dictionary, type Locale, withAvailableLocalePath, withLocalePath } from "@/lib/i18n";
+import { useFavorites } from "@/components/FavoritesProvider";
 
 const dictionaries: Partial<Record<Locale, Dictionary>> = { de, en, fr, it, es, pt, nl, sr, sq, tr, hr, bs, uk, pl };
 
@@ -31,6 +32,7 @@ export function SiteChrome({ children, initialLocale = defaultLocale }: { childr
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { favorites } = useFavorites();
   const locale = mounted ? getLocaleFromPath(pathname) : initialLocale;
   const fallback = de as Dictionary;
   const dictionary = { ...fallback, ...(dictionaries[locale] ?? {}) };
@@ -78,6 +80,7 @@ export function SiteChrome({ children, initialLocale = defaultLocale }: { childr
             ))}
           </nav>
           <div className="flex shrink-0 items-center gap-2">
+            {favorites.length ? <Link href={withLocalePath("/merkliste", locale)} className="focus-ring inline-flex min-h-10 items-center rounded-full border border-linen bg-white px-3 text-sm font-semibold text-sage">♡ <span className="hidden sm:inline">Merkliste </span>({favorites.length})</Link> : null}
             <button
               type="button"
               className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-linen bg-white text-sage shadow-soft md:hidden"

@@ -1,20 +1,15 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { hasActiveSearch, parseSearchParams } from "@/lib/discovery";
+import { browserId } from "@/lib/browser-identity";
 
-function id(key: string, storage: Storage) { const current = storage.getItem(key); if (current) return current; const value = crypto.randomUUID(); storage.setItem(key, value); return value; }
 export function track(eventName: string, properties: Record<string, string | number | boolean | string[]> = {}) {
-  try { void fetch("/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true, body: JSON.stringify({ eventName, sessionId: id("hs_session", sessionStorage), visitorId: id("hs_visitor", localStorage), path: location.pathname + location.search, properties }) }).catch(() => undefined); } catch { /* non-blocking */ }
+  try { void fetch("/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true, body: JSON.stringify({ eventName, sessionId: browserId("hs_session", sessionStorage), visitorId: browserId("hs_visitor", localStorage), path: location.pathname + location.search, properties }) }).catch(() => undefined); } catch { /* non-blocking */ }
 }
 export function Analytics() {
   const pathname = usePathname(); const params = useSearchParams();
   useEffect(() => {
     track("page_view", { referrer: document.referrer.slice(0, 250), language: navigator.language });
-    const searchPage = /^\/(?:fr|it|en|de)?\/?(?:search|standesamt-finden)?\/?$/.test(pathname);
-    if (searchPage && hasActiveSearch(parseSearchParams(Object.fromEntries(params)))) {
-      track("search_completed", { filters: Array.from(params.keys()).filter((key) => params.get(key)) });
-    }
   }, [pathname, params]);
   return null;
 }

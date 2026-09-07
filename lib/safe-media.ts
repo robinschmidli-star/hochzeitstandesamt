@@ -7,6 +7,8 @@ export type SafeMedia = {
   alt: string;
   status: "approved" | "fallback_crest" | "placeholder";
   fit: "cover" | "contain";
+  attribution?: string;
+  attributionUrl?: string;
   fallback?: SafeMedia;
 };
 
@@ -16,6 +18,7 @@ type ImageLike = {
   imageSource?: string;
   imageLicense?: string;
   imageAttribution?: string;
+  attributionUrl?: string;
   imageStatus?: string;
   publicDisplayWithoutCreditApproved?: boolean;
 };
@@ -31,7 +34,9 @@ function approvedImage(item: ImageLike, fallbackAlt: string): SafeMedia | null {
     url: item.imageUrl,
     alt: repairText(item.imageAlt || fallbackAlt),
     status: "approved",
-    fit: "cover"
+    fit: "cover",
+    attribution: repairText(item.imageAttribution || ""),
+    attributionUrl: item.attributionUrl
   };
 }
 
@@ -109,7 +114,9 @@ export function ceremonyVenueGallery(venue: CeremonyVenue): SafeMedia[] {
       url: image.url,
       alt: repairText(image.alt || venue.traulokal_name),
       status: "approved",
-      fit: "cover"
+      fit: "cover",
+      attribution: repairText(image.attribution || ""),
+      attributionUrl: image.attributionUrl
     });
   }
 
