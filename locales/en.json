@@ -261,5 +261,8 @@
   "discovery.previous": "Previous",
   "discovery.next": "More results",
   "discovery.page": "Page {page} of {pages}",
-  "discovery.postalCode": "Postcode of the office or a municipality it serves"
+  "discovery.postalCode": "Postcode of the office or a municipality it serves",
+  "availability.title": "Check your preferred date", "availability.disclaimer": "This is not a binding reservation. The responsible office confirms final availability.", "availability.date": "Date", "availability.check": "Check", "availability.officialCheck": "Check official reservation", "availability.status.unknown": "Select a date", "availability.status.unavailable": "Not offered on this weekday", "availability.status.manual_check": "Check with the office",
+  "favorite.add": "Save venue", "favorite.remove": "Remove venue from favorites", "favorite.saved": "Saved",
+  "lead.eyebrow": "Save search", "lead.title": "Save your search and receive relevant tips", "lead.description": "Save your search without an account so we can send you relevant information.", "lead.firstName": "First name (optional)", "lead.email": "Email", "lead.consent": "I would like to receive tips and recommendations by email. I can unsubscribe at any time.", "lead.privacyPrefix": "We use your details to save your search. See our", "lead.privacyLink": "privacy policy", "lead.saving": "Saving...", "lead.submit": "Save search", "lead.error": "Please check your email address.", "lead.success": "Thank you! We saved your search.", "lead.successMarketing": "Thank you! We saved your search and will send relevant information by email."
 }

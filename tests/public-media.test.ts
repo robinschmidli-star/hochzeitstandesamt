@@ -126,3 +126,34 @@ test("venue gallery keeps approved order, removes duplicates and rejects unappro
     "/fifth.jpg", "/sixth.jpg", "/seventh.jpg"
   ]);
 });
+
+test("Schloss Kyburg keeps exactly three approved local gallery images", () => {
+  const venue = ceremonyVenues.find((item) => item.slug === "schloss-kyburg");
+  assert.ok(venue);
+  const gallery = ceremonyVenueGallery(venue);
+
+  assert.equal(venue.imageUrl, "/venues/kyburg/schloss-kyburg-aussenansicht.jpg");
+  assert.equal(gallery.length, 3);
+  assert.equal(new Set(gallery.map((image) => image.url)).size, 3);
+  assert.ok(gallery.every((image) => image.status === "approved"));
+  assert.ok(gallery.every((image) => image.url?.startsWith("/venues/kyburg/")));
+  assert.ok(venue.galleryImages?.every((image) => image.publicDisplayWithoutCreditApproved === true));
+});
+
+test("approved venue galleries are complete and Castelgrande is not published as a venue", () => {
+  const expectedCounts = new Map([
+    ["aigle-chateau-d-aigle", 5],
+    ["castello-sasso-corbaro", 6],
+    ["hotel-blausee", 6],
+    ["villa-ciani", 8]
+  ]);
+
+  for (const [slug, count] of expectedCounts) {
+    const venue = ceremonyVenues.find((item) => item.slug === slug);
+    assert.ok(venue, `missing venue ${slug}`);
+    assert.equal(ceremonyVenueMedia(venue).status, "approved", `media gate rejected ${slug}`);
+    assert.equal(ceremonyVenueGallery(venue).length, count, `incomplete gallery ${slug}`);
+  }
+
+  assert.equal(ceremonyVenues.some((venue) => venue.slug === "castelgrande-bellinzona"), false);
+});

@@ -10,6 +10,10 @@ import { ceremonyVenueGallery } from "@/lib/safe-media";
 import { repairText } from "@/lib/search-experience";
 import { breadcrumbSchema, createMetadata } from "@/lib/seo";
 import type { CeremonyVenue } from "@/lib/types";
+import { AvailabilityCheck } from "@/components/AvailabilityCheck";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { TrackOnMount } from "@/components/Analytics";
+import { publicVenueVerification } from "@/lib/verification";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -81,6 +85,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
     item.canonicalId === venue.standesamt_id || item.id === venue.standesamt_id || item.slug === venue.standesamt_id
   );
   const canonicalId = venue.canonicalId!;
+  const verification = await publicVenueVerification(canonicalId);
   const translations = await contentTranslations("wedding_venue", [canonicalId], locale, "description");
   const description = repairText(translations.get(canonicalId) || venue.beschreibung);
   const media = ceremonyVenueGallery(venue);
@@ -118,9 +123,15 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
     venue.remarks ? { label: t("verification.field.conditions"), value: repairText(venue.remarks) } : null,
     venue.beautyStatus ? { label: t("venue.field.classification"), value: repairText(venue.beautyStatus) } : null
   ].filter((item): item is DetailItem => item !== null);
+  const officialReservationUrl = office?.onlineCalendarUrl?.startsWith("https://") ? office.onlineCalendarUrl
+    : office?.appointmentBookingUrl?.startsWith("https://") ? office.appointmentBookingUrl
+    : office?.appointment_url?.startsWith("https://") ? office.appointment_url
+    : externalUrl || sourceUrl;
+  const officeCanonicalId = office?.canonicalId && /^[0-9a-f-]{36}$/i.test(office.canonicalId) ? office.canonicalId : undefined;
 
   return (
     <main className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+      <TrackOnMount eventName="venue_opened" properties={{ venue_id: canonicalId, venue_slug: venue.slug, venue_name: repairText(venue.traulokal_name), ...(officeCanonicalId ? { civil_registry_office_id: officeCanonicalId } : {}), canton: venue.kanton || office?.canton || "", language: locale }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: t("nav.home"), url: `https://hochzeitstandesamt.ch${withLocalePath("/", locale)}` },
         ...(office ? [{ name: repairText(office.name), url: `https://hochzeitstandesamt.ch${withLocalePath(`/zivilstandsamt/${office.slug}`, locale)}` }] : []),
@@ -130,9 +141,14 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-champagne">{repairText([venue.ort, venue.kanton].filter(Boolean).join(" · "))}</p>
           <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{repairText(venue.traulokal_name)}</h1>
+          {verification ? <div className="mt-3 text-sm text-sage">
+            <p>✓ {t("venue.verification.confirmedBy").replace("{names}", verification.names.join(` ${t("venue.verification.and")} `))}</p>
+            <p className="mt-0.5 text-xs text-soft-ink">{t("venue.verification.lastConfirmed").replace("{date}", verification.verifiedAt.toLocaleDateString(`${locale}-CH`))}</p>
+          </div> : null}
           {description ? <p className="mt-4 text-lg leading-8 text-soft-ink">{description}</p> : null}
           <div className="mt-6 flex flex-wrap gap-3">
             {office ? <Link href={withLocalePath(`/zivilstandsamt/${office.slug}`, locale)} className="focus-ring inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{repairText(office.name)}</Link> : null}
+            <FavoriteButton venueId={canonicalId} venueSlug={venue.slug} labels={{ add: t("favorite.add"), remove: t("favorite.remove"), saved: t("favorite.saved") }} />
           </div>
         </div>
       </section>
@@ -145,6 +161,8 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         moreLabel={t("gallery.more")}
         placeholderLabel={t("media.placeholder")}
       />
+      <AvailabilityCheck venueId={canonicalId} venueSlug={venue.slug} officeId={officeCanonicalId} officialUrl={officialReservationUrl} language={locale}
+        labels={dictionary} schedule={{ monday: venue.ceremonyMonday, tuesday: venue.ceremonyTuesday, wednesday: venue.ceremonyWednesday, thursday: venue.ceremonyThursday, friday: venue.ceremonyFriday, saturday: venue.ceremonySaturday, sunday: venue.ceremonySunday }} />
       <div className="grid gap-5 lg:grid-cols-2">
         <DetailSection title={t("venue.section.location")} items={locationItems} />
         <DetailSection title={t("venue.section.ceremony")} items={ceremonyItems} />

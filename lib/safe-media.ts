@@ -27,7 +27,10 @@ type ImageLike = {
 const reviewedVenueMediaApprovalIds = new Set([
   "c6d3d621-e916-5ba1-8b9d-d3014c0a66e8", // Castello Sasso Corbaro
   "da067a71-7a88-57e9-8d51-e98d7904c299", // Schlossberg Thun
-  "ed5f604c-4808-5229-ac5e-c5c38f385405" // Aigle – Château d'Aigle
+  "ed5f604c-4808-5229-ac5e-c5c38f385405", // Aigle – Château d'Aigle
+  "ed5f604c-4808-5229-ac5e-c5c38f385405", // Château d'Aigle
+  "8d12e60e-efe9-582e-9dd9-70310cabac95", // Hotel Blausee
+  "5e2de59f-7a00-550d-ad82-e8e9be617b93" // Villa Ciani
 ]);
 
 function approvedImage(item: ImageLike, fallbackAlt: string): SafeMedia | null {

@@ -80,6 +80,7 @@ export type LicensedImageFields = {
   galleryImages?: Array<{
     url: string;
     alt?: string;
+    attribution?: string;
     publicDisplayWithoutCreditApproved: boolean;
   }>;
   imageCandidateUrl?: string;

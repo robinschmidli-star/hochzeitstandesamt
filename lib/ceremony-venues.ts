@@ -3585,6 +3585,39 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Hotel Blausee",
     "imageAttribution": "Hotel Blausee",
     "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/blausee/hotel-blausee.jpg",
+        "alt": "Hotel Blausee im Naturpark",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/blausee/hotel-blausee-01.jpg",
+        "alt": "Festlich gedeckter Hochzeitstisch im Hotel Blausee",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/blausee/hotel-blausee-02.jpg",
+        "alt": "Festlich gedeckter Saal im Hotel Blausee",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/blausee/hotel-blausee-03.jpg",
+        "alt": "Bankettsaal im Hotel Blausee",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/blausee/hotel-blausee-04.jpg",
+        "alt": "Restaurantbereich für Hochzeitsfeiern im Hotel Blausee",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/blausee/hotel-blausee-05.jpg",
+        "alt": "Blumendekoration für eine Hochzeitsfeier am Blausee",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "highlightLevel": 0,
     "ceremonyDaysNote": "",
     "capacityNote": "",
@@ -16808,8 +16841,8 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "parkingAvailable": null,
     "outdoorCeremonyAvailable": null,
     "seasonalAvailability": "",
-    "venueUrl": "",
-    "sourceUrl": "https://www4.ti.ch/di/spop/stato-civile/sale-per-la-celebrazione-dei-matrimoni",
+    "venueUrl": "https://fortezzabellinzona.ch/de/veranstaltungen-sasso-corbaro-2/",
+    "sourceUrl": "https://fortezzabellinzona.ch/de/veranstaltungen-sasso-corbaro-2/",
     "remarks": "Detailadresse nicht öffentlich in Übersichtszeile; bitte Einzelseite/Kommunikation bei Bedarf ergänzen.",
     "ceremonyMonday": null,
     "ceremonyTuesday": null,
@@ -16823,6 +16856,39 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Fortezza di Bellinzona",
     "imageAttribution": "Fortezza di Bellinzona",
     "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/bellinzona/sasso-corbaro.jpg",
+        "alt": "Castello Sasso Corbaro in Bellinzona",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/bellinzona/sasso-corbaro-01.jpg",
+        "alt": "Blumendekoration im Benedetto-Ferrini-Saal von Sasso Corbaro",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/bellinzona/sasso-corbaro-02.jpg",
+        "alt": "Geschmückter Eingang zum Castello Sasso Corbaro",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/bellinzona/sasso-corbaro-03.jpg",
+        "alt": "Hochzeitsdekoration im Castello Sasso Corbaro",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/bellinzona/sasso-corbaro-04.jpg",
+        "alt": "Benedetto-Ferrini-Saal im Castello Sasso Corbaro",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/bellinzona/sasso-corbaro-05.jpg",
+        "alt": "Kaminzimmer im Castello Sasso Corbaro",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "ceremonyDaysNote": "",
     "capacityNote": "40 posti",
     "parkingDescription": "",
@@ -25220,6 +25286,54 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "ceremonyFriday": null,
     "ceremonySunday": null,
     "eveningCeremonyAvailable": null,
+    "imageUrl": "/venues/villa-ciani/villa-ciani-01.jpg",
+    "imageAlt": "Villa Ciani mit Gartenanlage in Lugano",
+    "imageSource": "Lugano Convention & Exhibition",
+    "imageAttribution": "© Lugano Convention & Exhibition",
+    "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/villa-ciani/villa-ciani-01.jpg",
+        "alt": "Villa Ciani mit Gartenanlage in Lugano",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-02.jpg",
+        "alt": "Villa Ciani vom Park aus gesehen",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-03.jpg",
+        "alt": "Historischer Saal im ersten Stock der Villa Ciani",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-04.jpg",
+        "alt": "Blick aus der Villa Ciani auf den Luganersee",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-05.jpg",
+        "alt": "Historischer Saal im Erdgeschoss der Villa Ciani",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-06.jpg",
+        "alt": "Spiegelsaal der Villa Ciani",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-07.jpg",
+        "alt": "Spiegelsaal der Villa Ciani mit Blick in den Park",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/villa-ciani/villa-ciani-08.jpg",
+        "alt": "Zimmerflucht in der Villa Ciani",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "highlightLevel": 0,
     "ceremonyDaysNote": "",
     "capacityNote": "30",
@@ -25476,6 +25590,34 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "imageSource": "Château d’Aigle",
     "imageAttribution": "© Château d’Aigle",
     "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/aigle/chateau-aigle.jpg",
+        "alt": "Trauraum im Château d’Aigle",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/aigle/chateau-aigle-01.jpg",
+        "alt": "Festlich gedeckter Empfangssaal im Château d’Aigle",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/aigle/chateau-aigle-02.jpg",
+        "alt": "Bestuhlter Trausaal im Château d’Aigle",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/aigle/chateau-aigle-03.jpg",
+        "alt": "Für eine Trauung dekorierter Saal im Château d’Aigle",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/aigle/chateau-aigle-04.jpg",
+        "alt": "Festlich gedeckter Bankettsaal im Château d’Aigle",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "ceremonyDaysNote": "",
     "capacityNote": "",
     "parkingDescription": "",
@@ -25585,45 +25727,6 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": null,
     "reservationRequired": null,
     "slug": "chateau-maison-blanche-d-yvorne"
-  },
-  {
-    "canonicalId": "63687ff3-e088-5ba9-a680-d0563c8e5fa8",
-    "standesamt_id": "02067a59-ebe7-5f87-95fe-e064f81335d2",
-    "standesamt_name": "Office de l'état civil du canton de Vaud",
-    "traulokal_name": "Château d'Aigle",
-    "adresse": "",
-    "ort": "Aigle",
-    "kanton": "VD",
-    "beschreibung": "Lieu d'exception agréé par le canton de Vaud.",
-    "ceremonySaturday": null,
-    "maxCeremonyGuests": null,
-    "wheelchairAccessible": null,
-    "parkingAvailable": null,
-    "outdoorCeremonyAvailable": null,
-    "seasonalAvailability": "",
-    "venueUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-daigle",
-    "sourceUrl": "https://www.vd.ch/population/etat-civil/mariage/salles-des-mariages/salles-particulieres/chateau-daigle",
-    "remarks": "",
-    "ceremonyMonday": null,
-    "ceremonyTuesday": null,
-    "ceremonyWednesday": null,
-    "ceremonyThursday": null,
-    "ceremonyFriday": null,
-    "ceremonySunday": null,
-    "eveningCeremonyAvailable": null,
-    "imageUrl": "/venues/aigle/chateau-aigle.jpg",
-    "imageAlt": "Trauraum im Château d’Aigle",
-    "imageSource": "Château d’Aigle",
-    "imageAttribution": "© Château d’Aigle",
-    "imageStatus": "approved",
-    "highlightLevel": 0,
-    "ceremonyDaysNote": "",
-    "capacityNote": "",
-    "parkingDescription": "",
-    "ceremonyTimes": "",
-    "indoor": null,
-    "reservationRequired": null,
-    "slug": "chateau-d-aigle"
   },
   {
     "canonicalId": "96752559-d343-508e-befa-2f797c5acc4f",
@@ -30467,12 +30570,32 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "https://schlosskyburg.ch/",
     "sourceUrl": "https://www.ilef.ch/_docn/5584138/20250306_BER_Geschaeftsbericht_2024.pdf",
     "remarks": "",
-    "imageUrl": "/venues/kyburg/schloss-kyburg.jpg",
-    "imageAlt": "Trauzimmer im Schloss Kyburg",
+    "imageUrl": "/venues/kyburg/schloss-kyburg-aussenansicht.jpg",
+    "imageAlt": "Schloss Kyburg aus der Vogelperspektive über dem bewaldeten Tösstal",
     "imageSource": "Museum Schloss Kyburg",
     "imageAttribution": "Museum Schloss Kyburg",
     "imageStatus": "approved",
     "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/venues/kyburg/schloss-kyburg-aussenansicht.jpg",
+        "alt": "Schloss Kyburg aus der Vogelperspektive über dem bewaldeten Tösstal",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/kyburg/schloss-kyburg.jpg",
+        "alt": "Festlich eingerichtete Richterstube für Ziviltrauungen im Schloss Kyburg",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/venues/kyburg/schloss-kyburg-ziviltrauung.jpg",
+        "alt": "Zwei Taubenfiguren als Detail der Ziviltrauung im Schloss Kyburg",
+        "attribution": "Museum Schloss Kyburg",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ],
     "beautyStatus": "Top 20",
     "highlightLevel": 5,
     "tags": [
@@ -31230,6 +31353,40 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": null,
     "reservationRequired": null,
     "slug": "the-dolder-grand"
+  },
+  {
+    "canonicalId": "57104da0-6c2a-5ac5-b908-e57fd1794138",
+    "slug": "the-valley",
+    "standesamt_id": "de744d9d-4dfa-5caf-aac7-750a95c7d8ca",
+    "standesamt_name": "Zivilstandskreis Illnau-Effretikon",
+    "traulokal_name": "The Valley",
+    "adresse": "Kemptpark 2",
+    "ort": "Kemptthal",
+    "kanton": "ZH",
+    "beschreibung": "Ballsaal im Industrie-Look.",
+    "ceremonyMonday": null,
+    "ceremonyTuesday": null,
+    "ceremonyWednesday": null,
+    "ceremonyThursday": null,
+    "ceremonyFriday": null,
+    "ceremonySaturday": null,
+    "ceremonySunday": null,
+    "ceremonyDaysNote": "",
+    "maxCeremonyGuests": 100,
+    "capacityNote": "",
+    "parkingAvailable": null,
+    "parkingDescription": "",
+    "seasonalAvailability": "",
+    "ceremonyTimes": "",
+    "indoor": true,
+    "reservationRequired": null,
+    "eveningCeremonyAvailable": null,
+    "outdoorCeremonyAvailable": null,
+    "wheelchairAccessible": null,
+    "officialConfirmed": true,
+    "venueUrl": "https://www.ilef.ch/ehegeburttod/36334",
+    "sourceUrl": "https://www.ilef.ch/ehegeburttod/36334",
+    "remarks": ""
   },
   {
     "canonicalId": "aaaa499e-5be5-58d1-ad02-c7d276ed27a0",

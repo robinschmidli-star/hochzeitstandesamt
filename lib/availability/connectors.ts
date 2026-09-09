@@ -51,7 +51,8 @@ export function parseGermanPublishedDates(html: string): NormalizedAvailabilityS
     const sectionYear = Number(section[1]);
     const sectionText = section[2];
 
-    for (const match of sectionText.matchAll(datePattern)) {
+    const matches = [...sectionText.matchAll(datePattern)];
+    for (const [index, match] of matches.entries()) {
       const day = Number(match[1]);
       const monthName = match[2].toLowerCase();
       const year = match[3] ? Number(match[3]) : sectionYear;
@@ -61,9 +62,9 @@ export function parseGermanPublishedDates(html: string): NormalizedAvailabilityS
       const date = new Date(Date.UTC(year, month, day));
       if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) continue;
 
-      const start = Math.max(0, (match.index ?? 0) - 50);
-      const end = Math.min(sectionText.length, (match.index ?? 0) + match[0].length + 90);
-      const context = sectionText.slice(start, end).toLowerCase();
+      const start = match.index ?? 0;
+      const nextStart = matches[index + 1]?.index ?? sectionText.length;
+      const context = sectionText.slice(start, nextStart).toLowerCase();
       const unavailable = /ausgebucht|belegt|nicht verfügbar|keine freien/.test(context);
       const explicitlyAvailable = /\bfrei\b|verfügbar|freie termine?/.test(context);
       const dateKey = isoDate(date);

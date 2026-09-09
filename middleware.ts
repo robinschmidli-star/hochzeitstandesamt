@@ -36,6 +36,12 @@ export async function middleware(request: NextRequest) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
   }
+  if (pathname.startsWith("/verify")) {
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    response.headers.set("Referrer-Policy", "no-referrer");
+    return response;
+  }
   const segments = pathname.split("/").filter(Boolean);
   const locale = segments[0];
 

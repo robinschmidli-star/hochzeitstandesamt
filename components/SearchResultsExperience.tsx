@@ -2,12 +2,13 @@ import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { SearchLeadCapture } from "@/components/SearchLeadCapture";
 import { ceremonyVenueMedia, registryOfficeMedia } from "@/lib/safe-media";
-import { featuredCeremonyVenues, searchExperienceResults, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
+import { featuredCeremonyVenues, homepageCeremonyVenues, searchExperienceResults, repairText, type EnrichedRegistryOffice, type SearchParams } from "@/lib/search-experience";
 import type { CeremonyVenue } from "@/lib/types";
 import { discoveryHref, paginateResults } from "@/lib/discovery";
 import type { Dictionary } from "@/lib/i18n";
 import { ceremonyVenuePath } from "@/lib/public-venues";
 import { registryCantons } from "@/lib/registry-data";
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 export function RegistryOfficeCard({ office, dictionary, pathPrefix = "" }: { office: EnrichedRegistryOffice; dictionary: Dictionary; pathPrefix?: string }) {
   const officialUrl = office.website_url || office.officialUrl;
@@ -80,12 +81,10 @@ export function FeaturedVenueCard({ venue, dictionary, pathPrefix = "", compact 
         </p> : null}
         {typeof venue.maxCeremonyGuests === "number" && venue.maxCeremonyGuests > 0 ? <p className="mt-2 text-sm text-soft-ink">{t("office.field.maxGuests")}: {venue.maxCeremonyGuests}</p> : null}
         {venue.standesamt_name ? <p className="mt-2 text-xs leading-5 text-soft-ink">{t("homeSearch.responsibleOffice")}: {repairText(venue.standesamt_name)}</p> : null}
-        <Link
-          href={`${pathPrefix}${ceremonyVenuePath(venue)}`}
-          className="focus-ring mt-4 inline-flex rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white"
-        >
-          {t("featured.details")}
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href={`${pathPrefix}${ceremonyVenuePath(venue)}`} className="focus-ring inline-flex min-h-11 items-center rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white">{t("featured.details")}</Link>
+          {venue.canonicalId ? <FavoriteButton venueId={venue.canonicalId} venueSlug={venue.slug} labels={{ add: t("favorite.add"), remove: t("favorite.remove"), saved: t("favorite.saved") }} /> : null}
+        </div>
       </div>
     </article>
   );
@@ -99,10 +98,8 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
 }) {
   const t = (key: string) => dictionary[key] ?? key;
   const venueMode = initial || params.tag === "featured";
-  const matches = venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
-  const displayMatches = initial
-    ? (matches as CeremonyVenue[]).filter((venue) => ceremonyVenueMedia(venue).status === "approved")
-    : matches;
+  const matches = initial ? homepageCeremonyVenues() : venueMode ? featuredCeremonyVenues(params) : searchExperienceResults(params);
+  const displayMatches = matches;
   const { items, page, pageCount, total } = paginateResults<CeremonyVenue | EnrichedRegistryOffice>(displayMatches, params.page, initial ? 6 : 12);
   const selectedCanton = registryCantons.find((canton) => canton.code === params.canton);
   const resultsTitle = selectedCanton
@@ -129,7 +126,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
         <p className="text-sm text-soft-ink">{t("discovery.page").replace("{page}", String(page)).replace("{pages}", String(pageCount))}</p>
         {page < pageCount ? <Link href={discoveryHref(params, { page: String(page + 1) }, pathPrefix)} className="focus-ring inline-flex min-h-11 items-center rounded-lg border border-linen px-4 py-2 font-semibold text-sage">{t("discovery.next")}</Link> : <span />}
       </nav> : null}
-      {!initial && !venueMode && total > 0 ? <SearchLeadCapture params={params} /> : null}
+      {!initial && !venueMode && total > 0 ? <SearchLeadCapture params={params} dictionary={dictionary} language={pathPrefix.slice(1) || "de"} /> : null}
     </section>
   );
 }

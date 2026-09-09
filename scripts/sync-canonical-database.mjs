@@ -124,16 +124,18 @@ function publicMediaFields(entityId, previous = {}) {
   // The public replica may not expose the optional media contract yet. In that
   // case, retain provenance-reviewed media already present in the TS snapshot.
   const primary = media[0];
-  const imageUrl = text(primary?.image_url);
+  const retainedGallery = media.length <= 1 && previous.galleryImages?.length > 1;
+  const imageUrl = retainedGallery ? text(previous.imageUrl) : text(primary?.image_url);
   if (!imageUrl) return {};
   return {
     imageUrl,
-    imageAlt: text(primary.image_alt),
+    imageAlt: retainedGallery ? text(previous.imageAlt) : text(primary.image_alt),
     imageStatus: "approved",
     publicDisplayWithoutCreditApproved:
+      retainedGallery ? previous.publicDisplayWithoutCreditApproved === true :
       primary.public_display_without_credit_approved === true ||
       primary.permission_status === "allowed",
-    ...((media.length > 1 || previous.imageUrl === imageUrl) && (media.length > 1 || previous.galleryImages?.length > 1) ? {
+    ...((media.length > 1 || retainedGallery) ? {
       galleryImages: media.length > 1 ? media.map((item) => ({
         url: text(item.image_url),
         alt: text(item.image_alt),

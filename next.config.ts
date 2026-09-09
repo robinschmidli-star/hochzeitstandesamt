@@ -2,6 +2,20 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {},
+  async redirects() {
+    return [
+      {
+        source: "/trauort/chateau-d-aigle",
+        destination: "/trauort/aigle-chateau-d-aigle",
+        permanent: true
+      },
+      {
+        source: "/trauort/trauung-in-ebikon-amtliches-trauungslokal-ebikon-8a4cface",
+        destination: "/trauort/trauung-in-ebikon-amtliches-trauungslokal-ebikon",
+        permanent: true
+      }
+    ];
+  },
   async headers() {
     return [{
       source: "/(.*)",

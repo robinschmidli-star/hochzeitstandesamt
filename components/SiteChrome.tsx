@@ -22,16 +22,16 @@ import { defaultLocale, isLocale, isLocalizedContentPath, type Dictionary, type 
 
 const dictionaries: Partial<Record<Locale, Dictionary>> = { de, en, fr, it, es, pt, nl, sr, sq, tr, hr, bs, uk, pl };
 
-function getLocaleFromPath(pathname: string): Locale {
+function getLocaleFromPath(pathname: string): Locale | null {
   const firstSegment = pathname.split("/").filter(Boolean)[0];
-  return isLocale(firstSegment) ? firstSegment : defaultLocale;
+  return isLocale(firstSegment) ? firstSegment : null;
 }
 
 export function SiteChrome({ children, initialLocale = defaultLocale }: { children: React.ReactNode; initialLocale?: Locale }) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const locale = mounted ? getLocaleFromPath(pathname) : initialLocale;
+  const locale = mounted ? getLocaleFromPath(pathname) ?? initialLocale : initialLocale;
   const fallback = de as Dictionary;
   const dictionary = { ...fallback, ...(dictionaries[locale] ?? {}) };
   const t = (key: string) => dictionary[key] ?? fallback[key] ?? key;

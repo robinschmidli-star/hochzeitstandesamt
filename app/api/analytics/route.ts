@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { rateLimit } from "@/lib/rate-limit";
 
 const schema = z.object({
-  eventName: z.enum(["page_view", "search_started", "search_completed", "location_view", "favorite_added", "shortlist_save_started", "lead_created", "gallery_used", "external_link_clicked", "vendor_impression", "vendor_profile_opened", "vendor_website_clicked", "vendor_contact_started", "sponsored_impression", "sponsored_click"]),
+  eventName: z.enum(["page_view", "search_started", "search_results_viewed", "search_completed", "venue_opened", "location_view", "favorite_added", "favorite_removed", "availability_clicked", "official_link_clicked", "lead_started", "lead_submitted", "shortlist_save_started", "lead_created", "gallery_used", "external_link_clicked", "vendor_impression", "vendor_profile_opened", "vendor_website_clicked", "vendor_contact_started", "sponsored_impression", "sponsored_click"]),
   sessionId: z.string().uuid(), visitorId: z.string().uuid(),
   path: z.string().startsWith("/").max(500), country: z.enum(["CH", "AT", "DE"]).default("CH"),
   properties: z.record(z.union([z.string().max(250), z.number(), z.boolean(), z.array(z.string().max(100)).max(20)])).default({})

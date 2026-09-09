@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { buildNameSearchSuggestions, nameMatchRank } from "../lib/name-search";
-import { featuredCeremonyVenues, searchExperienceOffices, searchExperienceResults, searchWeekday } from "../lib/search-experience";
+import { featuredCeremonyVenues, homepageCeremonyVenues, searchExperienceOffices, searchExperienceResults, searchWeekday } from "../lib/search-experience";
 import { swissRegistryOffices } from "../lib/registry-data";
 import { withAvailableLocalePath } from "../lib/i18n";
 import { discoveryHref, hasActiveSearch, paginateResults, parseSearchParams } from "../lib/discovery";
@@ -130,6 +130,51 @@ test("existing style, capacity and accessibility filters are reused", () => {
   assert.ok(featuredCeremonyVenues().length >= 6);
 });
 
+test("The Valley is a direct venue result for its official name and locality", () => {
+  for (const query of ["The Valley", "Valley", "Kemptthal"]) {
+    const first = searchExperienceResults({ name: query })[0];
+    assert.ok(first && "traulokal_name" in first, query);
+    assert.equal(first.traulokal_name, "The Valley", query);
+    assert.equal(first.slug, "the-valley", query);
+    assert.equal(first.standesamt_name, "Zivilstandskreis Illnau-Effretikon", query);
+  }
+});
+
+test("venue-first ranking tolerates case, accents and localized detail routes", () => {
+  for (const query of ["DOLDER", "dolder", "The Dolder Grand"]) {
+    const first = searchExperienceResults({ name: query })[0];
+    assert.ok(first && "traulokal_name" in first, query);
+    assert.equal(first.traulokal_name, "The Dolder Grand", query);
+  }
+  for (const locale of ["de", "fr", "it", "en"] as const) {
+    assert.equal(withAvailableLocalePath("/trauort/the-dolder-grand", locale), `${locale === "de" ? "" : `/${locale}`}/trauort/the-dolder-grand`);
+  }
+});
+
+test("homepage shows approved photos without duplicate venue identities and prefers Top 20", () => {
+  const venues = homepageCeremonyVenues();
+  const identities = venues.map((venue) => `${venue.standesamt_id}:${venue.traulokal_name.toLocaleLowerCase()}`);
+  const firstNonTop20 = venues.findIndex((venue) => !/^Top20:\d{2}$/.test(venue.websitePriority ?? ""));
+
+  assert.ok(venues.length > 0);
+  assert.ok(venues.every((venue) =>
+    venue.imageStatus === "approved" &&
+    venue.publicDisplayWithoutCreditApproved === true &&
+    Boolean(venue.imageUrl)
+  ));
+  assert.equal(new Set(identities).size, identities.length);
+  assert.ok(firstNonTop20 > 0);
+  assert.ok(venues.slice(0, firstNonTop20).every((venue) => /^Top20:\d{2}$/.test(venue.websitePriority ?? "")));
+  assert.equal(
+    venues.filter((venue) => venue.traulokal_name === "Schloss Greifensee - Landvogtstube").length,
+    1
+  );
+  assert.equal(
+    venues.find((venue) => venue.traulokal_name === "Schloss Greifensee - Landvogtstube")?.websitePriority,
+    "Top20:06"
+  );
+});
+
 test("localized search and inspiration URLs retain parameters", () => {
   for (const locale of ["de", "fr", "it", "en"] as const) {
     assert.equal(withAvailableLocalePath("/search?tag=featured", locale), `${locale === "de" ? "" : `/${locale}`}/search?tag=featured`);
@@ -139,7 +184,7 @@ test("localized search and inspiration URLs retain parameters", () => {
 test("all enabled languages include homepage labels", () => {
   for (const locale of ["de", "fr", "it", "en"]) {
     const dictionary = JSON.parse(readFileSync(new URL(`../locales/${locale}.json`, import.meta.url), "utf8"));
-    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.title", "homeSearch.date", "homeSearch.guests", "homeSearch.moreFilters", "homeSearch.when", "homeSearch.exactDate", "homeSearch.flexibleDate", "homeSearch.monthYear", "homeSearch.dateRange", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides"]) {
+    for (const key of ["discovery.reset", "discovery.pagination", "discovery.previous", "discovery.next", "discovery.page", "discovery.postalCode", "homeSearch.submit", "homeSearch.title", "homeSearch.date", "homeSearch.guests", "homeSearch.moreFilters", "homeSearch.when", "homeSearch.exactDate", "homeSearch.flexibleDate", "homeSearch.monthYear", "homeSearch.dateRange", "homeSearch.dateHint", "homeSearch.responsibleOffice", "homeSearch.guideProcess", "homeSearch.guideDocuments", "homeSearch.allGuides", "availability.title", "availability.status.unknown", "availability.status.unavailable", "favorite.add", "favorite.remove", "lead.title", "lead.submit", "lead.error"]) {
       assert.ok(dictionary[key], `${locale}: ${key}`);
     }
   }

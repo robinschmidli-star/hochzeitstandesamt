@@ -72,3 +72,9 @@ test("slug routes are canonical while UUID routes remain resolvable for redirect
     assert.equal(ceremonyVenueByRouteKey(item.canonicalId!)?.slug, item.slug);
   }
 });
+
+test("the Château d'Aigle duplicate cannot re-enter the public canonical dataset", () => {
+  assert.equal(ceremonyVenues.some((item) => item.slug === "chateau-d-aigle"), false);
+  assert.equal(ceremonyVenueByRouteKey("aigle-chateau-d-aigle")?.canonicalId,
+    "ed5f604c-4808-5229-ac5e-c5c38f385405");
+});
