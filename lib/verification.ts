@@ -13,8 +13,12 @@ export type VerificationRequestView = { id: string; languageCode: "de" | "fr" | 
 
 const globalReplica = globalThis as unknown as { verificationReplicaPool?: pg.Pool };
 function replicaPool() {
-  if (!process.env.PUBLIC_REPLICA_DATABASE_URL) throw new Error("PUBLIC_REPLICA_DATABASE_URL is not configured");
-  globalReplica.verificationReplicaPool ??= new pg.Pool({ connectionString: process.env.PUBLIC_REPLICA_DATABASE_URL, ssl: process.env.PUBLIC_REPLICA_DATABASE_SSL === "require" ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" } : undefined });
+  const connectionString = process.env.WEB_PUBLIC_REPLICA_DATABASE_URL
+    ?? process.env.PUBLIC_REPLICA_DATABASE_URL;
+  if (!connectionString) {
+    throw new Error("WEB_PUBLIC_REPLICA_DATABASE_URL or PUBLIC_REPLICA_DATABASE_URL is not configured");
+  }
+  globalReplica.verificationReplicaPool ??= new pg.Pool({ connectionString, ssl: process.env.PUBLIC_REPLICA_DATABASE_SSL === "require" ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" } : undefined });
   return globalReplica.verificationReplicaPool;
 }
 

@@ -4,7 +4,8 @@ import { defaultLocale, type Locale } from "@/lib/i18n";
 const globalForTranslations = globalThis as unknown as { translationPool?: pg.Pool };
 
 function pool() {
-  const connectionString = process.env.PUBLIC_REPLICA_DATABASE_URL;
+  const connectionString = process.env.WEB_PUBLIC_REPLICA_DATABASE_URL
+    ?? process.env.PUBLIC_REPLICA_DATABASE_URL;
   if (!connectionString) return null;
   globalForTranslations.translationPool ??= new pg.Pool({
     connectionString,
