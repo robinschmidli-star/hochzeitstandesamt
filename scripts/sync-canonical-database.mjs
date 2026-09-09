@@ -120,6 +120,7 @@ for (const rows of mediaByEntityId.values()) {
   );
 }
 function publicMediaFields(entityId, previous = {}) {
+  previous ??= {};
   const media = mediaByEntityId.get(String(entityId)) ?? [];
   // The public replica may not expose the optional media contract yet. In that
   // case, retain provenance-reviewed media already present in the TS snapshot.
