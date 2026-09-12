@@ -40,7 +40,7 @@ export async function buildOfficeSnapshot(officeId: string, onlyVenueId?: string
   const result = await replicaPool().query<SnapshotRow>(`
     SELECT o.id::text office_id, o.name office_name,
       jsonb_build_object('name',o.name,'website',o.website,'phone',o.profile->>'telephone','email',o.profile->>'email','booking_url',o.profile->>'appointment_url','information_url',o.profile->>'information_url') office_fields,
-      COALESCE(jsonb_agg(jsonb_build_object(
+      COALESCE(jsonb_agg(DISTINCT jsonb_build_object(
         'entityType','wedding_venue','id',v.id::text,'name',v.name,'fields',jsonb_build_object(
           'name',v.name,'website',v.website,'phone',v.profile->>'telephone','email',v.profile->>'email','booking_url',v.profile->>'booking_url','information_url',v.profile->>'information_url',
           'official_ceremony_possible',v.profile->'official_ceremony_possible','ceremony_days',v.profile->'ceremony_days','ceremony_times',v.profile->'ceremony_times',
