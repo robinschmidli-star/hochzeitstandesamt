@@ -76,5 +76,15 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|.*\\..*).*)"]
+  // Only run middleware where it is actually needed. Public default-language
+  // pages such as /kontakt, /impressum and /datenschutz no longer incur an
+  // Edge Middleware invocation for every crawler request.
+  matcher: [
+    "/admin/:path*",
+    "/verify/:path*",
+    "/de/:path*",
+    "/fr/:path*",
+    "/it/:path*",
+    "/en/:path*"
+  ]
 };
