@@ -46,7 +46,7 @@ export async function buildOfficeSnapshot(officeId: string, onlyVenueId?: string
           'official_ceremony_possible',v.profile->'official_ceremony_possible','ceremony_days',v.profile->'ceremony_days','ceremony_times',v.profile->'ceremony_times',
           'capacity_min',v.profile->'capacity_min','capacity_max',v.profile->'capacity_max','indoor',v.profile->'indoor','outdoor',v.profile->'outdoor',
           'wheelchair_accessible',v.profile->'wheelchair_accessible','reservation_required',v.profile->'reservation_required'
-        )) ORDER BY v.name) FILTER (WHERE v.id IS NOT NULL), '[]'::jsonb) venues
+        )) ) FILTER (WHERE v.id IS NOT NULL), '[]'::jsonb) venues
     FROM web_public_offices o
     LEFT JOIN web_public_venue_office_assignments a ON a.office_id=o.id
     LEFT JOIN web_public_venues v ON v.id=a.venue_id AND ($2::uuid IS NULL OR v.id=$2::uuid)
