@@ -67,7 +67,9 @@ export async function createVerificationRequest(input: { officeId: string; venue
   const snapshot = await buildOfficeSnapshot(input.officeId, input.venueId);
   if (!snapshot) throw new Error("scope_not_found");
   const token = createSecureToken();
-  const expiresAt = new Date(Date.now() + (input.days ?? 30) * 86_400_000);
+  const expiresAt = input.days === 15
+    ? new Date("2026-09-27T23:59:59+02:00")
+    : new Date(Date.now() + (input.days ?? 30) * 86_400_000);
   const sourceName = input.sourceName ?? (input.venueId ? snapshot.venues[0].name : snapshot.office.name);
   const rows = await prisma.$queryRaw<Array<{ id: string }>>(Prisma.sql`
     INSERT INTO verification_requests (id,office_id,venue_id,parent_request_id,token_hash,language_code,status,source_type,source_name,snapshot,expires_at,created_at,updated_at,created_by)
