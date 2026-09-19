@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { createVerificationRequest } from "@/lib/verification";
 import { prisma } from "@/lib/prisma";
 
+export const runtime = "nodejs";
+export const maxDuration = 60;
+
 type BatchItem = { officeId: string; language?: string };
 
 const UUID = /^[0-9a-f-]{36}$/i;
@@ -54,7 +57,10 @@ export async function POST(request: Request) {
 
   const origin = new URL(request.url).origin;
   const results: Array<Record<string, unknown>> = [];
-  for (const item of items) {
+  // Keep database pressure bounded while allowing large batches to finish
+  // within a serverless request. Each item is independent and reports its own
+  // error instead of aborting the complete batch.
+  const worker = async (item: BatchItem) => {
     try {
       if (replaceExisting) {
         await prisma.$executeRaw`
@@ -75,7 +81,15 @@ export async function POST(request: Request) {
       const message = error instanceof Error ? error.message : "unknown_error";
       results.push({ officeId: item.officeId, language: item.language, error: message });
     }
-  }
+  };
+  const concurrency = Math.min(12, items.length);
+  let next = 0;
+  await Promise.all(Array.from({ length: concurrency }, async () => {
+    while (next < items.length) {
+      const item = items[next++];
+      if (item) await worker(item);
+    }
+  }));
 
   const failed = results.filter((result) => "error" in result).length;
   return NextResponse.json({ count: results.length, created: results.length - failed, failed, results }, { status: failed ? 207 : 200 });
