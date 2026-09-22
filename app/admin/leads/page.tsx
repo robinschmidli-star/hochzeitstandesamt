@@ -21,7 +21,9 @@ type Lead = {
 async function getLeads() {
   const rows = await prisma.websiteLead.findMany({ orderBy: { createdAt: "desc" } });
   return rows.map((row) => {
-    const payload = row.payload as unknown as Partial<Lead>;
+    const payload = row.payload && typeof row.payload === "object" && !Array.isArray(row.payload)
+      ? row.payload as unknown as Partial<Lead>
+      : {};
     return {
       lead_type: row.leadType,
       source_page: payload.source_page ?? "",
