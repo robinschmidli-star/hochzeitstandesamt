@@ -19,7 +19,13 @@ type Lead = {
 };
 
 async function getLeads() {
-  const rows = await prisma.websiteLead.findMany({ orderBy: { createdAt: "desc" } });
+  let rows;
+  try {
+    rows = await prisma.websiteLead.findMany({ orderBy: { createdAt: "desc" } });
+  } catch (error) {
+    console.error("Admin leads could not be loaded", error);
+    return [];
+  }
   return rows.map((row) => {
     const payload = row.payload && typeof row.payload === "object" && !Array.isArray(row.payload)
       ? row.payload as unknown as Partial<Lead>
