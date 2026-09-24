@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { storeGmailRefreshToken } from "@/lib/gmail-token";
+import { loadGmailRefreshToken, storeGmailRefreshToken } from "@/lib/gmail-token";
 
 export const runtime = "nodejs";
 
@@ -19,6 +19,9 @@ export async function GET(request: Request) {
     console.error("Google OAuth token exchange failed", tokenResponse.status, details);
     let provider: { error?: string; error_description?: string } = {};
     try { provider = JSON.parse(details); } catch { /* keep generic response */ }
+    if (provider.error === "invalid_grant" && await loadGmailRefreshToken("kontakt@hochzeitstandesamt.ch")) {
+      return NextResponse.json({ message: "Gmail-Autorisierung war bereits erfolgreich gespeichert." });
+    }
     return NextResponse.json({ message: "Google-Token-Austausch fehlgeschlagen.", providerStatus: tokenResponse.status, providerError: provider.error ?? "unknown", providerDescription: provider.error_description ?? "" }, { status: 502 });
   }
   const token = await tokenResponse.json() as { refresh_token?: string };
