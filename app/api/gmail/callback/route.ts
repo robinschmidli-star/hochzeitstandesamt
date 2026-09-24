@@ -17,7 +17,9 @@ export async function GET(request: Request) {
   if (!tokenResponse.ok) {
     const details = await tokenResponse.text();
     console.error("Google OAuth token exchange failed", tokenResponse.status, details);
-    return NextResponse.json({ message: "Google-Token-Austausch fehlgeschlagen.", providerStatus: tokenResponse.status }, { status: 502 });
+    let provider: { error?: string; error_description?: string } = {};
+    try { provider = JSON.parse(details); } catch { /* keep generic response */ }
+    return NextResponse.json({ message: "Google-Token-Austausch fehlgeschlagen.", providerStatus: tokenResponse.status, providerError: provider.error ?? "unknown", providerDescription: provider.error_description ?? "" }, { status: 502 });
   }
   const token = await tokenResponse.json() as { refresh_token?: string };
   if (!token.refresh_token) return NextResponse.json({ message: "Kein Refresh-Token erhalten. Erneute Zustimmung mit prompt=consent erforderlich." }, { status: 502 });
