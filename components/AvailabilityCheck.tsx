@@ -6,8 +6,8 @@ import { track } from "@/components/Analytics";
 type Schedule = Partial<Record<"monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday", boolean | null>>;
 const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"] as const;
 
-export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, officialUrl, language, labels }: {
-  venueId: string; venueSlug: string; officeId?: string; schedule: Schedule; officialUrl?: string; language: string;
+export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, officialUrl, officialLinkPurpose = "unknown", language, labels }: {
+  venueId: string; venueSlug: string; officeId?: string; schedule: Schedule; officialUrl?: string; officialLinkPurpose?: "booking" | "website" | "source" | "unknown"; language: string;
   labels: Record<string, string>;
 }) {
   const [date, setDate] = useState("");
@@ -31,6 +31,6 @@ export function AvailabilityCheck({ venueId, venueSlug, officeId, schedule, offi
       <button type="button" disabled={!date} onClick={check} className="focus-ring min-h-11 rounded-lg bg-sage px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">{t("availability.check")}</button>
     </div>
     <p className="mt-3 rounded-lg bg-paper px-3 py-2 text-sm font-semibold text-soft-ink" aria-live="polite">{t(`availability.status.${status}`)}</p>
-    {officialUrl?.startsWith("https://") ? <a href={officialUrl} target="_blank" rel="noopener noreferrer" onClick={() => track("official_link_clicked", { venue_id: venueId, venue_slug: venueSlug, language })} className="focus-ring mt-3 inline-flex min-h-11 items-center rounded-lg border border-sage/20 px-4 py-2 text-sm font-semibold text-sage">{t("availability.officialCheck")} ↗</a> : null}
+    {officialUrl?.startsWith("https://") ? <a data-analytics-ignore="true" href={officialUrl} target="_blank" rel="noopener noreferrer" onClick={() => track("external_link_clicked", { venue_id: venueId, language, contact_channel: officialLinkPurpose === "booking" ? "booking" : "website", link_purpose: officialLinkPurpose })} className="focus-ring mt-3 inline-flex min-h-11 items-center rounded-lg border border-sage/20 px-4 py-2 text-sm font-semibold text-sage">{t("availability.officialCheck")} ↗</a> : null}
   </section>;
 }

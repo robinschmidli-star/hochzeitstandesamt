@@ -1,76 +1,61 @@
-/** Shared definitions: actions, browsers and sequential journeys must not be mixed. */
-export type ReportEvent = {
-  eventName: string; visitorHash: string; sessionId: string; path: string;
-  occurredAt: Date; properties: unknown;
-};
-const props = (event: ReportEvent): Record<string, unknown> =>
-  event.properties && typeof event.properties === "object" ? event.properties as Record<string, unknown> : {};
-const publicEvent = (event: ReportEvent) => !/^\/(?:de\/|en\/|fr\/|it\/)?(?:admin|verify|api)(?:\/|$)/.test(event.path.split("?")[0]);
+import { actionLabels, analyticsPath, isQualifiedContact } from "./analytics-policy";
+export type ReportEvent = { eventName: string; visitorHash: string; sessionId?: string; path?: string; occurredAt?: Date; properties?: unknown };
+export const eventProperties = (event: ReportEvent): Record<string, unknown> => event.properties && typeof event.properties === "object" && !Array.isArray(event.properties) ? event.properties as Record<string, unknown> : {};
 export function summarizeAnalytics(input: ReportEvent[]) {
-  const events = input.filter(publicEvent);
-  const unique = (rows: ReportEvent[]) => new Set(rows.map(e => e.visitorHash)).size;
-  const metrics = [
-    ["page_view", "Seitenaufrufe"], ["search_completed", "Suchergebnis-Anzeigen"],
-    ["venue_opened", "Trauort-Aufrufe"], ["location_view", "Zivilstandsamt-Aufrufe"],
-    ["favorite_added", "Favoriten hinzugefügt"], ["official_link_clicked", "Offiziellen Link geöffnet"],
-    ["external_link_clicked", "Externe Website / Kontakt geklickt"],
-    ["lead_submitted", "Anfrage erfolgreich abgesendet (Tracking)"]
-  ].map(([name, label]) => { const rows = events.filter(e => e.eventName === name); return { name, label, actions: rows.length, browsers: unique(rows) }; });
-  // A journey requires temporal order within the same browser AND session.
-  const journeys = new Map<string, ReportEvent[]>();
-  for (const event of events) { const key = `${event.visitorHash}:${event.sessionId}`; const rows = journeys.get(key) ?? []; rows.push(event); journeys.set(key, rows); }
-  const searchBrowsers = new Set<string>(), venueBrowsers = new Set<string>(), contactBrowsers = new Set<string>();
-  for (const rows of journeys.values()) {
-    let searchAt: number | undefined, venueAt: number | undefined;
-    for (const event of rows.sort((a, b) => a.occurredAt.getTime() - b.occurredAt.getTime())) {
-      const time = event.occurredAt.getTime();
-      if (event.eventName === "search_completed") { searchAt = time; searchBrowsers.add(event.visitorHash); }
-      if (event.eventName === "venue_opened" && searchAt !== undefined && time > searchAt) { venueAt = time; venueBrowsers.add(event.visitorHash); }
-      if (["official_link_clicked", "external_link_clicked"].includes(event.eventName) && venueAt !== undefined && time > venueAt) contactBrowsers.add(event.visitorHash);
+  const events = input.filter(e => !e.path || analyticsPath(e.path) !== null);
+  const unique = (rows: ReportEvent[]) => new Set(rows.map(e => e.visitorHash).filter(Boolean)).size;
+  const metrics = Object.entries(actionLabels).map(([name,label]) => {
+    const rows = events.filter(e => e.eventName === name && (name!=="search_started" || eventProperties(e).analytics_version===3));
+    return { name,label,actions: rows.length,browsers: unique(rows),measured: rows.length > 0 || !["vendor_impression","vendor_website_clicked","vendor_contact_started","sponsored_impression","sponsored_click","search_completed"].includes(name) && events.some(e => eventProperties(e).analytics_version === 3) };
+  });
+  const sessions = new Map<string, ReportEvent[]>();
+  for (const event of events) {
+    if (!event.sessionId || !event.occurredAt || eventProperties(event).analytics_version !== 3) continue;
+    const key = `${event.visitorHash}:${event.sessionId}`, rows = sessions.get(key) ?? []; rows.push(event); sessions.set(key,rows);
+  }
+  const search = new Set<string>(), venue = new Set<string>(), contact = new Set<string>(), direct = new Set<string>();
+  for (const rows of sessions.values()) {
+    let searchAt: number | undefined;
+    const venues = new Map<string,number>();
+    const sorted = [...rows].sort((a,b) => a.occurredAt!.getTime()-b.occurredAt!.getTime());
+    const firstPage = sorted.find(e => typeof eventProperties(e).session_entry_path === "string");
+    if (firstPage && /^\/(?:de\/|fr\/|it\/|en\/)?trauort\//.test(String(eventProperties(firstPage).session_entry_path))) direct.add(firstPage.visitorHash);
+    for (const event of sorted) {
+      const time = event.occurredAt!.getTime(), p = eventProperties(event);
+      if (event.eventName === "search_started") { searchAt ??= time; search.add(event.visitorHash); }
+      if (event.eventName === "venue_opened" && searchAt !== undefined && time > searchAt && typeof p.venue_id === "string") { venues.set(p.venue_id,time); venue.add(event.visitorHash); }
+      const viewedAt = typeof p.venue_id === "string" ? venues.get(p.venue_id) : undefined;
+      if (event.eventName === "external_link_clicked" && viewedAt !== undefined && time > viewedAt && isQualifiedContact(p)) contact.add(event.visitorHash);
     }
   }
   function breakdown(key: string, selected: ReportEvent[]) {
-    const groups = new Map<string, ReportEvent[]>();
-    for (const event of selected) {
-      const raw = props(event)[key]; const label = typeof raw === "string" && raw.trim() ? raw : "Unbekannt / nicht erfasst";
-      const rows = groups.get(label) ?? []; rows.push(event); groups.set(label, rows);
-    }
-    return [...groups].map(([label, rows]) => ({ label, actions: rows.length, browsers: unique(rows) })).sort((a, b) => b.actions - a.actions).slice(0, 10);
+    const groups = new Map<string,ReportEvent[]>();
+    for (const event of selected) { const raw = eventProperties(event)[key],label = typeof raw === "string" && raw.trim() ? raw : "Unbekannt / nicht erfasst"; const rows = groups.get(label) ?? []; rows.push(event); groups.set(label,rows); }
+    return [...groups].map(([label,rows]) => ({label,actions:rows.length,browsers:unique(rows)})).sort((a,b) => b.actions-a.actions || a.label.localeCompare(b.label));
   }
-  const pages = events.filter(e => e.eventName === "page_view");
-  const venueEvents = events.filter(e => e.eventName === "venue_opened");
-  return { visitors: unique(events), pageViews: pages.length, excluded: input.length - events.length, metrics,
-    journey: { search: searchBrowsers.size, venue: venueBrowsers.size, contact: contactBrowsers.size },
-    sources: breakdown("entry_source", pages), devices: breakdown("viewport_category", pages),
-    cantons: breakdown("canton", venueEvents), venues: breakdown("venue_name", venueEvents),
-    searchCantons: breakdown("search_canton", events.filter(e => e.eventName === "search_completed")),
-    homeViews: pages.filter(e => /^\/(?:de|en|fr|it)?\/?$/.test(e.path.split("?")[0])).length };
-}
-export function escapeReport(value: string) { return value.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!); }
-export function renderAnalyticsSummary(summary: ReturnType<typeof summarizeAnalytics>) {
-  const table = (title: string, rows: { label: string; actions: number; browsers: number }[]) => `<h2>${title}</h2><table><tr><th>Merkmal</th><th>Aktionen</th><th>Browser</th></tr>${rows.map(r => `<tr><td>${escapeReport(r.label)}</td><td>${r.actions}</td><td>${r.browsers}</td></tr>`).join("")}</table>`;
-  const rate = (n: number, d: number) => d ? `${(100 * n / d).toFixed(1)}%` : "–";
-  const j = summary.journey;
-  return `<p>${summary.visitors} eindeutige Browser · ${summary.pageViews} Seitenaufrufe · Startseitenanteil ${rate(summary.homeViews, summary.pageViews)}</p>`
-    + table("Nutzung: Aktionen und eindeutige Browser", summary.metrics)
-    + `<h2>Nachvollziehbarer Suchverlauf</h2><p>${j.search} Browser mit Suchergebnis-Anzeige → ${j.venue} mit späterem Trauort-Aufruf (${rate(j.venue, j.search)}) → ${j.contact} mit späterem externem / offiziellem Linkklick (${rate(j.contact, j.venue)}).</p><p>Schritte müssen zeitlich aufeinander folgen und in derselben Session stattfinden. Direkte Einstiege werden separat in der Nutzungstabelle gezählt. Kontaktklicks sind keine bestätigten Anfragen oder Buchungen.</p>`
-    + table("Einstiegsquelle (Seitenaufrufe)", summary.sources) + table("Geräte (Seitenaufrufe)", summary.devices)
-    + table("Nachfrage nach Trauort-Kanton", summary.cantons) + table("Suchkantone", summary.searchCantons) + table("Trauorte", summary.venues)
-    + `<p>Browser-IDs sind keine Personen. Ein Browser kann in mehreren Gruppen vorkommen. Kantone beschreiben das Suchziel / den Trauort, nicht den Wohnort. Fehlende historische Angaben bleiben unbekannt. ${summary.excluded} Verwaltungs-/Verifikations-/API-Ereignisse ausgeschlossen. Unerkannte Bots und unmarkierte Tests bleiben möglich. Bei kleinen Fallzahlen keine belastbare Rangfolge ableiten.</p>`;
-}
-
-/** Local calendar Mondays converted individually to UTC, including DST changes. */
-export function zurichReportWindow(now: Date) {
-  const local = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
-  const part = (type: string) => Number(local.find(p => p.type === type)!.value);
-  const monday = new Date(Date.UTC(part("year"), part("month") - 1, part("day")));
-  monday.setUTCDate(monday.getUTCDate() - (monday.getUTCDay() || 7) + 1);
-  const midnight = (days: number) => {
-    const calendar = new Date(monday); calendar.setUTCDate(calendar.getUTCDate() + days);
-    const offset = new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", timeZoneName: "longOffset" }).formatToParts(calendar).find(p => p.type === "timeZoneName")!.value;
-    const match = /GMT([+-])(\d{2}):(\d{2})/.exec(offset)!;
-    const minutes = (Number(match[2]) * 60 + Number(match[3])) * (match[1] === "+" ? 1 : -1);
-    return new Date(calendar.getTime() - minutes * 60_000);
+  const pages = events.filter(e => e.eventName === "page_view"), venues = events.filter(e => e.eventName === "venue_opened");
+  const searches = events.filter(e => e.eventName === "search_started" && eventProperties(e).analytics_version===3), contacts = events.filter(e => e.eventName === "external_link_clicked");
+  const known = searches.filter(e => typeof eventProperties(e).search_lat === "number" && typeof eventProperties(e).search_lon === "number");
+  return { visitors:unique(events),pageViews:pages.length,sessions:new Set(events.filter(e => e.sessionId).map(e => `${e.visitorHash}:${e.sessionId}`)).size,excluded:input.length-events.length,metrics,
+    journey:{search:search.size,venue:venue.size,contact:contact.size,measured:sessions.size>0},directVenue:direct.size,
+    sources:breakdown("entry_source",pages),campaigns:breakdown("campaign_code",pages),devices:breakdown("viewport_category",pages),languages:breakdown("language",pages),
+    cantons:breakdown("canton",venues),venues:breakdown("venue_name",venues),searchCantons:breakdown("search_canton",searches),searchPlaces:breakdown("search_place_id",searches),
+    contactChannels:breakdown("contact_channel",contacts),contactPurposes:breakdown("link_purpose",contacts),
+    homeViews:pages.filter(e => /^\/(?:de|en|fr|it)?\/?$/.test(e.path?.split(/[?#]/)[0] ?? "")).length,
+    winterthur:{actions:known.filter(e => distanceKm(47.499,8.724,Number(eventProperties(e).search_lat),Number(eventProperties(e).search_lon))<=25).length,unknown:searches.length-known.length}
   };
-  return { from: midnight(-7), to: midnight(0), previousFrom: midnight(-14) };
+}
+export function distanceKm(a: number,b: number,c: number,d: number) {
+  const r=Math.PI/180,x=Math.sin((c-a)*r/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin((d-b)*r/2)**2;
+  return 6371*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+export function escapeReport(value: string) { return value.replace(/[&<>"']/g,c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]!); }
+export function renderAnalyticsSummary(s: ReturnType<typeof summarizeAnalytics>) {
+  const table=(title:string,rows:{label:string;actions:number;browsers:number;measured?:boolean}[]) => `<h2>${title}</h2><table><tr><th>Merkmal</th><th>Aktionen</th><th>Browser</th></tr>${rows.map(r=>`<tr><td>${escapeReport(r.label)}</td><td>${r.measured===false?"nicht erfasst":r.actions}</td><td>${r.measured===false?"nicht erfasst":r.browsers}</td></tr>`).join("")}</table>`;
+  const rate=(n:number,d:number)=>d?`${(100*n/d).toFixed(1)}%`:"–",j=s.journey;
+  return `<p>${s.visitors} eindeutige Browser · ${s.sessions} erfasste Sessions · ${s.pageViews} Seitenaufrufe · Anteil Sprachstartseiten ${rate(s.homeViews,s.pageViews)}</p>`
+    +table("Nutzung: Aktionen und eindeutige Browser",s.metrics)
+    +`<h2>Suchverlauf (Messrevision 3)</h2><p>${j.measured?`${j.search} Browser mit bewusster Suche → ${j.venue} mit späterem Trauort-Aufruf (${rate(j.venue,j.search)}) → ${j.contact} mit späterem Kontakt-/Buchungslinkklick für denselben Trauort (${rate(j.contact,j.venue)}).`:"Nicht vollständig messbar: historische Suchabsicht oder Kontaktzuordnung fehlen."}</p><p>Gleicher Browser, gleiche Session, strikte zeitliche Reihenfolge. ${s.directVenue} Browser mit direktem Trauort-Einstieg in einer erfassten Session. Quellen- und allgemeine Websitelinks zählen nicht zur Kontaktstufe; Klicks bestätigen weder Kontaktaufnahme noch Buchung.</p>`
+    +`<p>Unbekannte Einstiegsquelle: ${rate(s.sources.find(r=>r.label==="Unbekannt / nicht erfasst")?.actions??0,s.pageViews)} der Seitenaufrufe; unbekanntes Gerät: ${rate(s.devices.find(r=>r.label==="Unbekannt / nicht erfasst")?.actions??0,s.pageViews)}.</p>`+table("Einstiegsquellen (Seitenaufrufe)",s.sources)+table("Kampagnen (nur konfigurierte öffentliche Codes)",s.campaigns)+table("Geräte",s.devices)+table("Seitensprachen",s.languages)+table("Suchkantone",s.searchCantons)+table("Suchorte",s.searchPlaces)+table("Betrachtete Trauort-Kantone",s.cantons)+table("Kontaktkanäle",s.contactChannels)+table("Bedeutung der Linkklicks",s.contactPurposes)
+    +`<p>Suchziele im 25-km-Luftkreis um Winterthur (47.499, 8.724; kantonsübergreifend): ${s.winterthur.actions} Suchaktionen; ${s.winterthur.unknown} ohne zuordenbare Koordinaten. Das ist weder Besucherwohnort noch eine Aussage über einen ganzen Kanton.</p><p>Browser sind keine Personen oder Hochzeitspaare. Gruppen überschneiden sich und dürfen bei Browserzahlen nicht addiert werden. Unbekannte Angaben bleiben sichtbar; CH ist das Marktkennzeichen, kein Besuchsland. Kleine Fallzahlen belegen keine belastbaren Präferenzen. ${s.excluded} erkennbare Verwaltungs-/Verifikations-/API-Ereignisse ausgeschlossen. Unerkannte Bots und unmarkierte Tests bleiben möglich.</p>`;
 }

@@ -130,7 +130,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
   const officeCanonicalId = office?.canonicalId && /^[0-9a-f-]{36}$/i.test(office.canonicalId) ? office.canonicalId : undefined;
 
   return (
-    <main className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+    <main data-analytics-entity-id={canonicalId} data-analytics-entity-type="venue" data-analytics-canton={venue.kanton || office?.canton || ""} className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
       <TrackOnMount eventName="venue_opened" properties={{ venue_id: canonicalId, venue_slug: venue.slug, venue_name: repairText(venue.traulokal_name), ...(officeCanonicalId ? { civil_registry_office_id: officeCanonicalId } : {}), canton: venue.kanton || office?.canton || "", language: locale }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: t("nav.home"), url: `https://hochzeitstandesamt.ch${withLocalePath("/", locale)}` },
@@ -161,7 +161,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         moreLabel={t("gallery.more")}
         placeholderLabel={t("media.placeholder")}
       />
-      <AvailabilityCheck venueId={canonicalId} venueSlug={venue.slug} officeId={officeCanonicalId} officialUrl={officialReservationUrl} language={locale}
+      <AvailabilityCheck venueId={canonicalId} venueSlug={venue.slug} officeId={officeCanonicalId} officialUrl={officialReservationUrl} officialLinkPurpose={officialReservationUrl && [office?.onlineCalendarUrl, office?.appointmentBookingUrl, office?.appointment_url].includes(officialReservationUrl) ? "booking" : externalUrl ? "website" : "source"} language={locale}
         labels={dictionary} schedule={{ monday: venue.ceremonyMonday, tuesday: venue.ceremonyTuesday, wednesday: venue.ceremonyWednesday, thursday: venue.ceremonyThursday, friday: venue.ceremonyFriday, saturday: venue.ceremonySaturday, sunday: venue.ceremonySunday }} />
       <div className="grid gap-5 lg:grid-cols-2">
         <DetailSection title={t("venue.section.location")} items={locationItems} />
@@ -173,7 +173,7 @@ export default async function CeremonyVenueDetailPage({ params }: Props) {
         <h2 className="text-xl font-semibold text-ink">{t("venue.section.links")}</h2>
         <div className="mt-4 flex flex-wrap gap-3">
           {externalUrl ? <a href={externalUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage">{t("office.action.website")} ↗</a> : null}
-          {sourceUrl && sourceUrl !== externalUrl ? <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage">{t("venue.action.source")} ↗</a> : null}
+          {sourceUrl && sourceUrl !== externalUrl ? <a data-analytics-purpose="source" href={sourceUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage">{t("venue.action.source")} ↗</a> : null}
         </div>
       </section> : null}
     </main>

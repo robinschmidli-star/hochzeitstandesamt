@@ -18,7 +18,8 @@ export async function rateLimit(
   request: Request,
   namespace: string,
   limit: number,
-  windowMs: number
+  windowMs: number,
+  durable = true
 ) {
   const now = Date.now();
   const hash = clientKey(request);
@@ -38,7 +39,7 @@ export async function rateLimit(
   let count = bucket.count;
   let resetAt = bucket.resetAt;
 
-  try {
+  if (durable) try {
     if (!process.env.DATABASE_URL) throw new Error("Durable rate-limit storage is not configured");
     const rows = await prisma.$queryRaw<Array<{ count: number; reset_at: Date }>>`
       INSERT INTO "rate_limit_buckets" ("namespace", "client_hash", "count", "reset_at", "updated_at")

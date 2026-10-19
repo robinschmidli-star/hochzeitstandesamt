@@ -1,3 +1,4 @@
+import { TrackOnMount } from "@/components/Analytics";
 import Link from "next/link";
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
@@ -13,7 +14,8 @@ export default function UnicoVendorProfilePage() {
   const nearbyOffices = nearbyRegistryOfficesForUnico();
 
   return (
-    <main className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+    <main data-analytics-entity-id={"unico-florales-design"} data-analytics-entity-type="vendor" data-analytics-canton={"TG"} className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+      <TrackOnMount eventName="vendor_profile_opened" properties={{vendor_id:unicoProvider.slug,canton:"TG"}} />
       <section className="grid gap-6 rounded-xl border border-linen bg-white p-6 shadow-soft md:grid-cols-[1.4fr_1fr] lg:p-8">
         <div className="grid gap-3 md:col-span-2 md:grid-cols-subgrid">
           {unicoProvider.images.map((image, index) => (
