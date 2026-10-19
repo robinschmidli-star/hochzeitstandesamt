@@ -14,7 +14,7 @@ function id(key: string, storage: Storage) {
 }
 
 function allowAnalyticsEvent() {
-  if (navigator.webdriver || BOT_UA.test(navigator.userAgent)) return false;
+  if (navigator.webdriver || BOT_UA.test(navigator.userAgent) || location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname.endsWith(".vercel.app") || localStorage.getItem("hs_analytics_internal") === "1" || /^\/(?:de\/|en\/|fr\/|it\/)?(?:admin|verify)(?:\/|$)/.test(location.pathname)) return false;
   const now = Date.now();
   const start = Number(sessionStorage.getItem("hs_analytics_window_start") ?? "0");
   const count = Number(sessionStorage.getItem("hs_analytics_window_count") ?? "0");
@@ -31,14 +31,38 @@ function allowAnalyticsEvent() {
 export function track(eventName: string, properties: Record<string, string | number | boolean | string[]> = {}) {
   try {
     if (!allowAnalyticsEvent()) return;
+    const now = Date.now();
+    const last = Number(sessionStorage.getItem("hs_session_last") ?? "0");
+    if (!last || now - last > 30 * 60_000) {
+      sessionStorage.removeItem("hs_session");
+      sessionStorage.removeItem("hs_search_fingerprint");
+      const referrer = document.referrer ? new URL(document.referrer) : null;
+      const campaign = new URLSearchParams(location.search).get("utm_source");
+      sessionStorage.setItem("hs_entry_source", campaign?.slice(0, 100) || (referrer && referrer.host !== location.host ? referrer.hostname : "direct"));
+    }
+    sessionStorage.setItem("hs_session_last", String(now));
+    const entry_source = sessionStorage.getItem("hs_entry_source") ?? "unknown";
     const viewport_category = innerWidth < 640 ? "mobile" : innerWidth < 1024 ? "tablet" : "desktop";
     const traffic_source = document.referrer ? new URL(document.referrer).hostname.slice(0, 100) : "direct";
-    void fetch("/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true, body: JSON.stringify({ eventName, sessionId: id("hs_session", sessionStorage), visitorId: id("hs_visitor", localStorage), path: location.pathname + location.search, properties: { viewport_category, traffic_source, ...properties } }) }).catch(() => undefined);
+    void fetch("/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true, body: JSON.stringify({ eventName, sessionId: id("hs_session", sessionStorage), visitorId: id("hs_visitor", localStorage), path: location.pathname + location.search, properties: { viewport_category, traffic_source, entry_source, analytics_version: 2, ...properties } }) }).catch(() => undefined);
   } catch { /* non-blocking */ }
 }
 
 export function Analytics() {
   const pathname = usePathname(); const params = useSearchParams();
+  useEffect(() => {
+    const onClick = (event: MouseEvent) => {
+      const anchor = event.target instanceof Element ? event.target.closest("a") : null;
+      if (!anchor) return;
+      try {
+        const target = new URL(anchor.href, location.href);
+        const channel = target.protocol === "mailto:" ? "email" : target.protocol === "tel:" ? "phone" : ["http:", "https:"].includes(target.protocol) && target.host !== location.host ? "website" : null;
+        if (channel) track("external_link_clicked", { contact_channel: channel });
+      } catch { /* invalid link must not interrupt navigation */ }
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
   useEffect(() => {
     const pageKey = location.pathname + location.search;
     const now = Date.now();
@@ -54,7 +78,7 @@ export function Analytics() {
       const fingerprint = params.toString();
       if (sessionStorage.getItem("hs_search_fingerprint") !== fingerprint) {
         sessionStorage.setItem("hs_search_fingerprint", fingerprint);
-        const properties = { search_query: params.get("name") ?? "", filters: Array.from(params.keys()).filter((key) => params.get(key)), result_path: location.pathname };
+        const properties = { search_query: params.get("name") ?? "", search_canton: params.get("canton") ?? "", filters: Array.from(params.keys()).filter((key) => params.get(key)), result_path: location.pathname };
         track("search_started", properties);
         track("search_results_viewed", properties);
         track("search_completed", properties);
