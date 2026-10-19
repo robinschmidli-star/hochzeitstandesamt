@@ -28514,7 +28514,28 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": true,
     "reservationRequired": false,
     "slug": "chappeli-volketswil",
-    "officialConfirmed": true
+    "officialConfirmed": true,
+    "imageUrl": "/api/venue-photo/b4c08f3b-de11-57b1-a87b-8ee0aceea65b",
+    "imageAlt": "Trauraum im Chappeli Volketswil",
+    "imageSource": "Gemeinde Volketswil",
+    "imageLicense": "Ausschliesslich zur Vorstellung der Traulokale auf hochzeitstandesamt.ch. Keine Weitergabe an Dritte oder anderweitige kommerzielle Nutzung ohne vorherige schriftliche Zustimmung.",
+    "imageAttribution": "Nakarin Fotografie",
+    "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/api/venue-photo/b4c08f3b-de11-57b1-a87b-8ee0aceea65b",
+        "alt": "Trauraum im Chappeli Volketswil",
+        "attribution": "Nakarin Fotografie",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/api/venue-photo/0431c705-e9b1-553e-a8b3-a484aa32a250",
+        "alt": "Aussenansicht des Chappeli Volketswil",
+        "attribution": "Gemeinde Volketswil",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ]
   },
   {
     "canonicalId": "48d219b3-7edf-5ff7-8cd6-995ef0307639",
@@ -29297,7 +29318,28 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": true,
     "reservationRequired": false,
     "slug": "gemeindehaus-volketswil-zh",
-    "officialConfirmed": true
+    "officialConfirmed": true,
+    "imageUrl": "/api/venue-photo/d1337c6d-e1f4-51cb-bfd1-d8ef3034159f",
+    "imageAlt": "Trauzimmer im Gemeindehaus Volketswil",
+    "imageSource": "Gemeinde Volketswil",
+    "imageLicense": "Ausschliesslich zur Vorstellung der Traulokale auf hochzeitstandesamt.ch. Keine Weitergabe an Dritte oder anderweitige kommerzielle Nutzung ohne vorherige schriftliche Zustimmung.",
+    "imageAttribution": "Gemeinde Volketswil",
+    "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/api/venue-photo/d1337c6d-e1f4-51cb-bfd1-d8ef3034159f",
+        "alt": "Trauzimmer im Gemeindehaus Volketswil",
+        "attribution": "Gemeinde Volketswil",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/api/venue-photo/457d5304-aea6-5117-b543-da1dbdcf837e",
+        "alt": "Aussenansicht des Gemeindehauses Volketswil",
+        "attribution": "Nakarin Fotografie",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ]
   },
   {
     "canonicalId": "ece15f4a-49ce-534d-aaf7-f3f9f4f63894",
@@ -30390,10 +30432,10 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "venueUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
     "sourceUrl": "https://www.volketswil.ch/verwaltung/abteilungen/praesidiales/traulokale-im-zivilstandskreis-volketswil.html/166",
     "remarks": "Gebühren: CHF 345; Samstag CHF 470. Ziviltrauung inkl. eidgenössische Zuschläge für auswärtige Traulokale. Exklusive Brautpaar, Trauzeugen und Amtsperson Stufenlos oder per Lift erreichbar: Nein. Lift vorhanden: Nein. Rollstuhlgängiges WC: Nein. Samstagstrauungen nur an ausgewählten Daten.",
-    "imageUrl": "/venues/greifensee/landvogtstube.jpg",
-    "imageAlt": "Landvogtstube im Schloss Greifensee",
-    "imageSource": "Stiftung Schloss Greifensee",
-    "imageAttribution": "Stiftung Schloss Greifensee",
+    "imageUrl": "/api/venue-photo/e861de79-7a5e-5a48-be2f-680a91a978c2",
+    "imageAlt": "Trauraum der Landvogtstube im Schloss Greifensee",
+    "imageSource": "Gemeinde Volketswil",
+    "imageAttribution": "Nakarin Fotografie",
     "imageStatus": "approved",
     "publicDisplayWithoutCreditApproved": true,
     "beautyStatus": "Top 20",
@@ -30410,7 +30452,22 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": true,
     "reservationRequired": false,
     "slug": "schloss-greifensee-landvogtstube-zh",
-    "officialConfirmed": true
+    "officialConfirmed": true,
+    "imageLicense": "Ausschliesslich zur Vorstellung der Traulokale auf hochzeitstandesamt.ch. Keine Weitergabe an Dritte oder anderweitige kommerzielle Nutzung ohne vorherige schriftliche Zustimmung.",
+    "galleryImages": [
+      {
+        "url": "/api/venue-photo/e861de79-7a5e-5a48-be2f-680a91a978c2",
+        "alt": "Trauraum der Landvogtstube im Schloss Greifensee",
+        "attribution": "Nakarin Fotografie",
+        "publicDisplayWithoutCreditApproved": true
+      },
+      {
+        "url": "/api/venue-photo/bfa6f18b-e2b1-579f-843f-864f3c938739",
+        "alt": "Aussenansicht des Schlosses Greifensee",
+        "attribution": "Nakarin Fotografie",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ]
   },
   {
     "canonicalId": "39d37718-e2dd-536f-b656-45e667246e3b",
@@ -30445,7 +30502,22 @@ export const ceremonyVenues: CeremonyVenue[] = [
     "indoor": true,
     "reservationRequired": false,
     "slug": "schloss-greifensee-schlossgewolbe",
-    "officialConfirmed": true
+    "officialConfirmed": true,
+    "imageUrl": "/api/venue-photo/bfa6f18b-e2b1-579f-843f-864f3c938739",
+    "imageAlt": "Aussenansicht des Schlosses Greifensee",
+    "imageSource": "Gemeinde Volketswil",
+    "imageLicense": "Ausschliesslich zur Vorstellung der Traulokale auf hochzeitstandesamt.ch. Keine Weitergabe an Dritte oder anderweitige kommerzielle Nutzung ohne vorherige schriftliche Zustimmung.",
+    "imageAttribution": "Nakarin Fotografie",
+    "imageStatus": "approved",
+    "publicDisplayWithoutCreditApproved": true,
+    "galleryImages": [
+      {
+        "url": "/api/venue-photo/bfa6f18b-e2b1-579f-843f-864f3c938739",
+        "alt": "Aussenansicht des Schlosses Greifensee",
+        "attribution": "Nakarin Fotografie",
+        "publicDisplayWithoutCreditApproved": true
+      }
+    ]
   },
   {
     "canonicalId": "7a3ccaa8-3e21-572a-98a2-48477d6d4d13",
