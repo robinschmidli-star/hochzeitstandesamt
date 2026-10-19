@@ -244,6 +244,7 @@ const venues = [];
 const usedVenueSlugs = new Set();
 for (const row of venueRows) {
   const profile = row.profile ?? {};
+  if (boolean(profile.published) === false) continue;
   const canton = text(row.canton_code || profile.region_code).toUpperCase();
   const officeIds = [...(assignmentsByVenue.get(String(row.id)) ?? [])];
   if (officeIds.length !== 1) {
