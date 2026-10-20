@@ -13,7 +13,8 @@ const mountedEvents=new Set<string>();
 function mountKey() { const route=location.pathname+location.search;if(route!==mountRoute){mountRoute=route;mountedEvents.clear();}return route; }
 const cookieEnabled = () => document.cookie.split(";").some(p => p.trim() === "hsa_internal=1" || /^admin_session=.+/.test(p.trim()));
 function enabled() {
-  return process.env.NODE_ENV === "production" && new URLSearchParams(location.search).get("hsa_internal") !== "1" && !cookieEnabled() && localStorage.getItem("hs_analytics_internal") !== "1" && !navigator.webdriver && !BOT_UA.test(navigator.userAgent) && analyticsPath(location.pathname) !== null && ["hochzeitstandesamt.ch","www.hochzeitstandesamt.ch","standesamthochzeit.ch","www.standesamthochzeit.ch"].includes(location.hostname);
+  const localTest=process.env.NEXT_PUBLIC_ANALYTICS_TEST_MODE === "1" && ["127.0.0.1","localhost","[::1]"].includes(location.hostname);
+  return process.env.NODE_ENV === "production" && new URLSearchParams(location.search).get("hsa_internal") !== "1" && !cookieEnabled() && localStorage.getItem("hs_analytics_internal") !== "1" && !navigator.webdriver && !BOT_UA.test(navigator.userAgent) && analyticsPath(location.pathname) !== null && (["hochzeitstandesamt.ch","www.hochzeitstandesamt.ch","standesamthochzeit.ch","www.standesamthochzeit.ch"].includes(location.hostname) || localTest);
 }
 function context(): Properties {
   const main = document.querySelector<HTMLElement>("[data-analytics-entity-id]");

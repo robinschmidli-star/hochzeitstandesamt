@@ -1,8 +1,8 @@
 import { actionLabels, analyticsPath, isQualifiedContact } from "./analytics-policy";
 export type ReportEvent = { eventName: string; visitorHash: string; sessionId?: string; path?: string; occurredAt?: Date; properties?: unknown };
 export const eventProperties = (event: ReportEvent): Record<string, unknown> => event.properties && typeof event.properties === "object" && !Array.isArray(event.properties) ? event.properties as Record<string, unknown> : {};
-export function summarizeAnalytics(input: ReportEvent[]) {
-  const events = input.filter(e => !e.path || analyticsPath(e.path) !== null);
+export function summarizeAnalytics(input: ReportEvent[], includeTestTraffic = false) {
+  const events = input.filter(e => (!e.path || analyticsPath(e.path) !== null) && (includeTestTraffic || eventProperties(e).traffic_type !== "test"));
   const unique = (rows: ReportEvent[]) => new Set(rows.map(e => e.visitorHash).filter(Boolean)).size;
   const metrics = Object.entries(actionLabels).map(([name,label]) => {
     const rows = events.filter(e => e.eventName === name && (name!=="search_started" || eventProperties(e).analytics_version===3));

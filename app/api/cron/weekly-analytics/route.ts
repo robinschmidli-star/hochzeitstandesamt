@@ -1,3 +1,4 @@
+import { isIsolatedAnalyticsTest } from "@/lib/analytics-test-environment";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { aggregateWeeklyMetrics, isWeeklyReportTime, renderWeeklyReport, weeklyReportPeriod } from "@/lib/weekly-analytics";
@@ -8,6 +9,7 @@ async function report(request: Request, manual: boolean) {
   if (!process.env.CRON_SECRET || request.headers.get("authorization") !== `Bearer ${process.env.CRON_SECRET}`) return new NextResponse("Unauthorized", { status: 401 });
   const url = new URL(request.url);
   const dryRun = url.searchParams.get("dryRun") === "1";
+  if (isIsolatedAnalyticsTest() && !dryRun) return NextResponse.json({ ok: false, error: "Email sending is disabled in the isolated test environment" }, { status: 403 });
   const now = new Date();
   const backfill = manual || url.searchParams.has("from");
   if (!backfill && !dryRun && !isWeeklyReportTime(now)) {
@@ -34,11 +36,12 @@ async function report(request: Request, manual: boolean) {
     const current = aggregateWeeklyMetrics(events, leads);
     const previous = aggregateWeeklyMetrics(previousEvents, previousLeads);
     const summary = { from: period.from.toISOString(), untilExclusive: period.until.toISOString(), previousFrom: period.previousFrom.toISOString(), timeZone: "Europe/Zurich", current, previous };
+    const html = renderWeeklyReport({ current, previous, from: period.from, until: new Date(period.until.getTime() - 1), week: period.week, internalFilterSince: process.env.ANALYTICS_INTERNAL_FILTER_ACTIVE_SINCE });
     if (dryRun) {
+      if (url.searchParams.get("format") === "html") return new NextResponse(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "private, no-store" } });
       console.info("weekly-analytics dry-run", JSON.stringify(summary));
       return NextResponse.json({ ok: true, dryRun: true, mailConfigured: Boolean(apiKey && fromEmail), ...summary });
     }
-    const html = renderWeeklyReport({ current, previous, from: period.from, until: new Date(period.until.getTime() - 1), week: period.week, internalFilterSince: process.env.ANALYTICS_INTERNAL_FILTER_ACTIVE_SINCE });
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json", "Idempotency-Key": `weekly-analytics-${period.fromDay}` },

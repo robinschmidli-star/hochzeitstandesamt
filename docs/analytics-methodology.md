@@ -1,6 +1,6 @@
 # Analytics revision 3
 
-Prepared 19 October 2026. **Not deployed.** The effective date must be the verified
+Prepared 19 October 2026; live-source reconciliation and isolated end-to-end verification completed 20 October 2026. **Not deployed to production.** The effective date must be the verified
 production deployment time, not this preparation date. Compare new instrumentation
 only from the first complete Swiss calendar week after that deployment. Historical
 event counts can still be compared with identical event definitions and exclusions.
@@ -118,9 +118,21 @@ References: [Resend idempotency](https://resend.com/docs/dashboard/emails/idempo
 
 ## Release gate
 
-Reconcile actual production source archive before merging. The deployment source is a
-redeploy with uploaded archive and stale/different-repository Git metadata. Main/PR code
-alone is insufficient. Preserve unrelated verification tracking, existing schedules,
-filters and all newer production features. No website database connection or schema was
-changed. Alembic/Python checks are not applicable to this TypeScript-only patch.
-No production release or email send is part of this verified state.
+The live deployment was reconciled on 20 October against its Git checkout, confirmed
+by the Vercel clone/build log. The current main changes were merged without conflicts;
+newer venue records and permission-gated photos are retained. The former uploaded-source
+archive no longer describes the current live deployment. A later deployment must be
+rechecked before production release.
+
+The isolated PostgreSQL/browser/API/dashboard/report flow now passes, including real
+storage, shared browser/session across tabs, separate direct entry, source versus booking
+links, a stored synthetic lead, identical dashboard/report HTML, and a hard mail-send
+block. See analytics-e2e.md for the reproducible fixture. The optional local test mode
+requires both explicit flags, loopback access, a dedicated loopback test database name,
+and a nonproduction runtime. Test events are server-marked and excluded from default
+business metrics. Dry-run HTML preview requires the same cron authentication and uses
+private/no-store caching. No website production connection or production schema changed.
+
+Production release still requires explicit deployment approval. No production release
+or report email send was performed. The existing 24-hour mail idempotency limitation
+remains as documented above.

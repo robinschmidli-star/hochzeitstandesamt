@@ -129,6 +129,8 @@ test("cron authentication, read-only backfill, Resend errors and acceptance", as
   assert.equal(dry.from, "2026-09-27T22:00:00.000Z");
   assert.equal(fetch.mock.callCount(), 0);
   assert.equal(leads.mock.callCount(), 2);
+  const htmlPreview = await GET(request("?dryRun=1&format=html&from=2026-09-28"));
+  assert.equal(htmlPreview.status,200);assert.match(htmlPreview.headers.get("content-type")??"",/text\/html/);assert.match(await htmlPreview.text(),/Wochenreport/);assert.equal(fetch.mock.callCount(),0);
   assert.equal((await POST(request("?from=2026-10-05", "POST"))).status, 400);
   delete process.env.RESEND_API_KEY;
   assert.equal((await POST(request("?from=2026-09-28", "POST"))).status, 503);

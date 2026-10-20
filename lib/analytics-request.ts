@@ -1,3 +1,4 @@
+import { isIsolatedAnalyticsTest } from "./analytics-test-environment";
 // Match explicit automation identifiers; device names such as CUBOT are browsers.
 export const BOT_UA = /\b(?:Googlebot|bingbot|BingPreview|YandexBot|Baiduspider|DuckDuckBot|Applebot|facebookexternalhit|Twitterbot|LinkedInBot|PetalBot|AhrefsBot|SemrushBot|MJ12bot|GPTBot|ChatGPT-User|ClaudeBot|CCBot|Amazonbot|Bytespider|bot|crawler|spider|HeadlessChrome|headless|lighthouse|pagespeed|healthcheck|uptime|UptimeRobot|curl|wget|python-requests|python-urllib|scrapy|PhantomJS|selenium|playwright|puppeteer)\b/i;
 
@@ -12,14 +13,15 @@ export function isAdminPath(path: string) {
 }
 
 export function trustedBrowserRequest(request: Request) {
-  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production") return false;
+  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production" && !isIsolatedAnalyticsTest()) return false;
   const agent = request.headers.get("user-agent") ?? "";
   if (!agent || BOT_UA.test(agent)) return false;
 
   const host = request.headers.get("host") ?? "";
   let hostname: string;
   try { hostname = new URL(`http://${host}`).hostname; } catch { return false; }
-  if (!["hochzeitstandesamt.ch", "www.hochzeitstandesamt.ch", "standesamthochzeit.ch", "www.standesamthochzeit.ch"].includes(hostname)) return false;
+  const localTest = isIsolatedAnalyticsTest() && ["127.0.0.1", "localhost", "[::1]"].includes(hostname);
+  if (!localTest && !["hochzeitstandesamt.ch", "www.hochzeitstandesamt.ch", "standesamthochzeit.ch", "www.standesamthochzeit.ch"].includes(hostname)) return false;
 
   const fetchSite = request.headers.get("sec-fetch-site");
   if (fetchSite && fetchSite !== "same-origin" && fetchSite !== "same-site") return false;

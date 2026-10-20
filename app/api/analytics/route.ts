@@ -1,3 +1,4 @@
+import { isIsolatedAnalyticsTest } from "@/lib/analytics-test-environment";
 import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import { z } from "zod";
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
     const limited = await rateLimit(request, `analytics:${createHash("sha256").update(data.visitorId).digest("hex")}`, 120, 60_000, false);
     if (limited) return limited;
 
-    await prisma.analyticsEvent.create({ data: { eventName: data.eventName, sessionId: data.sessionId, visitorHash: createHash("sha256").update(data.visitorId).digest("hex"), path, country: "CH", properties: cleanProperties(data.properties) } });
+    await prisma.analyticsEvent.create({ data: { eventName: data.eventName, sessionId: data.sessionId, visitorHash: createHash("sha256").update(data.visitorId).digest("hex"), path, country: "CH", properties: { ...cleanProperties(data.properties), ...(isIsolatedAnalyticsTest() ? { traffic_type: "test" } : {}) } } });
     return new NextResponse(null, { status: 204 });
   } catch (error) {
     if (error instanceof z.ZodError || error instanceof SyntaxError) {

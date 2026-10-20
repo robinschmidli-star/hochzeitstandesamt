@@ -1,5 +1,6 @@
+import { isIsolatedAnalyticsTest } from "./analytics-test-environment";
 import { analyticsPath } from "./analytics-policy";
-import { summarizeAnalytics, renderAnalyticsSummary, type ReportEvent } from "./analytics-summary";
+import { summarizeAnalytics, renderAnalyticsSummary, eventProperties, type ReportEvent } from "./analytics-summary";
 export type AnalyticsRow = ReportEvent;
 
 export type WeeklyMetrics = {
@@ -18,7 +19,7 @@ export type WeeklyMetrics = {
 };
 
 export function aggregateWeeklyMetrics(input: AnalyticsRow[], leadCount?: number): WeeklyMetrics {
-  const isAdmin = (row: AnalyticsRow) => Boolean(row.path && analyticsPath(row.path) === null);
+  const isAdmin = (row: AnalyticsRow) => Boolean(row.path && analyticsPath(row.path) === null) || (!isIsolatedAnalyticsTest() && eventProperties(row).traffic_type === "test");
   const excluded = input.filter(isAdmin);
   const rows = input.filter((row) => !isAdmin(row));
   const count = (name: string) => rows.filter((event) => event.eventName === name).length;
@@ -39,11 +40,11 @@ export function aggregateWeeklyMetrics(input: AnalyticsRow[], leadCount?: number
     }
   }
   return {
-    summary: summarizeAnalytics(input),
+    summary: summarizeAnalytics(input, isIsolatedAnalyticsTest()),
     officeViews: count("location_view"),
     visitors: new Set(rows.map((event) => event.visitorHash)).size,
     pageViews: count("page_view"),
-    searches: summarizeAnalytics(input).metrics.find(r=>r.name==="search_started")?.actions??0,
+    searches: summarizeAnalytics(input, isIsolatedAnalyticsTest()).metrics.find(r=>r.name==="search_started")?.actions??0,
     // Offices use location_view; never combine with venue_opened.
     venueViews: count("venue_opened"),
     favorites: count("favorite_added"),
@@ -70,7 +71,7 @@ function metric(value: number, previous: number) { return `${number(value)} (Δ 
 export function renderWeeklyReport(input: { current: WeeklyMetrics; previous: WeeklyMetrics; from: Date; until: Date; week: number; internalFilterSince?: string }) {
   const {current:c,previous:p}=input;
   const list=(title:string,rows:{label:string;views:number}[]) => '<h2>'+title+'</h2>'+rows.map((r,i)=>'<div>'+(i+1)+'. '+escapeHtml(r.label)+' – '+number(r.views)+'</div>').join('');
-  return '<!doctype html><html><body style="font-family:Arial,sans-serif;max-width:720px;margin:auto;padding:24px"><h1>Hochzeitstandesamt.ch – Wochenreport KW '+input.week+'</h1><p>'+input.from.toLocaleDateString('de-CH',{timeZone:'Europe/Zurich'})+'–'+input.until.toLocaleDateString('de-CH',{timeZone:'Europe/Zurich'})+'. Datenstand: Datenbankabfrage beim Reportaufruf für diesen abgeschlossenen Ereigniszeitraum'+'</p><h2>Traffic und Vorwochenvergleich</h2><p>Browser: '+metric(c.visitors,p.visitors)+'<br>Seitenaufrufe: '+metric(c.pageViews,p.pageViews)+'<br>Seitenaufrufe pro Browser: '+(c.visitors?(c.pageViews/c.visitors).toFixed(2):'–')+'</p><h2>Aktionsvergleich</h2>'+c.summary.metrics.map(row=>{const prior=p.summary.metrics.find(r=>r.name===row.name);return '<div>'+escapeHtml(row.label)+': '+(row.measured?(prior?.measured?metric(row.actions,prior.actions):number(row.actions)+" (Vorwoche nicht erfasst)"):'nicht erfasst')+'; '+(row.measured?row.browsers:'nicht erfasst')+' Browser</div>';}).join('')+'<h2>Gespeicherte Website-Anfragen</h2><p>'+metric(c.leads,p.leads)+' Datensätze; separat vom Browser-Tracking. Enthält gespeicherte Suchabonnements. Status new bedeutet keine Bestätigung oder Qualifizierung; Tests, Spam und Duplikate sind nicht pauschal ausgeschlossen. Keine historische Funnel-Zuordnung.</p>'+renderAnalyticsSummary(c.summary)+list('Top Trauorte der Woche',c.topVenues.map(v=>({label:v.name+" ("+v.browsers+" Browser)",views:v.views})))+list('Top 10 Seiten der Woche',c.topPages.map(v=>({label:v.path,views:v.views})))+'<h2>Traffic-Qualität</h2><p>'+c.excludedEvents+' gespeicherte Verwaltungsereignisse ausgeschlossen; '+c.excludedVisitors+' ausschließlich ausgeschlossene Browser. Vor Speicherung gefilterte Ereignisse sind rückwirkend nicht messbar. Historische Browserqualität bleibt unbekannt.</p>'+(input.internalFilterSince?'<p>Interner Filter seit '+escapeHtml(input.internalFilterSince)+'</p>':'')+'<p>Messrevision 3 gilt erst ab tatsächlichem Deployment. Alte und neue Such-/Kontaktzahlen sind nicht unmittelbar vergleichbar. Nicht freigegebene Kampagnencodes und das tatsächliche Besuchsland bleiben unbekannt.</p></body></html>';
+  return '<!doctype html><html><body style="font-family:Arial,sans-serif;max-width:720px;margin:auto;padding:24px">'+(isIsolatedAnalyticsTest()?'<p><strong>ISOLIERTE TESTDATEN — keine Geschäftskennzahlen</strong></p>':'')+'<h1>Hochzeitstandesamt.ch – Wochenreport KW '+input.week+'</h1><p>'+input.from.toLocaleDateString('de-CH',{timeZone:'Europe/Zurich'})+'–'+input.until.toLocaleDateString('de-CH',{timeZone:'Europe/Zurich'})+'. Datenstand: Datenbankabfrage beim Reportaufruf für diesen abgeschlossenen Ereigniszeitraum'+'</p><h2>Traffic und Vorwochenvergleich</h2><p>Browser: '+metric(c.visitors,p.visitors)+'<br>Seitenaufrufe: '+metric(c.pageViews,p.pageViews)+'<br>Seitenaufrufe pro Browser: '+(c.visitors?(c.pageViews/c.visitors).toFixed(2):'–')+'</p><h2>Aktionsvergleich</h2>'+c.summary.metrics.map(row=>{const prior=p.summary.metrics.find(r=>r.name===row.name);return '<div>'+escapeHtml(row.label)+': '+(row.measured?(prior?.measured?metric(row.actions,prior.actions):number(row.actions)+" (Vorwoche nicht erfasst)"):'nicht erfasst')+'; '+(row.measured?row.browsers:'nicht erfasst')+' Browser</div>';}).join('')+'<h2>Gespeicherte Website-Anfragen</h2><p>'+metric(c.leads,p.leads)+' Datensätze; separat vom Browser-Tracking. Enthält gespeicherte Suchabonnements. Status new bedeutet keine Bestätigung oder Qualifizierung; Tests, Spam und Duplikate sind nicht pauschal ausgeschlossen. Keine historische Funnel-Zuordnung.</p>'+renderAnalyticsSummary(c.summary)+list('Top Trauorte der Woche',c.topVenues.map(v=>({label:v.name+" ("+v.browsers+" Browser)",views:v.views})))+list('Top 10 Seiten der Woche',c.topPages.map(v=>({label:v.path,views:v.views})))+'<h2>Traffic-Qualität</h2><p>'+c.excludedEvents+' gespeicherte Verwaltungsereignisse ausgeschlossen; '+c.excludedVisitors+' ausschließlich ausgeschlossene Browser. Vor Speicherung gefilterte Ereignisse sind rückwirkend nicht messbar. Historische Browserqualität bleibt unbekannt.</p>'+(input.internalFilterSince?'<p>Interner Filter seit '+escapeHtml(input.internalFilterSince)+'</p>':'')+'<p>Messrevision 3 gilt erst ab tatsächlichem Deployment. Alte und neue Such-/Kontaktzahlen sind nicht unmittelbar vergleichbar. Nicht freigegebene Kampagnencodes und das tatsächliche Besuchsland bleiben unbekannt.</p></body></html>';
 }
 
 const ZURICH = "Europe/Zurich";
