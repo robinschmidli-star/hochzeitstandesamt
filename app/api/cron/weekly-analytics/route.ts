@@ -7,7 +7,7 @@ function isoWeek(date: Date) { const value = new Date(Date.UTC(date.getUTCFullYe
 export async function GET(request: Request) {
   if (!process.env.CRON_SECRET || request.headers.get("authorization") !== `Bearer ${process.env.CRON_SECRET}`) return new NextResponse("Unauthorized", { status: 401 });
   const zurich = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Zurich", weekday: "short", hour: "2-digit", hour12: false }).format(new Date());
-  if (!zurich.startsWith("Mon, 07")) return NextResponse.json({ ok: true, skipped: "outside Europe/Zurich Monday 07:00" });
+  if (!/^Mon,?\s+07(?::|$)/.test(zurich)) return NextResponse.json({ ok: true, skipped: "outside Europe/Zurich Monday 07:00" });
   const thisMonday = mondayUtc(new Date()); const from = new Date(thisMonday); from.setUTCDate(from.getUTCDate() - 7); const previousFrom = new Date(from); previousFrom.setUTCDate(previousFrom.getUTCDate() - 7);
   const [events, previous, newLeads] = await Promise.all([
     prisma.analyticsEvent.findMany({ where: { occurredAt: { gte: from, lt: thisMonday } }, select: { eventName: true, visitorHash: true } }),
@@ -21,6 +21,6 @@ export async function GET(request: Request) {
   const fromEmail = process.env.ANALYTICS_REPORT_FROM ?? "Hochzeitstandesamt <onboarding@resend.dev>";
   if (!apiKey) return NextResponse.json({ ok: false, error: "RESEND_API_KEY is required" }, { status: 503 });
   const response = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: fromEmail, to: ["robinschmidli@gmail.com"], subject: `hochzeitstandesamt.ch – Wochenreport KW ${isoWeek(from)}`, html }) });
-  if (!response.ok) return NextResponse.json({ ok: false, error: "Email delivery failed" }, { status: 502 });
+  if (!response.ok) { const detail = await response.text(); console.error("Weekly analytics email failed", response.status, detail); return NextResponse.json({ ok: false, error: "Email delivery failed", status: response.status }, { status: 502 }); }
   return NextResponse.json({ ok: true });
 }
