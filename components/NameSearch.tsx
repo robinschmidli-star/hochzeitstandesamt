@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import Link from "next/link";
+import { markSearchIntent, track } from "@/components/Analytics";
 import { useRouter } from "next/navigation";
 import type { NameSearchSuggestion } from "@/lib/name-search";
 import type { Dictionary } from "@/lib/i18n";
@@ -53,6 +54,7 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
 
   function selectSuggestion(suggestion: NameSearchSuggestion) {
     if (!children || !formRef.current) {
+      track("search_started", { search_id: crypto.randomUUID() });
       router.push(`${pathPrefix}${suggestion.href}`);
       return;
     }
@@ -61,6 +63,7 @@ export function NameSearch({ dictionary, defaultValue = "", compact = false, pat
       if (typeof value === "string") params.append(key, value);
     });
     params.set("name", suggestion.name);
+    markSearchIntent();
     router.push(`${pathPrefix || "/"}?${params}#results`);
   }
 

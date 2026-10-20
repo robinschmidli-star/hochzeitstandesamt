@@ -1,75 +1,105 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { hasActiveSearch, parseSearchParams } from "@/lib/discovery";
+import { BOT_UA } from "@/lib/analytics-request";
+import { ANALYTICS_VERSION, analyticsPath, cleanProperties } from "@/lib/analytics-policy";
+import { entrySource, campaignCode, nextSession, type AnalyticsSession } from "@/lib/analytics-session";
 
-const BOT_UA = /bot|crawler|spider|headless|lighthouse|pagespeed|curl|wget|python|scrapy|phantom|selenium|playwright|puppeteer/i;
-
-function id(key: string, storage: Storage) {
-  const current = storage.getItem(key);
-  if (current) return current;
-  const value = crypto.randomUUID();
-  storage.setItem(key, value);
-  return value;
+type Properties = Record<string,string|number|boolean|string[]>;
+let queue = Promise.resolve();
+let lastPageKey = "";
+let mountRoute="";
+const mountedEvents=new Set<string>();
+function mountKey() { const route=location.pathname+location.search;if(route!==mountRoute){mountRoute=route;mountedEvents.clear();}return route; }
+const cookieEnabled = () => document.cookie.split(";").some(p => p.trim() === "hsa_internal=1" || /^admin_session=.+/.test(p.trim()));
+function enabled() {
+  const localTest=process.env.NEXT_PUBLIC_ANALYTICS_TEST_MODE === "1" && ["127.0.0.1","localhost","[::1]"].includes(location.hostname);
+  return process.env.NODE_ENV === "production" && new URLSearchParams(location.search).get("hsa_internal") !== "1" && !cookieEnabled() && localStorage.getItem("hs_analytics_internal") !== "1" && !navigator.webdriver && !BOT_UA.test(navigator.userAgent) && analyticsPath(location.pathname) !== null && (["hochzeitstandesamt.ch","www.hochzeitstandesamt.ch","standesamthochzeit.ch","www.standesamthochzeit.ch"].includes(location.hostname) || localTest);
 }
-
-function allowAnalyticsEvent() {
-  if (navigator.webdriver || BOT_UA.test(navigator.userAgent)) return false;
-  const now = Date.now();
-  const start = Number(sessionStorage.getItem("hs_analytics_window_start") ?? "0");
-  const count = Number(sessionStorage.getItem("hs_analytics_window_count") ?? "0");
-  if (!start || now - start >= 60_000) {
-    sessionStorage.setItem("hs_analytics_window_start", String(now));
-    sessionStorage.setItem("hs_analytics_window_count", "1");
-    return true;
-  }
-  if (count >= 30) return false;
-  sessionStorage.setItem("hs_analytics_window_count", String(count + 1));
-  return true;
+function context(): Properties {
+  const main = document.querySelector<HTMLElement>("[data-analytics-entity-id]");
+  if (!main) return {};
+  return { entity_type:main.dataset.analyticsEntityType??"",entity_id:main.dataset.analyticsEntityId??"",canton:main.dataset.analyticsCanton??"",...(main.dataset.analyticsEntityType==="venue"?{venue_id:main.dataset.analyticsEntityId??""}:{}) };
 }
-
-export function track(eventName: string, properties: Record<string, string | number | boolean | string[]> = {}) {
+function resultProperties(): Properties {
+  const result = document.querySelector<HTMLElement>("[data-analytics-results]");
+  try { return result ? JSON.parse(result.dataset.analyticsResults??"{}") as Properties : {}; } catch { return {}; }
+}
+export function track(eventName: string, properties: Properties = {}) {
   try {
-    if (!allowAnalyticsEvent()) return;
-    const viewport_category = innerWidth < 640 ? "mobile" : innerWidth < 1024 ? "tablet" : "desktop";
-    const traffic_source = document.referrer ? new URL(document.referrer).hostname.slice(0, 100) : "direct";
-    void fetch("/api/analytics", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true, body: JSON.stringify({ eventName, sessionId: id("hs_session", sessionStorage), visitorId: id("hs_visitor", localStorage), path: location.pathname + location.search, properties: { viewport_category, traffic_source, ...properties } }) }).catch(() => undefined);
-  } catch { /* non-blocking */ }
+    if (!enabled()) return;
+    const path=location.pathname,now=Date.now(),source=entrySource(document.referrer,location.hostname),campaign=campaignCode(new URLSearchParams(location.search));
+    const language=path.match(/^\/(de|fr|it|en)(?:\/|$)/)?.[1]??"de";
+    const props=cleanProperties({...context(),...properties,language,viewport_category:innerWidth<640?"mobile":innerWidth<1024?"tablet":"desktop",analytics_version:ANALYTICS_VERSION});
+    const visitorId=localStorage.getItem("hs_visitor")??crypto.randomUUID(); localStorage.setItem("hs_visitor",visitorId);
+    queue=queue.then(async()=>{
+      const send=async(storage:Storage,scope:string)=>{
+        let current:AnalyticsSession|null=null;
+        try { current=JSON.parse(storage.getItem("hs_session_v3")??"null"); } catch { /* expired/malformed session */ }
+        const session=nextSession(current,now,source,()=>crypto.randomUUID(),path,campaign); storage.setItem("hs_session_v3",JSON.stringify(session));
+        await fetch("/api/analytics",{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({eventName,visitorId,sessionId:session.id,path,properties:{...props,entry_source:session.source,session_scope:scope,session_entry_path:session.entryPath,campaign_code:session.campaign??"unknown"}})});
+      };
+      // Web Locks serialize same-origin tabs. Unsupported browsers use explicit tab sessions.
+      if (navigator.locks) await navigator.locks.request("hs_analytics_session",()=>send(localStorage,"browser"));
+      else await send(sessionStorage,"tab");
+    }).catch(()=>undefined);
+  } catch { /* tracking cannot interrupt navigation */ }
 }
-
+export function markSearchIntent(kind="search_started") {
+  try { sessionStorage.setItem("hs_search_intent",JSON.stringify({kind,id:crypto.randomUUID(),at:Date.now()})); } catch { /* non-blocking */ }
+}
 export function Analytics() {
-  const pathname = usePathname(); const params = useSearchParams();
-  useEffect(() => {
-    const pageKey = location.pathname + location.search;
-    const now = Date.now();
-    const lastPage = sessionStorage.getItem("hs_last_page_view_path");
-    const lastAt = Number(sessionStorage.getItem("hs_last_page_view_at") ?? "0");
-    if (lastPage !== pageKey || now - lastAt > 10_000) {
-      sessionStorage.setItem("hs_last_page_view_path", pageKey);
-      sessionStorage.setItem("hs_last_page_view_at", String(now));
-      track("page_view", { referrer: document.referrer.slice(0, 250), language: navigator.language });
-    }
-    const searchPage = /^\/(?:fr|it|en|de)?\/?(?:search|standesamt-finden)?\/?$/.test(pathname);
-    if (searchPage && hasActiveSearch(parseSearchParams(Object.fromEntries(params)))) {
-      const fingerprint = params.toString();
-      if (sessionStorage.getItem("hs_search_fingerprint") !== fingerprint) {
-        sessionStorage.setItem("hs_search_fingerprint", fingerprint);
-        const properties = { search_query: params.get("name") ?? "", filters: Array.from(params.keys()).filter((key) => params.get(key)), result_path: location.pathname };
-        track("search_started", properties);
-        track("search_results_viewed", properties);
-        track("search_completed", properties);
+  const pathname=usePathname(),params=useSearchParams();
+  useEffect(()=>{
+    const click=(event:MouseEvent)=>{
+      try {
+        const anchor=event.target instanceof Element?event.target.closest("a"):null;
+        if (!anchor || anchor.dataset.analyticsIgnore !== undefined) return;
+        const target=new URL(anchor.href,location.href);
+        if (target.origin===location.origin) {
+          if (target.hash==="#results") markSearchIntent(target.searchParams.has("page")?"search_pagination":anchor.dataset.analyticsSearch==="start"?"search_started":"search_filter_changed");
+          return;
+        }
+        const channel=target.protocol==="mailto:"?"email":target.protocol==="tel:"?"phone":["https:","http:"].includes(target.protocol)?"website":null;
+        if (!channel) return;
+        const purpose=anchor.dataset.analyticsPurpose??(["email","phone"].includes(channel)?"contact":"website");
+        track("external_link_clicked",{contact_channel:purpose==="booking"?"booking":channel,link_purpose:purpose});
+      } catch { /* non-blocking */ }
+    };
+    const submit=(event:SubmitEvent)=>{const form=event.target;if(form instanceof HTMLFormElement && (form.getAttribute("role")==="search" || form.dataset.analyticsSearch!==undefined)) markSearchIntent();};
+    const change=(event:Event)=>{const field=event.target;if((field instanceof HTMLInputElement || field instanceof HTMLSelectElement) && field.closest('form[role="search"],form[data-analytics-search]') && !["name","query"].includes(field.name)) track("search_filter_changed",{filters:[field.name]});};
+    let lastActivity=0;
+    const activity=(event:Event)=>{try{const now=Date.now();if(!event.isTrusted || now-lastActivity<15000 || !enabled())return;lastActivity=now;const update=()=>{const storage=navigator.locks?localStorage:sessionStorage;const current=JSON.parse(storage.getItem("hs_session_v3")??"null") as AnalyticsSession|null;if(current && now-current.last<30*60_000)storage.setItem("hs_session_v3",JSON.stringify({...current,last:Math.max(now,current.last)}));};if(navigator.locks)void navigator.locks.request("hs_analytics_session",update).catch(()=>undefined);else update();}catch{/* non-blocking */}};
+    const activityEvents=["pointerdown","keydown","scroll","touchstart"];for(const name of activityEvents)document.addEventListener(name,activity,{passive:true});
+    document.addEventListener("change",change);
+    document.addEventListener("click",click); document.addEventListener("submit",submit,true);
+    return ()=>{for(const name of activityEvents)document.removeEventListener(name,activity);document.removeEventListener("change",change);document.removeEventListener("click",click);document.removeEventListener("submit",submit,true);};
+  },[]);
+  useEffect(()=>{
+    try {
+      const setting=params.get("hsa_internal");
+      if(setting==="1"||setting==="0") {
+        document.cookie=setting==="1"?"hsa_internal=1; Max-Age=31536000; Path=/; SameSite=Lax; Secure":"hsa_internal=; Max-Age=0; Path=/; SameSite=Lax; Secure";
+        if(setting==="0")localStorage.removeItem("hs_analytics_internal");
+        const url=new URL(location.href);url.searchParams.delete("hsa_internal");history.replaceState(history.state,"",url.pathname+url.search+url.hash);return;
       }
-    }
-  }, [pathname, params]);
+      const key=pathname+"?"+params.toString();
+      if(lastPageKey===key)return; lastPageKey=key;
+      mountKey();
+      track("page_view");
+      const result=document.querySelector("[data-analytics-results]");
+      if(result){
+        const props=resultProperties();
+        const intent=JSON.parse(sessionStorage.getItem("hs_search_intent")??"null");sessionStorage.removeItem("hs_search_intent");
+        if(intent && Date.now()-intent.at>=0 && Date.now()-intent.at<60_000) track(intent.kind,{...props,search_id:intent.id});
+        track("search_results_viewed",props);
+      }
+    } catch { /* storage unavailable: website still works */ }
+  },[pathname,params]);
   return null;
 }
-
-export function TrackOnMount({ eventName, properties = {} }: { eventName: string; properties?: Record<string, string | number | boolean | string[]> }) {
-  const tracked = useRef(false);
-  useEffect(() => {
-    if (tracked.current) return;
-    tracked.current = true;
-    track(eventName, properties);
-  }, [eventName, properties]);
+export function TrackOnMount({eventName,properties={}}:{eventName:string;properties?:Properties}) {
+  const tracked=useRef("");
+  useEffect(()=>{const key=mountKey()+eventName+JSON.stringify(properties);if(tracked.current===key || mountedEvents.has(key))return;tracked.current=key;mountedEvents.add(key);track(eventName,properties);},[eventName,properties]);
   return null;
 }

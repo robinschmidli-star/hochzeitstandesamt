@@ -1,3 +1,4 @@
+import { searchAnalyticsProperties } from "@/lib/analytics-search";
 import Link from "next/link";
 import { SafeMediaFrame } from "@/components/SafeMediaFrame";
 import { SearchLeadCapture } from "@/components/SearchLeadCapture";
@@ -106,7 +107,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
     ? t("results.cantonTitle").replace("{canton}", repairText(selectedCanton.name))
     : initial ? t("featured.title") : `${total} ${t(venueMode ? "results.venues" : "results.results")}`;
   return (
-    <section id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">
+    <section data-analytics-results={JSON.stringify(searchAnalyticsProperties(params,total))} id="results" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8" aria-labelledby="results-title">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 id="results-title" className="text-3xl font-semibold text-ink sm:text-4xl">{resultsTitle}</h2>
         {!initial ? <Link href={pathPrefix || "/"} className="focus-ring inline-flex min-h-11 items-center font-semibold text-sage">{t("discovery.reset")}</Link> : null}
@@ -120,7 +121,7 @@ export function SearchResults({ params, dictionary, pathPrefix = "", initial = f
         <p className="font-semibold text-ink">{t("nameSearch.noResults")}</p>
         <p className="mt-1">{t("nameSearch.noResultsHelp")}</p>
       </div> : null}
-      {initial ? <Link href={discoveryHref({}, { submitted: "1" }, pathPrefix)} className="focus-ring mt-5 inline-flex min-h-12 items-center rounded-lg bg-sage px-5 py-3 font-semibold text-white">{t("featured.all")}</Link> : null}
+      {initial ? <Link data-analytics-search="start" href={discoveryHref({}, { submitted: "1" }, pathPrefix)} className="focus-ring mt-5 inline-flex min-h-12 items-center rounded-lg bg-sage px-5 py-3 font-semibold text-white">{t("featured.all")}</Link> : null}
       {!initial && pageCount > 1 ? <nav aria-label={t("discovery.pagination")} className="mt-6 flex flex-wrap items-center justify-between gap-3">
         {page > 1 ? <Link href={discoveryHref(params, { page: String(page - 1) }, pathPrefix)} className="focus-ring inline-flex min-h-11 items-center rounded-lg border border-linen px-4 py-2 font-semibold text-sage">{t("discovery.previous")}</Link> : <span />}
         <p className="text-sm text-soft-ink">{t("discovery.page").replace("{page}", String(page)).replace("{pages}", String(pageCount))}</p>

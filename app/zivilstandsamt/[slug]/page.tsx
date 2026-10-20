@@ -50,12 +50,12 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-function InfoItem({ label, value }: { label: string; value?: string }) {
+function InfoItem({ label, value, href }: { label: string; value?: string; href?: string }) {
   if (!value) return null;
   return (
     <div>
       <dt className="font-semibold text-ink">{label}</dt>
-      <dd>{value}</dd>
+      <dd>{href ? <a href={href} className="focus-ring hover:underline">{value}</a> : value}</dd>
     </div>
   );
 }
@@ -171,7 +171,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
   ];
 
   return (
-    <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
+    <main data-analytics-entity-id={office.canonicalId ?? office.id} data-analytics-entity-type="office" data-analytics-canton={office.canton} className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:px-8">
       <TrackOnMount eventName="location_view" properties={{ entityType: "civil_registry_office", entityId: office.canonicalId ?? office.id, canton: office.canton }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faq)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(registryOfficeSchema(cleanOffice, cleanVenues)) }} />
@@ -203,7 +203,7 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
           <dl className="mt-4 grid gap-3 text-sm text-soft-ink">
             <InfoItem label={t("office.field.address")} value={`${cleanOffice.addressLine1 || cleanOffice.postBox}, ${office.postalCode} ${cleanOffice.city}`} />
             <InfoItem label={t("office.field.postBox")} value={cleanOffice.postBox} />
-            <InfoItem label={t("office.field.phone")} value={office.phone || t("common.notListed")} />
+            <InfoItem href={office.phone && /^[+\d ()/-]+$/.test(office.phone) ? `tel:${office.phone.replace(/[^+\d]/g, "")}` : undefined} label={t("office.field.phone")} value={office.phone || t("common.notListed")} />
             <InfoItem label={t("office.field.email")} value={office.email || t("common.notListed")} />
             <InfoItem label={t("office.field.openingHours")} value={info(office.openingHours, dictionary)} />
           </dl>
@@ -219,12 +219,12 @@ export default async function RegistryOfficeDetailPage({ params }: Props) {
               </a>
             ) : null}
             {marriageInfoUrl ? (
-              <a href={marriageInfoUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
+              <a data-analytics-purpose="source" href={marriageInfoUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
                 {t("office.action.marriageInfo")}
               </a>
             ) : null}
             {appointmentUrl ? (
-              <a href={appointmentUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
+              <a data-analytics-purpose="booking" href={appointmentUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex rounded-lg border border-sage/15 px-4 py-2 text-sm font-semibold text-sage transition hover:border-sage/30">
                 {t("office.action.book")}
               </a>
             ) : null}

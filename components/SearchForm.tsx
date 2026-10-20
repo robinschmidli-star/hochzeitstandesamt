@@ -18,7 +18,7 @@ export function SearchForm({ compact = false, embedded = false, labels = default
   const weekdays = labels.weekdayNames;
 
   return (
-    <form
+    <form data-analytics-search="start"
       action={`${withLocalePath("/", labels.locale)}#results`}
       className={`grid gap-4 ${
         embedded ? "" : "rounded-xl border border-linen bg-white p-4 shadow-soft"
