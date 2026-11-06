@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { availabilityPrisma } from "@/lib/availability/prisma";
 
 export const availabilityMvpSources = [
   {
@@ -65,7 +65,7 @@ export const availabilityMvpSources = [
 
 export async function ensureAvailabilityMvpSources() {
   for (const source of availabilityMvpSources) {
-    await prisma.availabilitySource.upsert({
+    await availabilityPrisma.availabilitySource.upsert({
       where: {
         targetType_targetSlug_sourceUrl: {
           targetType: source.targetType,
