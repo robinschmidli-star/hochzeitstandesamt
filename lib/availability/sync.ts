@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { availabilityPrisma } from "@/lib/availability/prisma";
 import { getAvailabilityConnector } from "./connectors";
 import type { AvailabilitySourceRecord, NormalizedAvailabilitySlot } from "./types";
 
@@ -48,7 +48,7 @@ async function syncSource(source: AvailabilitySourceRecord) {
     const connector = getAvailabilityConnector(source);
     const payload = await connector.fetch(source, controller.signal);
     const slots = await connector.normalize(payload, source);
-    const existing = await prisma.availabilitySlot.findMany({
+    const existing = await availabilityPrisma.availabilitySlot.findMany({
       where: { sourceId: source.id },
       select: { externalKey: true, date: true, startAt: true, endAt: true, status: true, precision: true },
       orderBy: [{ date: "asc" }, { externalKey: "asc" }],
@@ -58,7 +58,7 @@ async function syncSource(source: AvailabilitySourceRecord) {
     const newFingerprint = slots.map(normalizedSignature).sort().join("\n");
     const changed = oldFingerprint !== newFingerprint;
 
-    await prisma.$transaction(async (tx) => {
+    await availabilityPrisma.$transaction(async (tx) => {
       await tx.availabilitySlot.deleteMany({ where: { sourceId: source.id } });
       if (slots.length) {
         await tx.availabilitySlot.createMany({
@@ -90,7 +90,7 @@ async function syncSource(source: AvailabilitySourceRecord) {
     return { sourceId: source.id, ok: true as const, changed, slots: slots.length };
   } catch (error) {
     const message = error instanceof Error ? error.message.slice(0, 1000) : "Unknown availability sync error";
-    await prisma.availabilitySource.update({
+    await availabilityPrisma.availabilitySource.update({
       where: { id: source.id },
       data: { lastCheckedAt: checkedAt, lastError: message },
     });
@@ -102,8 +102,8 @@ async function syncSource(source: AvailabilitySourceRecord) {
 
 export async function runAvailabilitySync() {
   const startedAt = new Date();
-  const run = await prisma.availabilitySyncRun.create({ data: { startedAt } });
-  const allActive = await prisma.availabilitySource.findMany({ where: { active: true }, orderBy: { targetSlug: "asc" } });
+  const run = await availabilityPrisma.availabilitySyncRun.create({ data: { startedAt } });
+  const allActive = await availabilityPrisma.availabilitySource.findMany({ where: { active: true }, orderBy: { targetSlug: "asc" } });
   const dueSources = allActive.filter((source) => isDue(source.lastCheckedAt, source.syncFrequencyMinutes, startedAt));
   const results: Awaited<ReturnType<typeof syncSource>>[] = [];
 
@@ -117,7 +117,7 @@ export async function runAvailabilitySync() {
   const failedSources = results.length - successfulSources;
   const completedAt = new Date();
 
-  await prisma.availabilitySyncRun.update({
+  await availabilityPrisma.availabilitySyncRun.update({
     where: { id: run.id },
     data: {
       completedAt,
