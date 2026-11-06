@@ -30,7 +30,7 @@ export async function contentTranslations(
       `SELECT entity_id::text, value
        FROM web_public_localized_content
        WHERE entity_type = $1 AND entity_id = ANY($2::uuid[])
-         AND language_code = $3 AND field_name = $4 AND status <> 'STALE'`,
+         AND language_code = $3 AND field_name = $4`,
       [entityType, entityIds, locale, fieldName]
     );
     return new Map(result.rows.map((row) => [row.entity_id, row.value]));
