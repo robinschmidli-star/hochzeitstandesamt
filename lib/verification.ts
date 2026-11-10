@@ -2,6 +2,7 @@ import { createHash, randomBytes } from "node:crypto";
 import { Prisma } from "@prisma/client";
 import pg from "pg";
 import { prisma } from "@/lib/prisma";
+import { publicReplicaPoolConfig } from "@/lib/public-replica-pg";
 
 export const officeFields = ["name", "website", "phone", "email", "booking_url", "information_url"] as const;
 export const venueFields = ["name", "website", "phone", "email", "booking_url", "information_url", "official_ceremony_possible", "ceremony_days", "ceremony_times", "capacity_min", "capacity_max", "indoor", "outdoor", "wheelchair_accessible", "reservation_required"] as const;
@@ -18,7 +19,7 @@ function replicaPool() {
   if (!connectionString) {
     throw new Error("WEB_PUBLIC_REPLICA_DATABASE_URL or PUBLIC_REPLICA_DATABASE_URL is not configured");
   }
-  globalReplica.verificationReplicaPool ??= new pg.Pool({ connectionString, ssl: process.env.PUBLIC_REPLICA_DATABASE_SSL === "require" ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" } : undefined });
+  globalReplica.verificationReplicaPool ??= new pg.Pool(publicReplicaPoolConfig(connectionString));
   return globalReplica.verificationReplicaPool;
 }
 

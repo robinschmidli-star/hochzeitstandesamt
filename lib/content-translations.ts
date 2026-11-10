@@ -1,5 +1,6 @@
 import pg from "pg";
 import { defaultLocale, type Locale } from "@/lib/i18n";
+import { publicReplicaPoolConfig } from "@/lib/public-replica-pg";
 
 const globalForTranslations = globalThis as unknown as { translationPool?: pg.Pool };
 
@@ -7,12 +8,9 @@ function pool() {
   const connectionString = process.env.WEB_PUBLIC_REPLICA_DATABASE_URL
     ?? process.env.PUBLIC_REPLICA_DATABASE_URL;
   if (!connectionString) return null;
-  globalForTranslations.translationPool ??= new pg.Pool({
-    connectionString,
-    ssl: process.env.PUBLIC_REPLICA_DATABASE_SSL === "require"
-      ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" }
-      : undefined
-  });
+  globalForTranslations.translationPool ??= new pg.Pool(
+    publicReplicaPoolConfig(connectionString)
+  );
   return globalForTranslations.translationPool;
 }
 
