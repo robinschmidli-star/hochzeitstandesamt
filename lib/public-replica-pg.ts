@@ -1,6 +1,6 @@
-import type pg from "pg";
+import type { PoolConfig } from "pg";
 
-export function publicReplicaPoolConfig(connectionString: string): pg.PoolConfig {
+export function publicReplicaPoolConfig(connectionString: string): PoolConfig {
   const url = new URL(connectionString);
   const sslMode = url.searchParams.get("sslmode");
   if (sslMode) url.searchParams.delete("sslmode");
