@@ -1,4 +1,5 @@
 import pg from "pg";
+import { publicReplicaPoolConfig } from "@/lib/public-replica-pg";
 
 export const runtime = "nodejs";
 const globalMedia = globalThis as unknown as { approvedPhotoPool?: pg.Pool };
@@ -8,12 +9,9 @@ function photoPool() {
     ?? process.env.PUBLIC_REPLICA_DATABASE_URL;
   if (!connectionString) throw new Error("Public media database is not configured");
   globalMedia.approvedPhotoPool ??= new pg.Pool({
-    connectionString,
+    ...publicReplicaPoolConfig(connectionString),
     max: 3,
     connectionTimeoutMillis: 10000,
-    ssl: process.env.PUBLIC_REPLICA_DATABASE_SSL === "require"
-      ? { rejectUnauthorized: process.env.PUBLIC_REPLICA_DATABASE_SSL_VERIFY !== "false" }
-      : undefined
   });
   return globalMedia.approvedPhotoPool;
 }
