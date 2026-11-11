@@ -36,7 +36,9 @@ function normalizedSignature(slot: NormalizedAvailabilitySlot) {
 
 function isDue(lastCheckedAt: Date | null, frequencyMinutes: number, now: Date) {
   if (!lastCheckedAt) return true;
-  return now.getTime() - lastCheckedAt.getTime() >= Math.max(60, frequencyMinutes) * 60_000;
+  // Allow one minute of cron scheduling jitter so a daily run does not skip a
+  // source checked a few milliseconds later on the previous day.
+  return now.getTime() - lastCheckedAt.getTime() >= Math.max(60, frequencyMinutes) * 60_000 - 60_000;
 }
 
 async function syncSource(source: AvailabilitySourceRecord) {
